@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mac Course Archive · Macalester Class Schedules, 2008–</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wordmark">
+    <span class="wordmark-code">MAC&thinsp;/&thinsp;CRS</span>
+    <h1>The Course Archive</h1>
+    <p class="tagline">Every schedule Macalester has published, Fall&nbsp;2008 to the term after next.</p>
+  </div>
+</header>
+
+<nav class="era-strip" id="eraStrip" aria-label="Jump to academic year">
+  <!-- populated by app.js -->
+</nav>
+
+<main>
+  <section class="controls" aria-label="Search and filters">
+    <div class="control-row">
+      <label class="field">
+        <span class="field-label">Term</span>
+        <select id="termSelect"></select>
+      </label>
+
+      <label class="field field-grow">
+        <span class="field-label">Search this term</span>
+        <input id="searchBox" type="text" placeholder="subject, course number, title, instructor, or CRN…" autocomplete="off">
+      </label>
+
+      <label class="field field-checkbox">
+        <input type="checkbox" id="searchAllToggle">
+        <span>Search every term instead</span>
+      </label>
+    </div>
+    <p class="status-line" id="statusLine" aria-live="polite"></p>
+  </section>
+
+  <section class="results" id="results" aria-label="Course results">
+    <!-- populated by app.js -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>Unofficial archive, built from Macalester's public class schedule pages. Not affiliated with the Registrar's Office — always confirm seat counts and details in the official system before registering.</p>
+  <p id="lastUpdated"></p>
+</footer>
+
+<template id="courseRowTemplate">
+  <article class="course">
+    <button class="course-summary" type="button">
+      <span class="course-code"></span>
+      <span class="course-title"></span>
+      <span class="course-meta"></span>
+      <span class="course-term-tag"></span>
+      <span class="course-toggle" aria-hidden="true">＋</span>
+    </button>
+    <div class="course-detail" hidden>
+      <p class="course-description"></p>
+      <dl class="course-facts"></dl>
+    </div>
+  </article>
+</template>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+name: Scrape current schedules
+
+on:
+  schedule:
+    # Fires every 6 hours. scheduler.py decides whether each firing actually
+    # does a full scrape: always yes during a registration/add-drop window
+    # (see scraper/registration_windows.json), otherwise only the first UTC
+    # firing of the day. This gives "more often during registration, ~daily
+    # otherwise" from one static cron.
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Run even if outside a registration window / daily slot"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Decide whether to run
+        id: gate
+        working-directory: scraper
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.force }}" = "true" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+            echo "Manual run, forcing."
+            exit 0
+          fi
+          python scheduler.py | tee /tmp/gate.txt
+          grep '^run=' /tmp/gate.txt >> "$GITHUB_OUTPUT"
+
+      - name: Install dependencies
+        if: steps.gate.outputs.run == 'true'
+        working-directory: scraper
+        run: |
+          pip install -r requirements.txt
+          playwright install --with-deps chromium
+
+      - name: Scrape active terms
+        if: steps.gate.outputs.run == 'true'
+        working-directory: scraper
+        run: python run.py --mode incremental
+
+      - name: Commit updated data
+        if: steps.gate.outputs.run == 'true'
+        run: |
+          git config user.name "schedule-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/
+          git diff --cached --quiet && echo "No changes." || git commit -m "Update schedules ($(date -u +'%Y-%m-%d %H:%M UTC'))"
+          git push

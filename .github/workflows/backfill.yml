@@ -1,0 +1,59 @@
+name: Backfill all historical schedules
+
+# Run this ONCE manually (Actions tab -> Backfill all historical schedules ->
+# Run workflow) to populate every term from Fall 2008 onward. After that,
+# scrape.yml keeps only the recent/near-future terms up to date, since past
+# terms never change. Re-run this manually only if you ever need to re-scrape
+# everything (e.g. after a parser fix).
+on:
+  workflow_dispatch:
+    inputs:
+      from_year:
+        description: "First calendar year to include (blank = 2008). Use this to chunk the backfill if one run risks the 6h job limit, e.g. 2008, then 2016, then 2022."
+        required: false
+      through_year:
+        description: "Last calendar year to include (blank = auto, current+1)"
+        required: false
+
+permissions:
+  contents: write
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    # GitHub-hosted runners hard-cap a single job at 6 hours. Scraping ~115
+    # terms with a real browser at a polite pace can approach that, so this
+    # workflow supports from_year/through_year chunking - see the inputs above.
+    timeout-minutes: 350
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        working-directory: scraper
+        run: |
+          pip install -r requirements.txt
+          playwright install --with-deps chromium
+
+      - name: Backfill
+        working-directory: scraper
+        run: |
+          ARGS="--mode backfill"
+          if [ -n "${{ inputs.from_year }}" ]; then
+            ARGS="$ARGS --from-year ${{ inputs.from_year }}"
+          fi
+          if [ -n "${{ inputs.through_year }}" ]; then
+            ARGS="$ARGS --through-year ${{ inputs.through_year }}"
+          fi
+          python run.py $ARGS
+
+      - name: Commit data
+        run: |
+          git config user.name "backfill-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/
+          git diff --cached --quiet && echo "No changes." || git commit -m "Backfill historical schedules"
+          git push

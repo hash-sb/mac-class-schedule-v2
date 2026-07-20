@@ -1,0 +1,21 @@
+{
+  "_comment": "Dates pulled from https://www.macalester.edu/registrar/academic-calendars/ on 2026-07-20. Add/drop windows run from 'Classes Begin' through 'Last Day to Add/Drop a Class' each term; registration windows are the multi-day pre-registration period for the FOLLOWING term. Update this file once a year when the registrar publishes a new academic year (or extend it further out early - the five-year calendar page has more years than shown here). If this file is stale, the scraper still runs, just on the default (less frequent) cadence.",
+  "windows": [
+    { "label": "Fall 2026 Add/Drop", "type": "add_drop", "start": "2026-09-08", "end": "2026-09-18" },
+    { "label": "Spring 2027 Registration", "type": "registration", "start": "2026-11-09", "end": "2026-11-20" },
+    { "label": "Spring 2027 Add/Drop", "type": "add_drop", "start": "2027-01-25", "end": "2027-02-05" },
+    { "label": "Fall 2027 Registration", "type": "registration", "start": "2027-04-19", "end": "2027-04-30" },
+    { "label": "Fall 2027 Add/Drop", "type": "add_drop", "start": "2027-09-07", "end": "2027-09-17" },
+    { "label": "Spring 2028 Registration", "type": "registration", "start": "2027-11-08", "end": "2027-11-19" },
+    { "label": "Spring 2028 Add/Drop", "type": "add_drop", "start": "2028-01-24", "end": "2028-02-03" },
+    { "label": "Fall 2028 Registration", "type": "registration", "start": "2028-04-17", "end": "2028-04-28" },
+    { "label": "Fall 2028 Add/Drop", "type": "add_drop", "start": "2028-09-05", "end": "2028-09-15" },
+    { "label": "Spring 2029 Registration", "type": "registration", "start": "2028-11-06", "end": "2028-11-17" },
+    { "label": "Spring 2029 Add/Drop", "type": "add_drop", "start": "2029-01-22", "end": "2029-01-31" },
+    { "label": "Fall 2029 Registration", "type": "registration", "start": "2029-04-16", "end": "2029-04-27" },
+    { "label": "Fall 2029 Add/Drop", "type": "add_drop", "start": "2029-09-04", "end": "2029-09-14" },
+    { "label": "Spring 2030 Registration", "type": "registration", "start": "2029-11-05", "end": "2029-11-16" },
+    { "label": "Spring 2030 Add/Drop", "type": "add_drop", "start": "2030-01-28", "end": "2030-02-06" },
+    { "label": "Fall 2030 Registration", "type": "registration", "start": "2030-04-22", "end": "2030-05-03" }
+  ]
+}
