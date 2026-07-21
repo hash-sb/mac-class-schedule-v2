@@ -1,10 +1,13 @@
 // Mac Course Archive service worker.
-// - App shell (HTML/CSS/JS/manifest/icon): cache-first, so the app loads
-//   instantly and works offline after the first visit.
-// - data/*.json: network-first with a cache fallback, so online users
-//   always get the latest scrape, but offline users still see the last
-//   data that was successfully loaded.
-const CACHE_NAME = "mac-course-archive-v1";
+//
+// Network-first for EVERYTHING (app shell and data alike): always try the
+// network first so a normal reload (F5/Ctrl-R) shows the latest deployed
+// version and the latest scraped data, falling back to the cache only when
+// the network request fails (i.e. offline). This is intentionally NOT
+// cache-first - for a course archive where seat counts change during
+// registration, "instant load" is not worth the risk of silently showing
+// stale seat counts or an old app version after a reload.
+const CACHE_NAME = "mac-course-archive-v2"; // bump this whenever the caching strategy changes
 const APP_SHELL = ["./", "index.html", "app.js", "style.css", "manifest.json", "icon.svg"];
 
 self.addEventListener("install", (event) => {
@@ -24,32 +27,15 @@ self.addEventListener("activate", (event) => {
 self.addEventListener("fetch", (event) => {
   const url = new URL(event.request.url);
   if (url.origin !== location.origin) return; // don't intercept cross-origin (e.g. Google Fonts)
-
-  const isData = url.pathname.includes("/data/");
-
-  if (isData) {
-    event.respondWith(
-      fetch(event.request)
-        .then((res) => {
-          const copy = res.clone();
-          caches.open(CACHE_NAME).then((cache) => cache.put(event.request, copy));
-          return res;
-        })
-        .catch(() => caches.match(event.request))
-    );
-    return;
-  }
+  if (event.request.method !== "GET") return;
 
   event.respondWith(
-    caches.match(event.request).then((cached) => {
-      const fetchPromise = fetch(event.request)
-        .then((res) => {
-          const copy = res.clone();
-          caches.open(CACHE_NAME).then((cache) => cache.put(event.request, copy));
-          return res;
-        })
-        .catch(() => cached);
-      return cached || fetchPromise;
-    })
+    fetch(event.request)
+      .then((res) => {
+        const copy = res.clone();
+        caches.open(CACHE_NAME).then((cache) => cache.put(event.request, copy));
+        return res;
+      })
+      .catch(() => caches.match(event.request))
   );
 });

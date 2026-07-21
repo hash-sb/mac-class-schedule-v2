@@ -60,9 +60,9 @@ to touch the parser.
 - **Client-side caching** (IndexedDB): once you've loaded a term, it's
   cached in your browser, so revisiting or using "search every term" again
   doesn't re-download everything.
-- **Seat-status badges**: a small colored dot on every row (green = open,
-  amber = few left, red = full, gray = unknown) so you can scan a subject's
-  availability without expanding each row.
+- **Seat-status badges**: a colored pill on every row showing the actual
+  open-seat count (or "Full") at a glance - no hovering or expanding needed,
+  since this is the number students care about most.
 - **Active-filter chips**: whatever's currently applied (search text, open
   seats, days, time of day, departments, cross-term search) shows as a
   dismissible chip above the results, with a "clear all."

@@ -34,6 +34,13 @@ html[data-theme="light"] {
 
 * { box-sizing: border-box; }
 
+/* Any element toggled via el.hidden = true/false in JS must actually hide,
+   even if a class rule elsewhere sets `display` on it (author styles beat
+   the browser's built-in [hidden]{display:none} rule regardless of
+   selector specificity, so without this, elements like the hint banner or
+   the active-filter chip row would ignore .hidden entirely). */
+[hidden] { display: none !important; }
+
 html { scroll-behavior: smooth; }
 
 body {
@@ -721,21 +728,28 @@ dialog.tray-dialog::backdrop { background: rgba(0,0,0,0.6); }
 /* ---------- seat-status badge ---------- */
 
 .seat-badge {
-  width: 0.6rem;
-  height: 0.6rem;
-  border-radius: 50%;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.5rem;
+  height: 1.5rem;
+  padding: 0 0.4rem;
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
   align-self: center;
   flex: none;
+  border: 1px solid transparent;
 }
-.seat-badge.seat-open { background: #6fbf73; }
-.seat-badge.seat-low { background: var(--amber); }
-.seat-badge.seat-full { background: #d97f7f; }
-.seat-badge.seat-unknown { background: var(--ink-600); }
+.seat-badge.seat-open { background: rgba(111, 191, 115, 0.18); color: #6fbf73; border-color: #6fbf73; }
+.seat-badge.seat-low { background: rgba(217, 164, 65, 0.18); color: var(--amber-bright); border-color: var(--amber); }
+.seat-badge.seat-full { background: rgba(217, 127, 127, 0.18); color: #d97f7f; border-color: #d97f7f; }
+.seat-badge.seat-unknown { background: var(--ink-800); color: var(--paper-dim); border-color: var(--ink-600); }
 
-/* extend the summary grid to fit the new badge column */
+/* extend the summary grid to fit the wider badge column */
 .course-summary {
-  grid-template-columns: 0.8rem 9rem 1fr auto auto;
+  grid-template-columns: 2.75rem 9rem 1fr auto auto;
 }
 
 /* ---------- schedule conflicts ---------- */
@@ -813,4 +827,64 @@ dialog.tray-dialog::backdrop { background: rgba(0,0,0,0.6); }
   #scheduleDialog .schedule-item { border-color: #999 !important; break-inside: avoid; }
   #scheduleDialog .schedule-item-code { color: #000 !important; }
   #scheduleDialog .schedule-item-meta { color: #333 !important; }
+}
+
+/* ---------- show more / show all ---------- */
+
+.show-more-wrap {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 0.25rem;
+}
+.show-more-ceiling {
+  color: var(--paper-dim);
+  font-size: 0.85rem;
+  font-family: var(--font-mono);
+}
+
+/* ---------- more-filters disclosure ---------- */
+
+.more-filters {
+  border-top: 1px dashed var(--rule);
+  padding-top: 0.5rem;
+}
+
+.more-filters > summary {
+  cursor: pointer;
+  list-style: none;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--teal);
+  padding: 0.3rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.more-filters > summary::-webkit-details-marker { display: none; }
+.more-filters > summary::before {
+  content: "▸";
+  display: inline-block;
+  transition: transform 0.15s ease;
+}
+.more-filters[open] > summary::before { transform: rotate(90deg); }
+.more-filters > summary:hover { color: var(--amber-bright); }
+
+.more-filters-hint {
+  color: var(--paper-dim);
+  font-style: italic;
+}
+
+.more-filters .control-row-tertiary {
+  padding-top: 0.75rem;
+  border-top: none;
+}
+
+/* the open-seats checkbox is called out because it's the filter students
+   care about most - keep it visually distinct from the rest of row 2 */
+.field-important {
+  padding: 0.3rem 0.6rem;
+  border: 1px solid var(--teal);
+  border-radius: 4px;
+  background: rgba(91, 155, 149, 0.1);
 }

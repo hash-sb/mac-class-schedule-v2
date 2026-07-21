@@ -50,7 +50,7 @@
     </div>
 
     <div class="control-row control-row-secondary">
-      <label class="field field-checkbox">
+      <label class="field field-checkbox field-important">
         <input type="checkbox" id="openSeatsToggle">
         <span>Open seats only</span>
       </label>
@@ -68,7 +68,9 @@
       <button type="button" class="share-btn" id="shareBtn">Copy link to this view</button>
     </div>
 
-    <div class="control-row control-row-tertiary">
+    <details class="more-filters" id="moreFilters">
+      <summary>More filters <span class="more-filters-hint" id="moreFiltersHint"></span></summary>
+      <div class="control-row control-row-tertiary">
       <fieldset class="field day-filter">
         <legend class="field-label">Meets on</legend>
         <div class="day-checks" id="dayChecks">
@@ -96,7 +98,8 @@
           <!-- populated by app.js -->
         </div>
       </div>
-    </div>
+      </div>
+    </details>
 
     <div class="active-filters" id="activeFilters" hidden></div>
 
@@ -175,7 +178,7 @@
 <template id="courseRowTemplate">
   <article class="course">
     <button class="course-summary" type="button">
-      <span class="seat-badge" aria-hidden="true"></span>
+      <span class="seat-badge"></span>
       <span class="course-code"></span>
       <span class="course-title"></span>
       <span class="course-meta"></span>

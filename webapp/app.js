@@ -2,7 +2,10 @@
   "use strict";
 
   const DATA_DIR = "data";
-  const MAX_RENDERED = 400; // cap DOM rows so an all-terms search stays snappy
+  const MAX_RENDERED = 400; // page size for progressive rendering
+  const HARD_RENDER_CEILING = 6000; // absolute cap so an unfiltered cross-term search can't hang the browser
+  let renderLimit = MAX_RENDERED;
+  let lastRenderSignature = null;
   const IDB_NAME = "mac-course-archive";
   const IDB_STORE = "terms";
   const SCHEDULE_KEY = "macCourseArchive.schedule.v1";
@@ -54,6 +57,8 @@
     scheduleConflicts: document.getElementById("scheduleConflicts"),
     themeToggle: document.getElementById("themeToggle"),
     printScheduleBtn: document.getElementById("printScheduleBtn"),
+    moreFilters: document.getElementById("moreFilters"),
+    moreFiltersHint: document.getElementById("moreFiltersHint"),
   };
 
   const THEME_KEY = "macCourseArchive.theme.v1";
@@ -273,6 +278,19 @@
     els.dayChecks.querySelectorAll("input[type=checkbox]").forEach((cb) => {
       cb.checked = selectedDays.has(cb.value);
     });
+  }
+
+  const DAY_SHORT = { M: "Mon", T: "Tue", W: "Wed", R: "Thu", F: "Fri", S: "Sat", U: "Sun" };
+
+  function syncMoreFiltersHint() {
+    const parts = [];
+    if (selectedDays.size) parts.push([...selectedDays].map((d) => DAY_SHORT[d] || d).join("/"));
+    if (els.timeOfDaySelect.value !== "any") {
+      parts.push(els.timeOfDaySelect.selectedOptions[0]?.textContent || els.timeOfDaySelect.value);
+    }
+    if (selectedSubjects.size) parts.push(`${selectedSubjects.size} dept${selectedSubjects.size === 1 ? "" : "s"}`);
+    els.moreFiltersHint.textContent = parts.length ? `(${parts.join(", ")})` : "";
+    if (parts.length) els.moreFilters.open = true;
   }
 
   async function onPopState() {
@@ -660,8 +678,27 @@
     els.activeFilters.appendChild(frag);
   }
 
+  function currentFilterSignature() {
+    return JSON.stringify([
+      currentTermCode,
+      els.searchAllToggle.checked,
+      els.searchBox.value.trim().toLowerCase(),
+      els.openSeatsToggle.checked,
+      els.sortSelect.value,
+      els.timeOfDaySelect.value,
+      [...selectedDays].sort(),
+      [...selectedSubjects].sort(),
+    ]);
+  }
+
   function render() {
     renderActiveFilterChips();
+    syncMoreFiltersHint();
+    const signature = currentFilterSignature();
+    if (signature !== lastRenderSignature) {
+      renderLimit = MAX_RENDERED; // a real filter/search/term change - start over at the top
+      lastRenderSignature = signature;
+    }
     const q = els.searchBox.value.trim().toLowerCase();
     let courses = currentCourses();
 
@@ -713,8 +750,8 @@
       return;
     }
 
-    const truncated = courses.length > MAX_RENDERED;
-    const shown = truncated ? courses.slice(0, MAX_RENDERED) : courses;
+    const truncated = courses.length > renderLimit;
+    const shown = truncated ? courses.slice(0, renderLimit) : courses;
 
     const frag = document.createDocumentFragment();
     if (sortMode === "default") {
@@ -736,9 +773,46 @@
     }
     els.results.appendChild(frag);
 
+    if (truncated) {
+      const remaining = courses.length - renderLimit;
+      const atCeiling = renderLimit >= HARD_RENDER_CEILING;
+      const wrap = document.createElement("div");
+      wrap.className = "show-more-wrap";
+      if (!atCeiling) {
+        const moreBtn = document.createElement("button");
+        moreBtn.type = "button";
+        moreBtn.className = "primary-btn show-more-btn";
+        moreBtn.textContent = `Show ${Math.min(MAX_RENDERED, remaining)} more (${remaining} left)`;
+        moreBtn.addEventListener("click", () => {
+          renderLimit = Math.min(renderLimit + MAX_RENDERED, HARD_RENDER_CEILING);
+          lastRenderSignature = currentFilterSignature(); // this render doesn't count as a "real" filter change
+          render();
+        });
+        wrap.appendChild(moreBtn);
+        if (remaining > MAX_RENDERED) {
+          const allBtn = document.createElement("button");
+          allBtn.type = "button";
+          allBtn.className = "link-btn show-all-btn";
+          allBtn.textContent = `Show all ${courses.length}`;
+          allBtn.addEventListener("click", () => {
+            renderLimit = Math.min(courses.length, HARD_RENDER_CEILING);
+            lastRenderSignature = currentFilterSignature();
+            render();
+          });
+          wrap.appendChild(allBtn);
+        }
+      } else {
+        const note = document.createElement("p");
+        note.className = "show-more-ceiling";
+        note.textContent = `Showing the first ${HARD_RENDER_CEILING.toLocaleString()} matches. Narrow your search to see the rest.`;
+        wrap.appendChild(note);
+      }
+      els.results.appendChild(wrap);
+    }
+
     setStatus(
       truncated
-        ? `Showing ${MAX_RENDERED} of ${courses.length} matches — refine your search to see more.`
+        ? `Showing ${Math.min(renderLimit, courses.length).toLocaleString()} of ${courses.length.toLocaleString()} matches.`
         : `${courses.length} section${courses.length === 1 ? "" : "s"}.`
     );
   }
@@ -759,7 +833,9 @@
     const badge = node.querySelector(".seat-badge");
     const seatInfo = seatStatus(c.open_seats);
     badge.classList.add(seatInfo.cls);
+    badge.textContent = seatInfo.short;
     badge.title = seatInfo.label;
+    badge.setAttribute("aria-label", seatInfo.label);
 
     const detail = node.querySelector(".course-detail");
     const descEl = node.querySelector(".course-description");
@@ -890,10 +966,10 @@
 
   function seatStatus(openSeatsRaw) {
     const n = parseInt(openSeatsRaw, 10);
-    if (!Number.isFinite(n)) return { cls: "seat-unknown", label: "Seat count unknown" };
-    if (n <= 0) return { cls: "seat-full", label: "Full" };
-    if (n <= 3) return { cls: "seat-low", label: `${n} seat${n === 1 ? "" : "s"} left` };
-    return { cls: "seat-open", label: `${n} seats open` };
+    if (!Number.isFinite(n)) return { cls: "seat-unknown", label: "Seat count unknown", short: "?" };
+    if (n <= 0) return { cls: "seat-full", label: "Full", short: "Full" };
+    if (n <= 3) return { cls: "seat-low", label: `${n} seat${n === 1 ? "" : "s"} left`, short: String(n) };
+    return { cls: "seat-open", label: `${n} seats open`, short: String(n) };
   }
 
   function escapeHtml(s) {
