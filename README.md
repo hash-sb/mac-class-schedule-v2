@@ -80,6 +80,18 @@ All of this is plain HTML/CSS/JS with no build step and no external
 services beyond the static JSON files - nothing is sent anywhere; "My
 schedule" and the term cache live only in your own browser's local storage.
 
+## Data-safety guarantee
+
+`run.py` never lets a bad scrape destroy good data. If a term already has a
+saved snapshot with sections in it, and a later scrape of that same term
+comes back with **zero** sections, that's treated as a suspected failure
+(slow render, timeout, transient site hiccup) rather than "this term
+suddenly has no classes" — the existing file and its `index.json` entry are
+left completely untouched, and a `SUSPECTED SCRAPE FAILURE` warning is
+printed to the workflow log instead. A term only gets marked "not offered"
+the first time it's ever scraped and comes back empty (which is the normal,
+expected case for most Summer II/III terms).
+
 ## Data format
 
 `data/index.json`:

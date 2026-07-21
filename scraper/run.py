@@ -82,17 +82,38 @@ def append_change_log(term: Term, diff: dict) -> None:
     path.write_text("\n".join(lines) + "\n")
 
 
-def write_term_file(term: Term, courses: list[dict]) -> dict:
+def write_term_file(term: Term, courses: list[dict]) -> dict | None:
+    """
+    Writes data/<code>.json, EXCEPT when this looks like a failed scrape
+    rather than a genuinely-empty term: if we got 0 sections but the existing
+    snapshot on disk had sections, we assume something went wrong this run
+    (slow render, transient timeout, site hiccup) and leave the old file
+    completely untouched rather than clobbering good data with an empty
+    result. Returns None in that case so the caller knows not to touch
+    index.json for this term either.
+    """
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     path = DATA_DIR / f"{term.code}.json"
 
+    old_payload = None
     if path.exists():
         try:
             old_payload = json.loads(path.read_text())
-            diff = compute_diff(old_payload.get("courses", []), courses)
-            append_change_log(term, diff)
         except (json.JSONDecodeError, OSError) as e:
-            print(f"  warning: couldn't diff previous {term.code}.json: {e}", file=sys.stderr)
+            print(f"  warning: couldn't read previous {term.code}.json: {e}", file=sys.stderr)
+
+    if len(courses) == 0 and old_payload and old_payload.get("course_count", 0) > 0:
+        print(
+            f"  SUSPECTED SCRAPE FAILURE for {term.code} ({term.label}): got 0 sections but the "
+            f"existing snapshot has {old_payload['course_count']}. Leaving the existing file and "
+            f"index entry untouched rather than overwriting good data with an empty result.",
+            file=sys.stderr,
+        )
+        return None
+
+    if old_payload:
+        diff = compute_diff(old_payload.get("courses", []), courses)
+        append_change_log(term, diff)
 
     payload = {
         "term_code": term.code,
@@ -152,6 +173,11 @@ def run(terms: list[Term]) -> None:
             print(f"  SKIPPING {term.code}: {e}", file=sys.stderr)
             continue
         payload = write_term_file(term, courses)
+        if payload is None:
+            # Suspected scrape failure - write_term_file already logged why.
+            # Do NOT add to payloads, so update_index() leaves this term's
+            # existing entry (and file) exactly as it was.
+            continue
         payloads[term.code] = payload
         print(f"  -> {payload['course_count']} sections")
         time.sleep(POLITE_DELAY_SECONDS)
