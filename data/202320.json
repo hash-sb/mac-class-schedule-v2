@@ -1,0 +1,31 @@
+{
+  "term_code": "202320",
+  "term_label": "January 2023",
+  "scraped_at": "2026-07-21T00:10:37.865145+00:00",
+  "course_count": 1,
+  "courses": [
+    {
+      "crn": "20007",
+      "subject": "CLAS",
+      "subject_name": "Classical Mediterranean and Middle East",
+      "course_number": "155",
+      "section": "01",
+      "title": "January in Rome: The Art, Archaeology, and Urban History of Ancient Rome",
+      "meetings": [
+        {
+          "days": "TBA",
+          "time": "",
+          "room": ""
+        }
+      ],
+      "instructor": "Beth Severy-Hoven",
+      "open_seats": "3",
+      "max_enrollment": "25",
+      "crosslistings": [],
+      "description": "A survey and exploration of the major spaces, surviving monuments and artifacts of the city of Rome from the earliest occupation of the Palatine around 1000 BCE to the first major Christian buildings in the 4th-5th centuries CE. Students explore how politics and culture shape the urban landscape, challenges in identifying buildings and the way that spaces were used, and the Roman imperial consumption of Greek art. We consider the incorporation of Roman monuments into subsequent architecture, including Fascist political (re)use of archaeology, as well as problems of conservation in the context of the modern city. Visits to the excavated cities of Pompeii and Ostia make visible the lives and activities of those lost in the literary record, including women and enslaved people. Students give two presentations to help teach the city, use their developing knowledge to interpret archaeological sites, and conduct a self-guided site visit as coursework. No prerequisites - students from all disciplines and years are welcome to apply. See the website of the Department of the Classical Mediterranean and Middle East for more information.",
+      "distribution_requirements": "Humanities",
+      "gen_ed_requirements": "",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202320%27%20dept=%20%27CLAS%27%20num=%27155%27%20sect=%2701%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "term_code": "201550",
+  "term_label": "Summer II 2015",
+  "scraped_at": "2026-07-20T23:56:33.176596+00:00",
+  "course_count": 1,
+  "courses": [
+    {
+      "crn": "50101",
+      "subject": "PHYS",
+      "subject_name": "Physics and Astronomy",
+      "course_number": "222",
+      "section": "01",
+      "title": "Introductory Physics II",
+      "meetings": [
+        {
+          "days": "TBA",
+          "time": "",
+          "room": ""
+        }
+      ],
+      "instructor": "Sung Kyu Kim",
+      "open_seats": "37",
+      "max_enrollment": "60",
+      "crosslistings": [],
+      "description": "Electricity and magnetism, light and optics, modern physics, including laboratory experiments and extensive demonstrations. Daily lectures and help sessions, three two-hour laboratories per week. Students cannot receive credit for both Physics 222 and Physics 227. (4 credits)",
+      "distribution_requirements": "Natural science and mathematics",
+      "gen_ed_requirements": "",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27201550%27%20dept=%20%27PHYS%27%20num=%27222%27%20sect=%2701%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    }
+  ]
+}

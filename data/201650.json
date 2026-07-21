@@ -1,0 +1,54 @@
+{
+  "term_code": "201650",
+  "term_label": "Summer II 2016",
+  "scraped_at": "2026-07-20T23:58:14.407203+00:00",
+  "course_count": 2,
+  "courses": [
+    {
+      "crn": "50003",
+      "subject": "GEOG",
+      "subject_name": "Geography",
+      "course_number": "669",
+      "section": "01",
+      "title": "Geography, Reading and Geotechnology in the Social Studies Classroom:Intro to Inquiry Based Pedagogy",
+      "meetings": [
+        {
+          "days": "TBA",
+          "time": "",
+          "room": ""
+        }
+      ],
+      "instructor": "David Lanegran",
+      "open_seats": "3",
+      "max_enrollment": "25",
+      "crosslistings": [],
+      "description": "",
+      "distribution_requirements": "",
+      "gen_ed_requirements": "",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27201650%27%20dept=%20%27GEOG%27%20num=%27669%27%20sect=%2701%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50004",
+      "subject": "GEOG",
+      "subject_name": "Geography",
+      "course_number": "670",
+      "section": "01",
+      "title": "Advanced Geography, Reading and Geotechnology in Social Studies Classroom:Adv Inquiry using ArcGIS",
+      "meetings": [
+        {
+          "days": "TBA",
+          "time": "",
+          "room": ""
+        }
+      ],
+      "instructor": "David Lanegran",
+      "open_seats": "9",
+      "max_enrollment": "25",
+      "crosslistings": [],
+      "description": "",
+      "distribution_requirements": "",
+      "gen_ed_requirements": "",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27201650%27%20dept=%20%27GEOG%27%20num=%27670%27%20sect=%2701%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    }
+  ]
+}
