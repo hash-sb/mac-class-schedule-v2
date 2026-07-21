@@ -1,0 +1,13 @@
+{
+  "name": "Mac Course Archive",
+  "short_name": "Mac Courses",
+  "description": "Every Macalester class schedule, Fall 2008 to the term after next.",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "background_color": "#10141c",
+  "theme_color": "#10141c",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

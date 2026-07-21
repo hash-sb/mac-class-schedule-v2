@@ -52,7 +52,11 @@
     loadProgress: document.getElementById("loadProgress"),
     exportCsvBtn: document.getElementById("exportCsvBtn"),
     scheduleConflicts: document.getElementById("scheduleConflicts"),
+    themeToggle: document.getElementById("themeToggle"),
+    printScheduleBtn: document.getElementById("printScheduleBtn"),
   };
+
+  const THEME_KEY = "macCourseArchive.theme.v1";
 
   /** @type {{term_code:string, term_label:string, course_count:number, scraped_at:string}[]} */
   let index = [];
@@ -62,6 +66,8 @@
   let selectedDays = new Set();
   let selectedSubjects = new Set();
   let mySchedule = loadSchedule();
+  /** flat, compact array of every course across every term, or null until loaded */
+  let searchIndexCache = null;
 
   init();
 
@@ -127,6 +133,8 @@
     wireDialogs();
     updateScheduleFabCount();
     maybeShowHint();
+    initTheme();
+    registerServiceWorker();
 
     // Restore state from the URL so links and back/forward behave like a real page.
     const url = new URL(location.href);
@@ -138,6 +146,7 @@
     const urlDays = (url.searchParams.get("days") || "").split(",").filter(Boolean);
     const urlTime = url.searchParams.get("time");
     const urlSubj = (url.searchParams.get("subj") || "").split(",").filter(Boolean);
+    const urlCrn = url.searchParams.get("crn");
 
     if (urlQ) els.searchBox.value = urlQ;
     if (urlSeats) els.openSeatsToggle.checked = true;
@@ -155,7 +164,7 @@
     if (urlAll) {
       els.searchAllToggle.checked = true;
       els.results.classList.add("is-cross-term");
-      await loadAllTerms();
+      await ensureSearchIndexLoaded();
     } else {
       await ensureTermLoaded(startTerm);
     }
@@ -165,6 +174,14 @@
     loadChangesPanel();
     window.addEventListener("popstate", onPopState);
     render();
+
+    if (urlCrn) {
+      // the target row might be past MAX_RENDERED or filtered out - best
+      // effort, and we let the person know either way.
+      if (!focusCourseByCrn(urlCrn)) {
+        setStatus(`Linked course (CRN ${urlCrn}) isn't visible with the current filters.`);
+      }
+    }
   }
 
   function wireControls() {
@@ -199,11 +216,39 @@
       e.preventDefault();
       els.searchBox.focus();
     });
+    els.themeToggle.addEventListener("click", toggleTheme);
   }
 
   function maybeShowHint() {
     if (localStorage.getItem(HINT_DISMISSED_KEY)) return;
     els.hintBanner.hidden = false;
+  }
+
+  function initTheme() {
+    const saved = localStorage.getItem(THEME_KEY);
+    const theme = saved || "dark";
+    applyTheme(theme);
+  }
+
+  function applyTheme(theme) {
+    document.documentElement.dataset.theme = theme;
+    els.themeToggle.textContent = theme === "light" ? "🌙" : "☀";
+    els.themeToggle.setAttribute("aria-label", theme === "light" ? "Switch to dark theme" : "Switch to light theme");
+  }
+
+  function toggleTheme() {
+    const next = document.documentElement.dataset.theme === "light" ? "dark" : "light";
+    applyTheme(next);
+    localStorage.setItem(THEME_KEY, next);
+  }
+
+  function registerServiceWorker() {
+    if (!("serviceWorker" in navigator)) return;
+    // Relative path, so it still works if the app is served from a subpath
+    // (e.g. a project page at username.github.io/repo-name/).
+    navigator.serviceWorker.register("sw.js").catch(() => {
+      // offline/installable support is a nice-to-have - never block the app on it
+    });
   }
 
   function timeAgo(isoString) {
@@ -240,6 +285,7 @@
     const urlDays = (url.searchParams.get("days") || "").split(",").filter(Boolean);
     const urlTime = url.searchParams.get("time") || "any";
     const urlSubj = (url.searchParams.get("subj") || "").split(",").filter(Boolean);
+    const urlCrn = url.searchParams.get("crn");
 
     els.searchBox.value = urlQ;
     els.openSeatsToggle.checked = urlSeats;
@@ -260,10 +306,11 @@
     if (urlAll !== els.searchAllToggle.checked) {
       els.searchAllToggle.checked = urlAll;
       els.results.classList.toggle("is-cross-term", urlAll);
-      if (urlAll) await loadAllTerms();
+      if (urlAll) await ensureSearchIndexLoaded();
     }
     buildSubjectChips();
     render();
+    if (urlCrn) focusCourseByCrn(urlCrn);
   }
 
   function updateUrl() {
@@ -277,6 +324,9 @@
     els.timeOfDaySelect.value !== "any" ? url.searchParams.set("time", els.timeOfDaySelect.value) : url.searchParams.delete("time");
     selectedDays.size ? url.searchParams.set("days", [...selectedDays].join(",")) : url.searchParams.delete("days");
     selectedSubjects.size ? url.searchParams.set("subj", [...selectedSubjects].join(",")) : url.searchParams.delete("subj");
+    // crn is only ever set by the explicit "copy link to this course" action
+    // (see copyCoursePermalink) - any other interaction invalidates it.
+    url.searchParams.delete("crn");
     history.replaceState(null, "", url);
   }
 
@@ -290,6 +340,29 @@
         els.shareBtn.classList.remove("is-copied");
       }, 1800);
     });
+  }
+
+  function copyCoursePermalink(btn, c) {
+    const url = new URL(location.href);
+    url.searchParams.set("term", c._term_code);
+    url.searchParams.set("crn", c.crn);
+    url.searchParams.delete("all"); // a course permalink means "go look at this one," not cross-term search
+    navigator.clipboard.writeText(url.toString()).then(() => {
+      const original = btn.textContent;
+      btn.textContent = "Link copied ✓";
+      setTimeout(() => { btn.textContent = original; }, 1800);
+    });
+  }
+
+  /** Finds a course row already in the DOM by CRN, expands it, and scrolls it into view. */
+  function focusCourseByCrn(crn) {
+    const row = [...els.results.querySelectorAll(".course")].find((el) => el.dataset.crn === crn);
+    if (!row) return false;
+    const summaryBtn = row.querySelector(".course-summary");
+    const detail = row.querySelector(".course-detail");
+    if (detail.hasAttribute("hidden")) summaryBtn.click();
+    row.scrollIntoView({ behavior: "smooth", block: "center" });
+    return true;
   }
 
   // ---------------------------------------------------------------------
@@ -382,25 +455,28 @@
     return index.find((t) => t.term_code === termCode)?.term_label ?? termCode;
   }
 
-  async function loadAllTerms() {
-    const missing = index.filter((t) => !termCache.has(t.term_code));
-    if (missing.length > 0) {
-      els.loadProgress.hidden = false;
-      els.loadProgress.max = missing.length;
-      els.loadProgress.value = 0;
-    }
-    for (let i = 0; i < missing.length; i++) {
-      setStatus(`Loading all terms for search… ${i + 1}/${missing.length} (${missing[i].term_label})`);
-      await ensureTermLoaded(missing[i].term_code);
-      els.loadProgress.value = i + 1;
+  async function ensureSearchIndexLoaded() {
+    if (searchIndexCache) return searchIndexCache;
+    els.loadProgress.hidden = false;
+    els.loadProgress.removeAttribute("max"); // indeterminate - it's one request, not N
+    setStatus("Loading the full course index for cross-term search…");
+    try {
+      const res = await fetch(`${DATA_DIR}/search-index.json`);
+      const payload = await res.json();
+      searchIndexCache = payload.courses.map((c) => ({ ...c, _term_label: c.term_label, _term_code: c.term_code }));
+    } catch {
+      searchIndexCache = [];
+      setStatus("Couldn't load the cross-term search index.");
     }
     els.loadProgress.hidden = true;
+    els.loadProgress.max = 100;
     setStatus("");
+    return searchIndexCache;
   }
 
   async function onToggleSearchAll(e) {
     els.results.classList.toggle("is-cross-term", e.target.checked);
-    if (e.target.checked) await loadAllTerms();
+    if (e.target.checked) await ensureSearchIndexLoaded();
     selectedSubjects.clear();
     buildSubjectChips();
     render();
@@ -495,13 +571,7 @@
 
   function currentCourses() {
     if (els.searchAllToggle && els.searchAllToggle.checked) {
-      const all = [];
-      for (const t of index) {
-        const payload = termCache.get(t.term_code);
-        if (!payload) continue;
-        for (const c of payload.courses) all.push({ ...c, _term_label: t.term_label, _term_code: t.term_code });
-      }
-      return all;
+      return searchIndexCache || [];
     }
     const payload = termCache.get(currentTermCode);
     return payload ? payload.courses.map((c) => ({ ...c, _term_label: payload.term_label, _term_code: payload.term_code })) : [];
@@ -675,6 +745,10 @@
 
   function buildCourseRow(c, q) {
     const node = els.rowTemplate.content.cloneNode(true);
+    const article = node.querySelector(".course");
+    article.dataset.crn = c.crn;
+    article.dataset.term = c._term_code;
+
     const code = `${c.subject} ${c.course_number}-${c.section} (${c.crn})`;
     const meta = `${meetingSummary(c)} · ${c.instructor || "TBA"}`;
     node.querySelector(".course-code").innerHTML = highlight(code, q);
@@ -688,25 +762,80 @@
     badge.title = seatInfo.label;
 
     const detail = node.querySelector(".course-detail");
+    const descEl = node.querySelector(".course-description");
+    const factsEl = node.querySelector(".course-facts");
+    renderCourseDescription(descEl, c);
+    renderCourseFacts(factsEl, c);
+
     const summaryBtn = node.querySelector(".course-summary");
     const toggle = node.querySelector(".course-toggle");
-    summaryBtn.addEventListener("click", () => {
+    let hydrated = c.description !== undefined; // compact search-index rows omit long text fields
+    summaryBtn.addEventListener("click", async () => {
       const isHidden = detail.hasAttribute("hidden");
       if (isHidden) {
         detail.removeAttribute("hidden");
         toggle.textContent = "−";
+        if (!hydrated) {
+          hydrated = true;
+          descEl.textContent = "Loading full details…";
+          const full = await hydrateFullCourse(c);
+          if (full) {
+            Object.assign(c, full);
+            renderCourseDescription(descEl, c);
+            renderCourseFacts(factsEl, c);
+          } else {
+            descEl.remove();
+          }
+        }
       } else {
         detail.setAttribute("hidden", "");
         toggle.textContent = "＋";
       }
     });
 
-    if (c.description) {
-      node.querySelector(".course-description").textContent = c.description;
+    const historyBtn = node.querySelector(".course-history-btn");
+    historyBtn.addEventListener("click", () => showCourseHistory(c));
+
+    const instructorBtn = node.querySelector(".course-instructor-btn");
+    if (!c.instructor || /tba/i.test(c.instructor)) {
+      instructorBtn.remove();
     } else {
-      node.querySelector(".course-description").remove();
+      instructorBtn.addEventListener("click", () => showInstructorHistory(c.instructor));
     }
 
+    const trendBtn = node.querySelector(".course-trend-btn");
+    const trendBox = node.querySelector(".course-trend");
+    trendBtn.addEventListener("click", () => toggleSeatTrend(trendBtn, trendBox, c));
+
+    const permalinkBtn = node.querySelector(".course-permalink-btn");
+    permalinkBtn.addEventListener("click", () => copyCoursePermalink(permalinkBtn, c));
+
+    const addBtn = node.querySelector(".add-schedule-btn");
+    const key = scheduleKey(c._term_code, c.crn);
+    setAddBtnState(addBtn, isInSchedule(key));
+    addBtn.addEventListener("click", () => {
+      if (isInSchedule(key)) {
+        removeFromSchedule(key);
+      } else {
+        addToSchedule(c);
+      }
+      setAddBtnState(addBtn, isInSchedule(key));
+    });
+
+    return node;
+  }
+
+  function renderCourseDescription(descEl, c) {
+    if (c.description) {
+      descEl.textContent = c.description;
+      descEl.hidden = false;
+    } else {
+      descEl.hidden = true;
+    }
+  }
+
+  function renderCourseFacts(dl, c) {
+    dl.innerHTML = "";
     const factsList = [
       ["Instructor", c.instructor || "TBA"],
       ["Open seats", c.open_seats || "—"],
@@ -716,7 +845,6 @@
     if (c.distribution_requirements) factsList.push(["Distribution", c.distribution_requirements]);
     if (c.gen_ed_requirements) factsList.push(["General education", c.gen_ed_requirements]);
 
-    const dl = node.querySelector(".course-facts");
     for (const [term, def] of factsList) {
       const dt = document.createElement("dt");
       dt.textContent = term;
@@ -738,30 +866,21 @@
       dl.appendChild(dt);
       dl.appendChild(dd);
     }
+  }
 
-    const historyBtn = node.querySelector(".course-history-btn");
-    historyBtn.addEventListener("click", () => showCourseHistory(c));
-
-    const instructorBtn = node.querySelector(".course-instructor-btn");
-    if (!c.instructor || /tba/i.test(c.instructor)) {
-      instructorBtn.remove();
-    } else {
-      instructorBtn.addEventListener("click", () => showInstructorHistory(c.instructor));
+  /**
+   * Compact search-index rows omit long text fields (description, reqs,
+   * bookstore link) to keep cross-term search fast. When someone actually
+   * expands such a row, fetch that one term's full file (cached after the
+   * first time via IndexedDB) and pull the matching CRN's full record.
+   */
+  async function hydrateFullCourse(c) {
+    try {
+      const payload = await ensureTermLoaded(c._term_code);
+      return payload.courses.find((course) => course.crn === c.crn) || null;
+    } catch {
+      return null;
     }
-
-    const addBtn = node.querySelector(".add-schedule-btn");
-    const key = scheduleKey(c._term_code, c.crn);
-    setAddBtnState(addBtn, isInSchedule(key));
-    addBtn.addEventListener("click", () => {
-      if (isInSchedule(key)) {
-        removeFromSchedule(key);
-      } else {
-        addToSchedule(c);
-      }
-      setAddBtnState(addBtn, isInSchedule(key));
-    });
-
-    return node;
   }
 
   function meetingSummary(c) {
@@ -811,21 +930,11 @@
   async function showCourseHistory(c) {
     els.historyTitle.textContent = `${c.subject} ${c.course_number} — every offering in the archive`;
     els.historyList.innerHTML = "";
-    els.historyStatus.textContent = "Loading every term…";
+    els.historyStatus.textContent = "Loading the course index…";
     els.historyDialog.showModal();
 
-    if (!els.searchAllToggle.checked) await loadAllTerms();
-
-    const matches = [];
-    for (const t of index) {
-      const payload = termCache.get(t.term_code);
-      if (!payload) continue;
-      for (const course of payload.courses) {
-        if (course.subject === c.subject && course.course_number === c.course_number) {
-          matches.push({ ...course, _term_label: t.term_label, _term_code: t.term_code });
-        }
-      }
-    }
+    const all = await ensureSearchIndexLoaded();
+    const matches = all.filter((course) => course.subject === c.subject && course.course_number === c.course_number);
     matches.sort((a, b) => (a._term_code < b._term_code ? 1 : -1));
     renderHistoryRows(matches, "This course hasn't appeared in any scraped term.");
   }
@@ -833,22 +942,12 @@
   async function showInstructorHistory(instructorName) {
     els.historyTitle.textContent = `Everything ${instructorName} has taught`;
     els.historyList.innerHTML = "";
-    els.historyStatus.textContent = "Loading every term…";
+    els.historyStatus.textContent = "Loading the course index…";
     els.historyDialog.showModal();
 
-    if (!els.searchAllToggle.checked) await loadAllTerms();
-
+    const all = await ensureSearchIndexLoaded();
     const needle = instructorName.trim().toLowerCase();
-    const matches = [];
-    for (const t of index) {
-      const payload = termCache.get(t.term_code);
-      if (!payload) continue;
-      for (const course of payload.courses) {
-        if ((course.instructor || "").trim().toLowerCase() === needle) {
-          matches.push({ ...course, _term_label: t.term_label, _term_code: t.term_code });
-        }
-      }
-    }
+    const matches = all.filter((course) => (course.instructor || "").trim().toLowerCase() === needle);
     matches.sort((a, b) => (a._term_code < b._term_code ? 1 : -1));
     renderHistoryRows(matches, "No other sections found for this instructor.");
   }
@@ -929,8 +1028,90 @@
   }
 
   // ---------------------------------------------------------------------
-  // Schedule builder + .ics export
+  // Seat-count trend (built from the same per-term change log)
   // ---------------------------------------------------------------------
+
+  async function toggleSeatTrend(btn, box, c) {
+    if (!box.hidden) {
+      box.hidden = true;
+      btn.textContent = "Show seat trend →";
+      return;
+    }
+    btn.textContent = "Loading trend…";
+    try {
+      const res = await fetch(`${DATA_DIR}/changes/${c._term_code}.jsonl`);
+      if (!res.ok) throw new Error("no change log for this term");
+      const text = (await res.text()).trim();
+      const lines = text ? text.split("\n").filter(Boolean) : [];
+      const prefix = `${c.subject} ${c.course_number}-${c.section} (${c.crn})`;
+      const points = [];
+      for (const line of lines) {
+        const entry = JSON.parse(line);
+        for (const sc of entry.seat_changes || []) {
+          if (!sc.course.startsWith(prefix)) continue;
+          const n = parseInt(sc.after, 10);
+          if (Number.isFinite(n)) points.push({ t: entry.timestamp, seats: n });
+        }
+      }
+      box.innerHTML = "";
+      if (points.length === 0) {
+        box.textContent = "No seat-count history recorded for this section yet.";
+      } else {
+        box.appendChild(buildSparkline(points));
+      }
+      box.hidden = false;
+      btn.textContent = "Hide seat trend";
+    } catch {
+      box.hidden = false;
+      box.textContent = "No seat-count history available for this section.";
+      btn.textContent = "Hide seat trend";
+    }
+  }
+
+  function buildSparkline(points) {
+    const W = 260;
+    const H = 48;
+    const PAD = 4;
+    const seats = points.map((p) => p.seats);
+    const min = Math.min(0, ...seats);
+    const max = Math.max(1, ...seats);
+    const xStep = points.length > 1 ? (W - PAD * 2) / (points.length - 1) : 0;
+    const y = (v) => H - PAD - ((v - min) / (max - min || 1)) * (H - PAD * 2);
+    const coords = points.map((p, i) => [PAD + i * xStep, y(p.seats)]);
+
+    const wrapper = document.createElement("div");
+    wrapper.className = "trend-chart";
+
+    const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+    svg.setAttribute("class", "trend-svg");
+
+    const polyline = document.createElementNS("http://www.w3.org/2000/svg", "polyline");
+    polyline.setAttribute("points", coords.map(([x, y2]) => `${x},${y2}`).join(" "));
+    polyline.setAttribute("class", "trend-line");
+    svg.appendChild(polyline);
+
+    coords.forEach(([x, y2], i) => {
+      const dot = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+      dot.setAttribute("cx", x);
+      dot.setAttribute("cy", y2);
+      dot.setAttribute("r", 2.2);
+      dot.setAttribute("class", "trend-dot");
+      const title = document.createElementNS("http://www.w3.org/2000/svg", "title");
+      title.textContent = `${new Date(points[i].t).toLocaleString()}: ${points[i].seats} seat${points[i].seats === 1 ? "" : "s"}`;
+      dot.appendChild(title);
+      svg.appendChild(dot);
+    });
+
+    const caption = document.createElement("p");
+    caption.className = "trend-caption";
+    caption.textContent = `${points.length} data point${points.length === 1 ? "" : "s"} · range ${min}–${max} seats`;
+
+    wrapper.append(svg, caption);
+    return wrapper;
+  }
+
+
 
   function loadSchedule() {
     try {
@@ -1101,6 +1282,10 @@
 
     els.exportCsvBtn.addEventListener("click", () => {
       downloadFile("my-mac-schedule.csv", "text/csv", buildCsv(mySchedule));
+    });
+
+    els.printScheduleBtn.addEventListener("click", () => {
+      window.print();
     });
 
     els.downloadIcsBtn.addEventListener("click", () => {

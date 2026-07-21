@@ -1,0 +1,56 @@
+name: Check registration calendar staleness
+
+# Runs monthly. If scraper/registration_windows.json is running low on
+# future entries, opens a reminder issue (reusing an existing open one
+# instead of spamming a new issue every month).
+on:
+  schedule:
+    - cron: "0 12 1 * *" # 12:00 UTC on the 1st of each month
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Check staleness
+        id: check
+        working-directory: scraper
+        run: python check_calendar_staleness.py
+
+      - name: Open or update reminder issue
+        if: steps.check.outputs.stale == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const message = `${{ steps.check.outputs.message }}`;
+            const title = "registration_windows.json needs the next academic year added";
+
+            const existing = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: "open",
+              labels: "calendar-maintenance",
+            });
+
+            if (existing.data.length > 0) {
+              console.log(`Open reminder issue already exists (#${existing.data[0].number}) - not creating another.`);
+              return;
+            }
+
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title,
+              body: `${message}\n\nEdit \`scraper/registration_windows.json\` and add the next academic year's registration and add/drop date ranges, then close this issue.`,
+              labels: ["calendar-maintenance"],
+            });

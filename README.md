@@ -75,6 +75,23 @@ to touch the parser.
 - **First-visit tip**: a one-time dismissible banner pointing out the
   schedule builder, since it isn't otherwise obvious on first glance.
 - **"/" keyboard shortcut** jumps focus to the search box.
+- **Fast cross-term search**: instead of fetching 100+ term files one at a
+  time, "search every term" fetches a single compact `data/search-index.json`
+  (identity/schedule fields only - no long text). Expanding a specific
+  section still lazy-loads that one term's full file (cached) for its
+  description and other details. Course/instructor history modals also use
+  this index, so they're instant rather than requiring every term loaded.
+- **Course permalinks**: "Copy link to this course" gives a `?term=&crn=`
+  link that auto-expands and scrolls to that exact section on load.
+- **Seat-count trend chart**: "Show seat trend" on a section renders a small
+  sparkline from that term's change log, if any history has accumulated.
+- **Light/dark theme toggle** (sun/moon button, top right), persisted.
+- **Installable / offline-capable** (PWA): a manifest + service worker cache
+  the app shell so it loads instantly and still works offline after a first
+  visit; data files are cached network-first so you get fresh data when
+  online and the last-seen data when you don't.
+- **Print support**: the schedule tray has a "Print" button that produces a
+  clean, chrome-free printout of just your added sections.
 
 All of this is plain HTML/CSS/JS with no build step and no external
 services beyond the static JSON files - nothing is sent anywhere; "My
@@ -104,6 +121,24 @@ actually exist** (this could only happen from a run made before this fix
 existed), no re-scraping is needed - run **Actions → "Rebuild index from
 existing data" → Run workflow**. It regenerates `index.json` purely by
 reading whatever term files are already on disk.
+
+### Other reliability features
+
+- **Randomized pacing**: delays between term requests are jittered (2-6s),
+  not a fixed interval, to look less like an obvious bot.
+- **Big-drop detection**: if a term's section count drops by more than half
+  in one scrape (but doesn't hit zero), it's still saved - courses do get
+  legitimately cancelled - but flagged as a `big_drop` problem for review.
+- **Automatic issue on scrape problems**: if any `zero_result_failure` or
+  `big_drop` is flagged during a scheduled scrape or backfill run, a GitHub
+  Issue is opened automatically (labeled `scrape-problem`) summarizing what
+  happened and linking to the run.
+- **Calendar staleness reminder**: a monthly workflow
+  (`check-calendar-staleness.yml`) checks whether
+  `registration_windows.json` is running low on future entries and opens a
+  reminder issue (labeled `calendar-maintenance`) if so, rather than the
+  scraper silently reverting to its default daily-only cadence with nobody
+  noticing.
 
 ## Data format
 
@@ -149,6 +184,17 @@ reading whatever term files are already on disk.
 Terms with zero sections found (not offered that year - e.g. most
 Summer II/III terms) simply don't get a file and don't appear in
 `index.json`. That's expected, not an error.
+
+### `data/search-index.json`
+
+A single compact file covering every course section across every term -
+just the identity/scheduling fields (subject, number, section, CRN, title,
+meetings, instructor, seats), not the long text fields (description,
+requirements, bookstore link). This is what powers "search every term" and
+the course/instructor history modals without the web app having to fetch
+100+ separate term files. It's rebuilt from scratch (via `indexing.py`,
+shared by `run.py` and `rebuild_index.py`) every time either of those runs,
+so it can't drift out of sync with the real per-term files.
 
 ### Change log (`data/changes/<code>.jsonl`)
 

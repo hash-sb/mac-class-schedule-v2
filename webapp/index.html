@@ -4,6 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mac Course Archive · Macalester Class Schedules, 2008–</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#10141c">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,6 +17,7 @@
     <h1>The Course Archive</h1>
     <p class="tagline">Every schedule Macalester has published, Fall&nbsp;2008 to the term after next.</p>
   </div>
+  <button type="button" class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark theme">☀</button>
 </header>
 
 <nav class="era-strip" id="eraStrip" aria-label="Jump to academic year">
@@ -132,6 +136,7 @@
   <div id="scheduleConflicts" class="schedule-conflicts" hidden></div>
   <div id="scheduleList" class="schedule-list"><!-- populated by app.js --></div>
   <div class="dialog-actions">
+    <button type="button" class="link-btn" id="printScheduleBtn">Print</button>
     <button type="button" class="link-btn" id="exportCsvBtn">Export as CSV</button>
     <button type="button" class="primary-btn" id="exportIcsBtn">Export as calendar (.ics)</button>
   </div>
@@ -183,8 +188,11 @@
       <div class="course-actions">
         <button type="button" class="link-btn course-history-btn">See every offering of this course →</button>
         <button type="button" class="link-btn course-instructor-btn">See everything this instructor has taught →</button>
+        <button type="button" class="link-btn course-trend-btn">Show seat trend →</button>
+        <button type="button" class="link-btn course-permalink-btn">Copy link to this course</button>
         <button type="button" class="add-schedule-btn">+ Add to my schedule</button>
       </div>
+      <div class="course-trend" hidden></div>
     </div>
   </article>
 </template>

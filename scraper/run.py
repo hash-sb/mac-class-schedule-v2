@@ -1,6 +1,8 @@
 """
-Orchestrates scraping one or more terms and writing out data/<code>.json plus
-a data/index.json manifest that the web app reads.
+Orchestrates scraping one or more terms and writing out data/<code>.json,
+data/index.json, and data/search-index.json (the last two are always
+rebuilt from whatever term files actually exist on disk - see indexing.py -
+so they can never drift out of sync with the real data).
 
 Usage:
     python run.py --mode backfill              # every term, Fall 2008 -> now+1yr
@@ -11,12 +13,15 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
+import random
 import subprocess
 import sys
 import time
 from datetime import datetime, timezone
 from pathlib import Path
 
+import indexing
 from parser import parse_schedule_html
 from render import render_term_html
 from terms import Term, active_terms, all_terms
@@ -24,9 +29,19 @@ from terms import Term, active_terms, all_terms
 DATA_DIR = Path(__file__).parent.parent / "data"
 CHANGES_DIR = DATA_DIR / "changes"
 REPO_ROOT = Path(__file__).parent.parent
-POLITE_DELAY_SECONDS = 3
+PROBLEMS_FILE = Path(__file__).parent / ".scrape_problems.json"  # ephemeral - never committed (only data/ is)
+MIN_DELAY_SECONDS = 2.0
+MAX_DELAY_SECONDS = 6.0  # randomized, rather than a fixed pace, to look less like an obvious bot
 MAX_ATTEMPTS = 3
 MAX_CHANGE_ENTRIES_PER_TERM = 200  # cap so the log doesn't grow forever over years of runs
+BIG_DROP_THRESHOLD = 0.5  # flag (but still save) a term whose section count more than halves run-to-run
+
+PROBLEMS: list[dict] = []
+
+
+def _flag_problem(term: Term, kind: str, message: str) -> None:
+    print(f"  {kind.upper()} for {term.code} ({term.label}): {message}", file=sys.stderr)
+    PROBLEMS.append({"term": term.code, "label": term.label, "type": kind, "message": message})
 
 
 def checkpoint_commit(message: str) -> None:
@@ -114,6 +129,11 @@ def write_term_file(term: Term, courses: list[dict]) -> dict | None:
     completely untouched rather than clobbering good data with an empty
     result. Returns None in that case so the caller knows not to touch
     index.json for this term either.
+
+    A less extreme drop (still >0 results, but more than BIG_DROP_THRESHOLD
+    smaller than before) is still saved - courses genuinely do get cancelled
+    - but it's flagged as a problem to review, since a partial render could
+    also produce this shape of result.
     """
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     path = DATA_DIR / f"{term.code}.json"
@@ -125,14 +145,24 @@ def write_term_file(term: Term, courses: list[dict]) -> dict | None:
         except (json.JSONDecodeError, OSError) as e:
             print(f"  warning: couldn't read previous {term.code}.json: {e}", file=sys.stderr)
 
-    if len(courses) == 0 and old_payload and old_payload.get("course_count", 0) > 0:
-        print(
-            f"  SUSPECTED SCRAPE FAILURE for {term.code} ({term.label}): got 0 sections but the "
-            f"existing snapshot has {old_payload['course_count']}. Leaving the existing file and "
-            f"index entry untouched rather than overwriting good data with an empty result.",
-            file=sys.stderr,
+    old_count = old_payload.get("course_count", 0) if old_payload else 0
+
+    if len(courses) == 0 and old_count > 0:
+        _flag_problem(
+            term,
+            "zero_result_failure",
+            f"got 0 sections but the existing snapshot has {old_count}. Leaving the existing file "
+            "and index entry untouched rather than overwriting good data with an empty result.",
         )
         return None
+
+    if old_count >= 10 and len(courses) < old_count * BIG_DROP_THRESHOLD:
+        _flag_problem(
+            term,
+            "big_drop",
+            f"section count dropped from {old_count} to {len(courses)} (more than {int(BIG_DROP_THRESHOLD*100)}%) "
+            "in one scrape. Saved anyway (courses can legitimately be cancelled), but worth a manual look.",
+        )
 
     if old_payload:
         diff = compute_diff(old_payload.get("courses", []), courses)
@@ -149,43 +179,6 @@ def write_term_file(term: Term, courses: list[dict]) -> dict | None:
     return payload
 
 
-def update_index(term_payloads: dict[str, dict]) -> None:
-    """
-    Merges freshly-scraped term summaries into the existing index.json so a
-    partial/incremental run doesn't wipe out terms it didn't touch this time.
-    """
-    index_path = DATA_DIR / "index.json"
-    existing = {}
-    if index_path.exists():
-        existing = {t["term_code"]: t for t in json.loads(index_path.read_text())["terms"]}
-
-    for code, payload in term_payloads.items():
-        if payload["course_count"] == 0:
-            # Term not offered (or nothing found) - don't advertise a data file
-            # for it, but do remember we checked, so future incremental runs
-            # can decide whether it's worth re-checking (e.g. newly-announced
-            # future term) without a human having to notice.
-            existing.pop(code, None)
-            continue
-        existing[code] = {
-            "term_code": payload["term_code"],
-            "term_label": payload["term_label"],
-            "course_count": payload["course_count"],
-            "scraped_at": payload["scraped_at"],
-        }
-
-    terms_sorted = sorted(existing.values(), key=lambda t: t["term_code"])
-    index_path.write_text(
-        json.dumps(
-            {
-                "generated_at": datetime.now(timezone.utc).isoformat(),
-                "terms": terms_sorted,
-            },
-            indent=2,
-        )
-    )
-
-
 def run(terms: list[Term], commit_every: int = 0) -> None:
     written = 0
     for i, term in enumerate(terms, 1):
@@ -197,25 +190,33 @@ def run(terms: list[Term], commit_every: int = 0) -> None:
             continue
         payload = write_term_file(term, courses)
         if payload is None:
-            # Suspected scrape failure - write_term_file already logged why.
-            # Leave this term's existing index entry exactly as it was.
-            continue
-        # Update index.json after EVERY term, not just once at the end. If
-        # this run gets interrupted (timeout, cancellation, a crash on a
-        # later term), every term scraped so far is still correctly listed -
-        # nothing is lost just because the run didn't finish.
-        update_index({term.code: payload})
+            continue  # suspected failure - write_term_file already logged + flagged it
+
+        # index.json is always fully rebuilt from whatever's on disk, not
+        # incrementally patched - so it can never drift from the real files,
+        # even if this run gets interrupted right after this line.
+        indexing.write_index_json(DATA_DIR)
         written += 1
         print(f"  -> {payload['course_count']} sections")
 
         if commit_every and written % commit_every == 0:
+            indexing.write_search_index_json(DATA_DIR)  # rebuilt at each checkpoint, not every term (it's the pricier one)
             checkpoint_commit(f"Scrape checkpoint: {written}/{len(terms)} terms ({term.code})")
 
-        time.sleep(POLITE_DELAY_SECONDS)
+        time.sleep(random.uniform(MIN_DELAY_SECONDS, MAX_DELAY_SECONDS))
 
+    indexing.write_search_index_json(DATA_DIR)
     if commit_every:
         checkpoint_commit(f"Scrape checkpoint: final ({written} terms written/updated)")
     print(f"Done. {written} terms written/updated.")
+
+    if PROBLEMS:
+        PROBLEMS_FILE.write_text(json.dumps(PROBLEMS, indent=2))
+        print(f"{len(PROBLEMS)} problem(s) flagged this run - see {PROBLEMS_FILE.name}", file=sys.stderr)
+    github_output = os.environ.get("GITHUB_OUTPUT")
+    if github_output:
+        with open(github_output, "a") as f:
+            f.write(f"had_problems={'true' if PROBLEMS else 'false'}\n")
 
 
 def main():

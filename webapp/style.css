@@ -18,6 +18,20 @@
   --font-mono: 'IBM Plex Mono', 'SF Mono', monospace;
 }
 
+html[data-theme="light"] {
+  --ink-950: #f7f4ec;
+  --ink-900: #ffffff;
+  --ink-800: #efe9d9;
+  --ink-700: #ded5bc;
+  --ink-600: #c7bb9c;
+  --paper: #201d17;
+  --paper-dim: #6e6552;
+  --amber: #a8701f;
+  --amber-bright: #8a5912;
+  --teal: #316f69;
+  --rule: rgba(32, 29, 23, 0.14);
+}
+
 * { box-sizing: border-box; }
 
 html { scroll-behavior: smooth; }
@@ -41,7 +55,25 @@ a { color: var(--amber-bright); }
     radial-gradient(ellipse 900px 400px at 15% -20%, rgba(217,164,65,0.14), transparent 60%),
     var(--ink-950);
   border-bottom: 1px solid var(--rule);
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 1rem;
 }
+
+.theme-toggle {
+  flex: none;
+  background: var(--ink-800);
+  border: 1px solid var(--ink-600);
+  color: var(--paper);
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  cursor: pointer;
+  line-height: 1;
+}
+.theme-toggle:hover { border-color: var(--amber); }
 
 .wordmark { max-width: 62rem; margin: 0 auto; }
 
@@ -734,4 +766,51 @@ dialog.tray-dialog::backdrop { background: rgba(0,0,0,0.6); }
 .schedule-item.has-conflict {
   border-color: #d97f7f;
   background: rgba(217, 127, 127, 0.08);
+}
+
+/* ---------- seat-count trend chart ---------- */
+
+.trend-chart {
+  margin-top: 0.6rem;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  background: var(--ink-900);
+}
+.trend-svg { width: 100%; height: 48px; display: block; }
+.trend-line { fill: none; stroke: var(--amber); stroke-width: 1.5; }
+.trend-dot { fill: var(--amber-bright); }
+.trend-caption {
+  margin: 0.4rem 0 0;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--paper-dim);
+}
+
+/* ---------- print ---------- */
+
+@media print {
+  body > *:not(#scheduleDialog) { display: none !important; }
+  .schedule-fab { display: none !important; }
+
+  #scheduleDialog[open] {
+    position: static !important;
+    display: block !important;
+    width: 100% !important;
+    max-height: none !important;
+    max-width: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    color: #000 !important;
+    background: #fff !important;
+  }
+  #scheduleDialog::backdrop { display: none !important; }
+  #scheduleDialog .dialog-close,
+  #scheduleDialog .dialog-actions,
+  #scheduleConflicts { display: none !important; }
+  #scheduleDialog .schedule-item-remove { display: none !important; }
+  #scheduleDialog .schedule-item { border-color: #999 !important; break-inside: avoid; }
+  #scheduleDialog .schedule-item-code { color: #000 !important; }
+  #scheduleDialog .schedule-item-meta { color: #333 !important; }
 }
