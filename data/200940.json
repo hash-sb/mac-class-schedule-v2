@@ -1,0 +1,31 @@
+{
+  "term_code": "200940",
+  "term_label": "Summer I 2009",
+  "scraped_at": "2026-07-20T23:45:29.545122+00:00",
+  "course_count": 1,
+  "courses": [
+    {
+      "crn": "40002",
+      "subject": "PHYS",
+      "subject_name": "Physics and Astronomy",
+      "course_number": "221",
+      "section": "01",
+      "title": "Introductory Physics I",
+      "meetings": [
+        {
+          "days": "TBA",
+          "time": "",
+          "room": ""
+        }
+      ],
+      "instructor": "Sung Kyu Kim",
+      "open_seats": "37",
+      "max_enrollment": "100",
+      "crosslistings": [],
+      "description": "Mechanics, heat and sound, including laboratory experiments and extensive demonstrations. Daily lectures and help sessions, three two-hour laboratories per week. Students cannot receive credit for both Physics 221 and Physics 226. Summer Physics Institute only (June 4¿June 29). (4 credits)",
+      "distribution_requirements": "",
+      "gen_ed_requirements": "",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27200940%27%20dept=%20%27PHYS%27%20num=%27221%27%20sect=%2701%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    }
+  ]
+}

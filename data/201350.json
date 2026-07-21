@@ -1,0 +1,62 @@
+{
+  "term_code": "201350",
+  "term_label": "Summer II 2013",
+  "scraped_at": "2026-07-20T23:52:56.640718+00:00",
+  "course_count": 2,
+  "courses": [
+    {
+      "crn": "50002",
+      "subject": "GEOG",
+      "subject_name": "Geography",
+      "course_number": "662",
+      "section": "01",
+      "title": "Tech/Common Core Stds HS Geog",
+      "meetings": [
+        {
+          "days": "TBA",
+          "time": "",
+          "room": ""
+        }
+      ],
+      "instructor": "David Lanegran",
+      "open_seats": "5",
+      "max_enrollment": "30",
+      "crosslistings": [
+        "Authentic Pedagog for Integrating Instruction Technology",
+        "the Common Core Standards",
+        "the New Minnesota Academic Standards for Geography for High School Teachers"
+      ],
+      "description": "This class is focused on ways to use backwards design to develop course material that will enhance course offering in Human Geography at the High School level. Class sessions will focus on the integration geo-technology especially on-line GIS software, writing skills, thematic geography and authentic pedagogy in to the High School curriculum. It is designed for in-service classroom teachers. 2 semester credits or equivalent CEUs.",
+      "distribution_requirements": "",
+      "gen_ed_requirements": "",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27201350%27%20dept=%20%27GEOG%27%20num=%27662%27%20sect=%2701%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50003",
+      "subject": "GEOG",
+      "subject_name": "Geography",
+      "course_number": "663",
+      "section": "01",
+      "title": "Tech/Common Core Stnds MS Geog",
+      "meetings": [
+        {
+          "days": "TBA",
+          "time": "",
+          "room": ""
+        }
+      ],
+      "instructor": "David Lanegran",
+      "open_seats": "3",
+      "max_enrollment": "30",
+      "crosslistings": [
+        "Authentic Pedagogy for Integrating Instructional Techonology",
+        "the Common Core Standards",
+        "the New Minnesota Academic Standards for Geography for Middlw School Teachers"
+      ],
+      "description": "This class is focused on ways to integrate geo-technology, writing skills regional geography content on major world regions (Asia, Africa, and Latin America); and the linkages among the lives of their students and other parts of the world and authentic pedagogy in to the middle school curriculum. There will special training on the use of Google Earth in the classroom. It is designed for in-service classroom teachers. 2 semester credits or equivalent CEUs.",
+      "distribution_requirements": "",
+      "gen_ed_requirements": "",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27201350%27%20dept=%20%27GEOG%27%20num=%27663%27%20sect=%2701%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    }
+  ]
+}

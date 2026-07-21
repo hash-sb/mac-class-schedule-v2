@@ -1,0 +1,2430 @@
+{
+  "term_code": "202150",
+  "term_label": "Summer II 2021",
+  "scraped_at": "2026-07-21T00:07:55.991099+00:00",
+  "course_count": 96,
+  "courses": [
+    {
+      "crn": "50062",
+      "subject": "AMST",
+      "subject_name": "American Studies",
+      "course_number": "194",
+      "section": "01",
+      "title": "Shared Legacies, Disparate Journeys: Brazil and the U.S. Since the Abolition of Slavery",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "1:45 - 3:00 pm",
+          "room": "THEATR 205"
+        }
+      ],
+      "instructor": "J. Ernesto Ortiz Díaz",
+      "open_seats": "7",
+      "max_enrollment": "27",
+      "crosslistings": [
+        "Mode of Instruction: Hybrid; cross-listed with LATI 194-01",
+        "PORT 194-01"
+      ],
+      "description": "Varies by semester. Consult the department or class schedule for current listing.",
+      "distribution_requirements": "Humanities",
+      "gen_ed_requirements": "Internationalism or U.S. Identities and Differences, Writing WA",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27AMST%27%20num=%27194%27%20sect=%2701%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50081",
+      "subject": "AMST",
+      "subject_name": "American Studies",
+      "course_number": "194",
+      "section": "02",
+      "title": "Ethnic Studies and Campus Activism",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "3:15 - 4:30 pm",
+          "room": ""
+        }
+      ],
+      "instructor": "Duchess HarrisHana Dinku",
+      "open_seats": "0",
+      "max_enrollment": "20",
+      "crosslistings": [
+        "Mode of Instruction: Remote; permission of instructor required"
+      ],
+      "description": "In the United States, the field of ethnic studies evolved out of student activism. Most disciplines began in the Academy and have stayed in the Academy. Ethnic Studies is different. The Civil Rights Movement during the 1960s and early 1970s, contributed to growing self-awareness and radicalization of people of color such as African-Americans, Asian Americans, Latino Americans, and Indigenous People. Ethnic studies departments were established on college campuses across the country and have grown to encompass African American Studies, Asian American Studies, Chicano Studies, and Native American Studies. What is the history of Ethnic Studies at Macalester College? Also how does this knowledge transpire in communiversities in the Twin Cities, such as Nu Skool? This course will teach students how student and community activism have led to the creation of ethnic studies departments on college campuses; and will provide students an opportunity to explore the tools and strategies utilized in these movements.",
+      "distribution_requirements": "Humanities",
+      "gen_ed_requirements": "",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27AMST%27%20num=%27194%27%20sect=%2702%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50102",
+      "subject": "AMST",
+      "subject_name": "American Studies",
+      "course_number": "271",
+      "section": "01",
+      "title": "Uses and Abuses: Drugs, Addiction and Recovery",
+      "meetings": [
+        {
+          "days": "M W F",
+          "time": "11:00 - 1:30 pm",
+          "room": ""
+        }
+      ],
+      "instructor": "Amy Sullivan",
+      "open_seats": "Closed 10",
+      "max_enrollment": "25",
+      "crosslistings": [
+        "Mode of Instruction: Remote; cross-listed with HIST 271-01"
+      ],
+      "description": "After a brief but essential global history of drugs, this course will focus primarily on the 20th century to the present. We will examine histories of substance use and abuse, temperance and prohibition, the \"War on Drugs,\" the shifting concept of addiction as a moral failing to addiction as a treatable disease, as well as study the history of the recovery movement and harm reduction. This course is not intended to be an exhaustive, comprehensive history of the subject-but it will provide you with a solid base from which to explore other aspects of this fascinating and contentious aspect of human history.",
+      "distribution_requirements": "Humanities",
+      "gen_ed_requirements": "U.S Identities and Differences",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27AMST%27%20num=%27271%27%20sect=%2701%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50001",
+      "subject": "AMST",
+      "subject_name": "American Studies",
+      "course_number": "294",
+      "section": "10",
+      "title": "Make Love Not War: From Vietnam to Pleasure Activism",
+      "meetings": [
+        {
+          "days": "MTWR",
+          "time": "7:00 - 8:45 pm",
+          "room": "THEATR 202"
+        }
+      ],
+      "instructor": "Karin Aguilar-San Juan",
+      "open_seats": "Closed 10",
+      "max_enrollment": "30",
+      "crosslistings": [
+        "Mode of Instruction: Hybrid"
+      ],
+      "description": "In this course we will discuss today’s social justice movements in the light of the Vietnam antiwar and countercultural movements of the 1960s and 70s. Giving voice to the experience of Black, Indigenous, Southeast Asian refugee, and immigrant communities--in St. Paul and elsewhere--will ground the course in multicultural, anti-racist, life-affirming language and ideas. Activities and events will build intergenerational and cross-cultural dialogue with people outside of the course. Key sources will include Aaron Sorkin’s film \"Trial of the Chicago 7,\" my co-edited book \"The People Make the Peace: Lessons from the Vietnam Antiwar Movement\" and Adrienne Maree Brown’s book \"Pleasure Activism.\"",
+      "distribution_requirements": "Humanities",
+      "gen_ed_requirements": "U.S Identities and Differences",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27AMST%27%20num=%27294%27%20sect=%2710%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50002",
+      "subject": "ANTH",
+      "subject_name": "Anthropology",
+      "course_number": "115",
+      "section": "02",
+      "title": "Biological Anthropology",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "9:30 - 10:45 am",
+          "room": ""
+        }
+      ],
+      "instructor": "Scott Legge",
+      "open_seats": "Closed 2",
+      "max_enrollment": "18",
+      "crosslistings": [
+        "Mode of Instruction: Remote; course reserved for incoming first years"
+      ],
+      "description": "This class is a broad survey covering topics such as genetics, evolutionary mechanisms, adaptation, primate studies, the human fossil record, and human variation. All of these areas will be placed within the framework of the interaction of humans within their environment. The course is divided into three sections: human genetics, human ecology and primatology, human evolution and adaptation.",
+      "distribution_requirements": "Natural science and mathematics",
+      "gen_ed_requirements": "Quantitative Thinking Q1",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27ANTH%27%20num=%27115%27%20sect=%2702%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50086",
+      "subject": "ANTH",
+      "subject_name": "Anthropology",
+      "course_number": "194",
+      "section": "02",
+      "title": "Culture, Film and Photography: An Introduction to Visual Anthropology",
+      "meetings": [
+        {
+          "days": "MTWR",
+          "time": "7:00 - 8:45 pm",
+          "room": ""
+        }
+      ],
+      "instructor": "Katie Nelson",
+      "open_seats": "19",
+      "max_enrollment": "30",
+      "crosslistings": [
+        "Mode of Instruction: Remote"
+      ],
+      "description": "In this course we explore ethnographic film and how anthropologists portray other peoples’ lives visually. Each week we watch ethnographic films from throughout the world that shape the discipline of visual anthropology. Films are followed by a discussion of how the subject matter is represented and interpreted, whose voices are included, and whose authority is present, among other perspectives. We also explore new forms of visual ethnographic self-representation and how photography and film can be used as a form of advocacy. As a final project, students use photography or video to produce their own ethnographic expression (using the technology they have available) and interpret the work of another student. There are no prerequisites for this course.",
+      "distribution_requirements": "Social science",
+      "gen_ed_requirements": "Internationalism",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27ANTH%27%20num=%27194%27%20sect=%2702%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50003",
+      "subject": "ANTH",
+      "subject_name": "Anthropology",
+      "course_number": "253",
+      "section": "01",
+      "title": "Comparative Muslim Cultures",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "1:45 - 3:00 pm",
+          "room": "ARTCOM 202"
+        }
+      ],
+      "instructor": "Jenna Rice Rahaim",
+      "open_seats": "Closed 8",
+      "max_enrollment": "20",
+      "crosslistings": [
+        "Mode of Instruction: Hybrid; cross-listed with INTL 253-01"
+      ],
+      "description": "This course is an introduction to the diverse lifeways of Muslims around the world, looking at how understandings and practice of Islam are shaped by social, economic, and political factors. It examines the Qur’an and hadith, and other authoritative texts that ground Islamic jurisprudence, and explores the diverse ways in which Muslims have understood and interpreted these teachings in locations across the world-such as Indonesia, the Middle East, South Asia, Europe and the United States - and at various points in history. The specific focus may vary with each offering, responding to instructor expertise and focus, emerging and volatile situations worldwide, or new advances in the field.",
+      "distribution_requirements": "Social science",
+      "gen_ed_requirements": "Internationalism or U.S. Identities and Differences, Writing WP",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27ANTH%27%20num=%27253%27%20sect=%2701%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50005",
+      "subject": "ART",
+      "subject_name": "Art and Art History",
+      "course_number": "161",
+      "section": "02",
+      "title": "Art of the West II",
+      "meetings": [
+        {
+          "days": "M W F",
+          "time": "11:00 - 1:30 pm",
+          "room": "ARTCOM 102"
+        }
+      ],
+      "instructor": "Joanna Inglot",
+      "open_seats": "Closed 3",
+      "max_enrollment": "16",
+      "crosslistings": [
+        "Mode of Instruction: Hybrid"
+      ],
+      "description": "This course surveys artists and art movements that are generally perceived to be crucial in the development of Western art from the 14th through the 20th century. The course introduces students to art periods such as Renaissance, Mannerism, Baroque, Rococo, Neoclassicism, Romanticism, Realism, Impressionism, Post-Impressionism and a wide spectrum of modernist art movements, including Fauvism, Cubism, Dada, Surrealism, and Abstract Expressionism. The course examines visual culture of this broad period of Western art within political, socio-historical and philosophical context in which it was produced. (4 credits).",
+      "distribution_requirements": "Fine arts",
+      "gen_ed_requirements": "Internationalism",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27ART%27%20num=%27161%27%20sect=%2702%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50006",
+      "subject": "ART",
+      "subject_name": "Art and Art History",
+      "course_number": "233",
+      "section": "02",
+      "title": "Photography I",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "8:00 - 10:45 am",
+          "room": ""
+        }
+      ],
+      "instructor": "Eric Carroll",
+      "open_seats": "Closed 1",
+      "max_enrollment": "18",
+      "crosslistings": [
+        "Mode of Instruction: Remote"
+      ],
+      "description": "This course introduces the conceptual, technical, and historical aspects of photography within a fine-arts context. The emphasis throughout is on photography as a creative and expressive medium and will introduce strategies and methods related to this goal through assignments and class activities. Students will learn the foundational aspects of digital photography from manual camera operation to the editing of images through Adobe Lightroom and Photoshop. Along the way, students will be introduced to the digital workflow, the critique process, and how to take their images from screen to print. Presentations and assigned readings will help students develop the critical and creative skills needed to understand how artistic photographs function in society and culture. $75 materials fee charged for course to cover printer paper and ink. Note: A digital SLR camera is required for this course--students may be able to rent one from the department on a first-come, first-served basis.",
+      "distribution_requirements": "Fine arts",
+      "gen_ed_requirements": "",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27ART%27%20num=%27233%27%20sect=%2702%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50007",
+      "subject": "ART",
+      "subject_name": "Art and Art History",
+      "course_number": "294",
+      "section": "02",
+      "title": "Wild Clay",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "1:45 - 4:30 pm",
+          "room": "ART 113"
+        }
+      ],
+      "instructor": "Summer Hills-Bonczyk",
+      "open_seats": "Closed 3",
+      "max_enrollment": "16",
+      "crosslistings": [
+        "Mode of Instruction: Hybrid"
+      ],
+      "description": "When clay is fired in a kiln, it becomes ceramic - an art medium that has run parallel to human history for over 10,000 years. However, some contemporary clay artists have chosen to forgo kiln-firing entirely; elevating the soft, malleable and expressive properties of unfired clay to a new level of recognition in contemporary art practice. This hands-on, studio art class will invite students to explore the many ways that wet clay performs, narrates and becomes Art. Prioritizing engagement with the physical world and community, students will be encouraged to work outdoors, will be provided with tools to dig wild clay in their area, and create a public wet clay installation or performance. Readings and discussion will support creative practice and provide fuel for broader questions about art, craft, permanence and objecthood. Low-stakes journaling assignments will promote reflection, idea-development and document personal practice.",
+      "distribution_requirements": "Fine arts",
+      "gen_ed_requirements": "Writing WP",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27ART%27%20num=%27294%27%20sect=%2702%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50045",
+      "subject": "ASIA",
+      "subject_name": "Asian Studies",
+      "course_number": "275",
+      "section": "01",
+      "title": "The Rise of Modern China",
+      "meetings": [
+        {
+          "days": "MTWR",
+          "time": "8:00 - 9:45 pm",
+          "room": ""
+        }
+      ],
+      "instructor": "Yue Him Tam",
+      "open_seats": "7",
+      "max_enrollment": "20",
+      "crosslistings": [
+        "Mode of Instruction: Remote; cross-listed with HIST 275-01"
+      ],
+      "description": "A study of leading institutions and movements of nineteenth- and twentieth-century China. Major emphases include the impact of Western imperialism, the transformation of peasant society through revolution, the rise of Mao Tse-Tung, and the Great Proletarian Cultural Revolution. Special attention will be given to U.S.-China relations.",
+      "distribution_requirements": "Humanities",
+      "gen_ed_requirements": "Internationalism, Writing WP",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27ASIA%27%20num=%27275%27%20sect=%2701%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50008",
+      "subject": "BIOL",
+      "subject_name": "Biology",
+      "course_number": "170",
+      "section": "02",
+      "title": "Ecology and the Environment",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "8:00 - 11:30 am",
+          "room": ""
+        }
+      ],
+      "instructor": "Jerald Dosch",
+      "open_seats": "2",
+      "max_enrollment": "30",
+      "crosslistings": [
+        "Mode of Instruction: Remote; permission of instructor required; cross-listed with ENVI 170-01"
+      ],
+      "description": "This course dives into a range of topics to study how species, populations, communities, ecosystems, and biomes function in our changing climate. We will emphasize biological nutrient and energy cycling, population dynamics, animal and plant species interactions, disturbances and response to disturbances, and ecology in urban and agricultural landscapes. We will examine Ecology under four conceptual ’lenses’: Climate Change, Environmental Justice, Land Use, and Ecosystem Services. These lenses provide critical insight into how scientists, policy makers, land managers, and other stakeholders evaluate complex ecological and environmental systems. Labs will be field and data-based, and emphasize the development of hypotheses, novel data collection at Ordway Field Station, and statistical analysis. Three hours lecture and one three-hour laboratory each week.",
+      "distribution_requirements": "Natural science and mathematics",
+      "gen_ed_requirements": "Quantitative Thinking Q3",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27BIOL%27%20num=%27170%27%20sect=%2702%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50010",
+      "subject": "BIOL",
+      "subject_name": "Biology",
+      "course_number": "190",
+      "section": "03",
+      "title": "Genetics",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "8:00 - 11:30 am",
+          "room": "OLRI 250"
+        }
+      ],
+      "instructor": "Mary Montgomery",
+      "open_seats": "5",
+      "max_enrollment": "24",
+      "crosslistings": [
+        "Mode of Instruction: Hybrid; permission of instructor required"
+      ],
+      "description": "An introduction to the principles of genetics, including patterns of inheritance, structure and function of genetic material, flow of genetic information, and control of gene expression. This course also introduces students to the methodologies used in genetics research, such as gene mapping, gene expression techniques, DNA sequencing, introductory genomics, and gene manipulation. Bioethical and sociocultural issues that emerge from the applications of genetic concepts and methodologies are discussed. Three lecture hours and one three-hour laboratory each week.",
+      "distribution_requirements": "Natural science and mathematics",
+      "gen_ed_requirements": "Quantitative Thinking Q1",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27BIOL%27%20num=%27190%27%20sect=%2703%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50093",
+      "subject": "BIOL",
+      "subject_name": "Biology",
+      "course_number": "194",
+      "section": "02",
+      "title": "Being Human in STEM",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "1:45 - 3:00 pm",
+          "room": ""
+        }
+      ],
+      "instructor": "Devavani Chatterjea",
+      "open_seats": "Closed 3",
+      "max_enrollment": "20",
+      "crosslistings": [
+        "Mode of Instruction: Remote"
+      ],
+      "description": "Learning communities and workspaces in science, technology, engineering, and math (STEM) continue to be considerably less diverse than the world in which we are located. Black, Indigenous, and Persons of Color (BIPOC) scientists in the US and elsewhere face barriers that reflect the structural racisms of our society at large and those entrenched within STEM communities. Female-identifying, LGBTQ+, differently-abled persons, first-generation college students, and those holding other and intersectional marginalized identities experience different, and compounded, injustices in the sciences. To be the formidable scientific force we can and deserve to be, we must critically evaluate and change who is invited into the sciences, how science is done, and how scientific discoveries are distributed and used. In this seminar, we will examine our own stories of being human in our scientific pursuits, and collaboratively begin to assemble a toolkit of strategies and practices that will help us chart a path toward greater equity and inclusion in STEM. The tools we will use for this work include close reading, creative and analytical writing, active listening, conversation and team-based design of structural interventions to promote equity and inclusion.",
+      "distribution_requirements": "Natural science and mathematics",
+      "gen_ed_requirements": "U.S Identities and Differences",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27BIOL%27%20num=%27194%27%20sect=%2702%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50011",
+      "subject": "BIOL",
+      "subject_name": "Biology",
+      "course_number": "312",
+      "section": "01",
+      "title": "Microbiology",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "1:45 - 4:30 pm",
+          "room": ""
+        }
+      ],
+      "instructor": "Robin Shields-Cutler",
+      "open_seats": "3",
+      "max_enrollment": "20",
+      "crosslistings": [
+        "Mode of Instruction: Remote; permission of instructor required"
+      ],
+      "description": "This course is an introduction to the diverse field of microbiology, including prokaryotes, archaea, viruses, and eukaryotic microorganisms. We will explore the ways microbes interact with their environments, in particular their diverse and complex relationships with humans. The course includes regular discussion of primary literature and an emphasis on written and oral communication. Students will explore fundamental microbiology laboratory techniques and data analysis. Prerequisite(s): BIOL 170, BIOL 190 and BIOL 200; CHEM 211 recommended.",
+      "distribution_requirements": "Natural science and mathematics",
+      "gen_ed_requirements": "Writing WA",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27BIOL%27%20num=%27312%27%20sect=%2701%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50012",
+      "subject": "CHEM",
+      "subject_name": "Chemistry",
+      "course_number": "112",
+      "section": "05",
+      "title": "General Chemistry II: Energetics and Reactivity",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "8:00 - 11:30 am",
+          "room": "OLRI 350"
+        }
+      ],
+      "instructor": "Paul Fischer",
+      "open_seats": "4",
+      "max_enrollment": "18",
+      "crosslistings": [
+        "Mode of Instruction: Hybrid; $7 lab fee charged"
+      ],
+      "description": "This course provides an intuitive, yet rigorous, understanding of how energy is stored and transferred in chemical systems. We start with the behavior of individual atoms and molecules (using the foundation of atomic and molecular structure laid in CHEM 111 , and then build up to the macroscopic concepts of thermodynamics. We focus on free energy as a powerful tool for predicting physical and chemical behavior. We then apply our understanding of energetics to electrochemical systems and the rates of chemical reactions. Three lectures and one three-hour laboratory per week. Lab fee of $7 required. Prerequisite(s): CHEM 111 with a grade of C- or better, or satisfactory performance on a placement examination.",
+      "distribution_requirements": "Natural science and mathematics",
+      "gen_ed_requirements": "Quantitative Thinking Q2",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27CHEM%27%20num=%27112%27%20sect=%2705%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50013",
+      "subject": "CHEM",
+      "subject_name": "Chemistry",
+      "course_number": "222",
+      "section": "02",
+      "title": "Analytical Chemistry",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "8:00 - 11:30 am",
+          "room": "OLRI 301"
+        }
+      ],
+      "instructor": "Susan Green",
+      "open_seats": "11",
+      "max_enrollment": "24",
+      "crosslistings": [
+        "Mode of Instruction: Hybrid"
+      ],
+      "description": "This course uses key concepts of chemical equilibrium and structure to solve problems in chemical analysis. Lecture and laboratory work provide both the theoretical foundations and practical training in classical methods (gravimetric and volumetric analysis), atomic and molecular spectroscopy, and chromatography. Statistics and error analysis are also emphasized throughout the course. Three lectures and three hours of laboratory per week. Prerequisite(s): CHEM 112 with a grade of C- or better or CHEM 115 with a grade of C- or better.",
+      "distribution_requirements": "Natural science and mathematics",
+      "gen_ed_requirements": "",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27CHEM%27%20num=%27222%27%20sect=%2702%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50016",
+      "subject": "CLAS",
+      "subject_name": "Classical Mediterranean and Middle East",
+      "course_number": "332",
+      "section": "02",
+      "title": "Intermediate Latin II: Poetry",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "9:30 - 10:45 am",
+          "room": "MAIN 010"
+        }
+      ],
+      "instructor": "Nanette Goldman",
+      "open_seats": "6",
+      "max_enrollment": "16",
+      "crosslistings": [
+        "Mode of Instruction: Hybrid"
+      ],
+      "description": "A course in the poetic literature of the Republican and/or Augustan Ages with concentrated study on one or two authors. Students work toward grammatical and lexical mastery while learning about the forms, styles and cultural aspects of Latin poetry. Authors to be studied may include Plautus, Catullus, Horace, Vergil, or Ovid. May be repeated for credit. Prerequisite(s): CLAS 231or equivalent.",
+      "distribution_requirements": "Humanities",
+      "gen_ed_requirements": "Writing WA",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27CLAS%27%20num=%27332%27%20sect=%2702%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50072",
+      "subject": "COMP",
+      "subject_name": "Computer Science",
+      "course_number": "112",
+      "section": "03",
+      "title": "Introduction to Data Science",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "8:00 - 9:15 am",
+          "room": ""
+        }
+      ],
+      "instructor": "Lisa Lendway",
+      "open_seats": "Closed 1",
+      "max_enrollment": "30",
+      "crosslistings": [
+        "Mode of Instruction: Remote; cross-listed with STAT 112-01"
+      ],
+      "description": "This course provides an introduction to the handling, analysis, and interpretation of the big datasets now routinely being collected in science, commerce, and government. Students achieve facility with a sophisticated, technical computing environment. The course aligns with techniques being used in several courses in the natural and social sciences, statistics, and mathematics. The course is intended to be accessible to all students, regardless of background.",
+      "distribution_requirements": "Natural science and mathematics",
+      "gen_ed_requirements": "Quantitative Thinking Q2",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27COMP%27%20num=%27112%27%20sect=%2703%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50017",
+      "subject": "COMP",
+      "subject_name": "Computer Science",
+      "course_number": "123",
+      "section": "05",
+      "title": "Core Concepts in Computer Science",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "1:45 - 3:00 pm",
+          "room": "THEATR 200"
+        }
+      ],
+      "instructor": "Susan Fox",
+      "open_seats": "Closed 2",
+      "max_enrollment": "30",
+      "crosslistings": [
+        "Mode of Instruction: Hybrid"
+      ],
+      "description": "This course introduces the field of computer science, including central concepts such as the design and implementation of algorithms and programs, testing and analyzing programs, the representation of information within the computer, and the role of abstraction and metaphor in computer science. The exploration of these central ideas will draw examples from a range of application areas including multimedia processing, turtle graphics, and text processing. Course work will use the Python programming language.",
+      "distribution_requirements": "Natural science and mathematics",
+      "gen_ed_requirements": "",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27COMP%27%20num=%27123%27%20sect=%2705%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50018",
+      "subject": "COMP",
+      "subject_name": "Computer Science",
+      "course_number": "127",
+      "section": "04",
+      "title": "Object-Oriented Programming and Abstraction",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "8:00 - 11:30 am",
+          "room": "OLRI 256"
+        }
+      ],
+      "instructor": "Esra Kadioglu Urtis",
+      "open_seats": "0",
+      "max_enrollment": "16",
+      "crosslistings": [
+        "Mode of Instruction: Hybrid"
+      ],
+      "description": "What happens as software grows in complexity? How do we break a program into manageable pieces? How do we write readable, maintainable code? This course is an introduction to the building blocks of software design: abstraction, decomposition, and encapsulation. Using object-oriented programming in Java, we will create graphics, games, and simulations, and explore natural language processing. Topics may include: classes, objects, polymorphism, inheritance, testing, refactoring, events, closures, streams, immutability, parallel programming, and version control. The course culminates in a student-designed project. There is a required 1.5 hour laboratory section associated with this course. Prerequisite(s): COMP 123 or permission of instructor.",
+      "distribution_requirements": "Natural science and mathematics",
+      "gen_ed_requirements": "",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27COMP%27%20num=%27127%27%20sect=%2704%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50019",
+      "subject": "ECON",
+      "subject_name": "Economics",
+      "course_number": "119",
+      "section": "06",
+      "title": "Principles of Economics",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "1:45 - 3:00 pm",
+          "room": "CARN 305"
+        }
+      ],
+      "instructor": "Mario Solis-Garcia",
+      "open_seats": "16",
+      "max_enrollment": "25",
+      "crosslistings": [
+        "Mode of Instruction: Hybrid"
+      ],
+      "description": "A one-semester introduction to the basic tools of micro- and macroeconomic analysis. Microeconomics deals with consumers, firms, markets and income distribution. Macroeconomics deals with national income, employment, inflation and money. This course counts as a Group E elective.",
+      "distribution_requirements": "Social science",
+      "gen_ed_requirements": "Quantitative Thinking Q3, Writing WP",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27ECON%27%20num=%27119%27%20sect=%2706%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50020",
+      "subject": "ECON",
+      "subject_name": "Economics",
+      "course_number": "119",
+      "section": "07",
+      "title": "Principles of Economics",
+      "meetings": [
+        {
+          "days": "M W F",
+          "time": "11:00 - 1:30 pm",
+          "room": ""
+        }
+      ],
+      "instructor": "Lucas Threinen",
+      "open_seats": "16",
+      "max_enrollment": "25",
+      "crosslistings": [
+        "Mode of Instruction: Remote"
+      ],
+      "description": "A one-semester introduction to the basic tools of micro- and macroeconomic analysis. Microeconomics deals with consumers, firms, markets and income distribution. Macroeconomics deals with national income, employment, inflation and money. This course counts as a Group E elective.",
+      "distribution_requirements": "Social science",
+      "gen_ed_requirements": "Quantitative Thinking Q3",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27ECON%27%20num=%27119%27%20sect=%2707%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50111",
+      "subject": "ECON",
+      "subject_name": "Economics",
+      "course_number": "294",
+      "section": "02",
+      "title": "Philanthropy in Society",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "1:45 - 3:00 pm",
+          "room": ""
+        }
+      ],
+      "instructor": "Andrew Brown",
+      "open_seats": "8",
+      "max_enrollment": "25",
+      "crosslistings": [
+        "Mode of Instruction: Remote"
+      ],
+      "description": "If charitable giving were an industry, it would be one of the 25 largest in the U.S. by revenue. Philanthropy is vital to over 1.5 million not-for-profits and benefits all of us. This course will look at the role of philanthropy in society, how it works, and the benefits and drawbacks of philanthropic practices. We will look at the tax and legal aspects of giving and how organizations raise money, consider both the benefits and shortcomings of a society and economy that relies on a charitable sector, relate philanthropy to our own experiences and as part of the Macalester community, and have conversations with people engaged in various aspects of philanthropy, including not-for-profit executives, donors, and fundraisers. This course counts as an ECON B elective. No pre-requisites required.",
+      "distribution_requirements": "Social science",
+      "gen_ed_requirements": "",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27ECON%27%20num=%27294%27%20sect=%2702%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50022",
+      "subject": "ECON",
+      "subject_name": "Economics",
+      "course_number": "361",
+      "section": "05",
+      "title": "Intermediate Microeconomic Analysis",
+      "meetings": [
+        {
+          "days": "MTWR",
+          "time": "7:00 - 8:45 pm",
+          "room": ""
+        }
+      ],
+      "instructor": "Gabriel Lade",
+      "open_seats": "14",
+      "max_enrollment": "25",
+      "crosslistings": [
+        "Mode of Instruction: Remote"
+      ],
+      "description": "Methodology of economic science; theory of consumer behavior; theory of the firm; market structure and price determination; factor markets and income distribution; general equilibrium analysis; market failure. This course counts as a Group E elective. Prerequisite(s): MATH 135 or MATH 137, and one 200-level Economics course from Group E electives. Not open to first-year students except by permission of the instructor. C- or higher required for all prerequisites.",
+      "distribution_requirements": "Social science",
+      "gen_ed_requirements": "Quantitative Thinking Q3",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27ECON%27%20num=%27361%27%20sect=%2705%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50087",
+      "subject": "EDUC",
+      "subject_name": "Educational Studies",
+      "course_number": "220",
+      "section": "02",
+      "title": "Educational Psychology",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "9:30 - 10:45 am",
+          "room": ""
+        }
+      ],
+      "instructor": "Tina Kruse",
+      "open_seats": "Closed -2",
+      "max_enrollment": "25",
+      "crosslistings": [
+        "Mode of Instruction: Remote; cross-listed with PSYC 220-02"
+      ],
+      "description": "An introduction to theory and research in educational psychology. Topics include learning theory, learner characteristics, intelligence, creativity, motivation, measurement and evaluation, and models of teaching appropriate for diverse learners from early childhood through young adulthood. Students are required to complete observations in classroom settings.",
+      "distribution_requirements": "Social science",
+      "gen_ed_requirements": "Quantitative Thinking Q1",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27EDUC%27%20num=%27220%27%20sect=%2702%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50023",
+      "subject": "ENGL",
+      "subject_name": "English and Creative Writing",
+      "course_number": "150",
+      "section": "08",
+      "title": "Introduction to Creative Writing",
+      "meetings": [
+        {
+          "days": "M W F",
+          "time": "11:00 - 1:30 pm",
+          "room": ""
+        }
+      ],
+      "instructor": "Michael Prior",
+      "open_seats": "Closed 0",
+      "max_enrollment": "16",
+      "crosslistings": [
+        "Mode of Instruction: Remote; course reserved for incoming first years"
+      ],
+      "description": "This workshop-based course focuses on the development of skills for writing poetry, short fiction, and/or creative nonfiction through a close study of the techniques involved in these forms, analysis of model literary works, and frequent writing exercises that will be workshopped. This course must be completed at Macalester as a PREREQUISITE for the further study of creative writing at Macalester.",
+      "distribution_requirements": "Fine arts",
+      "gen_ed_requirements": "Writing WC",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27ENGL%27%20num=%27150%27%20sect=%2708%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50024",
+      "subject": "ENGL",
+      "subject_name": "English and Creative Writing",
+      "course_number": "150",
+      "section": "09",
+      "title": "Introduction to Creative Writing",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "3:15 - 4:30 pm",
+          "room": "CARN 304"
+        }
+      ],
+      "instructor": "Sally Franson",
+      "open_seats": "Closed 4",
+      "max_enrollment": "16",
+      "crosslistings": [
+        "Mode of Instruction: Hybrid"
+      ],
+      "description": "This workshop-based course focuses on the development of skills for writing poetry, short fiction, and/or creative nonfiction through a close study of the techniques involved in these forms, analysis of model literary works, and frequent writing exercises that will be workshopped. This course must be completed at Macalester as a PREREQUISITE for the further study of creative writing at Macalester.",
+      "distribution_requirements": "Fine arts",
+      "gen_ed_requirements": "Writing WC",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27ENGL%27%20num=%27150%27%20sect=%2709%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50025",
+      "subject": "ENGL",
+      "subject_name": "English and Creative Writing",
+      "course_number": "150",
+      "section": "10",
+      "title": "Introduction to Creative Writing",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "1:45 - 3:00 pm",
+          "room": "ARTCOM 102"
+        }
+      ],
+      "instructor": "Melissa Cundieff",
+      "open_seats": "Closed 2",
+      "max_enrollment": "18",
+      "crosslistings": [
+        "Mode of Instruction: Hybrid"
+      ],
+      "description": "This workshop-based course focuses on the development of skills for writing poetry, short fiction, and/or creative nonfiction through a close study of the techniques involved in these forms, analysis of model literary works, and frequent writing exercises that will be workshopped. This course must be completed at Macalester as a PREREQUISITE for the further study of creative writing at Macalester.",
+      "distribution_requirements": "Fine arts",
+      "gen_ed_requirements": "Writing WC",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27ENGL%27%20num=%27150%27%20sect=%2710%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50120",
+      "subject": "ENGL",
+      "subject_name": "English and Creative Writing",
+      "course_number": "194",
+      "section": "02",
+      "title": "Reading Plays: Latinx and Latin American Theater",
+      "meetings": [
+        {
+          "days": "M W F",
+          "time": "11:30 - 1:00 pm",
+          "room": ""
+        }
+      ],
+      "instructor": "Cláudia Tatinge Nascimento",
+      "open_seats": "8",
+      "max_enrollment": "24",
+      "crosslistings": [
+        "Mode of Instruction: Hybrid; cross-listed with LATI 194-02",
+        "PORT 194-02",
+        "THDA 194-01"
+      ],
+      "description": "Reading Plays: Latinx and Latin American Theater guides students in close readings of dramatic literature, in particular of plays that are typically left out of the traditional theatrical canon. This edition of the course will focus on texts by Latinx and Latin American playwrights. Students will learn about the socio-historical context of each play, and in-class exercises will introduce them to the foundation of script analysis: they will examine the play’s given circumstances, dialogue, dramatic action, characters, and style. Students will read a new play every week; examples of titles the course may explore are: Information for Foreigners (Griselda Gambarro, Argentina); Symphony Dream (Diogo Liberano, Brazil); Death and the Maiden (Ariel Dorfman, Chile); Fefu and her Friends (Maria Irene Fornes, Cuba/United States); The Sanchez Huerta Girl Killed Herself (Claudia Ríos, Mexico); Aunt Julia and the Scriptwriter (Mario Vargas Llosa, Peru); Marisol (José Rivera, United States/Puerto Rico). Texts are in translation, if desired the instructor may be able provide a copy of Latin American plays in either Portuguese or Spanish. Assignments include weekly in-class writing exercises and short critical papers.",
+      "distribution_requirements": "Fine arts",
+      "gen_ed_requirements": "Internationalism or U.S. Identities and Differences, Writing WP",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27ENGL%27%20num=%27194%27%20sect=%2702%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50096",
+      "subject": "ENGL",
+      "subject_name": "English and Creative Writing",
+      "course_number": "294",
+      "section": "05",
+      "title": "Indigenous Feminisms",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "9:30 - 10:45 am",
+          "room": "ARTCOM 102"
+        }
+      ],
+      "instructor": "Melissa Cundieff",
+      "open_seats": "Closed 8",
+      "max_enrollment": "26",
+      "crosslistings": [
+        "Mode of Instruction: Hybrid"
+      ],
+      "description": "In a 2017 interview with Margaret Atwood, the renowned novelist Louise Erdrich (Turtle Mountain Chippewa) asserts that \"women’s rights are just a watery paint on the walls of history. We must not forget.\" This course will investigate the extent to which that assertion holds true, especially in relation to Indigenous women, girls, two-spirit, trans, and non-binary people. We will explore the intersections, as well as disconnections, between white and POC feminisms and Indigenous feminisms through our readings of Indigenous literature across a variety of genres. The course will highlight critical differences of Indigenous feminisms from other feminisms, and why they are essential to the studies of decolonization and sovereignty.",
+      "distribution_requirements": "Humanities",
+      "gen_ed_requirements": "U.S Identities and Differences, Writing WP",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27ENGL%27%20num=%27294%27%20sect=%2705%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50038",
+      "subject": "ENVI",
+      "subject_name": "Environmental Studies",
+      "course_number": "104",
+      "section": "02",
+      "title": "Soil: Science and Sustainability",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "9:30 - 10:45 am",
+          "room": ""
+        }
+      ],
+      "instructor": "Anna Lindquist",
+      "open_seats": "Closed 6",
+      "max_enrollment": "26",
+      "crosslistings": [
+        "Mode of Instruction: Remote; cross-listed with GEOL 104-01"
+      ],
+      "description": "From the food we eat, to the air we breathe, soil shapes our lives. Soil forms in response to local conditions, recording regional climate variability (if you know how to look). Soil is also one of the most important carbon sinks, so the way we interact with soil has the potential to seriously impact our changing climate. However, as an important agricultural resource, we must continue to utilize soil to feed Earth’s growing population. To better understand this under-appreciated layer of Earth, this class will investigate soil formation, soil properties and the variability between types of soil, and how we interact with soil in our world today. This course includes one field trip.",
+      "distribution_requirements": "Natural science and mathematics",
+      "gen_ed_requirements": "",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27ENVI%27%20num=%27104%27%20sect=%2702%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50009",
+      "subject": "ENVI",
+      "subject_name": "Environmental Studies",
+      "course_number": "170",
+      "section": "02",
+      "title": "Ecology and the Environment",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "8:00 - 11:30 am",
+          "room": ""
+        }
+      ],
+      "instructor": "Jerald Dosch",
+      "open_seats": "2",
+      "max_enrollment": "30",
+      "crosslistings": [
+        "Mode of Instruction: Remote; permission of instructor required; cross-listed with BIOL 107-01"
+      ],
+      "description": "This course dives into a range of topics to study how species, populations, communities, ecosystems, and biomes function in our changing climate. We will emphasize biological nutrient and energy cycling, population dynamics, animal and plant species interactions, disturbances and response to disturbances, and ecology in urban and agricultural landscapes. We will examine Ecology under four conceptual ’lenses’: Climate Change, Environmental Justice, Land Use, and Ecosystem Services. These lenses provide critical insight into how scientists, policy makers, land managers, and other stakeholders evaluate complex ecological and environmental systems. Labs will be field and data-based, and emphasize the development of hypotheses, novel data collection at Ordway Field Station, and statistical analysis. Three lecture hours and one three-hour laboratory each week.",
+      "distribution_requirements": "Natural science and mathematics",
+      "gen_ed_requirements": "Quantitative Thinking Q3",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27ENVI%27%20num=%27170%27%20sect=%2702%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50026",
+      "subject": "ENVI",
+      "subject_name": "Environmental Studies",
+      "course_number": "234",
+      "section": "02",
+      "title": "U.S. Environmental History",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "9:30 - 10:45 am",
+          "room": ""
+        }
+      ],
+      "instructor": "Chris Wells",
+      "open_seats": "Closed 3",
+      "max_enrollment": "30",
+      "crosslistings": [
+        "Mode of Instruction: Remote; cross-listed with HIST 234-01"
+      ],
+      "description": "People have always had to contend with the natural world, but only recently have historians begun to explore the changing relationships between people and their environment over time. In this course, we will examine the variety of ways that people in North America have shaped the environment, as well as how they have used, labored in, abused, conserved, protected, rearranged, polluted, cleaned, and thought about it. In addition, we will explore how various characteristics of the natural world have affected the broad patterns of human society, sometimes harming or hindering life and other times enabling rapid development and expansion. By bringing nature into the study of human history and the human past into the study of nature, we will begin to see the connections and interdependencies between the two that are often overlooked.",
+      "distribution_requirements": "Humanities",
+      "gen_ed_requirements": "Writing WP",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27ENVI%27%20num=%27234%27%20sect=%2702%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50028",
+      "subject": "ENVI",
+      "subject_name": "Environmental Studies",
+      "course_number": "270",
+      "section": "01",
+      "title": "Psychology of Sustainable Behavior",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "1:45 - 3:00 pm",
+          "room": "THEATR 202"
+        }
+      ],
+      "instructor": "Christie Manning",
+      "open_seats": "Closed 8",
+      "max_enrollment": "25",
+      "crosslistings": [
+        "Mode of Instruction: Hybrid; cross-listed with PSYC 270-01"
+      ],
+      "description": "This course is built around the argument that environmental problems do not exist; they are human behavior problems. Crafting effective solutions to issues such as ocean acidification, air pollution, or climate change requires understanding the human behaviors that lead to them. Course readings will cover psychological principles and theories relevant to sustainability, and in-class discussions will explore the complex web of factors underlying environmentally sustainable and unsustainable actions. Woven through the course is the theme of identity - personal, social, and cultural –and how it intersects with environmentalism. Psychology of Sustainable Behavior is a project-based class. Students will participate in a self-change project (2.5 weeks) and a campus- and community-based collaborative project (4.5 weeks). Prerequisite(s): PSYC 100 for Psychology majors.",
+      "distribution_requirements": "Social science",
+      "gen_ed_requirements": "U.S Identities and Differences",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27ENVI%27%20num=%27270%27%20sect=%2701%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50030",
+      "subject": "FREN",
+      "subject_name": "French and Francophone Studies",
+      "course_number": "203",
+      "section": "02",
+      "title": "French III",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "8:00 - 10:45 am",
+          "room": "THEATR 206"
+        }
+      ],
+      "instructor": "Juliette Rogers",
+      "open_seats": "Closed 7",
+      "max_enrollment": "20",
+      "crosslistings": [
+        "Mode of Instruction: Hybrid"
+      ],
+      "description": "The aim of this course is to bring students to a point where they can use French for communication, both oral and written. At the end of this course students should be able to read appropriate authentic materials, write short papers in French and communicate with a native speaker. It consolidates and builds competencies in listening, speaking, reading and writing and includes study of the cultural background of France and the Francophone world. Class sessions are supplemented by weekly small group meetings with a French graduate assistant. ALL COURSES ARE TAUGHT IN FRENCH UNLESS OTHERWISE INDICATED. Prerequisite(s): FREN 102 or FREN 111 with a grade of C- or better, placement test or permission of instructor.",
+      "distribution_requirements": "",
+      "gen_ed_requirements": "",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27FREN%27%20num=%27203%27%20sect=%2702%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50031",
+      "subject": "FREN",
+      "subject_name": "French and Francophone Studies",
+      "course_number": "204",
+      "section": "03",
+      "title": "Text, Film and Media",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "1:00 - 4:30 pm",
+          "room": "HUM 400"
+        }
+      ],
+      "instructor": "El Hadji Diop",
+      "open_seats": "7",
+      "max_enrollment": "20",
+      "crosslistings": [
+        "Mode of Instruction: Hybrid"
+      ],
+      "description": "This course presents a study of the contemporary language and culture of France and the Francophone world through authentic materials including the French press, the internet, television, literature and film. At the end of this course students should have attained a more sophisticated level of communication in French, the ability to use their skills in French for a variety of purposes including research in other disciplines, and a full appreciation of the intellectual challenge of learning a foreign language and its cultures. ALL COURSES ARE TAUGHT IN FRENCH UNLESS OTHERWISE INDICATED. Prerequisite(s): FREN 203 with a grade of C- or better, placement test or permission of instructor.",
+      "distribution_requirements": "",
+      "gen_ed_requirements": "",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27FREN%27%20num=%27204%27%20sect=%2703%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50032",
+      "subject": "FREN",
+      "subject_name": "French and Francophone Studies",
+      "course_number": "305",
+      "section": "02",
+      "title": "Advanced Expression: Communication Tools",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "1:00 - 4:30 pm",
+          "room": "THEATR 206"
+        }
+      ],
+      "instructor": "Joëlle Vitiello",
+      "open_seats": "13",
+      "max_enrollment": "20",
+      "crosslistings": [
+        "Mode of Instruction: Hybrid"
+      ],
+      "description": "This course is an intensive training in oral expression and corrective phonetics. Materials include news broadcasts from French TV, films and articles from the French and Francophone press. Grammar patterns that enhance communication will be studied. Class sessions are supplemented by small group meetings with French assistants and small conversation groups with Francophone tutors. Taught in French. Prerequisite(s): FREN 204, placement test or permission of instructor.",
+      "distribution_requirements": "Humanities",
+      "gen_ed_requirements": "Internationalism",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27FREN%27%20num=%27305%27%20sect=%2702%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50033",
+      "subject": "GEOG",
+      "subject_name": "Geography",
+      "course_number": "111",
+      "section": "02",
+      "title": "Human Geography of Global Issues",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "9:30 - 10:45 am",
+          "room": ""
+        }
+      ],
+      "instructor": "John Bowman",
+      "open_seats": "10",
+      "max_enrollment": "25",
+      "crosslistings": [
+        "Mode of Instruction: Remote"
+      ],
+      "description": "This course is an introduction to the global perspectives, basic concepts and fundamental questions of geography. It focuses on the ways through which all places on Earth are interconnected and how the human use of Earth’s surface varies over space. Major topics covered will be the human perception of earth space and the ways people give order to space; the growth and distribution of human population; the localization and spatial characteristics of patterns of settlement and land use; geopolitics and colonialism; environmental geography; the geography of economic development and modernization; principles of the analysis of spatial diffusion; spatial aspects of retail marketing; the geographic analysis of selected issues in industrialized societies such as gender issues, racism, poverty, sport, and religion.",
+      "distribution_requirements": "Social science",
+      "gen_ed_requirements": "Internationalism",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27GEOG%27%20num=%27111%27%20sect=%2702%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50034",
+      "subject": "GEOG",
+      "subject_name": "Geography",
+      "course_number": "294",
+      "section": "01",
+      "title": "The Political Geography of Urban Public Spaces",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "1:45 - 3:00 pm",
+          "room": "CARN 06A"
+        }
+      ],
+      "instructor": "Daniel Trudeau",
+      "open_seats": "Closed 9",
+      "max_enrollment": "20",
+      "crosslistings": [
+        "Mode of Instruction: Hybrid"
+      ],
+      "description": "This course investigates the ways that public spaces in cities function in theory and in practice to support democratic life. Our investigation will critically assess geographer Don Mitchell’s provocative claim that we may be seeing “the end of public space.” Privatization trends in urban development (including “hostile design”) and a narrowing scope of who qualifies as part of “the public” has certainly born out this claim. At the same time, there’s also a renewed interest among citizens and urbanists alike in the importance of public space as well as grassroots and professional efforts to re-claim and re-program open space for public purposes and use digital technologies to create new types of space to support public engagement. These tensions prompt questions about how to design socially inclusive public spaces. Such questions are at the heart of this course. Toward this aim, the course examines theoretical and philosophical perspectives regarding the ways in which the design and use of public spaces are thought to support democratic citizenship and build inclusive cities. We will also learn about the social and political institutions that govern the decisions affecting how public spaces are created and managed in a variety of contexts. Our consideration of the “end of public space” thesis will draw extensively on students’ field work in the Twin Cities and the course will take several field trips to public spaces in Minneapolis and St. Paul. Students will learn and practice field methods crucial to the study of public spaces and that follow personal and public safety protocols during the COVID-19 pandemic. Using frameworks and methods learned in the class, students will complete an independent field study project of a particular public space in the Twin Cities. This will entail routine visits to off-campus locations for several weeks in order to observe and study the use and design of public space. Individual work will be incorporated into A Field Guide to Public Spaces, https://stpfieldguide.wordpress.com, a digital platform for public scholarship of public space. Collectively, the projects will inform our critical examination of the claim that in cities today, we are witnessing the end of public space. Fieldwork is required. No prerequisites.",
+      "distribution_requirements": "Social science",
+      "gen_ed_requirements": "Writing WP",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27GEOG%27%20num=%27294%27%20sect=%2701%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50035",
+      "subject": "GEOL",
+      "subject_name": "Geology",
+      "course_number": "101",
+      "section": "02",
+      "title": "Dinosaurs",
+      "meetings": [
+        {
+          "days": "M W F",
+          "time": "11:00 - 1:30 pm",
+          "room": ""
+        }
+      ],
+      "instructor": "Kristina Curry Rogers",
+      "open_seats": "Closed 1",
+      "max_enrollment": "32",
+      "crosslistings": [
+        "Mode of Instruction: Remote"
+      ],
+      "description": "Dinosaurs dominated Earth’s landscapes for nearly 200 million years, and then they vanished in one of the \"big-five\" mass extinctions in the history of life. This course explores the evolution of dinosaurs, and examines their biology and behavior. Students are introduced to the various groups of dinosaurs as they study the reasons behind their dramatic diversification and ecological success. Theories that pertain to their abrupt disappearance 65 million years ago are also explored. The class includes a field trip to the dinosaur hall at the Science Museum of Minnesota.",
+      "distribution_requirements": "Natural science and mathematics",
+      "gen_ed_requirements": "Quantitative Thinking Q1, Writing WP",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27GEOL%27%20num=%27101%27%20sect=%2702%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50036",
+      "subject": "GEOL",
+      "subject_name": "Geology",
+      "course_number": "103",
+      "section": "02",
+      "title": "Geocinema",
+      "meetings": [
+        {
+          "days": "MTWR",
+          "time": "7:00 - 8:45 pm",
+          "room": ""
+        }
+      ],
+      "instructor": "Kelly MacGregor",
+      "open_seats": "Closed 3",
+      "max_enrollment": "30",
+      "crosslistings": [
+        "Mode of Instruction: Remote"
+      ],
+      "description": "Lights, camera, ACTION! Geologists think planet Earth is incredibly exciting, but nowhere is the story of the behavior of our planet more dramatized and misrepresented than in movies! Whether they are big-budget thrillers like Jurassic Park, San Andreas, or The Day After Tomorrow, or low-brow science fiction like Boa, movies tend to stretch the reality of natural hazards and earth processes to great dramatic effect. In this course, we will have the opportunity to watch a variety of movie clips that focus on geologic hazards (such as volcanoes, earthquakes, avalanches, floods, and tsunamis) and other earth processes (origins of life, evolution, mass extinction, climate change, and glaciers). We will examine the scientific features and processes depicted in films, learn about their scientific basis, and critique the film’s portrayal of earth process. Students will work in groups to examine a film centered on a geological process, and critique the way science is depicted. The final project gives you the opportunity to develop your own script for a movie that does the geology correctly. This course will cover quantitative concepts relevant to earth processes, such as describing the world quantitatively, understanding uncertainty and risk, and evaluating quality and sources of data.",
+      "distribution_requirements": "Natural science and mathematics",
+      "gen_ed_requirements": "Quantitative Thinking Q3",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27GEOL%27%20num=%27103%27%20sect=%2702%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50037",
+      "subject": "GEOL",
+      "subject_name": "Geology",
+      "course_number": "104",
+      "section": "02",
+      "title": "Soil: Science and Sustainability",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "9:30 - 10:45 am",
+          "room": ""
+        }
+      ],
+      "instructor": "Anna Lindquist",
+      "open_seats": "Closed 6",
+      "max_enrollment": "26",
+      "crosslistings": [
+        "Mode of Instruction: Remote; cross-listed with ENVI 104-01"
+      ],
+      "description": "From the food we eat, to the air we breathe, soil shapes our lives. Soil forms in response to local conditions, recording regional climate variability (if you know how to look). Soil is also one of the most important carbon sinks, so the way we interact with soil has the potential to seriously impact our changing climate. However, as an important agricultural resource, we must continue to utilize soil to feed Earth’s growing population. To better understand this under-appreciated layer of Earth, this class will investigate soil formation, soil properties and the variability between types of soil, and how we interact with soil in our world today. This course includes one field trip.",
+      "distribution_requirements": "Natural science and mathematics",
+      "gen_ed_requirements": "",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27GEOL%27%20num=%27104%27%20sect=%2702%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50039",
+      "subject": "GERM",
+      "subject_name": "German Studies",
+      "course_number": "294",
+      "section": "02",
+      "title": "Marx and the Imaginary",
+      "meetings": [
+        {
+          "days": "M W F",
+          "time": "11:00 - 1:30 pm",
+          "room": ""
+        }
+      ],
+      "instructor": "Kiarina Kordela",
+      "open_seats": "11",
+      "max_enrollment": "30",
+      "crosslistings": [
+        "Mode of Instruction: Remote; cross-listed with MCST 294-01",
+        "POLI 294-01",
+        "RELI 294-01"
+      ],
+      "description": "Marx’s contribution to the theorization of the function of the imaginary in both the constitution of subjectivity and the mechanisms of politics and economy—usually referred to as ideology—cannot be overestimated. His conceptualization of the imaginary is gradually developed throughout several of his works, from his Critique of German Ideology to Capital, and is intrinsically intertwined with his discovery of three further crucial concepts: structure, the unconscious, and the symptom. All these concepts became instrumental in the development of psychoanalysis and new fields of knowledge, such as cultural analysis and the analysis of ideology. While also familiarizing ourselves with the basics of two of the most decisive influences on Marx, Hegel and Spinoza, in this course, we shall read excerpts from Marx’s work and pursue its further development in later influential thinkers and cultural critics, such as Louis Althusser, Étienne Balibar, and Slavoj Žižek. In this way the course will combine theoretical rigor with tangible analysis of media that range from verbal texts to the visual arts and film. The course will actually meet MWF 11:00-1:00 (not until 1:30), so students who want to take the course but have another course starting at 1:00 can ask professor Kordela whether she can give them permission to take the course as an independent study with her.",
+      "distribution_requirements": "Humanities",
+      "gen_ed_requirements": "Internationalism",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27GERM%27%20num=%27294%27%20sect=%2702%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50027",
+      "subject": "HIST",
+      "subject_name": "History",
+      "course_number": "234",
+      "section": "02",
+      "title": "U.S. Environmental History",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "9:30 - 10:45 am",
+          "room": ""
+        }
+      ],
+      "instructor": "Chris Wells",
+      "open_seats": "Closed 3",
+      "max_enrollment": "30",
+      "crosslistings": [
+        "Mode of Instruction: Remote; cross-listed with ENVI 234-01"
+      ],
+      "description": "People have always had to contend with the natural world, but only recently have historians begun to explore the changing relationships between people and their environment over time. In this course, we will examine the variety of ways that people in North America have shaped the environment, as well as how they have used, labored in, abused, conserved, protected, rearranged, polluted, cleaned, and thought about it. In addition, we will explore how various characteristics of the natural world have affected the broad patterns of human society, sometimes harming or hindering life and other times enabling rapid development and expansion. By bringing nature into the study of human history and the human past into the study of nature, we will begin to see the connections and interdependencies between the two that are often overlooked. Meets History’s post-1800 requirement, and can count towards \"Environment,\" or \"Law and Social Justice,\" or \"North America\" fields.",
+      "distribution_requirements": "Humanities",
+      "gen_ed_requirements": "Writing WP",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27HIST%27%20num=%27234%27%20sect=%2702%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50043",
+      "subject": "HIST",
+      "subject_name": "History",
+      "course_number": "271",
+      "section": "01",
+      "title": "Uses and Abuses: Drugs, Addiction and Recovery",
+      "meetings": [
+        {
+          "days": "M W F",
+          "time": "11:00 - 1:30 pm",
+          "room": ""
+        }
+      ],
+      "instructor": "Amy Sullivan",
+      "open_seats": "Closed 10",
+      "max_enrollment": "25",
+      "crosslistings": [
+        "Mode of Instruction: Remote"
+      ],
+      "description": "After a brief but essential global history of drugs, this course will focus primarily on the 20th century to the present. We will examine histories of substance use and abuse, temperance and prohibition, the \"War on Drugs,\" the shifting concept of addiction as a moral failing to addiction as a treatable disease, as well as study the history of the recovery movement and harm reduction. This course is not intended to be an exhaustive, comprehensive history of the subject-but it will provide you with a solid base from which to explore other aspects of this fascinating and contentious aspect of human history. Meets the post-1800 requirement, and can count towards \"Gender,\" or \"Race and Indigeneity,\" or \"Law and Social Justice,\" or \"North America\" fields.",
+      "distribution_requirements": "Humanities",
+      "gen_ed_requirements": "U.S Identities and Differences",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27HIST%27%20num=%27271%27%20sect=%2701%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50044",
+      "subject": "HIST",
+      "subject_name": "History",
+      "course_number": "275",
+      "section": "01",
+      "title": "The Rise of Modern China",
+      "meetings": [
+        {
+          "days": "MTWR",
+          "time": "8:00 - 9:45 pm",
+          "room": ""
+        }
+      ],
+      "instructor": "Yue Him Tam",
+      "open_seats": "7",
+      "max_enrollment": "20",
+      "crosslistings": [
+        "Mode of Instruction: Remote; cross-listed with ASIA 275-01"
+      ],
+      "description": "A study of leading institutions and movements of nineteenth- and twentieth-century China. Major emphases include the impact of Western imperialism, intellectual and cultural changes, the transformation of peasant society through revolution, the rise of Mao Tse-Tung, and the Great Proletarian Cultural Revolution, and the rise of China as a world power. Special attention will be given to China’s international relations. Meets the post-1800 requirement, and can count towards \"Colonization and Empire,\" or \"Race and Indigeneity,\" or \"Law and Social Justice,\" or \"Asia\" fields.",
+      "distribution_requirements": "Humanities",
+      "gen_ed_requirements": "Internationalism, Writing WP",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27HIST%27%20num=%27275%27%20sect=%2701%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50046",
+      "subject": "HIST",
+      "subject_name": "History",
+      "course_number": "285",
+      "section": "01",
+      "title": "Cold War Latin America",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "1:45 - 3:00 pm",
+          "room": "MAIN 009"
+        }
+      ],
+      "instructor": "Ernesto Capello",
+      "open_seats": "Closed 8",
+      "max_enrollment": "20",
+      "crosslistings": [
+        "Mode of Instruction: Hybrid; cross-listed with LATI 285-01"
+      ],
+      "description": "During the Cold War, Latin America was a decidedly \"hot zone.\" This course considers this phenomenon as a result of internal and external pressures, including political and socioeconomic instability, a deep tradition of revolutionary and socialist activism, and the region’s conflictive relationship with the United States. The class examines dramatic moments of the Latin American Cold War, such as the overthrow of Jacobo Arbenz in Guatemala, the Cuban and Nicaraguan revolutions, and the Dirty Wars in Chile and Argentina. It also examines less heralded aspects of the Latin American Cold War, such as its important role in fostering transhemispheric solidarities, the creative possibilities of Cold War cultural production, the emergence of a youth counterculture, and the many attempts by Latin Americans across the political spectrum to reject the premise of the Cold War altogether. Meets the post-1800 requirement, and can count towards \"Latin American/Caribbean\" field.",
+      "distribution_requirements": "Humanities",
+      "gen_ed_requirements": "Internationalism, Writing WP",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27HIST%27%20num=%27285%27%20sect=%2701%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50048",
+      "subject": "HIST",
+      "subject_name": "History",
+      "course_number": "294",
+      "section": "04",
+      "title": "Do Black Lives Matter in Europe?",
+      "meetings": [
+        {
+          "days": "M W F",
+          "time": "11:00 - 1:30 pm",
+          "room": ""
+        }
+      ],
+      "instructor": "Jess Pearson",
+      "open_seats": "12",
+      "max_enrollment": "30",
+      "crosslistings": [
+        "Mode of Instruction: Remote"
+      ],
+      "description": "Do Black Lives Matter in Europe? Over the course of the module we will explore this question from a broad range of perspectives, with a particular focus on amplifying the work of scholars, artists, writers, and activists of color working on the European continent and in Europe’s former colonies. We will consider the ways that anti-Black racism in Europe has evolved since the Enlightenment, and the role that it played in European colonization of Africa and the Caribbean. We will explore the legacies that anti-Black racism in the colonial context continues to have in Europe today and we will also consider the profoundly important contributions that Black Europeans have made to political, social, and cultural movements on the European continent and beyond. In addition to viewing several films and engaging with a series of shorter readings, we will also follow photographer and writer Johny Pitts on a journey through his book Afropean: Notes from Black Europe. This history course will invite students to engage in multidisciplinary approaches to studying the past as they develop independent research projects related to our course themes and we will work to foster a supportive learning community as we grow as writers and scholars. Meets the post-1800 requirement, and can count towards the \"Colonization and Empire,\" or \"Law and Social Justice,\" or \"Race and Indigeneity,\" or \"Europe\" fields.",
+      "distribution_requirements": "Humanities",
+      "gen_ed_requirements": "Internationalism, Writing WA",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27HIST%27%20num=%27294%27%20sect=%2704%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50104",
+      "subject": "INTD",
+      "subject_name": "Interdisciplinary Courses",
+      "course_number": "194",
+      "section": "04",
+      "title": "So You Want to Be An Anti-Racist?",
+      "meetings": [
+        {
+          "days": "M W F",
+          "time": "11:00 - 1:30 pm",
+          "room": "MARKIM DAVIS"
+        }
+      ],
+      "instructor": "Harry Waters Jr.Marjorie Trueblood",
+      "open_seats": "5",
+      "max_enrollment": "20",
+      "crosslistings": [
+        "Mode of Instruction: Hybrid"
+      ],
+      "description": "In this course, we will explore various approaches and strategies in navigating race, racism, and anti-racism from scholars, community activists, artists, and one another. Through this exploration, students will cultivate their own understanding of what it takes to be an Anti-racist in theory and in practice. Students will increase their intercultural competence and awareness as well as develop strategies to be the change they wish to see in the world.",
+      "distribution_requirements": "",
+      "gen_ed_requirements": "",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27INTD%27%20num=%27194%27%20sect=%2704%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50110",
+      "subject": "INTD",
+      "subject_name": "Interdisciplinary Courses",
+      "course_number": "294",
+      "section": "03",
+      "title": "What’s next? Designing Work and Careers in a COVID-19 Era",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "9:30 - 10:45 am",
+          "room": ""
+        }
+      ],
+      "instructor": "Kate Larson",
+      "open_seats": "17",
+      "max_enrollment": "30",
+      "crosslistings": [
+        "Mode of Instruction: Remote"
+      ],
+      "description": "Through this course, students will gain timely career exploration skills, mindsets and competencies to bring their interdisciplinary liberal arts preparation to bear on the challenges of navigating the COVID-19 work landscape and beyond. This course will be conducted remotely, with some likely optional in-person components (pandemic permitting). This course is especially suitable for rising juniors and seniors, but is open to all students. Course times will involve synchronous meetings during class time, and a few optional evening events announced at the start of class. Two components of the course will be delivered in parallel: project-based work-integrated learning with organizational partners and alumni mentors, alongside active and reflective career exploration modules. Work-integrated learning: Students will engage in the creation, implementation and presentation of solutions with and for organizational partners. Instructor mentoring, organizational partner collaboration, and weekly alumni collaborations will assist students in developing competency and self-efficacy in navigating diverse professional environments. Career exploration modules: Students will engage with reflective and skill-building modules incorporating theoretical career development models like hope-centered career planning, life design-focused career exploration. The course will also dedicate space to explore and reflect on a person’s intersectional identities and how these identities influence career exploration. Students will learn skills including, but not limited to, effective writing for job search materials (e.g., resumes, cover letters) and how to present in formal (pitch presentations, job interviewing) and informal (informational interviewing) professional contexts.",
+      "distribution_requirements": "",
+      "gen_ed_requirements": "",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27INTD%27%20num=%27294%27%20sect=%2703%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50049",
+      "subject": "INTD",
+      "subject_name": "Interdisciplinary Courses",
+      "course_number": "330",
+      "section": "02",
+      "title": "Mellon Seminar: Exploring Academia",
+      "meetings": [
+        {
+          "days": "TBA",
+          "time": "",
+          "room": ""
+        }
+      ],
+      "instructor": "Karin VélezDonna Maeda",
+      "open_seats": "5",
+      "max_enrollment": "10",
+      "crosslistings": [
+        "Mode of Instruction: Hybrid; 2-credit course; permission of instructor required"
+      ],
+      "description": "Corequisite(s): The Mellon Seminar is for students who are the recipients of the Mellon Mays Undergraduate Fellowship. The course is interdisciplinary, in order to meet the needs of students across the Mellon-designated fields. They will develop their academic interests to the fullest, with the intent to enter Ph.D. programs, and careers in higher education. We will cover topics such as contemporary issues in higher education, the politics of knowledge production,\"and preparing to apply to graduate school. This course is designed to train students who will pursue PhDs and subsequent careers in academia in selected core fields in the Arts and Sciences. Our objective is to prepare for the Professoriate. S/N grading only. May be repeated multiple times for credit.",
+      "distribution_requirements": "",
+      "gen_ed_requirements": "",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27INTD%27%20num=%27330%27%20sect=%2702%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50050",
+      "subject": "INTL",
+      "subject_name": "International Studies",
+      "course_number": "245",
+      "section": "01",
+      "title": "Intro to Intl Human Rights",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "8:00 - 9:15 am",
+          "room": ""
+        }
+      ],
+      "instructor": "Wendy Weber",
+      "open_seats": "Closed 5",
+      "max_enrollment": "24",
+      "crosslistings": [
+        "Mode of Instruction: Remote"
+      ],
+      "description": "This course offers a theoretical and practical introduction to the study and promotion of human rights. Using broad materials, it focuses on the evolution and definition of key concepts, the debate over \"universal\" rights, regional and international institutions, core documents, the role of states, and current topics of interest to the human rights movement.",
+      "distribution_requirements": "Social science",
+      "gen_ed_requirements": "Internationalism",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27INTL%27%20num=%27245%27%20sect=%2701%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50004",
+      "subject": "INTL",
+      "subject_name": "International Studies",
+      "course_number": "253",
+      "section": "01",
+      "title": "Comparative Muslim Cultures",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "1:45 - 3:00 pm",
+          "room": "ARTCOM 202"
+        }
+      ],
+      "instructor": "Jenna Rice Rahaim",
+      "open_seats": "Closed 8",
+      "max_enrollment": "20",
+      "crosslistings": [
+        "Mode of Instruction: Hybrid; cross-listed with ANTH 253-01"
+      ],
+      "description": "This course is an introduction to the diverse lifeways of Muslims around the world, looking at how understandings and practice of Islam are shaped by social, economic, and political factors. It examines the Qur’an and hadith, and other authoritative texts that ground Islamic jurisprudence, and explores the diverse ways in which Muslims have understood and interpreted these teachings in locations across the world-such as Indonesia, the Middle East, South Asia, Europe and the United States - and at various points in history. The specific focus may vary with each offering, responding to instructor expertise and focus, emerging and volatile situations worldwide, or new advances in the field.",
+      "distribution_requirements": "Social science",
+      "gen_ed_requirements": "Internationalism or U.S. Identities and Differences, Writing WP",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27INTL%27%20num=%27253%27%20sect=%2701%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50051",
+      "subject": "INTL",
+      "subject_name": "International Studies",
+      "course_number": "294",
+      "section": "02",
+      "title": "Public Health Justice in a “Glocal” Context: Systemic Racism, Oppression, and the COVID-19 Pandemic",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "3:15 - 4:30 pm",
+          "room": "THEATR 202"
+        }
+      ],
+      "instructor": "Vanessa Voller",
+      "open_seats": "12",
+      "max_enrollment": "30",
+      "crosslistings": [
+        "Mode of Instruction: Hybrid"
+      ],
+      "description": "In this course, learners will be immersed in the study of health justice, the social and structural determinants of health, and the principles of health delivery as it relates to the ongoing COVID-19 pandemic. Learners will be introduced to and explore major health problems facing BIPOC and low-income communities both locally in the Twin Cities and globally and examine how and why systemic racism and other forms of structural oppression are contributing to a disproportionate COVID-19 infection and case mortality rate in BIPOC communities and low income communities. The course considers the social, structural, and political determinants of health and the need for public health programs to address the root causes of health inequities as well as poor health itself. Attention will be given to major indicators, recent trends, policies, and metrics for monitoring progress of the COVID-19 pandemic. Learners will participate in several workshops throughout the semester to develop their skills as future interdisciplinary public health professionals and leaders. The COVID-19 case study will be used as an applied analysis throughout the summer course.",
+      "distribution_requirements": "Social science",
+      "gen_ed_requirements": "Internationalism",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27INTL%27%20num=%27294%27%20sect=%2702%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50061",
+      "subject": "LATI",
+      "subject_name": "Latin American Studies",
+      "course_number": "194",
+      "section": "01",
+      "title": "Shared Legacies, Disparate Journeys: Brazil and the U.S. Since the Abolition of Slavery",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "1:45 - 3:00 pm",
+          "room": "THEATR 205"
+        }
+      ],
+      "instructor": "J. Ernesto Ortiz Díaz",
+      "open_seats": "7",
+      "max_enrollment": "27",
+      "crosslistings": [
+        "Mode of Instruction: Hybrid; cross-listed with AMST 194-01",
+        "PORT 194-01"
+      ],
+      "description": "Varies by semester. Consult the department or class schedule for current listing.",
+      "distribution_requirements": "Humanities",
+      "gen_ed_requirements": "Internationalism or U.S. Identities and Differences, Writing WA",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27LATI%27%20num=%27194%27%20sect=%2701%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50074",
+      "subject": "LATI",
+      "subject_name": "Latin American Studies",
+      "course_number": "194",
+      "section": "02",
+      "title": "Reading Plays: Latinx and Latin American Theater",
+      "meetings": [
+        {
+          "days": "M W F",
+          "time": "11:00 - 1:30 pm",
+          "room": "THEATR 202"
+        }
+      ],
+      "instructor": "Cláudia Tatinge Nascimento",
+      "open_seats": "8",
+      "max_enrollment": "24",
+      "crosslistings": [
+        "Mode of Instruction: Hybrid; cross-listed with ENGL 194-02",
+        "PORT 194-02",
+        "THDA 194-01"
+      ],
+      "description": "Reading Plays: Latinx and Latin American Theater guides students in close readings of dramatic literature, in particular of plays that are typically left out of the traditional theatrical canon. This edition of the course will focus on texts by Latinx and Latin American playwrights. Students will learn about the socio-historical context of each play, and in-class exercises will introduce them to the foundation of script analysis: they will examine the play’s given circumstances, dialogue, dramatic action, characters, and style. Students will read a new play every week; examples of titles the course may explore are: Information for Foreigners (Griselda Gambarro, Argentina); Symphony Dream (Diogo Liberano, Brazil); Death and the Maiden (Ariel Dorfman, Chile); Fefu and her Friends (Maria Irene Fornes, Cuba/United States); The Sanchez Huerta Girl Killed Herself (Claudia Ríos, Mexico); Aunt Julia and the Scriptwriter (Mario Vargas Llosa, Peru); Marisol (José Rivera, United States/Puerto Rico). Texts are in translation, if desired the instructor may be able provide a copy of Latin American plays in either Portuguese or Spanish. Assignments include weekly in-class writing exercises and short critical papers.",
+      "distribution_requirements": "Fine arts",
+      "gen_ed_requirements": "Internationalism or U.S. Identities and Differences, Writing WP",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27LATI%27%20num=%27194%27%20sect=%2702%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50047",
+      "subject": "LATI",
+      "subject_name": "Latin American Studies",
+      "course_number": "285",
+      "section": "01",
+      "title": "Cold War Latin America",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "1:45 - 3:00 pm",
+          "room": "MAIN 009"
+        }
+      ],
+      "instructor": "Ernesto Capello",
+      "open_seats": "Closed 8",
+      "max_enrollment": "20",
+      "crosslistings": [
+        "Mode of Instruction: Hybrid; cross-listed with HIST 285-01"
+      ],
+      "description": "During the Cold War, Latin America was a decidedly \"hot zone.\" This course considers this phenomenon as a result of internal and external pressures, including political and socioeconomic instability, a deep tradition of revolutionary and socialist activism, and the region’s conflictive relationship with the United States. The class examines dramatic moments of the Latin American Cold War, such as the overthrow of Jacobo Arbenz in Guatemala, the Cuban and Nicaraguan revolutions, and the Dirty Wars in Chile and Argentina. It also examines less heralded aspects of the Latin American Cold War, such as its important role in fostering transhemispheric solidarities, the creative possibilities of Cold War cultural production, the emergence of a youth counterculture, and the many attempts by Latin Americans across the political spectrum to reject the premise of the Cold War altogether.",
+      "distribution_requirements": "Humanities",
+      "gen_ed_requirements": "Internationalism, Writing WP",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27LATI%27%20num=%27285%27%20sect=%2701%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50105",
+      "subject": "LATI",
+      "subject_name": "Latin American Studies",
+      "course_number": "294",
+      "section": "05",
+      "title": "IDENTITY AND PACHA",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "9:30 - 10:45 am",
+          "room": ""
+        }
+      ],
+      "instructor": "Ernesto Capello",
+      "open_seats": "13",
+      "max_enrollment": "20",
+      "crosslistings": [
+        "Mode of Instruction: Remote"
+      ],
+      "description": "Pacha is a Kichwa word that is usually interpreted as “earth,” and Pachamama as “mother earth.” However, those translations come from a limited epistemological framework. According to indigenous Andean scholars, Pacha refers to the time-space continuum, or as the “everything around and inside us.” This course asks students to challenge their identities by broadening their epistemological and ontological lenses to see their individual and collective lives as interrelated with local and global ecologies. To synthesize this complicated process, we take advantage of our virtual exchange and examine Pacha as an interconnection between “place” and “space,” challenging students to rethink who they are from the Kichwa triadic interpretation of ecology: our immediate territory (llakta), our surrounding natural environment (allpa), and our pluriversal space (pacha). This course offers a virtual study away opportunity in collaboration with the Pachaysana Foundation in Quito, Ecuador. It will be taught by Pachaysana faculty and community-based educators from Ecuador.",
+      "distribution_requirements": "Humanities",
+      "gen_ed_requirements": "",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27LATI%27%20num=%27294%27%20sect=%2705%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50098",
+      "subject": "LING",
+      "subject_name": "Linguistics",
+      "course_number": "100",
+      "section": "01",
+      "title": "Introduction to Linguistics",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "9:30 - 10:45 am",
+          "room": ""
+        }
+      ],
+      "instructor": "Jessica Love-Nichols",
+      "open_seats": "Closed -1",
+      "max_enrollment": "25",
+      "crosslistings": [
+        "Mode of Instruction: Remote"
+      ],
+      "description": "The aim of this course is to make you aware of the complex organization and systematic nature of language, the primary means of human communication. In a sense, you will be studying yourself, since you are a prime example of a language user. Most of your knowledge of language, however, is unconscious, and the part of language that you can describe is largely the result of your earlier education, which may have given you confused, confusing, or misleading notions about language. This course is intended to clarify your ideas about language and bring you to a better understanding of its nature. By the end of the course you should be familiar with some of the terminology and techniques of linguistic analysis and be able to apply this knowledge to the description of different languages. There are no prerequisites, but this course is the prerequisite for almost every higher level course within the linguistics major.",
+      "distribution_requirements": "Social science",
+      "gen_ed_requirements": "",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27LING%27%20num=%27100%27%20sect=%2701%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50083",
+      "subject": "MATH",
+      "subject_name": "Mathematics",
+      "course_number": "236",
+      "section": "03",
+      "title": "Linear Algebra",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "9:30 - 10:45 am",
+          "room": "OLRI 241"
+        }
+      ],
+      "instructor": "Thomas Halverson",
+      "open_seats": "1",
+      "max_enrollment": "25",
+      "crosslistings": [
+        "Mode of Instruction: Hybrid"
+      ],
+      "description": "Linear algebra is one of the pillars of mathematics, both pure and applied. Linear relations can be used to model phenomena from numerous disciplines in the mathematical sciences, physical sciences, social sciences, engineering, and computer science. This introduction to linear algebra blends mathematical computation, theory, abstraction, and application. It starts with systems of linear equations and grows into the study of matrices, vector spaces, linear independence, dimension, linear transformations, orthogonality and projections, eigenvectors, and their applications. The resulting linear algebraic framework is a flexible and powerful way to approach multidimensional problems. Prerequisite(s): MATH 279 or MATH 137, or with permission of instructor, MATH 135 .",
+      "distribution_requirements": "Natural science and mathematics",
+      "gen_ed_requirements": "Quantitative Thinking Q1",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27MATH%27%20num=%27236%27%20sect=%2703%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50085",
+      "subject": "MATH",
+      "subject_name": "Mathematics",
+      "course_number": "279",
+      "section": "04",
+      "title": "Discrete Mathematics",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "8:00 - 9:15 am",
+          "room": "THEATR 202"
+        }
+      ],
+      "instructor": "Dave Ehren",
+      "open_seats": "Closed 2",
+      "max_enrollment": "25",
+      "crosslistings": [
+        "Mode of Instruction: Hybrid"
+      ],
+      "description": "Discrete mathematics studies collections of distinct, separate objects and is complementary to calculus (which studies continuous phenomena). This course introduces techniques for analyzing arrangements of objects and the relationships between them. The material emphasizes problem solving and logical argumentation, rather than computation. Topics include basic counting principles, induction, logic, recurrence relations, number theory, and graph theory.",
+      "distribution_requirements": "Natural science and mathematics",
+      "gen_ed_requirements": "Quantitative Thinking Q1",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27MATH%27%20num=%27279%27%20sect=%2704%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50052",
+      "subject": "MCST",
+      "subject_name": "Media and Cultural Studies",
+      "course_number": "110",
+      "section": "02",
+      "title": "Texts and Power: Foundations of Media and Cultural Studies",
+      "meetings": [
+        {
+          "days": "M W F",
+          "time": "11:00 - 1:30 pm",
+          "room": "ARTCOM 202"
+        }
+      ],
+      "instructor": "Jeremy Meckler",
+      "open_seats": "8",
+      "max_enrollment": "18",
+      "crosslistings": [
+        "Mode of Instruction: Hybrid"
+      ],
+      "description": "This course introduces students to the intellectual roots and contemporary applications of cultural studies, including critical media studies, focusing on the theoretical bases for analyses of power and meaning in production, texts, and reception. It includes primary readings in anti-racist, feminist, modern, postmodern, and queer cultural and social theory, and compares them to traditional approaches to the humanities. Designed as preparation for intermediate and advanced work grounded in cultural studies, the course is writing intensive, with special emphasis on developing skills in critical thinking and scholarly argumentation and documentation. Completion of or enrollment in MCST 110 is the prerequisite for majoring in media and cultural studies.",
+      "distribution_requirements": "Humanities",
+      "gen_ed_requirements": "Writing WA",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27MCST%27%20num=%27110%27%20sect=%2702%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50053",
+      "subject": "MCST",
+      "subject_name": "Media and Cultural Studies",
+      "course_number": "128",
+      "section": "02",
+      "title": "Film Analysis/Visual Culture",
+      "meetings": [
+        {
+          "days": "MTWR",
+          "time": "7:00 - 8:45 pm",
+          "room": ""
+        }
+      ],
+      "instructor": "Brad Stiffler",
+      "open_seats": "Closed 4",
+      "max_enrollment": "18",
+      "crosslistings": [
+        "Mode of Instruction: Remote"
+      ],
+      "description": "This course introduces the aesthetics of film as well as selected issues in contemporary film studies. Its aesthetic approach isolates the features that constitute film as a distinct art form: narrative or non-narrative structure, staging, cinematography, editing, and sound. Topics in contemporary film studies that might be considered include one or more of the following: cultural studies and film, industrial organization and globalization, representations of gender and race, and theories of authorship, horror, and spectatorship. Several papers, a test covering basic film terms, and a short video project emphasizing abstract form are required. Suitable for first year students.",
+      "distribution_requirements": "Fine arts",
+      "gen_ed_requirements": "Writing WA",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27MCST%27%20num=%27128%27%20sect=%2702%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50040",
+      "subject": "MCST",
+      "subject_name": "Media and Cultural Studies",
+      "course_number": "294",
+      "section": "02",
+      "title": "Marx and the Imaginary",
+      "meetings": [
+        {
+          "days": "M W F",
+          "time": "11:00 - 1:30 pm",
+          "room": ""
+        }
+      ],
+      "instructor": "Kiarina Kordela",
+      "open_seats": "11",
+      "max_enrollment": "30",
+      "crosslistings": [
+        "Mode of Instruction: Remote; cross-listed with GERM 294-02",
+        "POLI 294-06",
+        "RELI 294-03"
+      ],
+      "description": "Marx’s contribution to the theorization of the function of the imaginary in both the constitution of subjectivity and the mechanisms of politics and economy—usually referred to as ideology—cannot be overestimated. His conceptualization of the imaginary is gradually developed throughout several of his works, from his Critique of German Ideology to Capital, and is intrinsically intertwined with his discovery of three further crucial concepts: structure, the unconscious, and the symptom. All these concepts became instrumental in the development of psychoanalysis and new fields of knowledge, such as cultural analysis and the analysis of ideology. While also familiarizing ourselves with the basics of two of the most decisive influences on Marx, Hegel and Spinoza, in this course, we shall read excerpts from Marx’s work and pursue its further development in later influential thinkers and cultural critics, such as Louis Althusser, Étienne Balibar, and Slavoj Žižek. In this way the course will combine theoretical rigor with tangible analysis of media that range from verbal texts to the visual arts and film. The course will actually meet MWF 11:00-1:00 (not until 1:30), so students who want to take the course but have another course starting at 1:00 can ask professor Kordela whether she can give them permission to take the course as an independent study with her.",
+      "distribution_requirements": "Humanities",
+      "gen_ed_requirements": "Internationalism",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27MCST%27%20num=%27294%27%20sect=%2702%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50054",
+      "subject": "MUSI",
+      "subject_name": "Music",
+      "course_number": "110",
+      "section": "01",
+      "title": "Music Appreciation",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "9:30 - 10:45 am",
+          "room": ""
+        }
+      ],
+      "instructor": "Mark Mandarano",
+      "open_seats": "Closed 9",
+      "max_enrollment": "25",
+      "crosslistings": [
+        "Mode of Instruction: Remote"
+      ],
+      "description": "No prior training in music (including experience with musical notation or instrumental performance) is necessary for success in this class.",
+      "distribution_requirements": "Fine arts",
+      "gen_ed_requirements": "",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27MUSI%27%20num=%27110%27%20sect=%2701%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50055",
+      "subject": "MUSI",
+      "subject_name": "Music",
+      "course_number": "111",
+      "section": "02",
+      "title": "World Music",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "3:15 - 4:30 pm",
+          "room": ""
+        }
+      ],
+      "instructor": "Chuen-Fung Wong",
+      "open_seats": "Closed 8",
+      "max_enrollment": "24",
+      "crosslistings": [
+        "Mode of Instruction: Remote"
+      ],
+      "description": "This course surveys traditional, folk, and pop genres from major musical traditions in Africa, Asia, the Americas, Europe, and the Middle East. We approach music as both aesthetic and social processes, and explore the relationship between music making and other domains of human experience. Students will develop basic skills in critical listening, analysis, and writing about music. Course readings and audiovisual examples are designed primarily for non-music majors or minors. Previous knowledge of musical instrument or notation is not required.",
+      "distribution_requirements": "Fine arts",
+      "gen_ed_requirements": "Internationalism",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27MUSI%27%20num=%27111%27%20sect=%2702%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50094",
+      "subject": "MUSI",
+      "subject_name": "Music",
+      "course_number": "294",
+      "section": "03",
+      "title": "Metaphysical Song: Opera and Modernity",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "1:45 - 3:00 pm",
+          "room": "MUSIC 113"
+        }
+      ],
+      "instructor": "Mark Mazullo",
+      "open_seats": "25",
+      "max_enrollment": "35",
+      "crosslistings": [
+        "Mode of Instruction: Hybrid"
+      ],
+      "description": "This course provides a critical and historical introduction to opera from the period 1720-1945. No background in opera or music is required: the course is meant to serve students wanting a first experience with the art form as well as those who come with some experience and wish to deepen their engagement. If you’ve ever been curious about what all the fuss is about opera, this course is for you! Along with the close study of individual operas on a variety of subjects--myth and legend, politics and religion, the bourgeois center and its margins--we will read critical commentary that contextualizes these artworks within the history of ideas. Our fundamental aim will be to develop an understanding of the ways in which opera, by combining music and drama, forms and reflects modern subjectivity. In other words, we seek to discover what opera can tell us about what it means, and how it feels, to be human in the age of secular, capitalist modernity.",
+      "distribution_requirements": "Fine arts",
+      "gen_ed_requirements": "",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27MUSI%27%20num=%27294%27%20sect=%2703%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50056",
+      "subject": "PHIL",
+      "subject_name": "Philosophy",
+      "course_number": "100",
+      "section": "02",
+      "title": "Introduction to Philosophy",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "1:45 - 3:00 pm",
+          "room": "THEATR 204"
+        }
+      ],
+      "instructor": "Geoffrey Gorham",
+      "open_seats": "Closed 7",
+      "max_enrollment": "25",
+      "crosslistings": [
+        "Mode of Instruction: Hybrid"
+      ],
+      "description": "In this class we will explore and discuss what the greatest philosophers in the (mostly) Western traditions have said about the fundamental puzzles of human existence - such as the nature of reality, knowledge, freedom, personal identity, morality and death - tracing paths of intellectual development from the beginnings of philosophy in the ancient world to the ‘postmodern condition’ of contemporary thought. To supplement our study of major philosophical texts of Plato, Descartes, Hume, Kant and so on, we will view and discuss a number of films from several genres, cultures, and periods. Film is a recent human invention, but it seems to be a very useful medium for philosophical exploration. We will consider how films illustrate the philosophical problems that we are studying, such as the nature of reality and knowledge, the meaning of life and death, memory and the self, and freedom and moral responsibility. And we will also examine puzzles about the nature of film itself: Why do films engage us? Why do we enjoy sad and terrifying films? What is the nature of time and space in film? Can we ‘do’ philosophy with film? We will also consider philosophical issues related to other ’moving image’ media such as video games and virtual reality. Assignments will be several short papers and frequent reading/film responses. This class will be ’textless’.",
+      "distribution_requirements": "Humanities",
+      "gen_ed_requirements": "Writing WA",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27PHIL%27%20num=%27100%27%20sect=%2702%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50090",
+      "subject": "PHIL",
+      "subject_name": "Philosophy",
+      "course_number": "121",
+      "section": "01",
+      "title": "Ethics",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "3:15 - 4:30 pm",
+          "room": ""
+        }
+      ],
+      "instructor": "Samuel Asarnow",
+      "open_seats": "Closed 3",
+      "max_enrollment": "25",
+      "crosslistings": [
+        "Mode of Instruction: Remote"
+      ],
+      "description": "What matters in life? Is pleasure the only thing that matters? If so, whose pleasure should I pursue—just my own, my family’s, or everyone’s? Does suffering matter, too? What about the suffering of non-human animals? Is it okay for me to make animals suffer in order for me to enjoy the pleasure of eating their flesh? Or how about the suffering of people who are really far away from me—say, on another continent? Is it okay for me to spend money on cool stuff for myself when instead I could donate it to help people who are suffering very badly far away? If things in life other than pleasure matter too, what are they? People who oppose torture think that it’s wrong to hurt one person really badly even in order to prevent a large number of people from being hurt. Are they right? Is it always wrong to treat someone as merely a means to an end? Is it in general wrong to do things to people without their consent? Why? When do people deserve to be praised or blamed for their actions? What kind of person should I be? Should I try to be happy? Or should I try to be virtuous? Is virtue its own reward? Or are we all inevitably faced with a choice between being virtuous and being happy? If we are faced with that choice, which one should we pick? In Ethics, we will talk about these questions, and others.",
+      "distribution_requirements": "Humanities",
+      "gen_ed_requirements": "Writing WA",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27PHIL%27%20num=%27121%27%20sect=%2701%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50108",
+      "subject": "PHIL",
+      "subject_name": "Philosophy",
+      "course_number": "294",
+      "section": "01",
+      "title": "Human Research Ethics: Scientific Truth and Cultural Belief",
+      "meetings": [
+        {
+          "days": "M W F",
+          "time": "11:00 - 1:30 pm",
+          "room": "THEATR 200"
+        }
+      ],
+      "instructor": "Michael Householder",
+      "open_seats": "19",
+      "max_enrollment": "25",
+      "crosslistings": [
+        "Mode of Instruction: Hybrid"
+      ],
+      "description": "This course examines ethical issues raised by the use of human subjects in scientific research. No knowledge of bioethics or prior experience as a scientist is required. Indeed, you should consider taking this course not because you are considering a career as a clinical researcher, but rather because you almost certainly will at some point be a subject of such research. In fact, whether you know it or not, you probably already have been. You definitely are benefitting from others’ willingness to enroll in studies. The benefits of human subjects research are everywhere. We live longer, healthier lives. Our technology is safer and more efficient. We understand ourselves and our relationship to the natural world in greater detail. But such research also raises important questions about what it means to do good. Does each of us have a duty to volunteer for research that might contribute to the common welfare? Are some kinds of research more worthy than others? Who decides? What happens when the interests of the scientific community are in conflict with an individual’s or community’s cultural values? To answer these questions, we will examine a handful of key episodes in the history of biomedical research in the US from the 1940s to the present, with an emphasis on ones involving Black and Indigenous people.",
+      "distribution_requirements": "Humanities",
+      "gen_ed_requirements": "U.S Identities and Differences, Writing WA",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27PHIL%27%20num=%27294%27%20sect=%2701%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50057",
+      "subject": "POLI",
+      "subject_name": "Political Science",
+      "course_number": "220",
+      "section": "01",
+      "title": "Foreign Policy",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "8:00 - 9:15 am",
+          "room": ""
+        }
+      ],
+      "instructor": "Andrew Latham",
+      "open_seats": "Closed 7",
+      "max_enrollment": "28",
+      "crosslistings": [
+        "Mode of Instruction: Remote"
+      ],
+      "description": "An exploration of US foreign policy as it relates to a country or region of pressing interest or particular significance in global political life. For the next several years, the focus of the course will be on the foreign policy challenges posed by a \"rising\" China. It is organized around the following questions: What are the cultural, political, economic and strategic interests shaping the evolution of Chinese foreign policy? What is China’s \"peaceful rise\" policy? What are the systemic implications of this policy? What are the implications of China’s rise for US regional and global interests? And how should the US respond to the rise of China as a regional and global great power? Prerequisite(s): POLI 120 recommended, but not required.",
+      "distribution_requirements": "Social science",
+      "gen_ed_requirements": "Internationalism",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27POLI%27%20num=%27220%27%20sect=%2701%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50058",
+      "subject": "POLI",
+      "subject_name": "Political Science",
+      "course_number": "294",
+      "section": "05",
+      "title": "Podcasts and Politics",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "9:30 - 10:45 am",
+          "room": "CARN 304"
+        }
+      ],
+      "instructor": "Adrienne Christiansen",
+      "open_seats": "21",
+      "max_enrollment": "27",
+      "crosslistings": [
+        "Mode of Instruction: Remote"
+      ],
+      "description": "The popularity of podcasts as journalistic and political phenomena skyrocketed in 2014 thanks to a longform non-fiction podcast called “Serial,” produced by the radio show, This American Life. Today, hundreds of politically-oriented podcasts are available to listeners around the world. Hosts include elected politicians, former politicians, political scientists, campaign professionals, former Justice Department officials, former White House officials, radio and tv personalities, US citizens, and even high school students. Because of the relative ease of recording and publishing one’s ideas, podcasts should be seen as a truly democratic form of political debate and discourse. This course focuses on three topics of significant interest to political scientists: political polarization, the rise of populist movements, and threats to liberal democracy. Students will study these topics by listening to diverse voices in contemporary political podcasts. They will also examine the relationship between political podcasting and the growth (or diminishment) of political polarization, populism, and threats to liberal democracy. Political podcasts differ in format and can thus be understood as different rhetorical genres such as political soliloquys, formal debates, or Platonic-style dialogues. The course will situate political podcasting as one of several phenomena that suggest we have entered what Walter Ong calls a new “age of orality.” See, for example, the ubiquity of poetry slams, spoken word performances, Pecha Kucha nights, radio storytelling, TEDTalks, and TEDx Talks. Students will demonstrate their understanding of political polarization, populism, and liberal democracy by designing their own podcast series, identifying potential audiences, writing scripts, and then producing two 15-minute podcasts that address these significant political issues.",
+      "distribution_requirements": "Social science",
+      "gen_ed_requirements": "Writing WC",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27POLI%27%20num=%27294%27%20sect=%2705%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50041",
+      "subject": "POLI",
+      "subject_name": "Political Science",
+      "course_number": "294",
+      "section": "06",
+      "title": "Marx and the Imaginary",
+      "meetings": [
+        {
+          "days": "M W F",
+          "time": "11:00 - 1:30 pm",
+          "room": ""
+        }
+      ],
+      "instructor": "Kiarina Kordela",
+      "open_seats": "11",
+      "max_enrollment": "30",
+      "crosslistings": [
+        "Mode of Instruction: Remote; cross-listed with GERM 294-02",
+        "MCST 294-02",
+        "RELI 294-03"
+      ],
+      "description": "Marx’s contribution to the theorization of the function of the imaginary in both the constitution of subjectivity and the mechanisms of politics and economy—usually referred to as ideology—cannot be overestimated. His conceptualization of the imaginary is gradually developed throughout several of his works, from his Critique of German Ideology to Capital, and is intrinsically intertwined with his discovery of three further crucial concepts: structure, the unconscious, and the symptom. All these concepts became instrumental in the development of psychoanalysis and new fields of knowledge, such as cultural analysis and the analysis of ideology. While also familiarizing ourselves with the basics of two of the most decisive influences on Marx, Hegel and Spinoza, in this course, we shall read excerpts from Marx’s work and pursue its further development in later influential thinkers and cultural critics, such as Louis Althusser, Étienne Balibar, and Slavoj Žižek. In this way the course will combine theoretical rigor with tangible analysis of media that range from verbal texts to the visual arts and film. The course will actually meet MWF 11:00-1:00 (not until 1:30), so students who want to take the course but have another course starting at 1:00 can ask professor Kordela whether she can give them permission to take the course as an independent study with her.",
+      "distribution_requirements": "Humanities",
+      "gen_ed_requirements": "Internationalism",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27POLI%27%20num=%27294%27%20sect=%2706%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50059",
+      "subject": "POLI",
+      "subject_name": "Political Science",
+      "course_number": "301",
+      "section": "02",
+      "title": "Law, Economy, and Identity",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "3:15 - 4:30 pm",
+          "room": ""
+        }
+      ],
+      "instructor": "Patrick Schmidt",
+      "open_seats": "9",
+      "max_enrollment": "20",
+      "crosslistings": [
+        "Mode of Instruction: Remote"
+      ],
+      "description": "This seminar-style course explores vital questions in America’s political development, focusing particularly on the moments with questions of law and the identity of people have been contested around economic issues. Topics vary but may include the evolution in property rights for women, the law of slavery, the legal status of Native Americans, and the evolution of welfare rights. The course employs tutorials, in which students tackle key questions through essays, which are then discussed in small groups in the instructor’s office. Prerequisite(s): Sophomore-standing or permission of instructor.",
+      "distribution_requirements": "Social science",
+      "gen_ed_requirements": "U.S Identities and Differences, Writing WA",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27POLI%27%20num=%27301%27%20sect=%2702%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50060",
+      "subject": "PORT",
+      "subject_name": "Portuguese",
+      "course_number": "194",
+      "section": "01",
+      "title": "Shared Legacies, Disparate Journeys: Brazil and the U.S. Since the Abolition of Slavery",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "1:45 - 3:00 pm",
+          "room": "THEATR 205"
+        }
+      ],
+      "instructor": "J. Ernesto Ortiz Díaz",
+      "open_seats": "7",
+      "max_enrollment": "27",
+      "crosslistings": [
+        "Mode of Instruction: Hybrid; cross-listed with AMST 194-01",
+        "LATI 194-01"
+      ],
+      "description": "Varies by semester. Consult the department or class schedule for current listing.",
+      "distribution_requirements": "Humanities",
+      "gen_ed_requirements": "Internationalism or U.S. Identities and Differences, Writing WA",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27PORT%27%20num=%27194%27%20sect=%2701%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50075",
+      "subject": "PORT",
+      "subject_name": "Portuguese",
+      "course_number": "194",
+      "section": "02",
+      "title": "Reading Plays: Latinx and Latin American Theater",
+      "meetings": [
+        {
+          "days": "M W F",
+          "time": "11:00 - 1:30 pm",
+          "room": "THEATR 202"
+        }
+      ],
+      "instructor": "Cláudia Tatinge Nascimento",
+      "open_seats": "8",
+      "max_enrollment": "24",
+      "crosslistings": [
+        "Mode of Instruction: Hybrid; cross-listed with ENGL 194-02",
+        "LATI 194-02",
+        "THDA 194-01"
+      ],
+      "description": "Reading Plays: Latinx and Latin American Theater guides students in close readings of dramatic literature, in particular of plays that are typically left out of the traditional theatrical canon. This edition of the course will focus on texts by Latinx and Latin American playwrights. Students will learn about the socio-historical context of each play, and in-class exercises will introduce them to the foundation of script analysis: they will examine the play’s given circumstances, dialogue, dramatic action, characters, and style. Students will read a new play every week; examples of titles the course may explore are: Information for Foreigners (Griselda Gambarro, Argentina); Symphony Dream (Diogo Liberano, Brazil); Death and the Maiden (Ariel Dorfman, Chile); Fefu and her Friends (Maria Irene Fornes, Cuba/United States); The Sanchez Huerta Girl Killed Herself (Claudia Ríos, Mexico); Aunt Julia and the Scriptwriter (Mario Vargas Llosa, Peru); Marisol (José Rivera, United States/Puerto Rico). Texts are in translation, if desired the instructor may be able provide a copy of Latin American plays in either Portuguese or Spanish. Assignments include weekly in-class writing exercises and short critical papers.",
+      "distribution_requirements": "Fine arts",
+      "gen_ed_requirements": "Internationalism or U.S. Identities and Differences, Writing WP",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27PORT%27%20num=%27194%27%20sect=%2702%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50089",
+      "subject": "PSYC",
+      "subject_name": "Psychology",
+      "course_number": "100",
+      "section": "03",
+      "title": "Introduction to Psychology",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "1:45 - 3:00 pm",
+          "room": ""
+        }
+      ],
+      "instructor": "Cory Fleck",
+      "open_seats": "Closed 11",
+      "max_enrollment": "35",
+      "crosslistings": [
+        "Mode of Instruction: Remote"
+      ],
+      "description": "An introduction to psychological science -- the study of behavior and mental processes. This course surveys the major subdisciplines of the field, including such topics as the brain and neuroscience, behavioral genetics, cognitive and social development, perception, learning, memory, decision-making, language, consciousness, emotions, motivation, psychological disorders, social identity, interpersonal interactions and group and cultural processes. Lecture and laboratory components.",
+      "distribution_requirements": "Social science",
+      "gen_ed_requirements": "",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27PSYC%27%20num=%27100%27%20sect=%2703%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50063",
+      "subject": "PSYC",
+      "subject_name": "Psychology",
+      "course_number": "180",
+      "section": "01",
+      "title": "Brain, Mind, and Behavior",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "1:45 - 3:00 pm",
+          "room": ""
+        }
+      ],
+      "instructor": "Eric Wiertelak",
+      "open_seats": "22",
+      "max_enrollment": "99",
+      "crosslistings": [
+        "Mode of Instruction: Remote. The course is able to be entirely completed asynchronously",
+        "synchronously",
+        "or a bit of both",
+        "as student schedule/time-zone allow."
+      ],
+      "description": "A multidisciplinary investigation of behavior and the nervous system. Particular emphasis is placed on human processes of perception, cognition, learning, memory, and language. This course also serves as the introductory course for the neuroscience major.",
+      "distribution_requirements": "Natural science and mathematics",
+      "gen_ed_requirements": "",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27PSYC%27%20num=%27180%27%20sect=%2701%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50088",
+      "subject": "PSYC",
+      "subject_name": "Psychology",
+      "course_number": "220",
+      "section": "02",
+      "title": "Educational Psychology",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "9:30 - 10:45 am",
+          "room": ""
+        }
+      ],
+      "instructor": "Tina Kruse",
+      "open_seats": "Closed -2",
+      "max_enrollment": "25",
+      "crosslistings": [
+        "Mode of Instruction: Remote; cross-listed with EDUC 220-02"
+      ],
+      "description": "An introduction to theory and research in educational psychology. Topics include learning theory, learner characteristics, intelligence, creativity, motivation, measurement and evaluation, and models of teaching appropriate for diverse learners from early childhood through young adulthood. Students are required to complete observations in classroom settings.",
+      "distribution_requirements": "Social science",
+      "gen_ed_requirements": "Quantitative Thinking Q1",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27PSYC%27%20num=%27220%27%20sect=%2702%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50029",
+      "subject": "PSYC",
+      "subject_name": "Psychology",
+      "course_number": "270",
+      "section": "01",
+      "title": "Psychology of Sustainable Behavior",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "1:45 - 3:00 pm",
+          "room": "THEATR 202"
+        }
+      ],
+      "instructor": "Christie Manning",
+      "open_seats": "Closed 8",
+      "max_enrollment": "25",
+      "crosslistings": [
+        "Mode of Instruction: Hybrid; cross-listed with ENVI 270-01"
+      ],
+      "description": "This course is built around the argument that environmental problems do not exist; they are human behavior problems. Crafting effective solutions to issues such as ocean acidification, air pollution, or climate change requires understanding the human behaviors that lead to them. Course readings will cover psychological principles and theories relevant to sustainability, and in-class discussions will explore the complex web of factors underlying environmentally sustainable and unsustainable actions. Woven through the course is the theme of identity - personal, social, and cultural –and how it intersects with environmentalism. Psychology of Sustainable Behavior is a project-based class. Students will participate in a self-change project (2.5 weeks) and a campus- and community-based collaborative project (4.5 weeks). Prerequisite(s): PSYC 100 for Psychology majors.",
+      "distribution_requirements": "Social science",
+      "gen_ed_requirements": "U.S Identities and Differences",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27PSYC%27%20num=%27270%27%20sect=%2701%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50064",
+      "subject": "PSYC",
+      "subject_name": "Psychology",
+      "course_number": "394",
+      "section": "07",
+      "title": "Research in Parenting and Identity Development",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "8:00 - 11:30 am",
+          "room": "THEATR 201"
+        }
+      ],
+      "instructor": "Cari Gillen-O'Neel",
+      "open_seats": "1",
+      "max_enrollment": "17",
+      "crosslistings": [
+        "Mode of Instruction: Hybrid; permission of instructor required"
+      ],
+      "description": "For children to thrive in our increasingly diverse world, they must be prepared to engage with issues of race and racism. Children need to develop positive racial identities and learn how to navigate the racial privilege or discrimination that they will face in our society. One of the best places for children to learn about race is from their parents, yet parents often struggle with this topic. Should we teach our children to be \"colorblind,\" or should we teach them to notice race? When is the right age to start these conversations? For families who are committed to equity and justice, how can we ensure that these values are passed on to our kids? In this experiential class, you will be research assistants in the Macalester Development of Social Identities Lab. After becoming familiar with key theories from developmental, educational, and social psychology, you will work with a team of researchers to analysize interviews in which parents discussed how they teach their children about race. Prerequisite(s): PSYC 100, PSYC 201, and at least one intermediate course in Psychology. This course counts as an upper-level psychology course, and it satisfies the psychology major’s \"UP3\" requirement.",
+      "distribution_requirements": "Social science",
+      "gen_ed_requirements": "U.S Identities and Differences",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27PSYC%27%20num=%27394%27%20sect=%2707%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50065",
+      "subject": "RELI",
+      "subject_name": "Religious Studies",
+      "course_number": "238",
+      "section": "02",
+      "title": "Catholics: Culture, Identity, Politics",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "9:30 - 10:45 am",
+          "room": ""
+        }
+      ],
+      "instructor": "James Laine",
+      "open_seats": "Closed 5",
+      "max_enrollment": "20",
+      "crosslistings": [
+        "Mode of Instruction: Remote"
+      ],
+      "description": "A study of the religious tradition of Roman Catholicism. Some attention will be given to the theology and historical development of the Roman Catholic Church, but major emphasis will fall on the relationship of the Catholic religion to various Catholic cultures, including Ireland, Mexico, Poland and the United States.",
+      "distribution_requirements": "Humanities",
+      "gen_ed_requirements": "U.S Identities and Differences, Writing WC",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27RELI%27%20num=%27238%27%20sect=%2702%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50042",
+      "subject": "RELI",
+      "subject_name": "Religious Studies",
+      "course_number": "294",
+      "section": "03",
+      "title": "Marx and the Imaginary",
+      "meetings": [
+        {
+          "days": "M W F",
+          "time": "11:00 - 1:30 pm",
+          "room": ""
+        }
+      ],
+      "instructor": "Kiarina Kordela",
+      "open_seats": "11",
+      "max_enrollment": "30",
+      "crosslistings": [
+        "Mode of Instruction: Remote; cross-listed with MCST 294-02",
+        "POLI 294-06",
+        "GERM 294-02"
+      ],
+      "description": "Marx’s contribution to the theorization of the function of the imaginary in both the constitution of subjectivity and the mechanisms of politics and economy—usually referred to as ideology—cannot be overestimated. His conceptualization of the imaginary is gradually developed throughout several of his works, from his Critique of German Ideology to Capital, and is intrinsically intertwined with his discovery of three further crucial concepts: structure, the unconscious, and the symptom. All these concepts became instrumental in the development of psychoanalysis and new fields of knowledge, such as cultural analysis and the analysis of ideology. While also familiarizing ourselves with the basics of two of the most decisive influences on Marx, Hegel and Spinoza, in this course, we shall read excerpts from Marx’s work and pursue its further development in later influential thinkers and cultural critics, such as Louis Althusser, Étienne Balibar, and Slavoj Žižek. In this way the course will combine theoretical rigor with tangible analysis of media that range from verbal texts to the visual arts and film. The course will actually meet MWF 11:00-1:00 (not until 1:30), so students who want to take the course but have another course starting at 1:00 can ask professor Kordela whether she can give them permission to take the course as an independent study with her.",
+      "distribution_requirements": "Humanities",
+      "gen_ed_requirements": "Internationalism",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27RELI%27%20num=%27294%27%20sect=%2703%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50066",
+      "subject": "SOCI",
+      "subject_name": "Sociology",
+      "course_number": "150",
+      "section": "01",
+      "title": "Prius or Pickup? Political Divides and Social Class",
+      "meetings": [
+        {
+          "days": "MTWR",
+          "time": "7:00 - 10:00 pm",
+          "room": ""
+        }
+      ],
+      "instructor": "Khaldoun Samman",
+      "open_seats": "Closed 3",
+      "max_enrollment": "20",
+      "crosslistings": [
+        "Mode of Instruction: Remote"
+      ],
+      "description": "The Far Right in the United States has appropriated working class identities to produce an identity among the white working class. Donald Trump, for instance, intentionally portrays a large gap in highbrow and lowbrow to take jabs at privileged liberals (such as when he tweeted the \"Hamberder\" photo). This course observes what can be called the Far Right \"theater of politics\" in order to understand how liberals have left working class culture behind in ways that allowed the far right to fill the void by finding persuasive techniques in culture (country music, religion, church...) to articulate a political voice that some working class folks, especially whites, may find appealing. Some of the major questions of the course include: (1) How do political and economic elites produce class, gender, and racial divides and segmentations by aligning themselves with the cultural practices often associated with working class folks? (2) Can the left create a political culture that cultivates respect for organic cultural expressions that include religious expressions and pop-cultural themes like country music and sports (yes, even football!) into their fold Reducing everything to class and asking all others to submit to its political logic is a limited vision. Instead, the course investigates whether it is possible to envision a political project that rather than privileging the concerns of upper-middle class whites produces a culture of resistance that can articulate working class subjects - straight, queer, white, black, binary, non-binary - into a populist left movement? One of the truly powerful features of the Left is that it is much more diverse than the Far Right. Is it possible to extend that diversity even further so that it can show a \"little respect\" for organic cultural producers to feel comfortable producing and living in multiple class, racial, gender, and sexual habitus?",
+      "distribution_requirements": "Social science",
+      "gen_ed_requirements": "U.S Identities and Differences, Writing WP",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27SOCI%27%20num=%27150%27%20sect=%2701%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50091",
+      "subject": "SOCI",
+      "subject_name": "Sociology",
+      "course_number": "294",
+      "section": "03",
+      "title": "Progress & Identity: Intersections of Race, Gender and Social Movements",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "9:30 - 10:45 am",
+          "room": ""
+        }
+      ],
+      "instructor": "Aisha Upton",
+      "open_seats": "17",
+      "max_enrollment": "25",
+      "crosslistings": [
+        "Mode of Instruction: Remote"
+      ],
+      "description": "In many contemporary social movements, the roles of race and class may either seem obvious or relatively easy to ascertain. But what happens when we add gender to this mix? What are the different roles that women take on in social movements and how can we account for differences across movements? How do gender, race, and class intersect in social movements? For example, what happens when we compare the ideas of progress in Black Lives Matter and white nationalist movements with particular emphasis on women’s place(s) in the future? In this course, we scrutinize the intersections of race, class, and gender as they relate to the ideals to which movements aspire. Social movements that emphasize concepts such as progress, development, and nation-making indicate visions of the future that can illuminate how gender, race, and class shape peoples’ lives. We will focus on the experiences of women (as individuals and as members of groups or organizations) in their historical and structural locations and explore what concepts such as progress, development, and nation-making mean for women in the struggle over feminist meanings and claims.",
+      "distribution_requirements": "Social science",
+      "gen_ed_requirements": "U.S Identities and Differences",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27SOCI%27%20num=%27294%27%20sect=%2703%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50092",
+      "subject": "SOCI",
+      "subject_name": "Sociology",
+      "course_number": "294",
+      "section": "04",
+      "title": "Understanding and Addressing Homelessness",
+      "meetings": [
+        {
+          "days": "MTWR",
+          "time": "7:00 - 8:45 pm",
+          "room": ""
+        }
+      ],
+      "instructor": "Lesley Kandaras",
+      "open_seats": "17",
+      "max_enrollment": "30",
+      "crosslistings": [
+        "Mode of Instruction: Remote"
+      ],
+      "description": "Despite declining in the early part of the 2010s, the scope and extent of homelessness--along with public attention--has increased over the past few years. This course examines homelessness from a sociological perspective to inform the responses that we might take to address homelessness. What causes changes in homelessness? What are the social, political, and economic dimensions of homelessness? The course will incorporate guest speakers who work with individuals experiencing homelessness as well as people from non-governmental organizations and policy making sectors who aim to address homelessness through systems change.",
+      "distribution_requirements": "Social science",
+      "gen_ed_requirements": "U.S Identities and Differences",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27SOCI%27%20num=%27294%27%20sect=%2704%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50067",
+      "subject": "SPAN",
+      "subject_name": "Spanish",
+      "course_number": "102",
+      "section": "03",
+      "title": "Elementary Spanish II",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "8:00 - 11:30 am",
+          "room": "THEATR 205"
+        }
+      ],
+      "instructor": "Rosa Rull-Montoya",
+      "open_seats": "Closed 2",
+      "max_enrollment": "16",
+      "crosslistings": [
+        "Mode of Instruction: Hybrid"
+      ],
+      "description": "Pronunciation, grammar essentials, conversation and reading. Minimal introduction to history and culture of hispanophone countries. For admission into SPAN 203, students must have completed 102, or its equivalent, with a minimum grade of C-. Prerequisite(s): SPAN 101 with C- or better.",
+      "distribution_requirements": "",
+      "gen_ed_requirements": "Internationalism",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27SPAN%27%20num=%27102%27%20sect=%2703%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50068",
+      "subject": "SPAN",
+      "subject_name": "Spanish",
+      "course_number": "203",
+      "section": "04",
+      "title": "Intermediate Spanish I",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "1:00 - 4:30 pm",
+          "room": "THEATR 203"
+        }
+      ],
+      "instructor": "Teresa Mesa Adamuz",
+      "open_seats": "10",
+      "max_enrollment": "20",
+      "crosslistings": [
+        "Mode of Instruction: Hybrid"
+      ],
+      "description": "Intermediate Spanish extends and deepens awareness and use of linguistic functions in Spanish. Formal introduction to history and culture of Hispanophone countries. For admission into SPAN 204, students must have completed 203, or its equivalent, with a minimum grade of C-. Prerequisite(s): SPAN 102 or SPAN 110, or an equivalent, with a minimum grade of C-.",
+      "distribution_requirements": "",
+      "gen_ed_requirements": "",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27SPAN%27%20num=%27203%27%20sect=%2704%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50069",
+      "subject": "SPAN",
+      "subject_name": "Spanish",
+      "course_number": "204",
+      "section": "04",
+      "title": "Intermediate Spanish II",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "8:00 - 11:30 am",
+          "room": "HUM 400"
+        }
+      ],
+      "instructor": "Blanca Gimeno Escudero",
+      "open_seats": "Closed 3",
+      "max_enrollment": "16",
+      "crosslistings": [
+        "Mode of Instruction: Hybrid"
+      ],
+      "description": "Intermediate Spanish II extends and deepens awareness and use of linguistic functions in Spanish. Formal introduction to history and culture of Hispanophone countries. Prerequisite(s): SPAN 203, or its equivalent, with a grade of C- or better.",
+      "distribution_requirements": "",
+      "gen_ed_requirements": "Internationalism",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27SPAN%27%20num=%27204%27%20sect=%2704%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50071",
+      "subject": "STAT",
+      "subject_name": "Statistics",
+      "course_number": "112",
+      "section": "03",
+      "title": "Introduction to Data Science",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "8:00 - 9:15 am",
+          "room": ""
+        }
+      ],
+      "instructor": "Lisa Lendway",
+      "open_seats": "Closed 1",
+      "max_enrollment": "30",
+      "crosslistings": [
+        "Mode of Instruction: Remote; cross-listed with COMP 112-01"
+      ],
+      "description": "This course provides an introduction to the handling, analysis, and interpretation of the big datasets now routinely being collected in science, commerce, and government. Students achieve facility with a sophisticated, technical computing environment. The course aligns with techniques being used in several courses in the natural and social sciences, statistics, and mathematics. The course is intended to be accessible to all students, regardless of background.",
+      "distribution_requirements": "Natural science and mathematics",
+      "gen_ed_requirements": "Quantitative Thinking Q2",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27STAT%27%20num=%27112%27%20sect=%2703%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50097",
+      "subject": "STAT",
+      "subject_name": "Statistics",
+      "course_number": "125",
+      "section": "01",
+      "title": "Epidemiology",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "8:00 - 9:15 am",
+          "room": ""
+        }
+      ],
+      "instructor": "Kelsey McDonald",
+      "open_seats": "Closed 9",
+      "max_enrollment": "28",
+      "crosslistings": [
+        "Mode of Instruction: Remote"
+      ],
+      "description": "Epidemiology is the study of the distribution and determinants of disease and health in human populations and the application of this understanding to the solution of public health problems. Topics include measurement of disease and health, the outbreak and spread of disease, reasoning about cause and effect, analysis of risk, detection and classification, and the evaluation of trade-offs. The course is designed to fulfill and extend the professional community’s consensus definition of undergraduate epidemiology. In addition to the techniques of modern epidemiology, the course emphasizes the historical evolution of ideas of causation, treatment, and prevention of disease. The course is a required component of the concentration in Community and Global Health.",
+      "distribution_requirements": "Natural science and mathematics",
+      "gen_ed_requirements": "Quantitative Thinking Q3",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27STAT%27%20num=%27125%27%20sect=%2701%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50073",
+      "subject": "THDA",
+      "subject_name": "Theater and Dance",
+      "course_number": "194",
+      "section": "01",
+      "title": "Reading Plays: Latinx and Latin American Theater",
+      "meetings": [
+        {
+          "days": "M W F",
+          "time": "11:00 - 1:30 pm",
+          "room": "THEATR 202"
+        }
+      ],
+      "instructor": "Cláudia Tatinge Nascimento",
+      "open_seats": "8",
+      "max_enrollment": "24",
+      "crosslistings": [
+        "Mode of Instruction: Hybrid; cross-listed with ENGL 194-02",
+        "LATI 194-02",
+        "PORT 194-02"
+      ],
+      "description": "Reading Plays: Latinx and Latin American Theater guides students in close readings of dramatic literature, in particular of plays that are typically left out of the traditional theatrical canon. This edition of the course will focus on texts by Latinx and Latin American playwrights. Students will learn about the socio-historical context of each play, and in-class exercises will introduce them to the foundation of script analysis: they will examine the play’s given circumstances, dialogue, dramatic action, characters, and style. Students will read a new play every week; examples of titles the course may explore are: Information for Foreigners (Griselda Gambarro, Argentina); Symphony Dream (Diogo Liberano, Brazil); Death and the Maiden (Ariel Dorfman, Chile); Fefu and her Friends (Maria Irene Fornes, Cuba/United States); The Sanchez Huerta Girl Killed Herself (Claudia Ríos, Mexico); Aunt Julia and the Scriptwriter (Mario Vargas Llosa, Peru); Marisol (José Rivera, United States/Puerto Rico). Texts are in translation, if desired the instructor may be able provide a copy of Latin American plays in either Portuguese or Spanish. Assignments include weekly in-class writing exercises and short critical papers.",
+      "distribution_requirements": "Fine arts",
+      "gen_ed_requirements": "Internationalism or U.S. Identities and Differences, Writing WP",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27THDA%27%20num=%27194%27%20sect=%2701%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50078",
+      "subject": "THDA",
+      "subject_name": "Theater and Dance",
+      "course_number": "194",
+      "section": "02",
+      "title": "Dances and History of the African Diaspora",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "9:30 - 10:45 am",
+          "room": "THEATR 202"
+        }
+      ],
+      "instructor": "Patricia Brown",
+      "open_seats": "6",
+      "max_enrollment": "20",
+      "crosslistings": [
+        "Mode of Instruction: Hybrid"
+      ],
+      "description": "This course introduces students to the practice and history of selected dance forms from the African diaspora, especially those coming from West Africa, and that emerged in the Caribbean, and the Americas. Students will learn foundational characteristics and techniques, and engage in readings, films, documentaries, and videos. Some of the materials we will review in this course are Dance Black America directed by D.A. Pennebaker and Chris Hegedus, Dance in America: Free to Dance produced by Madison Davis Lacy/Thirteen; and select chapters from: Hot Feet and Social Change: African Dance and Diaspora Communities edited by Kariamu Welsh, Esailama Diouf, and Yvonne Daniel; and Katherine Dunham: Dance and the African Diaspora by Joanna Dee Das. A drummer will accompany the class, so students experience the fundamental connection between the drums/music and dance--when we connect to the rhythms of the music through our bodies, we connect to the internal drum of our heartbeat, which helps to ground us. Especially during the pandemic, when maintaining health, wellness, and a sense of balance have become a priority, since we are having to spend too many hours in front of computer screens. Class discussions about the readings, documentaries, and embodied practices will add to the course’s community-building aspect. Students will write weekly response papers in which they will articulate their questions and understandings about the origins, traditions, and artistic developments connected to these rich diasporic dance forms. All levels of experience are welcome, please contact the instructor with any questions. This course may count as a Tier II course for the African Studies concentration. Please contact the concentration’s director for approval.",
+      "distribution_requirements": "Fine arts",
+      "gen_ed_requirements": "Internationalism or U.S. Identities and Differences, Writing WP",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27THDA%27%20num=%27194%27%20sect=%2702%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50076",
+      "subject": "THDA",
+      "subject_name": "Theater and Dance",
+      "course_number": "294",
+      "section": "05",
+      "title": "Sound Design",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "1:45 - 3:00 pm",
+          "room": ""
+        }
+      ],
+      "instructor": "Katharine Horowitz",
+      "open_seats": "Closed 2",
+      "max_enrollment": "20",
+      "crosslistings": [
+        "Mode of Instruction: Remote"
+      ],
+      "description": "This course will provide the student with an introduction to the creative and technical process of sound design in contemporary entertainment. Through lecture, demonstration, and projects, students will learn the aesthetic of sound design, the basic science of sound, audio software, and the process of collaboration. Students will acquire the skills to analyze and research a script; to edit, manipulate, and program sound files; and to present and defend design projects.",
+      "distribution_requirements": "Fine arts",
+      "gen_ed_requirements": "Quantitative Thinking Q1",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27THDA%27%20num=%27294%27%20sect=%2705%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "50077",
+      "subject": "WGSS",
+      "subject_name": "Women's, Gender, and Sexuality Studies",
+      "course_number": "100",
+      "section": "02",
+      "title": "Introduction to Women’s, Gender, and Sexuality Studies",
+      "meetings": [
+        {
+          "days": "MTWRF",
+          "time": "3:15 - 4:30 pm",
+          "room": "MAIN 009"
+        }
+      ],
+      "instructor": "Myrl Beam",
+      "open_seats": "Closed 8",
+      "max_enrollment": "16",
+      "crosslistings": [
+        "Mode of Instruction: Hybrid"
+      ],
+      "description": "This course is an introduction to the range and importance of 20th century as well as current feminist and queer theories and practices to our understanding of positive social change. It will analyze feminist and queer histories of resistance and alternatives to economic and political control, in the U.S. and elsewhere. The framework for the course is the intersection of gender and sexuality with race, class, nationality, and dis/ability; it will address such issues as economic marginalization, social movements, the institutions of family and marriage, migration and the role of the state/nation among others. Depending on the instructor, the course generally focuses on either LGBTQI studies or on transnational perspectives of these issues.",
+      "distribution_requirements": "Humanities",
+      "gen_ed_requirements": "U.S Identities and Differences, Writing WA",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202150%27%20dept=%20%27WGSS%27%20num=%27100%27%20sect=%2702%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    }
+  ]
+}
