@@ -6,6 +6,7 @@
   const IDB_NAME = "mac-course-archive";
   const IDB_STORE = "terms";
   const SCHEDULE_KEY = "macCourseArchive.schedule.v1";
+  const HINT_DISMISSED_KEY = "macCourseArchive.hintDismissed.v1";
   const DAY_TO_ICS = { M: "MO", T: "TU", W: "WE", R: "TH", F: "FR", S: "SA", U: "SU" };
 
   const els = {
@@ -44,6 +45,13 @@
     historyStatus: document.getElementById("historyStatus"),
     historyList: document.getElementById("historyList"),
     historyCloseBtn: document.getElementById("historyCloseBtn"),
+    hintBanner: document.getElementById("hintBanner"),
+    hintDismissBtn: document.getElementById("hintDismissBtn"),
+    termFreshness: document.getElementById("termFreshness"),
+    activeFilters: document.getElementById("activeFilters"),
+    loadProgress: document.getElementById("loadProgress"),
+    exportCsvBtn: document.getElementById("exportCsvBtn"),
+    scheduleConflicts: document.getElementById("scheduleConflicts"),
   };
 
   /** @type {{term_code:string, term_label:string, course_count:number, scraped_at:string}[]} */
@@ -118,6 +126,7 @@
     wireControls();
     wireDialogs();
     updateScheduleFabCount();
+    maybeShowHint();
 
     // Restore state from the URL so links and back/forward behave like a real page.
     const url = new URL(location.href);
@@ -152,6 +161,7 @@
     }
 
     buildSubjectChips();
+    updateTermFreshness();
     loadChangesPanel();
     window.addEventListener("popstate", onPopState);
     render();
@@ -178,6 +188,40 @@
       render();
       updateUrl();
     });
+    els.hintDismissBtn.addEventListener("click", () => {
+      localStorage.setItem(HINT_DISMISSED_KEY, "1");
+      els.hintBanner.hidden = true;
+    });
+    document.addEventListener("keydown", (e) => {
+      if (e.key !== "/" || e.metaKey || e.ctrlKey || e.altKey) return;
+      const tag = (e.target.tagName || "").toLowerCase();
+      if (tag === "input" || tag === "textarea" || e.target.isContentEditable) return;
+      e.preventDefault();
+      els.searchBox.focus();
+    });
+  }
+
+  function maybeShowHint() {
+    if (localStorage.getItem(HINT_DISMISSED_KEY)) return;
+    els.hintBanner.hidden = false;
+  }
+
+  function timeAgo(isoString) {
+    if (!isoString) return "";
+    const diffMs = Date.now() - new Date(isoString).getTime();
+    const mins = Math.round(diffMs / 60000);
+    if (mins < 1) return "just now";
+    if (mins < 60) return `${mins} min${mins === 1 ? "" : "s"} ago`;
+    const hours = Math.round(mins / 60);
+    if (hours < 48) return `${hours} hour${hours === 1 ? "" : "s"} ago`;
+    const days = Math.round(hours / 24);
+    if (days < 60) return `${days} day${days === 1 ? "" : "s"} ago`;
+    return new Date(isoString).toLocaleDateString();
+  }
+
+  function updateTermFreshness() {
+    const meta = index.find((t) => t.term_code === currentTermCode);
+    els.termFreshness.textContent = meta && meta.scraped_at ? `updated ${timeAgo(meta.scraped_at)}` : "";
   }
 
   function syncDayCheckboxes() {
@@ -210,6 +254,7 @@
       els.termSelect.value = urlTerm;
       markActiveEra(urlTerm);
       await ensureTermLoaded(urlTerm);
+      updateTermFreshness();
       loadChangesPanel();
     }
     if (urlAll !== els.searchAllToggle.checked) {
@@ -308,6 +353,7 @@
     await ensureTermLoaded(termCode);
     selectedSubjects.clear();
     buildSubjectChips();
+    updateTermFreshness();
     loadChangesPanel();
     render();
     updateUrl();
@@ -338,10 +384,17 @@
 
   async function loadAllTerms() {
     const missing = index.filter((t) => !termCache.has(t.term_code));
+    if (missing.length > 0) {
+      els.loadProgress.hidden = false;
+      els.loadProgress.max = missing.length;
+      els.loadProgress.value = 0;
+    }
     for (let i = 0; i < missing.length; i++) {
       setStatus(`Loading all terms for search… ${i + 1}/${missing.length} (${missing[i].term_label})`);
       await ensureTermLoaded(missing[i].term_code);
+      els.loadProgress.value = i + 1;
     }
+    els.loadProgress.hidden = true;
     setStatus("");
   }
 
@@ -454,7 +507,91 @@
     return payload ? payload.courses.map((c) => ({ ...c, _term_label: payload.term_label, _term_code: payload.term_code })) : [];
   }
 
+  const DAY_DISPLAY = { M: "Mon", T: "Tue", W: "Wed", R: "Thu", F: "Fri", S: "Sat", U: "Sun" };
+
+  function renderActiveFilterChips() {
+    const chips = []; // {label, onRemove}
+
+    const q = els.searchBox.value.trim();
+    if (q) chips.push({ label: `"${q}"`, onRemove: () => { els.searchBox.value = ""; render(); updateUrl(); } });
+
+    if (els.openSeatsToggle.checked) {
+      chips.push({ label: "Open seats only", onRemove: () => { els.openSeatsToggle.checked = false; render(); updateUrl(); } });
+    }
+
+    if (selectedDays.size) {
+      const label = [...selectedDays].map((d) => DAY_DISPLAY[d] || d).join("/");
+      chips.push({
+        label,
+        onRemove: () => { selectedDays.clear(); syncDayCheckboxes(); render(); updateUrl(); },
+      });
+    }
+
+    if (els.timeOfDaySelect.value !== "any") {
+      const opt = els.timeOfDaySelect.selectedOptions[0];
+      chips.push({
+        label: opt ? opt.textContent : els.timeOfDaySelect.value,
+        onRemove: () => { els.timeOfDaySelect.value = "any"; render(); updateUrl(); },
+      });
+    }
+
+    if (selectedSubjects.size) {
+      chips.push({
+        label: [...selectedSubjects].join(", "),
+        onRemove: () => { selectedSubjects.clear(); buildSubjectChips(); render(); updateUrl(); },
+      });
+    }
+
+    if (els.searchAllToggle.checked) {
+      chips.push({
+        label: "Searching every term",
+        onRemove: () => { els.searchAllToggle.checked = false; onToggleSearchAll({ target: els.searchAllToggle }); },
+      });
+    }
+
+    els.activeFilters.innerHTML = "";
+    if (chips.length === 0) {
+      els.activeFilters.hidden = true;
+      return;
+    }
+    els.activeFilters.hidden = false;
+    const frag = document.createDocumentFragment();
+    for (const chip of chips) {
+      const el = document.createElement("span");
+      el.className = "filter-chip";
+      const text = document.createElement("span");
+      text.textContent = chip.label;
+      const removeBtn = document.createElement("button");
+      removeBtn.type = "button";
+      removeBtn.setAttribute("aria-label", `Remove filter: ${chip.label}`);
+      removeBtn.textContent = "✕";
+      removeBtn.addEventListener("click", chip.onRemove);
+      el.append(text, removeBtn);
+      frag.appendChild(el);
+    }
+    if (chips.length > 1) {
+      const clearAll = document.createElement("button");
+      clearAll.type = "button";
+      clearAll.className = "filter-chip clear-all";
+      clearAll.textContent = "Clear all ✕";
+      clearAll.addEventListener("click", () => {
+        els.searchBox.value = "";
+        els.openSeatsToggle.checked = false;
+        els.timeOfDaySelect.value = "any";
+        selectedDays.clear();
+        syncDayCheckboxes();
+        selectedSubjects.clear();
+        buildSubjectChips();
+        render();
+        updateUrl();
+      });
+      frag.appendChild(clearAll);
+    }
+    els.activeFilters.appendChild(frag);
+  }
+
   function render() {
+    renderActiveFilterChips();
     const q = els.searchBox.value.trim().toLowerCase();
     let courses = currentCourses();
 
@@ -545,6 +682,11 @@
     node.querySelector(".course-meta").innerHTML = highlight(meta, q);
     node.querySelector(".course-term-tag").textContent = c._term_label;
 
+    const badge = node.querySelector(".seat-badge");
+    const seatInfo = seatStatus(c.open_seats);
+    badge.classList.add(seatInfo.cls);
+    badge.title = seatInfo.label;
+
     const detail = node.querySelector(".course-detail");
     const summaryBtn = node.querySelector(".course-summary");
     const toggle = node.querySelector(".course-toggle");
@@ -625,6 +767,14 @@
   function meetingSummary(c) {
     if (!c.meetings || c.meetings.length === 0) return "TBA";
     return c.meetings.map((m) => [m.days, m.time, m.room].filter(Boolean).join(" ")).join(" / ");
+  }
+
+  function seatStatus(openSeatsRaw) {
+    const n = parseInt(openSeatsRaw, 10);
+    if (!Number.isFinite(n)) return { cls: "seat-unknown", label: "Seat count unknown" };
+    if (n <= 0) return { cls: "seat-full", label: "Full" };
+    if (n <= 3) return { cls: "seat-low", label: `${n} seat${n === 1 ? "" : "s"} left` };
+    return { cls: "seat-open", label: `${n} seats open` };
   }
 
   function escapeHtml(s) {
@@ -835,21 +985,81 @@
     els.scheduleFabCount.textContent = mySchedule.length;
   }
 
+  function detectConflicts(schedule) {
+    const conflicts = []; // {aKey, bKey, message}
+    const conflictKeys = new Set();
+
+    for (let i = 0; i < schedule.length; i++) {
+      for (let j = i + 1; j < schedule.length; j++) {
+        const a = schedule[i];
+        const b = schedule[j];
+        for (const ma of a.meetings || []) {
+          const daysA = dayLettersOf(ma.days);
+          const timeA = parseTimeRange(ma.time);
+          if (!daysA.length || !timeA) continue;
+          for (const mb of b.meetings || []) {
+            const daysB = dayLettersOf(mb.days);
+            const timeB = parseTimeRange(mb.time);
+            if (!daysB.length || !timeB) continue;
+            const sharedDay = daysA.find((d) => daysB.includes(d));
+            if (!sharedDay) continue;
+            const aStart = timeA.startHour * 60 + timeA.startMin;
+            const aEnd = timeA.endHour * 60 + timeA.endMin;
+            const bStart = timeB.startHour * 60 + timeB.startMin;
+            const bEnd = timeB.endHour * 60 + timeB.endMin;
+            if (aStart < bEnd && bStart < aEnd) {
+              const aKey = scheduleKey(a.term_code, a.crn);
+              const bKey = scheduleKey(b.term_code, b.crn);
+              conflictKeys.add(aKey);
+              conflictKeys.add(bKey);
+              conflicts.push({
+                aKey,
+                bKey,
+                message: `${a.subject} ${a.course_number}-${a.section} overlaps ${b.subject} ${b.course_number}-${b.section} on ${DAY_DISPLAY[sharedDay] || sharedDay} (${ma.time} vs ${mb.time})`,
+              });
+            }
+          }
+        }
+      }
+    }
+    return { conflicts, conflictKeys };
+  }
+
   function renderScheduleTray() {
     els.scheduleList.innerHTML = "";
+    els.scheduleConflicts.innerHTML = "";
+    els.scheduleConflicts.hidden = true;
+
     if (mySchedule.length === 0) {
       const p = document.createElement("p");
       p.className = "schedule-empty";
       p.textContent = "Nothing added yet — expand a course below and click \u201c+ Add to my schedule.\u201d";
       els.scheduleList.appendChild(p);
       els.exportIcsBtn.disabled = true;
+      els.exportCsvBtn.disabled = true;
       return;
     }
     els.exportIcsBtn.disabled = false;
+    els.exportCsvBtn.disabled = false;
+
+    const { conflicts, conflictKeys } = detectConflicts(mySchedule);
+    if (conflicts.length) {
+      els.scheduleConflicts.hidden = false;
+      const heading = document.createElement("p");
+      heading.innerHTML = `<strong>⚠ ${conflicts.length} time conflict${conflicts.length === 1 ? "" : "s"}:</strong>`;
+      els.scheduleConflicts.appendChild(heading);
+      for (const c of conflicts) {
+        const p = document.createElement("p");
+        p.textContent = c.message;
+        els.scheduleConflicts.appendChild(p);
+      }
+    }
+
     const frag = document.createDocumentFragment();
     for (const s of mySchedule) {
+      const key = scheduleKey(s.term_code, s.crn);
       const item = document.createElement("div");
-      item.className = "schedule-item";
+      item.className = "schedule-item" + (conflictKeys.has(key) ? " has-conflict" : "");
       const main = document.createElement("div");
       main.className = "schedule-item-main";
       const codeEl = document.createElement("span");
@@ -863,7 +1073,7 @@
       removeBtn.className = "schedule-item-remove";
       removeBtn.setAttribute("aria-label", "Remove");
       removeBtn.textContent = "✕";
-      removeBtn.addEventListener("click", () => removeFromSchedule(scheduleKey(s.term_code, s.crn)));
+      removeBtn.addEventListener("click", () => removeFromSchedule(key));
       item.append(main, removeBtn);
       frag.appendChild(item);
     }
@@ -889,6 +1099,10 @@
       els.exportDialog.showModal();
     });
 
+    els.exportCsvBtn.addEventListener("click", () => {
+      downloadFile("my-mac-schedule.csv", "text/csv", buildCsv(mySchedule));
+    });
+
     els.downloadIcsBtn.addEventListener("click", () => {
       const startVal = els.termStartInput.value;
       const weeks = parseInt(els.termWeeksInput.value, 10) || 14;
@@ -911,6 +1125,26 @@
 
   function pad(n) {
     return String(n).padStart(2, "0");
+  }
+
+  function csvEscape(s) {
+    const str = String(s ?? "");
+    return /[",\n]/.test(str) ? `"${str.replace(/"/g, '""')}"` : str;
+  }
+
+  function buildCsv(schedule) {
+    const header = ["Term", "Subject", "Number", "Section", "CRN", "Title", "Instructor", "Meetings"];
+    const rows = schedule.map((s) => [
+      s.term_label,
+      s.subject,
+      s.course_number,
+      s.section,
+      s.crn,
+      s.title,
+      s.instructor || "TBA",
+      meetingSummary(s),
+    ]);
+    return [header, ...rows].map((row) => row.map(csvEscape).join(",")).join("\r\n");
   }
 
   function buildIcs(schedule, startDateStr, weeks) {

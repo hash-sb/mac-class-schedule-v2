@@ -20,12 +20,18 @@
   <!-- populated by app.js -->
 </nav>
 
+<div class="hint-banner" id="hintBanner" hidden>
+  <span id="hintText">Tip: click a course to expand it, then add it to your schedule — look for the button bottom-right.</span>
+  <button type="button" id="hintDismissBtn" aria-label="Dismiss tip">Got it ✕</button>
+</div>
+
 <main>
   <section class="controls" aria-label="Search and filters">
     <div class="control-row">
       <label class="field">
         <span class="field-label">Term</span>
         <select id="termSelect"></select>
+        <span class="term-freshness" id="termFreshness"></span>
       </label>
 
       <label class="field field-grow">
@@ -88,6 +94,9 @@
       </div>
     </div>
 
+    <div class="active-filters" id="activeFilters" hidden></div>
+
+    <progress class="load-progress" id="loadProgress" hidden max="100" value="0"></progress>
     <p class="status-line" id="statusLine" aria-live="polite"></p>
   </section>
 
@@ -120,8 +129,10 @@
     <h2>My schedule</h2>
     <button type="button" class="dialog-close" id="scheduleCloseBtn" aria-label="Close">✕</button>
   </div>
+  <div id="scheduleConflicts" class="schedule-conflicts" hidden></div>
   <div id="scheduleList" class="schedule-list"><!-- populated by app.js --></div>
   <div class="dialog-actions">
+    <button type="button" class="link-btn" id="exportCsvBtn">Export as CSV</button>
     <button type="button" class="primary-btn" id="exportIcsBtn">Export as calendar (.ics)</button>
   </div>
 </dialog>
@@ -159,6 +170,7 @@
 <template id="courseRowTemplate">
   <article class="course">
     <button class="course-summary" type="button">
+      <span class="seat-badge" aria-hidden="true"></span>
       <span class="course-code"></span>
       <span class="course-title"></span>
       <span class="course-meta"></span>

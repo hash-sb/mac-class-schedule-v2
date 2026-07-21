@@ -60,6 +60,21 @@ to touch the parser.
 - **Client-side caching** (IndexedDB): once you've loaded a term, it's
   cached in your browser, so revisiting or using "search every term" again
   doesn't re-download everything.
+- **Seat-status badges**: a small colored dot on every row (green = open,
+  amber = few left, red = full, gray = unknown) so you can scan a subject's
+  availability without expanding each row.
+- **Active-filter chips**: whatever's currently applied (search text, open
+  seats, days, time of day, departments, cross-term search) shows as a
+  dismissible chip above the results, with a "clear all."
+- **Per-term freshness**: the term picker shows when that specific term was
+  last scraped, so you can tell whether you're looking at a stale snapshot.
+- **Schedule conflict detection**: if two sections you've added overlap in
+  time, the schedule tray flags it before you export.
+- **CSV export**: alongside the `.ics` calendar export, a plain CSV of your
+  added sections for pasting into a doc or spreadsheet.
+- **First-visit tip**: a one-time dismissible banner pointing out the
+  schedule builder, since it isn't otherwise obvious on first glance.
+- **"/" keyboard shortcut** jumps focus to the search box.
 
 All of this is plain HTML/CSS/JS with no build step and no external
 services beyond the static JSON files - nothing is sent anywhere; "My
