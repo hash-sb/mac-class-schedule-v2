@@ -9,6 +9,9 @@
     termSelect: document.getElementById("termSelect"),
     searchBox: document.getElementById("searchBox"),
     searchAllToggle: document.getElementById("searchAllToggle"),
+    openSeatsToggle: document.getElementById("openSeatsToggle"),
+    sortSelect: document.getElementById("sortSelect"),
+    shareBtn: document.getElementById("shareBtn"),
     statusLine: document.getElementById("statusLine"),
     results: document.getElementById("results"),
     lastUpdated: document.getElementById("lastUpdated"),
@@ -44,11 +47,93 @@
 
     buildTermSelect();
     buildEraStrip();
-    els.termSelect.addEventListener("change", () => selectTerm(els.termSelect.value));
-    els.searchBox.addEventListener("input", debounce(render, 120));
-    els.searchAllToggle.addEventListener("change", onToggleSearchAll);
 
-    await selectTerm(index[0].term_code);
+    els.termSelect.addEventListener("change", () => selectTerm(els.termSelect.value));
+    els.searchBox.addEventListener("input", debounce(() => { render(); updateUrl(); }, 120));
+    els.searchAllToggle.addEventListener("change", onToggleSearchAll);
+    els.openSeatsToggle.addEventListener("change", () => { render(); updateUrl(); });
+    els.sortSelect.addEventListener("change", () => { render(); updateUrl(); });
+    els.shareBtn.addEventListener("click", copyShareLink);
+
+    // Restore state from the URL (?term=...&q=...&all=1&seats=1&sort=...) so
+    // links and the browser back/forward buttons behave like a real page.
+    const url = new URL(location.href);
+    const urlTerm = url.searchParams.get("term");
+    const urlQ = url.searchParams.get("q");
+    const urlAll = url.searchParams.get("all") === "1";
+    const urlSeats = url.searchParams.get("seats") === "1";
+    const urlSort = url.searchParams.get("sort");
+
+    if (urlQ) els.searchBox.value = urlQ;
+    if (urlSeats) els.openSeatsToggle.checked = true;
+    if (urlSort && [...els.sortSelect.options].some((o) => o.value === urlSort)) {
+      els.sortSelect.value = urlSort;
+    }
+
+    const startTerm = index.some((t) => t.term_code === urlTerm) ? urlTerm : index[0].term_code;
+    currentTermCode = startTerm;
+    els.termSelect.value = startTerm;
+    markActiveEra(startTerm);
+
+    if (urlAll) {
+      els.searchAllToggle.checked = true;
+      els.results.classList.add("is-cross-term");
+      await loadAllTerms();
+    } else {
+      await ensureTermLoaded(startTerm);
+    }
+
+    window.addEventListener("popstate", onPopState);
+    render();
+  }
+
+  async function onPopState() {
+    const url = new URL(location.href);
+    const urlTerm = url.searchParams.get("term");
+    const urlQ = url.searchParams.get("q") || "";
+    const urlAll = url.searchParams.get("all") === "1";
+    const urlSeats = url.searchParams.get("seats") === "1";
+    const urlSort = url.searchParams.get("sort") || "default";
+
+    els.searchBox.value = urlQ;
+    els.openSeatsToggle.checked = urlSeats;
+    els.sortSelect.value = [...els.sortSelect.options].some((o) => o.value === urlSort) ? urlSort : "default";
+
+    if (urlTerm && urlTerm !== currentTermCode) {
+      currentTermCode = urlTerm;
+      els.termSelect.value = urlTerm;
+      markActiveEra(urlTerm);
+      await ensureTermLoaded(urlTerm);
+    }
+    if (urlAll !== els.searchAllToggle.checked) {
+      els.searchAllToggle.checked = urlAll;
+      els.results.classList.toggle("is-cross-term", urlAll);
+      if (urlAll) await loadAllTerms();
+    }
+    render();
+  }
+
+  function updateUrl() {
+    const url = new URL(location.href);
+    url.searchParams.set("term", currentTermCode);
+    const q = els.searchBox.value.trim();
+    q ? url.searchParams.set("q", q) : url.searchParams.delete("q");
+    els.searchAllToggle.checked ? url.searchParams.set("all", "1") : url.searchParams.delete("all");
+    els.openSeatsToggle.checked ? url.searchParams.set("seats", "1") : url.searchParams.delete("seats");
+    els.sortSelect.value !== "default" ? url.searchParams.set("sort", els.sortSelect.value) : url.searchParams.delete("sort");
+    history.replaceState(null, "", url);
+  }
+
+  function copyShareLink() {
+    updateUrl();
+    navigator.clipboard.writeText(location.href).then(() => {
+      els.shareBtn.textContent = "Link copied ✓";
+      els.shareBtn.classList.add("is-copied");
+      setTimeout(() => {
+        els.shareBtn.textContent = "Copy link to this view";
+        els.shareBtn.classList.remove("is-copied");
+      }, 1800);
+    });
   }
 
   function buildTermSelect() {
@@ -107,6 +192,7 @@
     els.results.classList.remove("is-cross-term");
     await ensureTermLoaded(termCode);
     render();
+    updateUrl();
   }
 
   async function ensureTermLoaded(termCode) {
@@ -123,20 +209,20 @@
     return index.find((t) => t.term_code === termCode)?.term_label ?? termCode;
   }
 
-  async function onToggleSearchAll(e) {
-    if (!e.target.checked) {
-      els.results.classList.remove("is-cross-term");
-      render();
-      return;
-    }
-    els.results.classList.add("is-cross-term");
+  async function loadAllTerms() {
     const missing = index.filter((t) => !termCache.has(t.term_code));
     for (let i = 0; i < missing.length; i++) {
       setStatus(`Loading all terms for search… ${i + 1}/${missing.length} (${missing[i].term_label})`);
       await ensureTermLoaded(missing[i].term_code);
     }
     setStatus("");
+  }
+
+  async function onToggleSearchAll(e) {
+    els.results.classList.toggle("is-cross-term", e.target.checked);
+    if (e.target.checked) await loadAllTerms();
     render();
+    updateUrl();
   }
 
   function currentCourses() {
@@ -174,6 +260,32 @@
       });
     }
 
+    if (els.openSeatsToggle.checked) {
+      courses = courses.filter((c) => {
+        const n = parseInt(c.open_seats, 10);
+        return Number.isFinite(n) && n > 0;
+      });
+    }
+
+    const sortMode = els.sortSelect.value;
+    if (sortMode === "seats-desc" || sortMode === "seats-asc") {
+      const fallback = sortMode === "seats-desc" ? -Infinity : Infinity;
+      const dir = sortMode === "seats-desc" ? -1 : 1;
+      courses = [...courses].sort((a, b) => {
+        const na = Number.isFinite(parseInt(a.open_seats, 10)) ? parseInt(a.open_seats, 10) : fallback;
+        const nb = Number.isFinite(parseInt(b.open_seats, 10)) ? parseInt(b.open_seats, 10) : fallback;
+        return (na - nb) * dir;
+      });
+    } else if (sortMode === "course-number") {
+      courses = [...courses].sort((a, b) => {
+        if (a.subject !== b.subject) return (a.subject || "").localeCompare(b.subject || "");
+        const na = parseInt(a.course_number, 10) || 0;
+        const nb = parseInt(b.course_number, 10) || 0;
+        if (na !== nb) return na - nb;
+        return (a.section || "").localeCompare(b.section || "");
+      });
+    }
+
     els.results.innerHTML = "";
 
     if (courses.length === 0) {
@@ -181,6 +293,8 @@
       empty.className = "empty-state";
       empty.textContent = q
         ? `No sections match "${q}".`
+        : els.openSeatsToggle.checked
+        ? "No sections with open seats right now."
         : "This term has no scraped sections yet.";
       els.results.appendChild(empty);
       setStatus("");
@@ -190,21 +304,24 @@
     const truncated = courses.length > MAX_RENDERED;
     const shown = truncated ? courses.slice(0, MAX_RENDERED) : courses;
 
-    // group by subject_name, preserving first-seen order
-    const groups = new Map();
-    for (const c of shown) {
-      const key = c.subject_name || c.subject || "Other";
-      if (!groups.has(key)) groups.set(key, []);
-      groups.get(key).push(c);
-    }
-
     const frag = document.createDocumentFragment();
-    for (const [subject, list] of groups) {
-      const h = document.createElement("h2");
-      h.className = "subject-heading";
-      h.textContent = subject;
-      frag.appendChild(h);
-      for (const c of list) frag.appendChild(buildCourseRow(c));
+    if (sortMode === "default") {
+      // group by subject_name, preserving first-seen order
+      const groups = new Map();
+      for (const c of shown) {
+        const key = c.subject_name || c.subject || "Other";
+        if (!groups.has(key)) groups.set(key, []);
+        groups.get(key).push(c);
+      }
+      for (const [subject, list] of groups) {
+        const h = document.createElement("h2");
+        h.className = "subject-heading";
+        h.textContent = subject;
+        frag.appendChild(h);
+        for (const c of list) frag.appendChild(buildCourseRow(c, q));
+      }
+    } else {
+      for (const c of shown) frag.appendChild(buildCourseRow(c, q));
     }
     els.results.appendChild(frag);
 
@@ -215,12 +332,13 @@
     );
   }
 
-  function buildCourseRow(c) {
+  function buildCourseRow(c, q) {
     const node = els.rowTemplate.content.cloneNode(true);
     const code = `${c.subject} ${c.course_number}-${c.section} (${c.crn})`;
-    node.querySelector(".course-code").textContent = code;
-    node.querySelector(".course-title").textContent = c.title;
-    node.querySelector(".course-meta").textContent = meetingSummary(c);
+    const meta = `${meetingSummary(c)} · ${c.instructor || "TBA"}`;
+    node.querySelector(".course-code").innerHTML = highlight(code, q);
+    node.querySelector(".course-title").innerHTML = highlight(c.title, q);
+    node.querySelector(".course-meta").innerHTML = highlight(meta, q);
     node.querySelector(".course-term-tag").textContent = c._term_label;
 
     const detail = node.querySelector(".course-detail");
@@ -281,6 +399,22 @@
   function meetingSummary(c) {
     if (!c.meetings || c.meetings.length === 0) return "TBA";
     return c.meetings.map((m) => [m.days, m.time, m.room].filter(Boolean).join(" ")).join(" / ");
+  }
+
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, (ch) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[ch]));
+  }
+
+  function escapeRegExp(s) {
+    return s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  }
+
+  /** Escapes `text`, then wraps case-insensitive matches of `query` in <mark>. */
+  function highlight(text, query) {
+    const safe = escapeHtml(text ?? "");
+    if (!query) return safe;
+    const re = new RegExp(`(${escapeRegExp(escapeHtml(query))})`, "ig");
+    return safe.replace(re, "<mark>$1</mark>");
   }
 
   function setStatus(msg) {

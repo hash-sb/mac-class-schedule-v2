@@ -38,6 +38,24 @@
         <span>Search every term instead</span>
       </label>
     </div>
+    <div class="control-row control-row-secondary">
+      <label class="field field-checkbox">
+        <input type="checkbox" id="openSeatsToggle">
+        <span>Open seats only</span>
+      </label>
+
+      <label class="field">
+        <span class="field-label">Sort by</span>
+        <select id="sortSelect">
+          <option value="default">Subject (default)</option>
+          <option value="seats-desc">Most open seats</option>
+          <option value="seats-asc">Fewest open seats</option>
+          <option value="course-number">Course number</option>
+        </select>
+      </label>
+
+      <button type="button" class="share-btn" id="shareBtn">Copy link to this view</button>
+    </div>
     <p class="status-line" id="statusLine" aria-live="polite"></p>
   </section>
 
