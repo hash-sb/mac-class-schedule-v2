@@ -36,7 +36,36 @@ schedule page (782 sections across 40 subjects, parsed with zero misses) -
 see the `sample HTML` you can re-use as a regression fixture if you ever need
 to touch the parser.
 
-### Data format
+### Features
+
+- **Browse & search** any term from Fall 2008 onward, or toggle "search every
+  term" to search across all of them at once.
+- **Filters**: open-seats-only, day-of-week (M/T/W/Th/F, OR logic), time of
+  day (morning/afternoon/evening), and department chips — all combinable,
+  and all reflected in the URL so a filtered view is a shareable link.
+- **Sorting**: by subject (default, grouped view), most/fewest open seats,
+  or course number.
+- **Course history**: expand any section and click "See every offering of
+  this course" to see every term it's been taught, with instructor and
+  enrollment for each.
+- **Instructor history**: same idea, but "everything this instructor has
+  taught" across the whole archive.
+- **Schedule builder + calendar export**: add sections to "My schedule"
+  (bottom-right), then export as a `.ics` file — you provide the term's
+  first day of class and how many weeks it runs (we don't scrape exact term
+  date ranges), and it generates weekly recurring calendar events.
+- **Recent changes panel**: if a term has been re-scraped and something
+  changed (new/removed sections, seat counts shifting during add/drop), a
+  banner above the results summarizes what changed since the last scrape.
+- **Client-side caching** (IndexedDB): once you've loaded a term, it's
+  cached in your browser, so revisiting or using "search every term" again
+  doesn't re-download everything.
+
+All of this is plain HTML/CSS/JS with no build step and no external
+services beyond the static JSON files - nothing is sent anywhere; "My
+schedule" and the term cache live only in your own browser's local storage.
+
+## Data format
 
 `data/index.json`:
 ```json
@@ -80,6 +109,21 @@ to touch the parser.
 Terms with zero sections found (not offered that year - e.g. most
 Summer II/III terms) simply don't get a file and don't appear in
 `index.json`. That's expected, not an error.
+
+### Change log (`data/changes/<code>.jsonl`)
+
+Every time `run.py` re-scrapes a term that already had a saved snapshot, it
+diffs the new result against the old one by CRN and appends one JSON line
+(if anything changed) to `data/changes/<term_code>.jsonl`:
+
+```json
+{"timestamp": "2026-09-10T06:00:00+00:00", "added": ["BIOL 210-02 (12345) Genetics"], "removed": [], "seat_changes": [{"course": "BIOL 100-01 (10010) Intro Biology", "before": "3", "after": "0"}]}
+```
+
+The web app reads the most recent line for whichever term you're viewing
+and shows it as a "recent changes" banner. Each term's log is capped at the
+last 200 entries so it doesn't grow forever over years of runs. This file
+simply won't exist for a term until it's been scraped at least twice.
 
 ## One-time setup
 

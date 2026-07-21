@@ -21,8 +21,10 @@ from render import render_term_html
 from terms import Term, active_terms, all_terms
 
 DATA_DIR = Path(__file__).parent.parent / "data"
+CHANGES_DIR = DATA_DIR / "changes"
 POLITE_DELAY_SECONDS = 3
 MAX_ATTEMPTS = 3
+MAX_CHANGE_ENTRIES_PER_TERM = 200  # cap so the log doesn't grow forever over years of runs
 
 
 def scrape_one(term: Term) -> list[dict]:
@@ -38,9 +40,60 @@ def scrape_one(term: Term) -> list[dict]:
     raise RuntimeError(f"Giving up on {term.code} after {MAX_ATTEMPTS} attempts") from last_err
 
 
+def _course_summary(c: dict) -> str:
+    return f"{c['subject']} {c['course_number']}-{c['section']} ({c['crn']}) {c['title']}"
+
+
+def compute_diff(old_courses: list[dict], new_courses: list[dict]) -> dict:
+    """Compares two snapshots of the same term by CRN and reports what changed."""
+    old_by_crn = {c["crn"]: c for c in old_courses}
+    new_by_crn = {c["crn"]: c for c in new_courses}
+
+    added = [_course_summary(c) for crn, c in new_by_crn.items() if crn not in old_by_crn]
+    removed = [_course_summary(c) for crn, c in old_by_crn.items() if crn not in new_by_crn]
+
+    seat_changes = []
+    for crn, new_c in new_by_crn.items():
+        old_c = old_by_crn.get(crn)
+        if old_c and old_c.get("open_seats") != new_c.get("open_seats"):
+            seat_changes.append(
+                {
+                    "course": _course_summary(new_c),
+                    "before": old_c.get("open_seats"),
+                    "after": new_c.get("open_seats"),
+                }
+            )
+
+    return {"added": added, "removed": removed, "seat_changes": seat_changes}
+
+
+def append_change_log(term: Term, diff: dict) -> None:
+    if not (diff["added"] or diff["removed"] or diff["seat_changes"]):
+        return  # nothing changed - don't bloat the log with no-op entries
+    CHANGES_DIR.mkdir(parents=True, exist_ok=True)
+    path = CHANGES_DIR / f"{term.code}.jsonl"
+    entry = {"timestamp": datetime.now(timezone.utc).isoformat(), **diff}
+
+    lines = []
+    if path.exists():
+        lines = path.read_text().splitlines()
+    lines.append(json.dumps(entry, ensure_ascii=False))
+    lines = lines[-MAX_CHANGE_ENTRIES_PER_TERM:]
+    path.write_text("\n".join(lines) + "\n")
+
+
 def write_term_file(term: Term, courses: list[dict]) -> dict:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     path = DATA_DIR / f"{term.code}.json"
+
+    if path.exists():
+        try:
+            old_payload = json.loads(path.read_text())
+            diff = compute_diff(old_payload.get("courses", []), courses)
+            append_change_log(term, diff)
+        except (json.JSONDecodeError, OSError) as e:
+            print(f"  warning: couldn't diff previous {term.code}.json: {e}", file=sys.stderr)
+
     payload = {
         "term_code": term.code,
         "term_label": term.label,

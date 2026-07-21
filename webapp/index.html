@@ -38,6 +38,7 @@
         <span>Search every term instead</span>
       </label>
     </div>
+
     <div class="control-row control-row-secondary">
       <label class="field field-checkbox">
         <input type="checkbox" id="openSeatsToggle">
@@ -56,7 +57,46 @@
 
       <button type="button" class="share-btn" id="shareBtn">Copy link to this view</button>
     </div>
+
+    <div class="control-row control-row-tertiary">
+      <fieldset class="field day-filter">
+        <legend class="field-label">Meets on</legend>
+        <div class="day-checks" id="dayChecks">
+          <label><input type="checkbox" value="M"><span>M</span></label>
+          <label><input type="checkbox" value="T"><span>T</span></label>
+          <label><input type="checkbox" value="W"><span>W</span></label>
+          <label><input type="checkbox" value="R"><span>Th</span></label>
+          <label><input type="checkbox" value="F"><span>F</span></label>
+        </div>
+      </fieldset>
+
+      <label class="field">
+        <span class="field-label">Time of day</span>
+        <select id="timeOfDaySelect">
+          <option value="any">Any time</option>
+          <option value="morning">Morning (before 12pm)</option>
+          <option value="afternoon">Afternoon (12–5pm)</option>
+          <option value="evening">Evening (after 5pm)</option>
+        </select>
+      </label>
+
+      <div class="field field-grow subject-filter">
+        <span class="field-label">Departments <button type="button" id="clearSubjectsBtn" class="link-btn">clear</button></span>
+        <div class="subject-chip-box" id="subjectChipBox">
+          <!-- populated by app.js -->
+        </div>
+      </div>
+    </div>
+
     <p class="status-line" id="statusLine" aria-live="polite"></p>
+  </section>
+
+  <section class="changes-panel" id="changesPanel" hidden>
+    <button type="button" class="changes-toggle" id="changesToggle">
+      <span id="changesSummary"></span>
+      <span class="course-toggle" aria-hidden="true">＋</span>
+    </button>
+    <div class="changes-body" id="changesBody" hidden></div>
   </section>
 
   <section class="results" id="results" aria-label="Course results">
@@ -68,6 +108,53 @@
   <p>Unofficial archive, built from Macalester's public class schedule pages. Not affiliated with the Registrar's Office — always confirm seat counts and details in the official system before registering.</p>
   <p id="lastUpdated"></p>
 </footer>
+
+<!-- Floating schedule tray toggle -->
+<button type="button" class="schedule-fab" id="scheduleFab">
+  My schedule <span class="schedule-fab-count" id="scheduleFabCount">0</span>
+</button>
+
+<!-- Schedule tray -->
+<dialog id="scheduleDialog" class="tray-dialog">
+  <div class="dialog-head">
+    <h2>My schedule</h2>
+    <button type="button" class="dialog-close" id="scheduleCloseBtn" aria-label="Close">✕</button>
+  </div>
+  <div id="scheduleList" class="schedule-list"><!-- populated by app.js --></div>
+  <div class="dialog-actions">
+    <button type="button" class="primary-btn" id="exportIcsBtn">Export as calendar (.ics)</button>
+  </div>
+</dialog>
+
+<!-- ICS export options -->
+<dialog id="exportDialog" class="tray-dialog">
+  <div class="dialog-head">
+    <h2>Export to calendar</h2>
+    <button type="button" class="dialog-close" id="exportCloseBtn" aria-label="Close">✕</button>
+  </div>
+  <p class="dialog-hint">We don't scrape exact term start/end dates, so tell us the term's first class day and how many weeks it runs — we'll generate repeating weekly events for that span.</p>
+  <label class="field">
+    <span class="field-label">First day of classes</span>
+    <input type="date" id="termStartInput">
+  </label>
+  <label class="field">
+    <span class="field-label">Number of weeks</span>
+    <input type="number" id="termWeeksInput" min="1" max="20" value="14">
+  </label>
+  <div class="dialog-actions">
+    <button type="button" class="primary-btn" id="downloadIcsBtn">Download .ics</button>
+  </div>
+</dialog>
+
+<!-- Course/instructor history modal -->
+<dialog id="historyDialog" class="tray-dialog">
+  <div class="dialog-head">
+    <h2 id="historyTitle">History</h2>
+    <button type="button" class="dialog-close" id="historyCloseBtn" aria-label="Close">✕</button>
+  </div>
+  <p class="status-line" id="historyStatus"></p>
+  <div id="historyList" class="history-list"><!-- populated by app.js --></div>
+</dialog>
 
 <template id="courseRowTemplate">
   <article class="course">
@@ -81,6 +168,11 @@
     <div class="course-detail" hidden>
       <p class="course-description"></p>
       <dl class="course-facts"></dl>
+      <div class="course-actions">
+        <button type="button" class="link-btn course-history-btn">See every offering of this course →</button>
+        <button type="button" class="link-btn course-instructor-btn">See everything this instructor has taught →</button>
+        <button type="button" class="add-schedule-btn">+ Add to my schedule</button>
+      </div>
     </div>
   </article>
 </template>
