@@ -41,7 +41,7 @@ jobs:
       - name: Backfill
         working-directory: scraper
         run: |
-          ARGS="--mode backfill"
+          ARGS="--mode backfill --commit-every 5"
           if [ -n "${{ inputs.from_year }}" ]; then
             ARGS="$ARGS --from-year ${{ inputs.from_year }}"
           fi
@@ -50,7 +50,11 @@ jobs:
           fi
           python run.py $ARGS
 
-      - name: Commit data
+      - name: Commit any remaining data
+        # run.py already checkpoints its own progress every 5 terms (see
+        # --commit-every above), so this is just a safety net for anything
+        # scraped after the last checkpoint. It's a no-op if there's nothing
+        # left to commit.
         run: |
           git config user.name "backfill-bot"
           git config user.email "actions@users.noreply.github.com"

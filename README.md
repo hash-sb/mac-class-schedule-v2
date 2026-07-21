@@ -92,6 +92,19 @@ printed to the workflow log instead. A term only gets marked "not offered"
 the first time it's ever scraped and comes back empty (which is the normal,
 expected case for most Summer II/III terms).
 
+`index.json` is also updated after **every single term**, not just once at
+the end of a run, and long backfill runs checkpoint-commit their own
+progress every 5 terms (`--commit-every 5`, wired up in `backfill.yml`). So
+even if a run gets cancelled or times out partway through, everything
+scraped up to that point is already saved and listed - nothing is lost just
+because the run didn't finish.
+
+**If you ever see fewer terms in the web app than `data/*.json` files that
+actually exist** (this could only happen from a run made before this fix
+existed), no re-scraping is needed - run **Actions → "Rebuild index from
+existing data" → Run workflow**. It regenerates `index.json` purely by
+reading whatever term files are already on disk.
+
 ## Data format
 
 `data/index.json`:

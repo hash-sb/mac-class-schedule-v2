@@ -1,17 +1,11 @@
 {
-  "generated_at": "2026-07-21T05:03:39.851782+00:00",
+  "generated_at": "2026-07-20T23:29:50.611897+00:00",
   "terms": [
-    {
-      "term_code": "202630",
-      "term_label": "Spring 2026",
-      "course_count": 743,
-      "scraped_at": "2026-07-21T05:01:50.722370+00:00"
-    },
     {
       "term_code": "202710",
       "term_label": "Fall 2026",
       "course_count": 782,
-      "scraped_at": "2026-07-21T05:03:12.716543+00:00"
+      "scraped_at": "2026-07-20T23:29:50.561034+00:00"
     }
   ]
 }

@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import subprocess
 import sys
 import time
 from datetime import datetime, timezone
@@ -22,9 +23,31 @@ from terms import Term, active_terms, all_terms
 
 DATA_DIR = Path(__file__).parent.parent / "data"
 CHANGES_DIR = DATA_DIR / "changes"
+REPO_ROOT = Path(__file__).parent.parent
 POLITE_DELAY_SECONDS = 3
 MAX_ATTEMPTS = 3
 MAX_CHANGE_ENTRIES_PER_TERM = 200  # cap so the log doesn't grow forever over years of runs
+
+
+def checkpoint_commit(message: str) -> None:
+    """
+    Commits and pushes data/ right now, so that if this process gets killed
+    a moment later (job timeout, manual cancellation, runner eviction), the
+    work done so far is still saved - not just written to the runner's
+    ephemeral disk. Safe to call often: it's a no-op if there's nothing new
+    to commit, and any failure here is logged but never crashes the scrape.
+    """
+    try:
+        subprocess.run(["git", "config", "user.email", "actions@users.noreply.github.com"], cwd=REPO_ROOT, check=False)
+        subprocess.run(["git", "config", "user.name", "scrape-checkpoint-bot"], cwd=REPO_ROOT, check=False)
+        subprocess.run(["git", "add", "data/"], cwd=REPO_ROOT, check=True)
+        result = subprocess.run(["git", "commit", "-m", message], cwd=REPO_ROOT, capture_output=True, text=True)
+        if result.returncode != 0:
+            return  # most likely "nothing to commit" - not an error
+        subprocess.run(["git", "push"], cwd=REPO_ROOT, check=True)
+        print(f"  checkpoint committed: {message}", file=sys.stderr)
+    except subprocess.CalledProcessError as e:
+        print(f"  warning: checkpoint commit/push failed (continuing anyway): {e}", file=sys.stderr)
 
 
 def scrape_one(term: Term) -> list[dict]:
@@ -163,8 +186,8 @@ def update_index(term_payloads: dict[str, dict]) -> None:
     )
 
 
-def run(terms: list[Term]) -> None:
-    payloads = {}
+def run(terms: list[Term], commit_every: int = 0) -> None:
+    written = 0
     for i, term in enumerate(terms, 1):
         print(f"[{i}/{len(terms)}] scraping {term.label} ({term.code})...")
         try:
@@ -175,14 +198,24 @@ def run(terms: list[Term]) -> None:
         payload = write_term_file(term, courses)
         if payload is None:
             # Suspected scrape failure - write_term_file already logged why.
-            # Do NOT add to payloads, so update_index() leaves this term's
-            # existing entry (and file) exactly as it was.
+            # Leave this term's existing index entry exactly as it was.
             continue
-        payloads[term.code] = payload
+        # Update index.json after EVERY term, not just once at the end. If
+        # this run gets interrupted (timeout, cancellation, a crash on a
+        # later term), every term scraped so far is still correctly listed -
+        # nothing is lost just because the run didn't finish.
+        update_index({term.code: payload})
+        written += 1
         print(f"  -> {payload['course_count']} sections")
+
+        if commit_every and written % commit_every == 0:
+            checkpoint_commit(f"Scrape checkpoint: {written}/{len(terms)} terms ({term.code})")
+
         time.sleep(POLITE_DELAY_SECONDS)
-    update_index(payloads)
-    print(f"Done. {len(payloads)} terms written/updated.")
+
+    if commit_every:
+        checkpoint_commit(f"Scrape checkpoint: final ({written} terms written/updated)")
+    print(f"Done. {written} terms written/updated.")
 
 
 def main():
@@ -191,12 +224,19 @@ def main():
     ap.add_argument("--term", help="term code for --mode single, e.g. 202710")
     ap.add_argument("--through-year", type=int, default=None, help="override end year for backfill")
     ap.add_argument("--from-year", type=int, default=None, help="start year for a chunked backfill")
+    ap.add_argument(
+        "--commit-every",
+        type=int,
+        default=0,
+        help="commit+push data/ every N terms scraped (0 = don't; the calling workflow commits once at the end instead). "
+        "Recommended for long backfill runs so a timeout/cancellation doesn't lose all progress.",
+    )
     args = ap.parse_args()
 
     if args.mode == "backfill":
-        run(all_terms(through_calendar_year=args.through_year, from_calendar_year=args.from_year))
+        run(all_terms(through_calendar_year=args.through_year, from_calendar_year=args.from_year), commit_every=args.commit_every)
     elif args.mode == "incremental":
-        run(active_terms())
+        run(active_terms(), commit_every=args.commit_every)
     elif args.mode == "single":
         if not args.term:
             ap.error("--mode single requires --term")
@@ -205,7 +245,7 @@ def main():
         yyyy = int(args.term[:4])
         season = season_by_suffix[suffix]
         cal_year = yyyy - 1 if season == "Fall" else yyyy
-        run([Term(code=args.term, season=season, calendar_year=cal_year)])
+        run([Term(code=args.term, season=season, calendar_year=cal_year)], commit_every=args.commit_every)
 
 
 if __name__ == "__main__":
