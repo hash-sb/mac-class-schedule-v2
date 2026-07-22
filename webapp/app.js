@@ -21,6 +21,7 @@
     searchBox: document.getElementById("searchBox"),
     searchAllToggle: document.getElementById("searchAllToggle"),
     seatsThresholdSelect: document.getElementById("seatsThresholdSelect"),
+    mergeCrossListedToggle: document.getElementById("mergeCrossListedToggle"),
     sortSelect: document.getElementById("sortSelect"),
     shareBtn: document.getElementById("shareBtn"),
     dayChecks: document.getElementById("dayChecks"),
@@ -198,6 +199,9 @@
       : saved.subj ?? [];
     subj.forEach((s) => selectedSubjects.add(s));
 
+    const mergeCrossListed = url.searchParams.has("merge") ? url.searchParams.get("merge") === "1" : saved.merge ?? false;
+    els.mergeCrossListedToggle.checked = mergeCrossListed;
+
     if (urlQ) els.searchBox.value = urlQ;
     if (urlSort && [...els.sortSelect.options].some((o) => o.value === urlSort)) els.sortSelect.value = urlSort;
 
@@ -236,6 +240,7 @@
     els.searchBox.addEventListener("input", debounce(() => { render(); updateUrl(); }, 120));
     els.searchAllToggle.addEventListener("change", onToggleSearchAll);
     els.seatsThresholdSelect.addEventListener("change", () => { render(); updateUrl(); });
+    els.mergeCrossListedToggle.addEventListener("change", () => { render(); updateUrl(); });
     els.sortSelect.addEventListener("change", () => { render(); updateUrl(); });
     els.shareBtn.addEventListener("click", copyShareLink);
     els.timeOfDaySelect.addEventListener("change", () => { render(); updateUrl(); });
@@ -425,6 +430,7 @@
     const urlDays = (url.searchParams.get("days") || "").split(",").filter(Boolean);
     const urlTime = url.searchParams.get("time") || "any";
     const urlSubj = (url.searchParams.get("subj") || "").split(",").filter(Boolean);
+    const urlMerge = url.searchParams.get("merge") === "1";
     const urlCrn = url.searchParams.get("crn");
 
     els.searchBox.value = urlQ;
@@ -434,6 +440,7 @@
     selectedDays = new Set(urlDays);
     syncDayCheckboxes();
     selectedSubjects = new Set(urlSubj);
+    els.mergeCrossListedToggle.checked = urlMerge;
 
     if (urlTerm && urlTerm !== currentTermCode) {
       currentTermCode = urlTerm;
@@ -465,6 +472,7 @@
     els.timeOfDaySelect.value !== "any" ? url.searchParams.set("time", els.timeOfDaySelect.value) : url.searchParams.delete("time");
     selectedDays.size ? url.searchParams.set("days", [...selectedDays].join(",")) : url.searchParams.delete("days");
     selectedSubjects.size ? url.searchParams.set("subj", [...selectedSubjects].join(",")) : url.searchParams.delete("subj");
+    els.mergeCrossListedToggle.checked ? url.searchParams.set("merge", "1") : url.searchParams.delete("merge");
     // crn is only ever set by the explicit "copy link to this course" action
     // (see copyCoursePermalink) - any other interaction invalidates it.
     url.searchParams.delete("crn");
@@ -482,6 +490,7 @@
         days: [...selectedDays],
         time: els.timeOfDaySelect.value,
         subj: [...selectedSubjects],
+        merge: els.mergeCrossListedToggle.checked,
       })
     );
   }
@@ -771,6 +780,41 @@
     return selectedSubjects.has(c.subject);
   }
 
+  /**
+   * When "merge cross-listed sections" is on, courses that are cross-listed
+   * with each other (the same physical section, offered under multiple
+   * department/number combinations) collapse into a single row. We don't
+   * need to look anything up elsewhere in the term to do this - each course
+   * already carries its own `crosslistings` field listing the other
+   * aliases as "SUBJ NUM-SEC (CRN)" strings, which is all we need both to
+   * detect the group and to build a combined label for it.
+   */
+  function crnsFromCrosslistings(crosslistings) {
+    const crns = [];
+    for (const s of crosslistings || []) {
+      const m = s.match(/\((\d+)\)/);
+      if (m) crns.push(m[1]);
+    }
+    return crns;
+  }
+
+  function dedupeCrossListed(courses) {
+    const seenCrns = new Set();
+    const result = [];
+    for (const c of courses) {
+      if (seenCrns.has(c.crn)) continue; // already folded into an earlier row's merged label
+      const linkedCrns = crnsFromCrosslistings(c.crosslistings);
+      linkedCrns.forEach((crn) => seenCrns.add(crn));
+      seenCrns.add(c.crn);
+      const ownDesignation = `${c.subject} ${c.course_number}-${c.section} (${c.crn})`;
+      result.push({
+        ...c,
+        _mergedLabel: linkedCrns.length ? [ownDesignation, ...c.crosslistings].join(" / ") : null,
+      });
+    }
+    return result;
+  }
+
   function queryMatchesCourse(c, q) {
     const haystack = [c.subject, c.course_number, c.section, c.crn, c.title, c.instructor, c.subject_name]
       .join(" ")
@@ -903,6 +947,13 @@
       });
     }
 
+    if (els.mergeCrossListedToggle.checked) {
+      chips.push({
+        label: "Merging cross-listed sections",
+        onRemove: () => { els.mergeCrossListedToggle.checked = false; render(); updateUrl(); },
+      });
+    }
+
     els.activeFilters.innerHTML = "";
     if (chips.length === 0) {
       els.activeFilters.hidden = true;
@@ -944,6 +995,7 @@
       els.timeOfDaySelect.value,
       [...selectedDays].sort(),
       [...selectedSubjects].sort(),
+      els.mergeCrossListedToggle.checked,
     ]);
   }
 
@@ -971,6 +1023,10 @@
         if (na !== nb) return na - nb;
         return (a.section || "").localeCompare(b.section || "");
       });
+    }
+
+    if (els.mergeCrossListedToggle.checked) {
+      courses = dedupeCrossListed(courses);
     }
 
     els.results.innerHTML = "";
@@ -1072,7 +1128,7 @@
     article.dataset.crn = c.crn;
     article.dataset.term = c._term_code;
 
-    const code = `${c.subject} ${c.course_number}-${c.section} (${c.crn})`;
+    const code = c._mergedLabel || `${c.subject} ${c.course_number}-${c.section} (${c.crn})`;
     const meta = `${meetingSummary(c)} · ${c.instructor || "TBA"}`;
     node.querySelector(".course-code").innerHTML = highlight(code, q);
     node.querySelector(".course-title").innerHTML = highlight(c.title, q);
@@ -1294,6 +1350,15 @@
     renderHistoryRows(matches, "No other sections found for this instructor.");
   }
 
+  function computeFillInfo(m) {
+    const max = parseInt(m.max_enrollment, 10);
+    const open = normalizeSeatCount(m.open_seats);
+    if (!Number.isFinite(max) || max <= 0) return null;
+    const filled = max - open;
+    const pct = Math.round((filled / max) * 100);
+    return { pct, filled, max, overEnrolled: open < 0 };
+  }
+
   function renderHistoryRows(matches, emptyMsg) {
     els.historyStatus.textContent = matches.length ? `${matches.length} section${matches.length === 1 ? "" : "s"}.` : "";
     els.historyList.innerHTML = "";
@@ -1304,6 +1369,23 @@
       els.historyList.appendChild(p);
       return;
     }
+
+    // Aggregate fill-rate summary across every offering with usable data -
+    // this is the "multi-year enrollment pattern" at a glance: does this
+    // course (or this instructor's sections) typically fill up, or usually
+    // have room? Based on each term's final snapshot, not a precise
+    // registration-week trend (we don't have historical registration
+    // calendar dates to align terms against), but still a genuinely useful
+    // signal from data we already reliably have.
+    const fillInfos = matches.map(computeFillInfo).filter(Boolean);
+    if (fillInfos.length > 0) {
+      const avgPct = Math.round(fillInfos.reduce((sum, f) => sum + f.pct, 0) / fillInfos.length);
+      const summary = document.createElement("p");
+      summary.className = "history-summary";
+      summary.textContent = `Average fill rate across ${fillInfos.length} offering${fillInfos.length === 1 ? "" : "s"} with enrollment data: ${avgPct}%.`;
+      els.historyList.appendChild(summary);
+    }
+
     const frag = document.createDocumentFragment();
     for (const m of matches) {
       const row = document.createElement("div");
@@ -1317,6 +1399,24 @@
       instr.className = "instructor";
       instr.textContent = m.instructor || "TBA";
       row.append(term, mid, instr);
+
+      const fill = computeFillInfo(m);
+      if (fill) {
+        const fillWrap = document.createElement("span");
+        fillWrap.className = "history-fill";
+        const track = document.createElement("span");
+        track.className = "history-fill-track";
+        const bar = document.createElement("span");
+        bar.className = "history-fill-bar" + (fill.overEnrolled ? " is-over" : "");
+        bar.style.width = `${Math.min(100, Math.max(0, fill.pct))}%`;
+        track.appendChild(bar);
+        const label = document.createElement("span");
+        label.className = "history-fill-label";
+        label.textContent = fill.overEnrolled ? `${fill.filled}/${fill.max} (over-enrolled)` : `${fill.filled}/${fill.max} (${fill.pct}%)`;
+        fillWrap.append(track, label);
+        row.appendChild(fillWrap);
+      }
+
       frag.appendChild(row);
     }
     els.historyList.appendChild(frag);

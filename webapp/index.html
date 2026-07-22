@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<a href="#mainContent" class="skip-link">Skip to course results</a>
 
 <header class="site-header">
   <div class="wordmark">
@@ -29,13 +30,12 @@
   <button type="button" id="hintDismissBtn" aria-label="Dismiss tip">Got it ✕</button>
 </div>
 
-<main>
+<main id="mainContent">
   <section class="controls" aria-label="Search and filters">
     <div class="primary-row">
       <label class="field field-term">
-        <span class="field-label">Term</span>
+        <span class="field-label">Term <span class="term-freshness" id="termFreshness"></span></span>
         <select id="termSelect"></select>
-        <span class="term-freshness" id="termFreshness"></span>
       </label>
 
       <label class="field field-grow">
@@ -106,13 +106,17 @@
         </select>
       </label>
 
-      <button type="button" class="reset-filters-btn" id="resetFiltersBtn">Reset filters</button>
+      <button type="button" class="reset-filters-btn" id="resetFiltersBtn">Reset</button>
     </div>
 
     <div class="utility-row">
       <label class="field field-checkbox">
         <input type="checkbox" id="searchAllToggle">
         <span>Search every term instead</span>
+      </label>
+      <label class="field field-checkbox">
+        <input type="checkbox" id="mergeCrossListedToggle">
+        <span>Merge cross-listed sections</span>
       </label>
       <label class="field field-checkbox">
         <input type="checkbox" id="rememberFiltersToggle">
@@ -130,9 +134,9 @@
   <!-- On narrow screens, #filterToolbar is moved in here by app.js (matchMedia),
        and #mobileFilterTrigger opens it. On wide screens it stays inline above
        and this dialog is unused. -->
-  <dialog id="mobileFilterDialog" class="tray-dialog mobile-filter-dialog">
+  <dialog id="mobileFilterDialog" class="tray-dialog mobile-filter-dialog" aria-labelledby="mobileFilterDialogTitle">
     <div class="dialog-head">
-      <h2>Filters</h2>
+      <h2 id="mobileFilterDialogTitle">Filters</h2>
       <button type="button" class="dialog-close" id="mobileFilterCloseBtn" aria-label="Close">✕</button>
     </div>
     <!-- #filterToolbar gets appended here on mobile -->
@@ -154,6 +158,7 @@
 <footer class="site-footer">
   <p>Unofficial archive, built from Macalester's public class schedule pages. Not affiliated with the Registrar's Office — always confirm seat counts and details in the official system before registering.</p>
   <p id="lastUpdated"></p>
+  <p><a href="status.html">Scrape health status →</a></p>
 </footer>
 
 <!-- Floating schedule tray toggle -->
@@ -162,9 +167,9 @@
 </button>
 
 <!-- Schedule tray -->
-<dialog id="scheduleDialog" class="tray-dialog">
+<dialog id="scheduleDialog" class="tray-dialog" aria-labelledby="scheduleDialogTitle">
   <div class="dialog-head">
-    <h2>My schedule</h2>
+    <h2 id="scheduleDialogTitle">My schedule</h2>
     <button type="button" class="dialog-close" id="scheduleCloseBtn" aria-label="Close">✕</button>
   </div>
   <div id="scheduleConflicts" class="schedule-conflicts" hidden></div>
@@ -177,9 +182,9 @@
 </dialog>
 
 <!-- ICS export options -->
-<dialog id="exportDialog" class="tray-dialog">
+<dialog id="exportDialog" class="tray-dialog" aria-labelledby="exportDialogTitle">
   <div class="dialog-head">
-    <h2>Export to calendar</h2>
+    <h2 id="exportDialogTitle">Export to calendar</h2>
     <button type="button" class="dialog-close" id="exportCloseBtn" aria-label="Close">✕</button>
   </div>
   <p class="dialog-hint">We don't scrape exact term start/end dates, so tell us the term's first class day and how many weeks it runs — we'll generate repeating weekly events for that span.</p>
@@ -197,7 +202,7 @@
 </dialog>
 
 <!-- Course/instructor history modal -->
-<dialog id="historyDialog" class="tray-dialog">
+<dialog id="historyDialog" class="tray-dialog" aria-labelledby="historyTitle">
   <div class="dialog-head">
     <h2 id="historyTitle">History</h2>
     <button type="button" class="dialog-close" id="historyCloseBtn" aria-label="Close">✕</button>

@@ -179,7 +179,45 @@ def write_term_file(term: Term, courses: list[dict]) -> dict | None:
     return payload
 
 
-def run(terms: list[Term], commit_every: int = 0) -> None:
+STATUS_HISTORY_FILE = DATA_DIR / "status-history.jsonl"
+MAX_STATUS_HISTORY_ENTRIES = 100
+
+
+def write_status(mode: str, terms_requested: int, written: int) -> None:
+    """
+    Writes data/status.json (a snapshot of the most recent run) and appends
+    a compact entry to data/status-history.jsonl (capped, so it doesn't grow
+    forever) - together these power the web app's scrape-health status page,
+    so problems are visible there without anyone needing to dig through
+    Actions logs or GitHub Issues.
+    """
+    now = datetime.now(timezone.utc).isoformat()
+    status = {
+        "last_run_at": now,
+        "mode": mode,
+        "terms_requested": terms_requested,
+        "terms_written": written,
+        "had_problems": bool(PROBLEMS),
+        "problems": PROBLEMS,
+    }
+    (DATA_DIR / "status.json").write_text(json.dumps(status, indent=2))
+
+    lines = STATUS_HISTORY_FILE.read_text().splitlines() if STATUS_HISTORY_FILE.exists() else []
+    lines.append(
+        json.dumps(
+            {
+                "timestamp": now,
+                "mode": mode,
+                "terms_written": written,
+                "had_problems": status["had_problems"],
+                "problem_count": len(PROBLEMS),
+            }
+        )
+    )
+    STATUS_HISTORY_FILE.write_text("\n".join(lines[-MAX_STATUS_HISTORY_ENTRIES:]) + "\n")
+
+
+def run(terms: list[Term], commit_every: int = 0, mode: str = "unknown") -> None:
     written = 0
     for i, term in enumerate(terms, 1):
         print(f"[{i}/{len(terms)}] scraping {term.label} ({term.code})...")
@@ -210,6 +248,8 @@ def run(terms: list[Term], commit_every: int = 0) -> None:
         checkpoint_commit(f"Scrape checkpoint: final ({written} terms written/updated)")
     print(f"Done. {written} terms written/updated.")
 
+    write_status(mode, len(terms), written)
+
     if PROBLEMS:
         PROBLEMS_FILE.write_text(json.dumps(PROBLEMS, indent=2))
         print(f"{len(PROBLEMS)} problem(s) flagged this run - see {PROBLEMS_FILE.name}", file=sys.stderr)
@@ -235,9 +275,9 @@ def main():
     args = ap.parse_args()
 
     if args.mode == "backfill":
-        run(all_terms(through_calendar_year=args.through_year, from_calendar_year=args.from_year), commit_every=args.commit_every)
+        run(all_terms(through_calendar_year=args.through_year, from_calendar_year=args.from_year), commit_every=args.commit_every, mode="backfill")
     elif args.mode == "incremental":
-        run(active_terms(), commit_every=args.commit_every)
+        run(active_terms(), commit_every=args.commit_every, mode="incremental")
     elif args.mode == "single":
         if not args.term:
             ap.error("--mode single requires --term")
@@ -246,7 +286,7 @@ def main():
         yyyy = int(args.term[:4])
         season = season_by_suffix[suffix]
         cal_year = yyyy - 1 if season == "Fall" else yyyy
-        run([Term(code=args.term, season=season, calendar_year=cal_year)], commit_every=args.commit_every)
+        run([Term(code=args.term, season=season, calendar_year=cal_year)], commit_every=args.commit_every, mode="single")
 
 
 if __name__ == "__main__":

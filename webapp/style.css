@@ -11,6 +11,8 @@
   --amber: #d9a441;
   --amber-bright: #f0c674;
   --teal: #5b9b95;
+  --red: #d97f7f;
+  --green: #6fbf73;
   --rule: rgba(236, 231, 219, 0.14);
 
   --font-display: 'Fraunces', Georgia, serif;
@@ -29,6 +31,8 @@ html[data-theme="light"] {
   --amber: #a8701f;
   --amber-bright: #8a5912;
   --teal: #316f69;
+  --red: #a3282c;
+  --green: #1e6b23;
   --rule: rgba(32, 29, 23, 0.14);
 }
 
@@ -215,6 +219,30 @@ select, input[type="text"] {
 select:focus, input:focus {
   outline: 2px solid var(--amber);
   outline-offset: 1px;
+}
+
+/* Buttons and links had no explicit keyboard-focus indicator beyond
+   whatever the browser's default happens to be, which isn't guaranteed to
+   be visible against our custom-colored buttons. :focus-visible (rather
+   than :focus) means this only shows for keyboard/screen-reader
+   navigation, not for mouse clicks. */
+button:focus-visible,
+a:focus-visible,
+summary:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 2px;
+}
+
+/* Many browsers (especially Chrome/Edge on Windows) render the OPEN
+   <option> popup list with a forced white background regardless of any
+   dark styling on the closed <select> itself - so the light theme's light
+   text color becomes invisible against it. Force a safe, guaranteed-legible
+   dark-on-light pairing specifically for options, since we can't reliably
+   control whether the browser honors an option background color at all. */
+select option {
+  background-color: #ffffff;
+  color: #14181f;
 }
 
 .field-checkbox {
@@ -628,7 +656,7 @@ mark {
 .changes-body ul { margin: 0; padding-left: 1.1rem; }
 .changes-body li { margin-bottom: 0.25rem; }
 .changes-body .added { color: var(--teal); }
-.changes-body .removed { color: #d97f7f; }
+.changes-body .removed { color: var(--red); }
 
 /* ---------- schedule FAB + dialogs ---------- */
 
@@ -725,7 +753,7 @@ dialog.tray-dialog::backdrop { background: rgba(0,0,0,0.6); }
   cursor: pointer;
   font-size: 0.9rem;
 }
-.schedule-item-remove:hover { color: #d97f7f; }
+.schedule-item-remove:hover { color: var(--red); }
 .schedule-empty { color: var(--paper-dim); font-size: 0.88rem; font-style: italic; }
 
 /* ---------- course action row ---------- */
@@ -757,14 +785,42 @@ dialog.tray-dialog::backdrop { background: rgba(0,0,0,0.6); }
 .history-list { display: flex; flex-direction: column; gap: 0.5rem; }
 .history-row {
   display: grid;
-  grid-template-columns: 7rem 1fr auto;
+  grid-template-columns: 6.5rem 1fr auto 8rem;
   gap: 0.6rem;
+  align-items: center;
   font-size: 0.85rem;
   padding: 0.4rem 0;
   border-bottom: 1px solid var(--rule);
 }
 .history-row .term { font-family: var(--font-mono); color: var(--amber-bright); }
 .history-row .instructor { color: var(--paper-dim); text-align: right; font-size: 0.8rem; }
+
+.history-fill { display: flex; flex-direction: column; gap: 0.2rem; }
+.history-fill-track {
+  display: block;
+  width: 100%;
+  height: 5px;
+  border-radius: 3px;
+  background: var(--ink-700);
+  overflow: hidden;
+}
+.history-fill-bar { display: block; height: 100%; background: var(--teal); }
+.history-fill-bar.is-over { background: var(--red); }
+.history-fill-label {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--paper-dim);
+  white-space: nowrap;
+}
+
+.history-summary {
+  font-size: 0.82rem;
+  color: var(--paper-dim);
+  font-style: italic;
+  margin: 0 0 0.75rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px dashed var(--rule);
+}
 
 /* ---------- first-visit hint banner ---------- */
 
@@ -798,9 +854,12 @@ dialog.tray-dialog::backdrop { background: rgba(0,0,0,0.6); }
 .term-freshness {
   font-family: var(--font-mono);
   font-size: 0.68rem;
+  font-style: italic;
   color: var(--paper-dim);
-  margin-top: 0.15rem;
+  text-transform: none;
+  letter-spacing: normal;
 }
+.term-freshness:not(:empty)::before { content: "· "; }
 
 /* ---------- active filter chips ---------- */
 
@@ -832,7 +891,7 @@ dialog.tray-dialog::backdrop { background: rgba(0,0,0,0.6); }
   line-height: 1;
   padding: 0;
 }
-.filter-chip button:hover { color: #d97f7f; }
+.filter-chip button:hover { color: var(--red); }
 
 .filter-chip.clear-all {
   border-style: dashed;
@@ -873,9 +932,9 @@ dialog.tray-dialog::backdrop { background: rgba(0,0,0,0.6); }
   flex: none;
   border: 1px solid transparent;
 }
-.seat-badge.seat-open { background: rgba(111, 191, 115, 0.18); color: #6fbf73; border-color: #6fbf73; }
+.seat-badge.seat-open { background: rgba(111, 191, 115, 0.18); color: var(--green); border-color: var(--green); }
 .seat-badge.seat-low { background: rgba(217, 164, 65, 0.18); color: var(--amber-bright); border-color: var(--amber); }
-.seat-badge.seat-full { background: rgba(217, 127, 127, 0.18); color: #d97f7f; border-color: #d97f7f; }
+.seat-badge.seat-full { background: rgba(217, 127, 127, 0.18); color: var(--red); border-color: var(--red); }
 .seat-badge.seat-unknown { background: var(--ink-800); color: var(--paper-dim); border-color: var(--ink-600); }
 
 /* extend the summary grid to fit the wider badge column */
@@ -887,12 +946,12 @@ dialog.tray-dialog::backdrop { background: rgba(0,0,0,0.6); }
 
 .schedule-conflicts {
   background: rgba(217, 127, 127, 0.12);
-  border: 1px solid #d97f7f;
+  border: 1px solid var(--red);
   border-radius: 4px;
   padding: 0.6rem 0.8rem;
   margin-bottom: 0.8rem;
   font-size: 0.82rem;
-  color: #d97f7f;
+  color: var(--red);
 }
 .schedule-conflicts p { margin: 0.15rem 0; }
 
@@ -909,7 +968,7 @@ dialog.tray-dialog::backdrop { background: rgba(0,0,0,0.6); }
 }
 
 .schedule-item.has-conflict {
-  border-color: #d97f7f;
+  border-color: var(--red);
   background: rgba(217, 127, 127, 0.08);
 }
 
@@ -979,7 +1038,6 @@ dialog.tray-dialog::backdrop { background: rgba(0,0,0,0.6); }
 .reset-filters-btn {
   height: 2.5rem;
   padding: 0 0.9rem;
-  margin-left: auto;
   background: none;
   border: 1px dashed var(--ink-600);
   border-radius: 999px;
@@ -1059,4 +1117,24 @@ dialog.tray-dialog::backdrop { background: rgba(0,0,0,0.6); }
      displays normally inside the dialog instead. */
   .controls > .filter-toolbar { display: none; }
   .mobile-filter-trigger { display: block; }
+}
+
+/* ---------- skip link ---------- */
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--amber);
+  color: var(--ink-950);
+  padding: 0.65rem 1.1rem;
+  z-index: 200;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.85rem;
+  border-radius: 0 0 4px 0;
+  text-decoration: none;
+}
+.skip-link:focus {
+  left: 0;
 }

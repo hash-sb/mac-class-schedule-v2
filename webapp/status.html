@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scrape health · Mac Course Archive</title>
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<style>
+  /* small page-specific layout, kept separate from the main app's stylesheet */
+  .status-main { max-width: 48rem; margin: 0 auto; padding: 2.5rem 1.5rem 5rem; }
+  .status-back { font-family: var(--font-mono); font-size: 0.82rem; color: var(--teal); text-decoration: none; }
+  .status-back:hover { color: var(--amber-bright); }
+  .status-hero {
+    display: flex; align-items: center; gap: 1rem;
+    margin: 1.5rem 0 2rem; padding: 1.25rem 1.5rem;
+    border-radius: 6px; border: 1px solid var(--ink-600);
+  }
+  .status-hero.is-ok { border-color: var(--green); background: rgba(111,191,115,0.08); }
+  .status-hero.is-problem { border-color: var(--red); background: rgba(217,127,127,0.08); }
+  .status-dot { width: 0.9rem; height: 0.9rem; border-radius: 50%; flex: none; }
+  .status-hero.is-ok .status-dot { background: var(--green); }
+  .status-hero.is-problem .status-dot { background: var(--red); }
+  .status-hero-text h2 { margin: 0 0 0.2rem; font-family: var(--font-display); font-size: 1.2rem; }
+  .status-hero-text p { margin: 0; color: var(--paper-dim); font-size: 0.88rem; }
+  .status-section { margin-bottom: 2.5rem; }
+  .status-section h3 {
+    font-family: var(--font-mono); font-size: 0.78rem; text-transform: uppercase;
+    letter-spacing: 0.08em; color: var(--paper-dim); margin: 0 0 0.85rem;
+    padding-bottom: 0.5rem; border-bottom: 1px solid var(--rule);
+  }
+  .problem-item {
+    padding: 0.6rem 0.8rem; margin-bottom: 0.5rem; border-radius: 4px;
+    border: 1px solid var(--red); background: rgba(217,127,127,0.08); font-size: 0.85rem;
+  }
+  .problem-item .ptype { font-family: var(--font-mono); font-size: 0.72rem; color: var(--red); text-transform: uppercase; }
+  .stale-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+  .stale-table th { text-align: left; font-family: var(--font-mono); font-size: 0.72rem; color: var(--paper-dim); text-transform: uppercase; letter-spacing: 0.06em; padding: 0.4rem 0.6rem; border-bottom: 1px solid var(--rule); }
+  .stale-table td { padding: 0.5rem 0.6rem; border-bottom: 1px solid var(--rule); }
+  .stale-table tr:last-child td { border-bottom: none; }
+  .history-strip { display: flex; gap: 3px; flex-wrap: wrap; }
+  .history-dot { width: 0.7rem; height: 0.7rem; border-radius: 2px; }
+  .history-dot.ok { background: var(--green); }
+  .history-dot.problem { background: var(--red); }
+  .status-empty { color: var(--paper-dim); font-size: 0.88rem; font-style: italic; }
+</style>
+</head>
+<body>
+
+<main class="status-main">
+  <a href="index.html" class="status-back">← Back to the course archive</a>
+  <h1 style="font-family: var(--font-display); margin: 1rem 0 0;">Scrape health</h1>
+  <p style="color: var(--paper-dim); font-size: 0.9rem;">
+    A quick look at whether the scraper is running cleanly, without digging through Actions logs or GitHub Issues.
+  </p>
+
+  <div id="statusHero"></div>
+
+  <div class="status-section">
+    <h3>Problems from the latest run</h3>
+    <div id="problemsList"></div>
+  </div>
+
+  <div class="status-section">
+    <h3>Recent run history</h3>
+    <div id="historyStrip"></div>
+  </div>
+
+  <div class="status-section">
+    <h3>Stalest terms (oldest last-scraped first)</h3>
+    <div id="staleTable"></div>
+  </div>
+</main>
+
+<script>
+(async () => {
+  const heroEl = document.getElementById("statusHero");
+  const problemsEl = document.getElementById("problemsList");
+  const historyEl = document.getElementById("historyStrip");
+  const staleEl = document.getElementById("staleTable");
+
+  function timeAgo(iso) {
+    if (!iso) return "unknown";
+    const diffMs = Date.now() - new Date(iso).getTime();
+    const mins = Math.round(diffMs / 60000);
+    if (mins < 1) return "just now";
+    if (mins < 60) return `${mins} min${mins === 1 ? "" : "s"} ago`;
+    const hours = Math.round(mins / 60);
+    if (hours < 48) return `${hours} hour${hours === 1 ? "" : "s"} ago`;
+    const days = Math.round(hours / 24);
+    return `${days} day${days === 1 ? "" : "s"} ago`;
+  }
+
+  let status = null;
+  try {
+    const res = await fetch("data/status.json");
+    if (res.ok) status = await res.json();
+  } catch { /* no status.json yet - first-ever run hasn't happened */ }
+
+  if (!status) {
+    heroEl.innerHTML = `<div class="status-hero"><div class="status-dot" style="background:var(--paper-dim)"></div>
+      <div class="status-hero-text"><h2>No scrape history yet</h2><p>Run the backfill or scrape workflow at least once to populate this page.</p></div></div>`;
+  } else {
+    const ok = !status.had_problems;
+    heroEl.innerHTML = `<div class="status-hero ${ok ? "is-ok" : "is-problem"}"><div class="status-dot"></div>
+      <div class="status-hero-text">
+        <h2>${ok ? "All clear" : `${status.problems.length} problem${status.problems.length === 1 ? "" : "s"} in the latest run`}</h2>
+        <p>Last run: ${timeAgo(status.last_run_at)} · ${status.mode} mode · ${status.terms_written}/${status.terms_requested} terms written</p>
+      </div></div>`;
+
+    if (status.problems && status.problems.length) {
+      for (const p of status.problems) {
+        const div = document.createElement("div");
+        div.className = "problem-item";
+        div.innerHTML = `<span class="ptype">${p.type}</span> — <strong>${p.label} (${p.term})</strong>: ${p.message}`;
+        problemsEl.appendChild(div);
+      }
+    } else {
+      problemsEl.innerHTML = `<p class="status-empty">No problems flagged in the latest run.</p>`;
+    }
+  }
+
+  // recent run history strip
+  try {
+    const res = await fetch("data/status-history.jsonl");
+    if (res.ok) {
+      const text = (await res.text()).trim();
+      const lines = text ? text.split("\n").filter(Boolean) : [];
+      if (lines.length === 0) throw new Error("empty");
+      const strip = document.createElement("div");
+      strip.className = "history-strip";
+      for (const line of lines) {
+        const entry = JSON.parse(line);
+        const dot = document.createElement("span");
+        dot.className = "history-dot " + (entry.had_problems ? "problem" : "ok");
+        dot.title = `${new Date(entry.timestamp).toLocaleString()} · ${entry.mode} · ${entry.terms_written} written${entry.had_problems ? ` · ${entry.problem_count} problem(s)` : ""}`;
+        strip.appendChild(dot);
+      }
+      historyEl.appendChild(strip);
+    } else {
+      throw new Error("no history file");
+    }
+  } catch {
+    historyEl.innerHTML = `<p class="status-empty">No run history yet.</p>`;
+  }
+
+  // staleness table from index.json
+  try {
+    const res = await fetch("data/index.json");
+    const idx = await res.json();
+    const sorted = [...idx.terms].sort((a, b) => new Date(a.scraped_at) - new Date(b.scraped_at));
+    const table = document.createElement("table");
+    table.className = "stale-table";
+    table.innerHTML = `<thead><tr><th>Term</th><th>Sections</th><th>Last scraped</th></tr></thead>`;
+    const tbody = document.createElement("tbody");
+    for (const t of sorted.slice(0, 15)) {
+      const tr = document.createElement("tr");
+      tr.innerHTML = `<td>${t.term_label}</td><td>${t.course_count}</td><td>${timeAgo(t.scraped_at)}</td>`;
+      tbody.appendChild(tr);
+    }
+    table.appendChild(tbody);
+    staleEl.appendChild(table);
+  } catch {
+    staleEl.innerHTML = `<p class="status-empty">No index.json yet.</p>`;
+  }
+})();
+</script>
+</body>
+</html>

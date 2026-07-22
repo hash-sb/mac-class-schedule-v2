@@ -140,6 +140,37 @@ patched over:
 - **Year strip only shows years that actually have data** (no more disabled
   placeholder buttons for gaps), and the current year auto-scrolls into view.
 
+## More improvements (this round)
+
+- **Cross-listing consolidation (opt-in)**: a "Merge cross-listed sections"
+  toggle collapses a course's cross-listed aliases (e.g. a class offered
+  under three different departments) into one row instead of three
+  duplicates, using each course's own `crosslistings` field - no extra
+  scraping needed. Off by default so nothing changes unless you turn it on.
+- **Enrollment fill indicators**: the course/instructor history modal now
+  shows a fill-rate bar per term (filled/max, from each term's final
+  snapshot) plus an aggregate average - a practical stand-in for a
+  multi-year enrollment trend, since we don't have historical registration
+  calendar dates to align a precise week-by-week trend for terms before
+  2026.
+- **Accessibility pass**: fixed a real WCAG contrast failure - the shared
+  warning/badge red (`#d97f7f`) had as little as 1.8:1 contrast in light
+  theme (needs 4.5:1); replaced with theme-aware `--red`/`--green`
+  variables that resolve to darker, verified-AA-compliant colors in light
+  theme while leaving the dark theme unchanged. Also added: a skip-to-content
+  link, visible `:focus-visible` outlines on buttons/links (previously only
+  form fields had one), and `aria-labelledby` on every dialog.
+- **Scrape-health status page** (`status.html`, linked from the footer):
+  shows whether the latest scrape run had problems, a history strip of
+  recent runs, and a table of the stalest terms - without needing to check
+  Actions logs or GitHub Issues. Powered by `data/status.json` and
+  `data/status-history.jsonl`, written by `run.py` at the end of every run.
+- Term freshness moved inline with the "Term" label so the dropdown aligns
+  with the search box; "Reset filters" renamed to "Reset" and no longer
+  wraps onto its own line; dropdown option-list text is now always legible
+  regardless of theme (browsers often force a white popup background for
+  `<option>` elements regardless of page styling).
+
 ## Filter section improvements (this round)
 
 - **Seat-count threshold** replaces the old on/off "open seats only" toggle -
@@ -166,6 +197,26 @@ patched over:
 - **Always-visible "Reset filters"** button in the toolbar (previously the
   clear-all only appeared once 2+ filters were already active in the chip
   row below results).
+
+### `data/status.json` and `data/status-history.jsonl`
+
+Written by `run.py` at the end of every run (backfill, incremental, or
+single-term). `status.json` is a snapshot of the most recent run:
+
+```json
+{
+  "last_run_at": "2026-09-10T06:00:00+00:00",
+  "mode": "incremental",
+  "terms_requested": 6,
+  "terms_written": 5,
+  "had_problems": true,
+  "problems": [{"term": "202650", "label": "Summer II 2026", "type": "zero_result_failure", "message": "..."}]
+}
+```
+
+`status-history.jsonl` is a compact rolling log (capped at 100 entries) of
+every run's timestamp, mode, terms written, and whether it had problems -
+used to draw the status page's "recent run history" strip.
 
 ## Data-safety guarantee
 
