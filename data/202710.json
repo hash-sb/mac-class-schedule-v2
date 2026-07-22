@@ -1,7 +1,7 @@
 {
   "term_code": "202710",
   "term_label": "Fall 2026",
-  "scraped_at": "2026-07-22T01:10:26.083950+00:00",
+  "scraped_at": "2026-07-22T02:00:11.722879+00:00",
   "course_count": 782,
   "courses": [
     {
@@ -6057,7 +6057,7 @@
         }
       ],
       "instructor": "Sonia Mehta",
-      "open_seats": "11",
+      "open_seats": "10",
       "max_enrollment": "24",
       "crosslistings": [],
       "description": "This course examines the role of Education as global phenomena. The course encompasses a comparative view of education around the world, as well as its role in International Development. We take it further, by analysis and critique, to understand education as a force for change in an inter-dependent, globalized world. Specifically, we will examine ways in which policies and practice either enhance or diminish efforts towards change that is inclusive, just, sustainable and effective in relieveing suffering, while expanding potential and capacity in those affected by social change. We take the position that, in order to be effective, building trust becomes a key to connectivity between people, groups, organizations and ideas where education, development and change are theorized and practiced. We will construct possible education frameworks around the idea of building trust, by analyzing socio-cultural issues of power, voice, silence, and discourse. (4 credits)",
@@ -6155,7 +6155,7 @@
         }
       ],
       "instructor": "Megan Butler",
-      "open_seats": "8",
+      "open_seats": "7",
       "max_enrollment": "15",
       "crosslistings": [
         "ENVI 294-02 (10290)"
@@ -7419,7 +7419,7 @@
         }
       ],
       "instructor": "Tom Robertson",
-      "open_seats": "1",
+      "open_seats": "0",
       "max_enrollment": "20",
       "crosslistings": [
         "HIST 234-01 (10281)"
@@ -7719,7 +7719,7 @@
         }
       ],
       "instructor": "Megan Butler",
-      "open_seats": "8",
+      "open_seats": "7",
       "max_enrollment": "15",
       "crosslistings": [
         "EDUC 294-02 (10291)"
@@ -10180,7 +10180,7 @@
         }
       ],
       "instructor": "Tom Robertson",
-      "open_seats": "1",
+      "open_seats": "0",
       "max_enrollment": "20",
       "crosslistings": [
         "ENVI 234-01 (10280)"
@@ -17150,7 +17150,7 @@
         }
       ],
       "instructor": "Fernando Contreras",
-      "open_seats": "9",
+      "open_seats": "8",
       "max_enrollment": "20",
       "crosslistings": [],
       "description": "Intermediate Spanish II extends and deepens awareness and use of linguistic functions in Spanish. Three class hours a week with professor plus bi-weekly sessions with lab instructor for additional speaking practice and cultural engagement. Formal introduction to history and culture of Hispanophone countries. Prerequisite(s): SPAN 203, or its equivalent, with a grade of C- or better.",
