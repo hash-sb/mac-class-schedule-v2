@@ -1,7 +1,7 @@
 {
   "term_code": "202530",
   "term_label": "Spring 2025",
-  "scraped_at": "2026-07-21T00:14:53.393315+00:00",
+  "scraped_at": "2026-07-22T01:56:29.266728+00:00",
   "course_count": 775,
   "courses": [
     {
@@ -1301,7 +1301,7 @@
           "room": "ARTCOM 202"
         }
       ],
-      "instructor": "Megan VosslerMatt Burgess",
+      "instructor": "Megan Vossler, Matt Burgess",
       "open_seats": "0",
       "max_enrollment": "18",
       "crosslistings": [
@@ -3243,7 +3243,7 @@
           "room": "OLRI 347"
         }
       ],
-      "instructor": "Amy RiceMalia Borg",
+      "instructor": "Amy Rice, Malia Borg",
       "open_seats": "9",
       "max_enrollment": "36",
       "crosslistings": [
@@ -3268,7 +3268,7 @@
           "room": "OLRI 347"
         }
       ],
-      "instructor": "Amy RiceMarc Rodwogin",
+      "instructor": "Amy Rice, Marc Rodwogin",
       "open_seats": "1",
       "max_enrollment": "36",
       "crosslistings": [
@@ -3293,7 +3293,7 @@
           "room": "OLRI 347"
         }
       ],
-      "instructor": "Amy RiceMalia Borg",
+      "instructor": "Amy Rice, Malia Borg",
       "open_seats": "0",
       "max_enrollment": "36",
       "crosslistings": [
@@ -3318,7 +3318,7 @@
           "room": "OLRI 347"
         }
       ],
-      "instructor": "Amy RicePaul Fischer",
+      "instructor": "Amy Rice, Paul Fischer",
       "open_seats": "5",
       "max_enrollment": "36",
       "crosslistings": [
@@ -6857,7 +6857,7 @@
           "room": "ARTCOM 202"
         }
       ],
-      "instructor": "Megan VosslerMatt Burgess",
+      "instructor": "Megan Vossler, Matt Burgess",
       "open_seats": "0",
       "max_enrollment": "18",
       "crosslistings": [
@@ -6882,7 +6882,7 @@
           "room": "HUM 216"
         }
       ],
-      "instructor": "James DawesJoe Linstroth",
+      "instructor": "James Dawes, Joe Linstroth",
       "open_seats": "3",
       "max_enrollment": "20",
       "crosslistings": [
@@ -12059,7 +12059,7 @@
           "room": "LIBR 250"
         }
       ],
-      "instructor": "Jinna JohnsonMarcos Cruz",
+      "instructor": "Jinna Johnson, Marcos Cruz",
       "open_seats": "4",
       "max_enrollment": "12",
       "crosslistings": [
@@ -18340,7 +18340,7 @@
           "room": "THEATR 121"
         }
       ],
-      "instructor": "Wynn FrickeMarciano Silva Dos Santos",
+      "instructor": "Wynn Fricke, Marciano Silva Dos Santos",
       "open_seats": "38",
       "max_enrollment": "50",
       "crosslistings": [],
@@ -18363,7 +18363,7 @@
           "room": "THEATR 121"
         }
       ],
-      "instructor": "Noel RaymondCláudia Tatinge Nascimento",
+      "instructor": "Noel Raymond, Cláudia Tatinge Nascimento",
       "open_seats": "34",
       "max_enrollment": "50",
       "crosslistings": [],
