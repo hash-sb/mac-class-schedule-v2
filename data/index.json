@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-22T01:30:20.178631+00:00",
+  "generated_at": "2026-07-22T01:31:42.191916+00:00",
   "terms": [
     {
       "term_code": "200910",
@@ -59,19 +59,19 @@
       "term_code": "201230",
       "term_label": "Spring 2012",
       "course_count": 697,
-      "scraped_at": "2026-07-20T23:50:43.972819+00:00"
+      "scraped_at": "2026-07-22T01:30:32.171096+00:00"
     },
     {
       "term_code": "201250",
       "term_label": "Summer II 2012",
       "course_count": 2,
-      "scraped_at": "2026-07-20T23:51:14.770088+00:00"
+      "scraped_at": "2026-07-22T01:31:05.291305+00:00"
     },
     {
       "term_code": "201310",
       "term_label": "Fall 2012",
       "course_count": 718,
-      "scraped_at": "2026-07-20T23:51:50.138177+00:00"
+      "scraped_at": "2026-07-22T01:31:41.930225+00:00"
     },
     {
       "term_code": "201330",
