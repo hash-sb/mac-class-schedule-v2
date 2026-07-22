@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-22T01:31:42.191916+00:00",
+  "generated_at": "2026-07-22T01:33:18.933297+00:00",
   "terms": [
     {
       "term_code": "200910",
@@ -77,13 +77,13 @@
       "term_code": "201330",
       "term_label": "Spring 2013",
       "course_count": 697,
-      "scraped_at": "2026-07-20T23:52:25.217681+00:00"
+      "scraped_at": "2026-07-22T01:32:21.654307+00:00"
     },
     {
       "term_code": "201350",
       "term_label": "Summer II 2013",
       "course_count": 2,
-      "scraped_at": "2026-07-20T23:52:56.640718+00:00"
+      "scraped_at": "2026-07-22T01:32:54.017342+00:00"
     },
     {
       "term_code": "201430",
