@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-22T01:26:53.392201+00:00",
+  "generated_at": "2026-07-22T01:28:20.069699+00:00",
   "terms": [
     {
       "term_code": "200910",
@@ -35,19 +35,19 @@
       "term_code": "201050",
       "term_label": "Summer II 2010",
       "course_count": 1,
-      "scraped_at": "2026-07-20T23:47:33.820064+00:00"
+      "scraped_at": "2026-07-22T01:27:05.244845+00:00"
     },
     {
       "term_code": "201110",
       "term_label": "Fall 2010",
       "course_count": 711,
-      "scraped_at": "2026-07-20T23:48:08.458493+00:00"
+      "scraped_at": "2026-07-22T01:27:41.817121+00:00"
     },
     {
       "term_code": "201130",
       "term_label": "Spring 2011",
       "course_count": 695,
-      "scraped_at": "2026-07-20T23:48:43.501446+00:00"
+      "scraped_at": "2026-07-22T01:28:19.859172+00:00"
     },
     {
       "term_code": "201210",
