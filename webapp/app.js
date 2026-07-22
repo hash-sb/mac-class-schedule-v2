@@ -57,8 +57,10 @@
     scheduleConflicts: document.getElementById("scheduleConflicts"),
     themeToggle: document.getElementById("themeToggle"),
     printScheduleBtn: document.getElementById("printScheduleBtn"),
-    moreFilters: document.getElementById("moreFilters"),
-    moreFiltersHint: document.getElementById("moreFiltersHint"),
+    deptFilter: document.getElementById("deptFilter"),
+    deptFilterBtn: document.getElementById("deptFilterBtn"),
+    deptFilterPanel: document.getElementById("deptFilterPanel"),
+    deptFilterCount: document.getElementById("deptFilterCount"),
   };
 
   const THEME_KEY = "macCourseArchive.theme.v1";
@@ -210,6 +212,24 @@
       render();
       updateUrl();
     });
+    els.deptFilterBtn.addEventListener("click", () => {
+      els.deptFilterPanel.hidden ? openDeptFilterPanel() : closeDeptFilterPanel();
+    });
+    // Clicks inside the panel (chips, clear button) rebuild the chip DOM
+    // synchronously, which would detach the clicked element from the tree
+    // before the event finishes bubbling - so rather than checking
+    // "contains(e.target)" after that mutation (which would wrongly say
+    // "no, that's not inside anymore"), just stop these clicks from ever
+    // reaching the document-level outside-click listener at all.
+    els.deptFilterPanel.addEventListener("click", (e) => e.stopPropagation());
+    document.addEventListener("click", (e) => {
+      if (els.deptFilterPanel.hidden) return;
+      if (els.deptFilter.contains(e.target)) return; // click was on the toggle button itself
+      closeDeptFilterPanel();
+    });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && !els.deptFilterPanel.hidden) closeDeptFilterPanel();
+    });
     els.hintDismissBtn.addEventListener("click", () => {
       localStorage.setItem(HINT_DISMISSED_KEY, "1");
       els.hintBanner.hidden = true;
@@ -280,17 +300,18 @@
     });
   }
 
-  const DAY_SHORT = { M: "Mon", T: "Tue", W: "Wed", R: "Thu", F: "Fri", S: "Sat", U: "Sun" };
+  function updateDeptFilterCount() {
+    els.deptFilterCount.textContent = selectedSubjects.size ? ` ${selectedSubjects.size}` : "";
+  }
 
-  function syncMoreFiltersHint() {
-    const parts = [];
-    if (selectedDays.size) parts.push([...selectedDays].map((d) => DAY_SHORT[d] || d).join("/"));
-    if (els.timeOfDaySelect.value !== "any") {
-      parts.push(els.timeOfDaySelect.selectedOptions[0]?.textContent || els.timeOfDaySelect.value);
-    }
-    if (selectedSubjects.size) parts.push(`${selectedSubjects.size} dept${selectedSubjects.size === 1 ? "" : "s"}`);
-    els.moreFiltersHint.textContent = parts.length ? `(${parts.join(", ")})` : "";
-    if (parts.length) els.moreFilters.open = true;
+  function openDeptFilterPanel() {
+    els.deptFilterPanel.hidden = false;
+    els.deptFilterBtn.setAttribute("aria-expanded", "true");
+  }
+
+  function closeDeptFilterPanel() {
+    els.deptFilterPanel.hidden = true;
+    els.deptFilterBtn.setAttribute("aria-expanded", "false");
   }
 
   async function onPopState() {
@@ -394,9 +415,6 @@
   }
 
   function buildEraStrip() {
-    const years = index.map((t) => Number(t.term_label.split(" ").pop()));
-    const minYear = Math.min(...years);
-    const maxYear = Math.max(...years);
     const byYear = new Map();
     for (const t of index) {
       const y = Number(t.term_label.split(" ").pop());
@@ -404,23 +422,19 @@
       byYear.get(y).push(t);
     }
     const seasonPriority = ["Fall", "Spring", "January", "Summer I", "Summer II", "Summer III"];
+    const years = [...byYear.keys()].sort((a, b) => a - b);
 
     const frag = document.createDocumentFragment();
-    for (let y = minYear; y <= maxYear; y++) {
+    for (const y of years) {
+      const terms = byYear.get(y);
+      terms.sort((a, b) => seasonPriority.indexOf(a.term_label.split(" ")[0]) - seasonPriority.indexOf(b.term_label.split(" ")[0]));
       const btn = document.createElement("button");
       btn.className = "era-btn";
       btn.type = "button";
       btn.textContent = y;
-      const terms = byYear.get(y);
-      if (!terms) {
-        btn.classList.add("is-empty");
-        btn.disabled = true;
-        btn.title = "No scraped terms this year";
-      } else {
-        terms.sort((a, b) => seasonPriority.indexOf(a.term_label.split(" ")[0]) - seasonPriority.indexOf(b.term_label.split(" ")[0]));
-        btn.addEventListener("click", () => selectTerm(terms[0].term_code));
-      }
       btn.dataset.year = y;
+      btn.title = terms.map((t) => t.term_label).join(", ");
+      btn.addEventListener("click", () => selectTerm(terms[0].term_code));
       frag.appendChild(btn);
     }
     els.eraStrip.appendChild(frag);
@@ -430,9 +444,13 @@
     const label = index.find((t) => t.term_code === termCode)?.term_label;
     if (!label) return;
     const year = label.split(" ").pop();
+    let activeBtn = null;
     els.eraStrip.querySelectorAll(".era-btn").forEach((b) => {
-      b.classList.toggle("is-active", b.dataset.year === year);
+      const isActive = b.dataset.year === year;
+      b.classList.toggle("is-active", isActive);
+      if (isActive) activeBtn = b;
     });
+    if (activeBtn) activeBtn.scrollIntoView({ inline: "center", block: "nearest", behavior: "smooth" });
   }
 
   async function selectTerm(termCode) {
@@ -543,21 +561,37 @@
     if (!timeStr) return null;
     const m = timeStr.match(/(\d{1,2}):(\d{2})\s*(am|pm)?\s*-\s*(\d{1,2}):(\d{2})\s*(am|pm)?/i);
     if (!m) return null;
-    let [, h1, m1, mer1, h2, m2, mer2] = m;
-    mer1 = mer1 || mer2;
-    mer2 = mer2 || mer1;
-    if (!mer1 || !mer2) return null;
+    const [, h1s, m1s, mer1, h2s, m2s, mer2] = m;
+    const h1 = parseInt(h1s, 10);
+    const min1 = parseInt(m1s, 10);
+    const h2 = parseInt(h2s, 10);
+    const min2 = parseInt(m2s, 10);
+
     const to24 = (h, mer) => {
-      h = parseInt(h, 10) % 12;
-      if (/pm/i.test(mer)) h += 12;
-      return h;
+      const hh = h % 12;
+      return /pm/i.test(mer) ? hh + 12 : hh;
     };
-    return {
-      startHour: to24(h1, mer1),
-      startMin: parseInt(m1, 10),
-      endHour: to24(h2, mer2),
-      endMin: parseInt(m2, 10),
-    };
+
+    // When only ONE meridiem is given (the common case - e.g. "10:50 - 11:50 am"),
+    // it's tempting to just copy it to the missing side, but that's wrong for
+    // any range that crosses noon (e.g. "10:50 - 1:00 pm" is 10:50 AM - 1:00 PM,
+    // NOT 10:50 PM - 1:00 PM). Instead, try every combination of missing
+    // meridiems and keep whichever produces a sane same-day interval (end after
+    // start, a few hours long at most) - campus classes are never longer than
+    // that or overnight, so this reliably picks the right one.
+    const candidatesFor = (given) => (given ? [given] : ["am", "pm"]);
+    let best = null;
+    for (const cand1 of candidatesFor(mer1)) {
+      for (const cand2 of candidatesFor(mer2)) {
+        const startHour = to24(h1, cand1);
+        const endHour = to24(h2, cand2);
+        const duration = endHour * 60 + min2 - (startHour * 60 + min1);
+        if (duration > 0 && duration <= 8 * 60 && (!best || duration < best.duration)) {
+          best = { startHour, startMin: min1, endHour, endMin: min2, duration };
+        }
+      }
+    }
+    return best;
   }
 
   function matchesDayFilter(c) {
@@ -693,7 +727,7 @@
 
   function render() {
     renderActiveFilterChips();
-    syncMoreFiltersHint();
+    updateDeptFilterCount();
     const signature = currentFilterSignature();
     if (signature !== lastRenderSignature) {
       renderLimit = MAX_RENDERED; // a real filter/search/term change - start over at the top
@@ -712,23 +746,15 @@
     }
 
     if (els.openSeatsToggle.checked) {
-      courses = courses.filter((c) => {
-        const n = parseInt(c.open_seats, 10);
-        return Number.isFinite(n) && n > 0;
-      });
+      courses = courses.filter((c) => normalizeSeatCount(c.open_seats) > 0);
     }
 
     courses = courses.filter((c) => matchesDayFilter(c) && matchesTimeFilter(c) && matchesSubjectFilter(c));
 
     const sortMode = els.sortSelect.value;
     if (sortMode === "seats-desc" || sortMode === "seats-asc") {
-      const fallback = sortMode === "seats-desc" ? -Infinity : Infinity;
       const dir = sortMode === "seats-desc" ? -1 : 1;
-      courses = [...courses].sort((a, b) => {
-        const na = Number.isFinite(parseInt(a.open_seats, 10)) ? parseInt(a.open_seats, 10) : fallback;
-        const nb = Number.isFinite(parseInt(b.open_seats, 10)) ? parseInt(b.open_seats, 10) : fallback;
-        return (na - nb) * dir;
-      });
+      courses = [...courses].sort((a, b) => (normalizeSeatCount(a.open_seats) - normalizeSeatCount(b.open_seats)) * dir);
     } else if (sortMode === "course-number") {
       courses = [...courses].sort((a, b) => {
         if (a.subject !== b.subject) return (a.subject || "").localeCompare(b.subject || "");
@@ -914,7 +940,7 @@
     dl.innerHTML = "";
     const factsList = [
       ["Instructor", c.instructor || "TBA"],
-      ["Open seats", c.open_seats || "—"],
+      ["Open seats", String(normalizeSeatCount(c.open_seats))],
       ["Max enrollment", c.max_enrollment || "—"],
     ];
     if (c.crosslistings && c.crosslistings.length) factsList.push(["Cross-listed with", c.crosslistings.join(", ")]);
@@ -964,10 +990,27 @@
     return c.meetings.map((m) => [m.days, m.time, m.room].filter(Boolean).join(" ")).join(" / ");
   }
 
+  /**
+   * The registrar's raw open-seats text isn't consistent - usually a plain
+   * number, but sometimes "Closed N" (N is still the meaningful count -
+   * "Closed 1" means 1 open seat) and sometimes negative when a section is
+   * over-enrolled. Extract the LAST number in the raw text and clamp
+   * negative results to 0, so every course always shows a clean,
+   * consistent, non-negative number - never a raw label or a "?".
+   * (parser.py normalizes this at scrape time too, going forward - this
+   * mirrors that logic so already-scraped data displays correctly too.)
+   */
+  function normalizeSeatCount(raw) {
+    const s = String(raw ?? "").trim();
+    const matches = s.match(/-?\d+/g);
+    if (!matches) return 0;
+    return parseInt(matches[matches.length - 1], 10);
+  }
+
   function seatStatus(openSeatsRaw) {
-    const n = parseInt(openSeatsRaw, 10);
-    if (!Number.isFinite(n)) return { cls: "seat-unknown", label: "Seat count unknown", short: "?" };
-    if (n <= 0) return { cls: "seat-full", label: "Full", short: "Full" };
+    const n = normalizeSeatCount(openSeatsRaw);
+    if (n < 0) return { cls: "seat-full", label: `Over-enrolled by ${Math.abs(n)}`, short: String(n) };
+    if (n === 0) return { cls: "seat-full", label: "0 seats open", short: "0" };
     if (n <= 3) return { cls: "seat-low", label: `${n} seat${n === 1 ? "" : "s"} left`, short: String(n) };
     return { cls: "seat-open", label: `${n} seats open`, short: String(n) };
   }

@@ -1,7 +1,7 @@
 {
   "term_code": "202710",
   "term_label": "Fall 2026",
-  "scraped_at": "2026-07-20T23:29:50.561034+00:00",
+  "scraped_at": "2026-07-22T01:10:26.083950+00:00",
   "course_count": 782,
   "courses": [
     {
@@ -241,7 +241,7 @@
         }
       ],
       "instructor": "Daylanne English",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "20",
       "crosslistings": [
         "ENGL 275-01 (10269)"
@@ -291,7 +291,7 @@
         }
       ],
       "instructor": "Katrina Phillips",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "20",
       "crosslistings": [
         "HIST 294-01 (10405)"
@@ -316,7 +316,7 @@
         }
       ],
       "instructor": "Paul Dosh",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "15",
       "crosslistings": [
         "POLI 294-02 (10577)",
@@ -512,7 +512,7 @@
         }
       ],
       "instructor": "Samantha Blatt",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "24",
       "crosslistings": [],
       "description": "This class is a broad survey covering topics such as genetics, evolutionary mechanisms, adaptation, primate studies, the human fossil record, and human variation. All of these areas will be placed within the framework of the interaction of humans within their environment. The course is divided into three sections: human genetics, human ecology and primatology, human evolution and adaptation.",
@@ -586,7 +586,7 @@
         }
       ],
       "instructor": "Arjun Guneratne",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "12",
       "crosslistings": [],
       "description": "An introduction to ethnographic field interviewing learned in the context of individually run student field projects. Focuses on the anthropologist-informant field relationship and the discovery of cultural knowledge through participant observation and ethnosemantic interviewing techniques. Prerequisite(s): ANTH 101 or ANTH 111 or permission of instructor.",
@@ -609,7 +609,7 @@
         }
       ],
       "instructor": "Ron Barrett",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "20",
       "crosslistings": [],
       "description": "This course examines issues of health, illness, and healing from a variety of anthropological perspectives. From a cross-cultural perspective, we will examine the diversity of beliefs about human health and sickness, and a variety of healing practices by which people treat them. From the perspective of critical epidemiology, we will wrestle with recurrent problems of socioeconomic inequalities, ecological disruptions, and their impact upon the differential distribution, prevention, and treatment of human diseases.",
@@ -705,7 +705,7 @@
           "room": "HUM 112"
         }
       ],
-      "instructor": "Arjun GuneratneTom Robertson",
+      "instructor": "Arjun Guneratne, Tom Robertson",
       "open_seats": "23",
       "max_enrollment": "30",
       "crosslistings": [
@@ -903,8 +903,8 @@
           "room": "ART 302"
         }
       ],
-      "instructor": "Megan VosslerMary Heskel",
-      "open_seats": "Closed 0",
+      "instructor": "Megan Vossler, Mary Heskel",
+      "open_seats": "0",
       "max_enrollment": "12",
       "crosslistings": [
         "BIOL 194-01 (10771); Seniors restricted to 5 seats"
@@ -953,7 +953,7 @@
           "room": "ARTCOM 202"
         }
       ],
-      "instructor": "Megan VosslerMatt Burgess",
+      "instructor": "Megan Vossler, Matt Burgess",
       "open_seats": "8",
       "max_enrollment": "18",
       "crosslistings": [
@@ -1221,7 +1221,7 @@
           "room": "ARTCOM 102"
         }
       ],
-      "instructor": "Joanna Inglotkt shorb",
+      "instructor": "Joanna Inglot, kt shorb",
       "open_seats": "11",
       "max_enrollment": "20",
       "crosslistings": [
@@ -1393,7 +1393,7 @@
         }
       ],
       "instructor": "Chris Willcox",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "7",
       "crosslistings": [],
       "description": "A continuation of ART 234, expanding both technical and critical/theoretical knowledge through projects which demand the development of each student’s individual interests. Required projects will encourage increasing self-direction and development of the students’ own artistic vision. Readings will supplement students’ critical and theoretical understanding of historical and contemporary art practices. Frequent group discussions and critiques, as well as museum/gallery field trips. Three two-hour periods per week. Offered every other semester. Prerequisite(s): ART 234 .",
@@ -1721,7 +1721,7 @@
           "room": "HUM 112"
         }
       ],
-      "instructor": "Arjun GuneratneTom Robertson",
+      "instructor": "Arjun Guneratne, Tom Robertson",
       "open_seats": "23",
       "max_enrollment": "30",
       "crosslistings": [
@@ -1799,7 +1799,7 @@
         }
       ],
       "instructor": "Sebastiano De Bona",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "28",
       "crosslistings": [
         "ENVI 170-01 (10058)"
@@ -1874,7 +1874,7 @@
         }
       ],
       "instructor": "Michael Anderson",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "23",
       "crosslistings": [
         "ENVI 170-L1 (10064)"
@@ -1899,7 +1899,7 @@
         }
       ],
       "instructor": "Michael Anderson",
-      "open_seats": "Closed 4",
+      "open_seats": "4",
       "max_enrollment": "23",
       "crosslistings": [
         "ENVI 170-L2 (10066)"
@@ -1924,7 +1924,7 @@
         }
       ],
       "instructor": "Jerald Dosch",
-      "open_seats": "Closed 3",
+      "open_seats": "3",
       "max_enrollment": "23",
       "crosslistings": [
         "ENVI 170-L3 (10068)"
@@ -2112,7 +2112,7 @@
         }
       ],
       "instructor": "Joseph Ly",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "22",
       "crosslistings": [],
       "description": "An introduction to the principles of genetics, including patterns of inheritance, structure and function of genetic material, flow of genetic information, and control of gene expression. This course also introduces students to the methodologies used in genetics research, such as gene mapping, gene expression techniques, DNA sequencing, introductory genomics, and gene manipulation. Bioethical and sociocultural issues that emerge from the applications of genetic concepts and methodologies are discussed. Three lecture hours and one three-hour laboratory each week.",
@@ -2157,8 +2157,8 @@
           "room": "ART 302"
         }
       ],
-      "instructor": "Megan VosslerMary Heskel",
-      "open_seats": "Closed 0",
+      "instructor": "Megan Vossler, Mary Heskel",
+      "open_seats": "0",
       "max_enrollment": "12",
       "crosslistings": [
         "ART 194-01 (10770); Seniors restricted to 5 seats"
@@ -2206,7 +2206,7 @@
         }
       ],
       "instructor": "Michelle Tianyi Tong",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "32",
       "crosslistings": [],
       "description": "Cells are the foundational organizing units of all life on our planet. In this course, we study the ways in which these nanomachines use the shapes and interactions of molecules to store and convert information, energy, and mass, and to communicate with their environments. The workings of single-celled bacteria to multicellular organisms, and the complex behaviors of multi-species ecosystems all depend on the working of these miniscule molecular gears packed inside cells. This course covers the structures and behavior of biological molecules, the metabolic reactions that power life, the properties of the fluid, complex membranes that organize biological molecules in space and time, the ways in which information is sent and received within and between cells, and molecular-scale understandings of health and disease processes. Three lecture hours each week. Prerequisite(s): BIOL 190; and CHEM 112 or CHEM 115",
@@ -2352,7 +2352,7 @@
         }
       ],
       "instructor": "Emily Twedell",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "16",
       "crosslistings": [],
       "description": "The structure and function of the vertebrate nervous system, with a focus on the human nervous system, will be explored through analysis of human brain specimens and sections, and artistic photographic and computer graphic representations of nervous system structures at both the microscopic and systems levels. This course is designed to provide an understanding of both the peripheral and central nervous system with a focus on brain, brainstem, and spinal cord structure and function through observation and study of normal brain tissue and discussion of clinical cases. This course is intended for students with a strong interest in neuroscience. Three lecture hours and one three-hour lab each week. Prerequisite(s): BIOL 190 and BIOL 200",
@@ -2375,7 +2375,7 @@
         }
       ],
       "instructor": "Robin Shields-Cutler",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "16",
       "crosslistings": [],
       "description": "This course is an introduction to the diverse field of microbiology, including prokaryotes, archaea, viruses, and eukaryotic microorganisms. We will explore the ways microbes interact with their environments, in particular their diverse and complex relationships with humans. The course includes regular discussion of primary literature and an emphasis on written and oral communication. In the laboratory, students will practice fundamental microbiology techniques and data analysis, and lead hypotheses-driven independent investigations. Three lecture hours and one three-hour laboratory each week. Prerequisite(s): BIOL 170, BIOL 190 and BIOL 200; CHEM 211 recommended.",
@@ -2398,7 +2398,7 @@
         }
       ],
       "instructor": "Robin Shields-Cutler",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "16",
       "crosslistings": [],
       "description": "This course is an introduction to the diverse field of microbiology, including prokaryotes, archaea, viruses, and eukaryotic microorganisms. We will explore the ways microbes interact with their environments, in particular their diverse and complex relationships with humans. The course includes regular discussion of primary literature and an emphasis on written and oral communication. In the laboratory, students will practice fundamental microbiology techniques and data analysis, and lead hypotheses-driven independent investigations. Three lecture hours and one three-hour laboratory each week. Prerequisite(s): BIOL 170, BIOL 190 and BIOL 200; CHEM 211 recommended.",
@@ -2446,7 +2446,7 @@
         }
       ],
       "instructor": "Michelle Tianyi Tong",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "16",
       "crosslistings": [],
       "description": "A study of the cellular and molecular mechanisms underlying the biological basis of behavior. While particular emphasis is placed on the molecular and cellular components of the nervous system, these components are the foundation for the analysis of various systems. Discussion topics may include the role of neurotransmitters, neuromodulators and receptors in learning and memory, multiple sclerosis, Alzheimer’s disease and drug addiction. The laboratory will be used to introduce major research techniques in neurobiology. These techniques will be used in independently designed research projects. Three lecture hours and one three-hour laboratory per week. Prerequisite(s): BIOL 190 and BIOL 200",
@@ -2469,7 +2469,7 @@
         }
       ],
       "instructor": "Kathryn Splan",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "48",
       "crosslistings": [
         "CHEM 351-01 (10135)"
@@ -2494,7 +2494,7 @@
         }
       ],
       "instructor": "Kathryn Splan",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "16",
       "crosslistings": [],
       "description": "Cross-listed with CHEM 351-L1 (10137)*",
@@ -2517,7 +2517,7 @@
         }
       ],
       "instructor": "Kathryn Splan",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "16",
       "crosslistings": [],
       "description": "Cross-listed with CHEM 351-L2 (10139)*",
@@ -2540,7 +2540,7 @@
         }
       ],
       "instructor": "Robin Shields-Cutler",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "16",
       "crosslistings": [],
       "description": "Cross-listed with CHEM 351-L3 (10141)*",
@@ -2609,7 +2609,7 @@
         }
       ],
       "instructor": "Stotra Chakrabarti",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "15",
       "crosslistings": [],
       "description": "Why do animals behave the way they do? Why do lions have manes while leopards don’t? Why do elephants and bees live in groups but many other species do not? Why does your friendly neighborhood squirrel get so busy late in the fall and again in the spring? Why do certain wolves ’fish’ but others never learn the technique? In this course we will explore the fundamentals of animal behavior and use that foundation to understand how we can better manage and conserve biodiversity. Outdoor and analytical labs will allow us to quantify animal behavior, develop ethograms, and understand species’ behavioral repertoires based on observation and manipulation of wolves, deer, bears, mountain lions and other species. Three hours of lecture plus three hours of lab each week. Prerequisite(s): BIOL 170. Recommended: STAT 155",
@@ -2632,7 +2632,7 @@
         }
       ],
       "instructor": "Stotra Chakrabarti",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "15",
       "crosslistings": [],
       "description": "Why do animals behave the way they do? Why do lions have manes while leopards don’t? Why do elephants and bees live in groups but many other species do not? Why does your friendly neighborhood squirrel get so busy late in the fall and again in the spring? Why do certain wolves ’fish’ but others never learn the technique? In this course we will explore the fundamentals of animal behavior and use that foundation to understand how we can better manage and conserve biodiversity. Outdoor and analytical labs will allow us to quantify animal behavior, develop ethograms, and understand species’ behavioral repertoires based on observation and manipulation of wolves, deer, bears, mountain lions and other species. Three hours of lecture plus three hours of lab each week. Prerequisite(s): BIOL 170. Recommended: STAT 155",
@@ -2705,7 +2705,7 @@
         }
       ],
       "instructor": "Mary Montgomery",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "16",
       "crosslistings": [],
       "description": "This seminar course centers on our understanding of the molecular events underlying the development of various cancers, including cell cycle control, DNA damage, tumor microenvironment, as well as therapeutic approaches to treatment, and associated difficulties. Two major goals of the course include developing an ability to understand cancerous transformation and learning to critically evaluate literature in the field. We will discuss primary articles and secondary reviews in a roundtable format, and students will present written and oral critiques of the literature and develop a final individual project. Three lecture/discussion hours each week. Prerequisite(s): BIOL 200, and junior or senior standing; or permission of instructor.",
@@ -2753,7 +2753,7 @@
         }
       ],
       "instructor": "Kristina Curry Rogers",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "6",
       "crosslistings": [
         "GEOL 394-L1 (10101)"
@@ -3023,7 +3023,7 @@
           "room": ""
         }
       ],
-      "instructor": "Marc RodwoginIsabella Nimm",
+      "instructor": "Marc Rodwogin, Isabella Nimm",
       "open_seats": "26",
       "max_enrollment": "36",
       "crosslistings": [
@@ -3048,7 +3048,7 @@
           "room": ""
         }
       ],
-      "instructor": "Leah WitusIsabella Nimm",
+      "instructor": "Leah Witus, Isabella Nimm",
       "open_seats": "29",
       "max_enrollment": "36",
       "crosslistings": [
@@ -3073,7 +3073,7 @@
           "room": ""
         }
       ],
-      "instructor": "Sophia LemonholmIsabella Nimm",
+      "instructor": "Sophia Lemonholm, Isabella Nimm",
       "open_seats": "33",
       "max_enrollment": "36",
       "crosslistings": [
@@ -3243,7 +3243,7 @@
         }
       ],
       "instructor": "Jeffrey Buenaflor",
-      "open_seats": "Closed 2",
+      "open_seats": "2",
       "max_enrollment": "32",
       "crosslistings": [],
       "description": "This course develops a broad understanding of the theoretical concepts of organic chemistry. Molecular orbital theory and valence bond resonance theory are invoked to describe and explain the ramification of covalent bonding in organic molecules, as well as to rationalize fundamental noncovalent associations. Thermodynamic considerations of 3-dimensional molecular shape are discussed. Contemporary instrumental techniques for the assignment of molecular structure are a key focus. Modern mechanistic theory of organic chemical reactions is developed in the context of acid-base, nucleophilic substitution, elimination, and electrophilic addition reactions. Three lectures, four hours laboratory per week. Prerequisite(s): CHEM 112 with a grade of C- or better or CHEM 115 with a grade of C- or better.",
@@ -3289,7 +3289,7 @@
         }
       ],
       "instructor": "Ronald Brisbois",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "16",
       "crosslistings": [],
       "description": "This course develops a broad understanding of the theoretical concepts of organic chemistry. Molecular orbital theory and valence bond resonance theory are invoked to describe and explain the ramification of covalent bonding in organic molecules, as well as to rationalize fundamental noncovalent associations. Thermodynamic considerations of 3-dimensional molecular shape are discussed. Contemporary instrumental techniques for the assignment of molecular structure are a key focus. Modern mechanistic theory of organic chemical reactions is developed in the context of acid-base, nucleophilic substitution, elimination, and electrophilic addition reactions. Three lectures, four hours laboratory per week. Prerequisite(s): CHEM 112 with a grade of C- or better or CHEM 115 with a grade of C- or better.",
@@ -3312,7 +3312,7 @@
         }
       ],
       "instructor": "Ronald Brisbois",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "16",
       "crosslistings": [],
       "description": "This course develops a broad understanding of the theoretical concepts of organic chemistry. Molecular orbital theory and valence bond resonance theory are invoked to describe and explain the ramification of covalent bonding in organic molecules, as well as to rationalize fundamental noncovalent associations. Thermodynamic considerations of 3-dimensional molecular shape are discussed. Contemporary instrumental techniques for the assignment of molecular structure are a key focus. Modern mechanistic theory of organic chemical reactions is developed in the context of acid-base, nucleophilic substitution, elimination, and electrophilic addition reactions. Three lectures, four hours laboratory per week. Prerequisite(s): CHEM 112 with a grade of C- or better or CHEM 115 with a grade of C- or better.",
@@ -3358,7 +3358,7 @@
         }
       ],
       "instructor": "Stephen Tereniak",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "16",
       "crosslistings": [],
       "description": "This course develops a broad understanding of the theoretical concepts of organic chemistry. Molecular orbital theory and valence bond resonance theory are invoked to describe and explain the ramification of covalent bonding in organic molecules, as well as to rationalize fundamental noncovalent associations. Thermodynamic considerations of 3-dimensional molecular shape are discussed. Contemporary instrumental techniques for the assignment of molecular structure are a key focus. Modern mechanistic theory of organic chemical reactions is developed in the context of acid-base, nucleophilic substitution, elimination, and electrophilic addition reactions. Three lectures, four hours laboratory per week. Prerequisite(s): CHEM 112 with a grade of C- or better or CHEM 115 with a grade of C- or better.",
@@ -3381,7 +3381,7 @@
         }
       ],
       "instructor": "Stephen Tereniak",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "16",
       "crosslistings": [],
       "description": "This course develops a broad understanding of the theoretical concepts of organic chemistry. Molecular orbital theory and valence bond resonance theory are invoked to describe and explain the ramification of covalent bonding in organic molecules, as well as to rationalize fundamental noncovalent associations. Thermodynamic considerations of 3-dimensional molecular shape are discussed. Contemporary instrumental techniques for the assignment of molecular structure are a key focus. Modern mechanistic theory of organic chemical reactions is developed in the context of acid-base, nucleophilic substitution, elimination, and electrophilic addition reactions. Three lectures, four hours laboratory per week. Prerequisite(s): CHEM 112 with a grade of C- or better or CHEM 115 with a grade of C- or better.",
@@ -3427,7 +3427,7 @@
         }
       ],
       "instructor": "Stephen Tereniak",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "16",
       "crosslistings": [],
       "description": "This course develops a broad understanding of the theoretical concepts of organic chemistry. Molecular orbital theory and valence bond resonance theory are invoked to describe and explain the ramification of covalent bonding in organic molecules, as well as to rationalize fundamental noncovalent associations. Thermodynamic considerations of 3-dimensional molecular shape are discussed. Contemporary instrumental techniques for the assignment of molecular structure are a key focus. Modern mechanistic theory of organic chemical reactions is developed in the context of acid-base, nucleophilic substitution, elimination, and electrophilic addition reactions. Three lectures, four hours laboratory per week. Prerequisite(s): CHEM 112 with a grade of C- or better or CHEM 115 with a grade of C- or better.",
@@ -3521,7 +3521,7 @@
         }
       ],
       "instructor": "Thomas Varberg",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "9",
       "crosslistings": [],
       "description": "This course covers topics in macroscopic physical chemistry dealing with the bulk properties of matter and energy. These topics include the properties of gases, the First and Second Laws of thermodynamics and their application to physical and chemical systems, phase and chemical equilibria, rates of reactions and chemical kinetics, and x-ray diffractometry. Three lectures and three hours of laboratory per week. Prerequisite(s): CHEM 112 or CHEM 115, PHYS 227, and MATH 137. Student must earn a grade of C- or higher in prerequisite courses.",
@@ -3567,7 +3567,7 @@
         }
       ],
       "instructor": "Keith Kuwata",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "8",
       "crosslistings": [],
       "description": "This course covers topics in macroscopic physical chemistry dealing with the bulk properties of matter and energy. These topics include the properties of gases, the First and Second Laws of thermodynamics and their application to physical and chemical systems, phase and chemical equilibria, rates of reactions and chemical kinetics, and x-ray diffractometry. Three lectures and three hours of laboratory per week. Prerequisite(s): CHEM 112 or CHEM 115, PHYS 227, and MATH 137. Student must earn a grade of C- or higher in prerequisite courses.",
@@ -3613,7 +3613,7 @@
         }
       ],
       "instructor": "Kathryn Splan",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "48",
       "crosslistings": [
         "BIOL 351-01 (10136)"
@@ -3638,7 +3638,7 @@
         }
       ],
       "instructor": "Kathryn Splan",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "16",
       "crosslistings": [],
       "description": "Cross-listed with BIOL 351-L1 (10138)*",
@@ -3661,7 +3661,7 @@
         }
       ],
       "instructor": "Kathryn Splan",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "16",
       "crosslistings": [],
       "description": "Cross-listed with BIOL 351-L2 (10140)*",
@@ -3684,7 +3684,7 @@
         }
       ],
       "instructor": "Robin Shields-Cutler",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "16",
       "crosslistings": [],
       "description": "Cross-listed with BIOL 351-L3 (10142)*",
@@ -3730,7 +3730,7 @@
         }
       ],
       "instructor": "Kelsey Boyle",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "8",
       "crosslistings": [],
       "description": "This course examines how modern theories of chemical bonding are applied to an understanding of the chemistry of the elements of the periodic table. Students explore chemical structures, reactions and spectra on the basis of molecular symmetry and group theory. Topics covered include chemical periodicity, coordination compounds, and organometallic complexes.Three lectures and three hours of laboratory per week. Prerequisite(s): CHEM 312 with a grade of C- or better, or permission of the instructor.",
@@ -4357,7 +4357,7 @@
           "room": "THEATR 205"
         }
       ],
-      "instructor": "Andrew OvermanJames Laine",
+      "instructor": "Andrew Overman, James Laine",
       "open_seats": "12",
       "max_enrollment": "25",
       "crosslistings": [
@@ -5046,7 +5046,7 @@
         }
       ],
       "instructor": "Amin Alhashim",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "20",
       "crosslistings": [
         "STAT 212-01 (10201)"
@@ -5140,7 +5140,7 @@
         }
       ],
       "instructor": "Susan Fox",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "22",
       "crosslistings": [],
       "description": "This course is an introduction to how computer systems work, including how a computer represents data, how code is compiled into instructions for the CPU, and how memory is organized. Students will learn to use the C programming language and assembly language. Prerequisite(s): COMP 127 or permission of instructor.",
@@ -5257,7 +5257,7 @@
         }
       ],
       "instructor": "Susan Fox",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "20",
       "crosslistings": [
         "3 seats saved for juniors"
@@ -5328,7 +5328,7 @@
         }
       ],
       "instructor": "Bridgit Jordan",
-      "open_seats": "Closed 2",
+      "open_seats": "2",
       "max_enrollment": "25",
       "crosslistings": [],
       "description": "Accounting is the language of business. One of the objectives of this course is to learn that \"language.\" The emphasis will be on understanding financial statements both for profit and non-profit organizations. International accounting, ethics and investment decisions are also covered. This course is designed for students who desire an understanding of the elements of accounting as a component of a liberal arts education as well as for those who would like to study further in accounting or business. This course counts as a Group B elective.",
@@ -5536,7 +5536,7 @@
           "room": "LIBR 250"
         }
       ],
-      "instructor": "Allan Martinez VenegasErik Halaas",
+      "instructor": "Allan Martinez Venegas, Erik Halaas",
       "open_seats": "3",
       "max_enrollment": "25",
       "crosslistings": [],
@@ -5606,7 +5606,7 @@
         }
       ],
       "instructor": "",
-      "open_seats": "Closed 2",
+      "open_seats": "2",
       "max_enrollment": "25",
       "crosslistings": [],
       "description": "How do firms create value, and how is that value distributed to different stakeholders? How do firms choose which projects to pursue, and how to pay for them? Financial decisions are central to businesses of all sizes and across all sectors. This course introduces the core ideas and practical tools of corporate finance from both the manager’s and investor’s perspective. Topics include asset valuation, decisions-making over uncertainty, capital structure, portfolio theory, options, mergers, and corporate governance. This course counts as a Group E elective. Prerequisites: ECON 119 or 129 with C- or higher.",
@@ -5675,7 +5675,7 @@
         }
       ],
       "instructor": "Sarah West",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "25",
       "crosslistings": [],
       "description": "In microeconomics, we study how individuals make economic choices. We pose questions like: What influences consumers’ purchasing decisions? Will firms replace employees with machines if the minimum wage increases? How do concentrated markets (e.g., airlines, Amazon) affect consumers? If a firm can set different prices for different consumers, what set of prices will be optimal? How do risk and uncertainty affect investment decisions? What is the efficient amount of pollution? What role should governments play in providing resources for public goods like parks? In this course, we derive models of constrained choice to examine fundamental tradeoffs faced by individuals, firms, and governments when making economic decisions and to determine how such decisions influence market outcomes and well-being. This course counts as a Group E elective. Prerequisite(s): MATH 135 or MATH 137, and one 200-level Economics course from Group E electives. Not open to first-year students except by permission of the instructor. C- or higher required for all prerequisites.",
@@ -5698,7 +5698,7 @@
         }
       ],
       "instructor": "Mark Drozd",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "25",
       "crosslistings": [],
       "description": "In microeconomics, we study how individuals make economic choices. We pose questions like: What influences consumers’ purchasing decisions? Will firms replace employees with machines if the minimum wage increases? How do concentrated markets (e.g., airlines, Amazon) affect consumers? If a firm can set different prices for different consumers, what set of prices will be optimal? How do risk and uncertainty affect investment decisions? What is the efficient amount of pollution? What role should governments play in providing resources for public goods like parks? In this course, we derive models of constrained choice to examine fundamental tradeoffs faced by individuals, firms, and governments when making economic decisions and to determine how such decisions influence market outcomes and well-being. This course counts as a Group E elective. Prerequisite(s): MATH 135 or MATH 137, and one 200-level Economics course from Group E electives. Not open to first-year students except by permission of the instructor. C- or higher required for all prerequisites.",
@@ -5744,7 +5744,7 @@
         }
       ],
       "instructor": "Mario Solis-Garcia",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "25",
       "crosslistings": [],
       "description": "This course will introduce students to microeconomics based, dynamic general equilibrium models of the aggregate economy. These models will be used to address the three main questions of macroeconomics: What causes long-term economic growth to vary over time and across countries? Which forces drive fluctuations in economic activity and inflation throughout the business cycle? What role, if any, do monetary and fiscal policy play in fostering economic growth and minimizing economic fluctuations? This is one of the four courses required for the economics major. Prerequisite(s): ECON 361 or permission of instructor. C- or higher required for all prerequisites.",
@@ -5767,7 +5767,7 @@
         }
       ],
       "instructor": "Felix Friedt",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "22",
       "crosslistings": [
         "Students registered for this section must register for ECON 381-L1 only"
@@ -5792,7 +5792,7 @@
         }
       ],
       "instructor": "Amy Damon",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "22",
       "crosslistings": [
         "Students registered for this section must register for ECON 381-L2 only"
@@ -5817,7 +5817,7 @@
         }
       ],
       "instructor": "Felix Friedt",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "22",
       "crosslistings": [
         "Students registered for this lab section must register for ECON 381-01 only"
@@ -5842,7 +5842,7 @@
         }
       ],
       "instructor": "Amy Damon",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "22",
       "crosslistings": [
         "Students registered for this lab section must register for ECON 381-02 only"
@@ -5890,7 +5890,7 @@
         }
       ],
       "instructor": "Liang Ding",
-      "open_seats": "Closed 3",
+      "open_seats": "3",
       "max_enrollment": "25",
       "crosslistings": [],
       "description": "This course concentrates on developing and applying economic principles to the decision making process of the firm. Typically the course is taught from the viewpoint of the financial manager of a firm (profit or non-profit). Traditional corporate finance topics will be covered, including: cash flow management, sources of capital, capital budgeting, cost of capital, and financial structure. Recent theoretical developments in the capital asset pricing model and portfolio theory also will be examined. Actual case studies of financial decision making often are included in the course. This course counts as a Group E elective. Prerequisite(s): ECON 113, ECON 361 and ECON 381. C- or higher required for all prerequisites.",
@@ -6205,7 +6205,7 @@
         }
       ],
       "instructor": "Lesley Lavery",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "20",
       "crosslistings": [
         "POLI 315-01 (10582)"
@@ -6426,7 +6426,7 @@
         }
       ],
       "instructor": "Peter Bognanni",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "16",
       "crosslistings": [],
       "description": "This workshop-based course focuses on the development of skills for writing poetry, short fiction, and/or creative nonfiction through a close study of the techniques involved in these forms, analysis of model literary works, and frequent writing exercises. This course must be completed at Macalester as a PREREQUISITE for the further study of creative writing at Macalester.",
@@ -6449,7 +6449,7 @@
         }
       ],
       "instructor": "Emma Törzs",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "16",
       "crosslistings": [],
       "description": "This workshop-based course focuses on the development of skills for writing poetry, short fiction, and/or creative nonfiction through a close study of the techniques involved in these forms, analysis of model literary works, and frequent writing exercises. This course must be completed at Macalester as a PREREQUISITE for the further study of creative writing at Macalester.",
@@ -6495,7 +6495,7 @@
         }
       ],
       "instructor": "Aurora Masum-Javed",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "16",
       "crosslistings": [],
       "description": "Writing, whether in the form of a story, a poem, or a late-night email begging your professor for an extension, is always a creative act. Words arranged on a page create meaning, and in this class we will examine and practice certain authorial choices that go into creative meaning-making. We will do this through the lenses of poetry and fiction, reading widely and carefully with an eye to explore what choices the authors make, and to what end. Essentially, we will be asking over and over what makes a reader feel, experience, and understand. By the end of the semester I hope you’ll feel confident with your new toolbox of tricks n skills, and empowered in your creative work to a) Say what you mean to say, b) How you mean to say it, c) With the desired emotional impact.",
@@ -6518,7 +6518,7 @@
         }
       ],
       "instructor": "Aurora Masum-Javed",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "16",
       "crosslistings": [],
       "description": "This workshop-based course focuses on the development of skills for writing poetry, short fiction, and/or creative nonfiction through a close study of the techniques involved in these forms, analysis of model literary works, and frequent writing exercises. This course must be completed at Macalester as a PREREQUISITE for the further study of creative writing at Macalester.",
@@ -6632,7 +6632,7 @@
           "room": "ARTCOM 202"
         }
       ],
-      "instructor": "Megan VosslerMatt Burgess",
+      "instructor": "Megan Vossler, Matt Burgess",
       "open_seats": "8",
       "max_enrollment": "18",
       "crosslistings": [
@@ -6658,7 +6658,7 @@
         }
       ],
       "instructor": "Penelope Geng",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "16",
       "crosslistings": [],
       "description": "The story goes like this. While performing Christopher Marlowe’s Doctor Faustus—a play featuring spell-casting, necromancy, and other devilish arts—the actors noticed that “there was one devil too many amongst them.” They stopped the play; the audience panicked. Whether a true story or not (the anecdote comes down to us through a seventeenth-century source), it captures one of the “certainties” of the period: that demons, devils, witches, and other things of darkness are a part of the here and now. In this course, we explore sixteenth- and seventeenth-centuries tales of the demonic. At the same time, we examine how authors used the public’s fascination with the supernatural to explore the pressing issues of the day: religious controversies regarding freewill and election, political nightmares of state tyranny and oppression, and social crises surrounding the vanishing culture of hospitality and charity. Hence, just as characters strive to see beyond appearances and outward show, so we shall investigate the religious, political, and legal debates out of which the texts arise. Central to our study are the major works of early modern English literature such as Marlowe’s Dr. Faustus, Shakespeare’s Macbeth, and Milton’s Paradise Lost, and lesser known texts such as The Witch of Edmonton, The Discovery of Witchcraft, and King James VI and I’s Daemonologie. No prior knowledge of conjuring is presumed or required.",
@@ -6681,7 +6681,7 @@
         }
       ],
       "instructor": "Coral Lumbley",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "20",
       "crosslistings": [
         "ENVI 262-02 (10780)"
@@ -6706,7 +6706,7 @@
         }
       ],
       "instructor": "James Dawes",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "16",
       "crosslistings": [],
       "description": "This course is an introduction to the interdiscipline of literature and human rights. We will read a series of beautiful and emotionally wrenching novels, treating them simultaneously as aesthetic artifacts and case studies in human rights. We will discuss the urgent political questions and philosophical paradoxes that define human rights, paying special attention to theories of trauma and torture. We will seek to better understand how spectators of suffering develop—or fail to develop—empathy for strangers by also examining how they can so palpably feel for the dreams, desires, and dignity of fictional persons. This course fills the US Identities and Differences requirement and the framework requirement for the Human Rights and Humanitarianism concentration.",
@@ -6729,7 +6729,7 @@
         }
       ],
       "instructor": "Daylanne English",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "20",
       "crosslistings": [
         "AMST 275-01 (10270)"
@@ -6754,7 +6754,7 @@
         }
       ],
       "instructor": "Peter Bognanni",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "16",
       "crosslistings": [],
       "description": "This course will focus in a variety of ways on the development of skills for writing screenplays, building on the work done in ENGL 120. The emphasis will be on narrative films, with the objective of writing a feature-length screenplay during the semester. There will be extensive readings and discussion of published and unpublished screenplays in addition to regular writing assignments. The course may be conducted to some extent in workshop format; the emphasis will be on continuing to develop writing skills. Prerequisite(s): ENGL 150 taken at Macalester.",
@@ -6825,7 +6825,7 @@
         }
       ],
       "instructor": "Michael Prior",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "16",
       "crosslistings": [],
       "description": "In this hybrid creative writing and literature course, we will explore 20 of the most influential poems written in English during the last century, including work by T.S. Eliot, W.H. Auden, H.D., Robert Frost, Edna St. Vincent Millay, Elizabeth Bishop, Gertrude Stein, Gwendolyn Brooks, and Li-Young Lee. We will consider the way these poems bear witness to the century’s historical tumults and social transformations as well as how contemporary poets have responded—admiringly, critically—to these touchstones of verse. Class assignments will include the opportunity to write poems in imitation of those we’ve read (to immerse ourselves in their grammars of image, line, and metaphor); poetic scavenger hunts; brief, informal presentations; and a final creative or scholarly project. This course will fulfill the writers of color requirement for the English major. Prerequisite(s): one 100-level ENGL course.",
@@ -6848,7 +6848,7 @@
         }
       ],
       "instructor": "David Moore",
-      "open_seats": "Closed -1",
+      "open_seats": "-1",
       "max_enrollment": "20",
       "crosslistings": [
         "INTL 367-01 (10424)"
@@ -7045,7 +7045,7 @@
         }
       ],
       "instructor": "Sebastiano De Bona",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "28",
       "crosslistings": [
         "BIOL 170-01 (10057)"
@@ -7120,7 +7120,7 @@
         }
       ],
       "instructor": "Michael Anderson",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "23",
       "crosslistings": [
         "BIOL 170-L1 (10063)"
@@ -7145,7 +7145,7 @@
         }
       ],
       "instructor": "Michael Anderson",
-      "open_seats": "Closed 4",
+      "open_seats": "4",
       "max_enrollment": "23",
       "crosslistings": [
         "BIOL 170-L2 (10065)"
@@ -7170,7 +7170,7 @@
         }
       ],
       "instructor": "Jerald Dosch",
-      "open_seats": "Closed 3",
+      "open_seats": "3",
       "max_enrollment": "23",
       "crosslistings": [
         "BIOL 170-L3 (10067)"
@@ -7495,7 +7495,7 @@
         }
       ],
       "instructor": "Louisa Bradtmiller",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "24",
       "crosslistings": [],
       "description": "The Earth’s climate system is complex and dynamic, and yet understanding this system is crucial in order to address concerns about anthropogenic influences on climate. In this course, we examine the basic physical and chemical processes that control the modern climate system, including the role of incoming solar radiation, the greenhouse effect, ocean and atmospheric circulation, and El Nino. We also look critically at the methods and archives used to reconstruct climate in the past, such as ice cores, marine and lake sediments, and cave deposits. We explore the possible effects of anthropogenic greenhouse gas emissions on modern and future climate by critically examining the models used in climate prediction, and discuss the challenges of modeling such a complex system. Although this course is taught from a primarily scientific perspective, it includes frequent discussions of the roles policy and economics play in the current dialogue on global climate change.",
@@ -7518,7 +7518,7 @@
         }
       ],
       "instructor": "Louisa Bradtmiller",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "24",
       "crosslistings": [],
       "description": "The Earth’s climate system is complex and dynamic, and yet understanding this system is crucial in order to address concerns about anthropogenic influences on climate. In this course, we examine the basic physical and chemical processes that control the modern climate system, including the role of incoming solar radiation, the greenhouse effect, ocean and atmospheric circulation, and El Nino. We also look critically at the methods and archives used to reconstruct climate in the past, such as ice cores, marine and lake sediments, and cave deposits. We explore the possible effects of anthropogenic greenhouse gas emissions on modern and future climate by critically examining the models used in climate prediction, and discuss the challenges of modeling such a complex system. Although this course is taught from a primarily scientific perspective, it includes frequent discussions of the roles policy and economics play in the current dialogue on global climate change.",
@@ -7541,7 +7541,7 @@
         }
       ],
       "instructor": "Coral Lumbley",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "20",
       "crosslistings": [
         "ENGL 262-02 (10779)"
@@ -7616,7 +7616,7 @@
         }
       ],
       "instructor": "Kiarina Kordela",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "20",
       "crosslistings": [
         "GERM 274-01 (10383)",
@@ -7693,7 +7693,7 @@
           "room": "THEATR 200"
         }
       ],
-      "instructor": "Eric CarterRoopali Phadke",
+      "instructor": "Eric Carter, Roopali Phadke",
       "open_seats": "2",
       "max_enrollment": "16",
       "crosslistings": [
@@ -7768,7 +7768,7 @@
           "room": "HUM 112"
         }
       ],
-      "instructor": "Arjun GuneratneTom Robertson",
+      "instructor": "Arjun Guneratne, Tom Robertson",
       "open_seats": "23",
       "max_enrollment": "30",
       "crosslistings": [
@@ -7870,7 +7870,7 @@
         }
       ],
       "instructor": "Xavier Haro-Carrión",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "12",
       "crosslistings": [
         "GEOG 352-01 (10348)"
@@ -9077,7 +9077,7 @@
           "room": "THEATR 200"
         }
       ],
-      "instructor": "Eric CarterRoopali Phadke",
+      "instructor": "Eric Carter, Roopali Phadke",
       "open_seats": "2",
       "max_enrollment": "16",
       "crosslistings": [
@@ -9151,7 +9151,7 @@
         }
       ],
       "instructor": "Xavier Haro-Carrión",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "12",
       "crosslistings": [
         "ENVI 352-01 (10349)"
@@ -9540,7 +9540,7 @@
         }
       ],
       "instructor": "Kristina Curry Rogers",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "6",
       "crosslistings": [
         "BIOL 480-L1 (10100)"
@@ -9868,7 +9868,7 @@
         }
       ],
       "instructor": "Kiarina Kordela",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "20",
       "crosslistings": [
         "ENVI 274-01 (10384)",
@@ -9963,7 +9963,7 @@
         }
       ],
       "instructor": "David Martyn",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "18",
       "crosslistings": [
         "PHIL 216-01 (10390)"
@@ -10253,7 +10253,7 @@
         }
       ],
       "instructor": "Maria Fedorova",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "25",
       "crosslistings": [
         "RUSS 262-01 (10656)"
@@ -10301,7 +10301,7 @@
         }
       ],
       "instructor": "Katrina Phillips",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "20",
       "crosslistings": [
         "AMST 294-01 (10406)"
@@ -10524,7 +10524,7 @@
         }
       ],
       "instructor": "Elisabeth Figueroa",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "25",
       "crosslistings": [],
       "description": "Epidemiology is the study of the distribution and determinants of disease and health in human populations and the application of this understanding to the solution of public health problems. Topics include measurement of disease and health, the outbreak and spread of disease, reasoning about cause and effect, analysis of risk, detection and classification, and the evaluation of trade-offs. The course is designed to fulfill and extend the professional community’s consensus definition of undergraduate epidemiology. In addition to the techniques of modern epidemiology, the course emphasizes the historical evolution of ideas of causation, treatment, and prevention of disease. The course is a required component of the concentration in Community and Global Health.",
@@ -10863,7 +10863,7 @@
         }
       ],
       "instructor": "Alix Johnson",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "16",
       "crosslistings": [
         "MCST 330-01 (10423)"
@@ -10888,7 +10888,7 @@
         }
       ],
       "instructor": "David Moore",
-      "open_seats": "Closed -1",
+      "open_seats": "-1",
       "max_enrollment": "20",
       "crosslistings": [
         "ENGL 367-01 (10425)"
@@ -10913,7 +10913,7 @@
         }
       ],
       "instructor": "Ahmed Samatar",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "7",
       "crosslistings": [],
       "description": "Capitalism, for many, is synonymous with the \"natural\" exchange of goods and services through \"the free market.\" But fuller examination shows capitalism to be neither natural, free, nor limited to economic transactions. Capitalism more precisely is a historical social system and a way of being which now penetrates all forms of life: cultural, ecological, civic and more. This senior seminar aims to identify capitalism’s origins and development, and interrogate its contemporary status. Thinkers such as Smith, Marx, and Braudel will loom, but readings will focus on works by Beaud, Weber, Tawney, Kotz, Wallerstein, and others. The course concludes with a significant research paper on a topic, relevant to the theme, of a student’s choice. Prerequisite(s): Senior standing or permission of instructor.",
@@ -11437,7 +11437,7 @@
         }
       ],
       "instructor": "Paul Dosh",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "15",
       "crosslistings": [
         "POLI 294-02 (10577)",
@@ -11997,7 +11997,7 @@
         }
       ],
       "instructor": "William Grodzicki",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "20",
       "crosslistings": [],
       "description": "Linear algebra is one of the pillars of mathematics, both pure and applied. Linear relations can be used to model phenomena from numerous disciplines in the mathematical sciences, physical sciences, social sciences, engineering, and computer science. This introduction to linear algebra blends mathematical computation, theory, abstraction, and application. It starts with systems of linear equations and grows into the study of matrices, vector spaces, linear independence, dimension, linear transformations, orthogonality and projections, eigenvectors, and their applications. The resulting linear algebraic framework is a flexible and powerful way to approach multidimensional problems. Prerequisite(s): MATH 279 or MATH 137 or STAT 155.",
@@ -12135,7 +12135,7 @@
         }
       ],
       "instructor": "Andrew Beveridge",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "20",
       "crosslistings": [],
       "description": "Discrete mathematics studies collections of distinct, separate objects and is complementary to calculus (which studies continuous phenomena). This course introduces techniques for analyzing arrangements of objects and the relationships between them. The material emphasizes problem solving and logical argumentation, rather than computation. Topics include basic counting principles, induction, logic, recurrence relations, number theory, and graph theory.",
@@ -12256,7 +12256,7 @@
         }
       ],
       "instructor": "Kristin Heysse",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "20",
       "crosslistings": [],
       "description": "Graphs are mathematical structures which represent the relationships between objects in a set. Graph Theory falls under the umbrella of discrete mathematics and borrows methods from several areas of study to explore properties like the overall strength and complexity of the graph. Topics in this course include connectivity, graph coloring, trees, graph algorithms, and network flows. This course also discusses how these topics relate to graphs found in applications, such as social networks and the internet. Prerequisite(s): MATH 279",
@@ -12279,7 +12279,7 @@
         }
       ],
       "instructor": "Taryn Flock",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "16",
       "crosslistings": [],
       "description": "Basic theory for the real numbers and the notions of limit, continuity, differentiation, integration, convergence, uniform convergence, and infinite series. Additional topics may include metric and normed linear spaces, point set topology, analytic number theory, Fourier series. Prerequisite(s): MATH 137 and one of: MATH 236, MATH 237, or MATH 279.",
@@ -12325,7 +12325,7 @@
         }
       ],
       "instructor": "Will Mitchell",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "16",
       "crosslistings": [],
       "description": "Partial differential equations are powerful tools for modeling and simulation, with wide use in science and engineering. This course introduces some famous and well-understood equations (e.g. for modeling heat flow, waves, advection, and gravitation) and covers strategies for solving them on paper and by machine; applications in one, two and three space dimensions are covered. Nonlinear equations are introduced more briefly. Capstone projects allow students to apply or extend their knowledge to a problem of their choice. Prerequisite(s): MATH 312",
@@ -12490,7 +12490,7 @@
         }
       ],
       "instructor": "Morgan Adamson",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "12",
       "crosslistings": [],
       "description": "This course is designed as a basic introduction to digital video production. The objective of the class is to familiarize students of film theory and history with the language of cinema from the standpoint of production in order to deepen your appreciation and knowledge of the technical aspects of film/video and to develop your capacity to use video as a tool for research and communication. In this way, the course will be a combination of technical instruction, critical engagement, and creative exploration. We will analyze and employ a variety of filmmaking techniques as well as constructing narrative and non-narrative strategies for doing so. The focus of the course will be to familiarize you with some basic conventions of experimental, documentary, and narrative cinema. In each assignment, you will be encouraged to think about how formal decisions enhance and further narrative or thematic elements. We will thus pay very close attention to formal aspects of cinematic production: mise-en-scene. cinematography, editing, and sound design. In addition to this attention to form, success in the class will be dependent on a commitment to working through the technical aspects of video production (camera operation, lighting, editing software) in order to create short, original video pieces.",
@@ -12612,7 +12612,7 @@
         }
       ],
       "instructor": "Alix Johnson",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "16",
       "crosslistings": [
         "INTL 330-01 (10422)"
@@ -12781,7 +12781,7 @@
         }
       ],
       "instructor": "Reid Kruger",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "12",
       "crosslistings": [],
       "description": "Electronic music composition explores the art of creating experimental sound compositions using analog and digital technology. Although we will survey the historical development of electronic music, the emphasis of the class is on composition, including multi-media and experimental work. The class format includes listening, discussion, lab sessions and a final concert showcasing works created throughout the semester.",
@@ -13395,7 +13395,7 @@
         }
       ],
       "instructor": "David Martyn",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "18",
       "crosslistings": [
         "GERM 316-01 (10389)"
@@ -13493,7 +13493,7 @@
         }
       ],
       "instructor": "Amanda Evans",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "15",
       "crosslistings": [],
       "description": "In what sense are mental illnesses genuine illnesses, and how do they differ from other bodily ailments? Is a psychiatric diagnosis the discovery of a natural biological fact, or is it a social judgment cloaked in the language of science? This course provides an overview of the philosophical study of mental disorder from a variety of angles, including the scientific, the ontological, and the sociopolitical. Throughout the term we will engage with interdisciplinary work in order to evaluate the scientific and normative status of mental disorder classifications. We will also examine the power dynamics between the institutions that employ these labels and the individuals affected by them. Students will develop the analytical tools necessary to navigate the complex intersection of science and values that is modern psychiatry. While the course will deal with sophisticated concepts, no specific philosophical background is required, and interested students from a variety of backgrounds are encouraged to enroll.",
@@ -13585,7 +13585,7 @@
         }
       ],
       "instructor": "Sara Augustin",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "20",
       "crosslistings": [],
       "description": "This class is based on Hatha Yoga. Class work is centered in physical posture (asana) practice and breath work (pranayama). These two limbs of yoga allow the student to become familiar with his/her own body and the way the minds inhabits it. Basic yoga poses (asana) are introduced and added to each week progressing from beginner poses to intermediate poses with advanced variations offered for more experienced students. Yoga class starts with centering breath work and moves into postures (asana) and movement (vinyasa) which warm up the muscles and open the joints as postures are explored. Props are employed to allow proper alignment. Class work ends with a cool down period to allow the student to come into balance and a relaxation (shavasana). Any level of fitness is appropriate! Inform instructor of limitations so practice can be adjusted for you. Come to the practice with an open mind and a desire to explore, embrace and inhabit your best self in a supportive, non-competitive space. Not repeatable for credit.",
@@ -13608,7 +13608,7 @@
         }
       ],
       "instructor": "Priscilla Momah",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "20",
       "crosslistings": [],
       "description": "This class is based on Hatha Yoga. Class work is centered in physical posture (asana) practice and breath work (pranayama). These two limbs of yoga allow the student to become familiar with his/her own body and the way the minds inhabits it. Basic yoga poses (asana) are introduced and added to each week progressing from beginner poses to intermediate poses with advanced variations offered for more experienced students. Yoga class starts with centering breath work and moves into postures (asana) and movement (vinyasa) which warm up the muscles and open the joints as postures are explored. Props are employed to allow proper alignment. Class work ends with a cool down period to allow the student to come into balance and a relaxation (shavasana). Any level of fitness is appropriate! Inform instructor of limitations so practice can be adjusted for you. Come to the practice with an open mind and a desire to explore, embrace and inhabit your best self in a supportive, non-competitive space. Not repeatable for credit.",
@@ -13677,7 +13677,7 @@
         }
       ],
       "instructor": "Emma Fitzsimmons",
-      "open_seats": "Closed 2",
+      "open_seats": "2",
       "max_enrollment": "20",
       "crosslistings": [],
       "description": "Pilates is a mind-body discipline that uses non-impact exercises designed by Joseph Pilates to develop strength, flexibility, stability, coordination, and physical awareness. Practiced regularly, Pilates improves control and endurance in the entire body. Students learn Pilates breathing, principles, and its progressive repertoire, and how to apply them to correct their own movement patterns. Pilates enhances performance in other athletic activities and also in the activities of daily life. Students are expected to come ready to learn about a new way of moving with awareness. Regular attendance and focused attention are essential; cell phones are not allowed in the class. Dress for movement, but clothing should not be too baggy. Classes are suitable for students of any level. No prior experience necessary. Pilates exercises can be modified to benefit all body types and backgrounds. All are welcome! Not repeatable for credit.",
@@ -13722,7 +13722,7 @@
           "room": "LEOCTR FITNESS RM"
         }
       ],
-      "instructor": "Russell AdamsDina KountoupesJenelle Zumbusch",
+      "instructor": "Russell Adams, Dina Kountoupes, Jenelle Zumbusch",
       "open_seats": "30",
       "max_enrollment": "30",
       "crosslistings": [],
@@ -13746,7 +13746,7 @@
         }
       ],
       "instructor": "Matthew Reed",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "12",
       "crosslistings": [],
       "description": "This course will provide the opportunity to learn the basic rules and strategies for playing the games of racquetball, badminton and pickleball. Throughout the course students will be introduced to the mechanics of the different types of swings and learn a variety of defensive and offensive shots for the different sports. Students will gain an understanding of all the rules of serving for both singles and doubles and will practice several different types of serves. Students will have the opportunity to play singles, doubles, and cutthroat games throughout the semester and will participate in tournament play toward the end of the term. The indoor track will be used for warm-up for our class activities. Graded S/N. Attendance is vital to success of the course. Not repeatable for credit.",
@@ -13814,7 +13814,7 @@
           "room": "LEOCTR STUDIO 1"
         }
       ],
-      "instructor": "AD DonovanRichard Glesmann",
+      "instructor": "AD Donovan, Richard Glesmann",
       "open_seats": "14",
       "max_enrollment": "20",
       "crosslistings": [],
@@ -13838,7 +13838,7 @@
         }
       ],
       "instructor": "Donnie Brooks",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "12",
       "crosslistings": [],
       "description": "The social and recreational values of a sport like bowling must be experienced to be appreciated. Individual help is given as needed. Bowling does not develop physical fitness, but other skills are involved and can be developed in an atmosphere that encourages social interaction. Open to all levels of experience. Students will learn how to keep score and be taught the different techniques for bowling. Part of the class will be taught in a classroom setting. But the majority of class time will be off campus at a local bowling alley. Not repeatable for credit.",
@@ -13884,7 +13884,7 @@
         }
       ],
       "instructor": "Saki Khan",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "36",
       "crosslistings": [],
       "description": "Mechanics, heat and sound, including laboratory experiments and demonstrations. This course does not use calculus, has no prerequisites, and is appropriate for students pursuing pre-med or for students looking to satisfy a science distribution requirement. This course does not count toward the physics major or minor. This course is not appropriate for students who intend to major in physics, chemistry, or biology with the biochemistry emphasis.",
@@ -13907,7 +13907,7 @@
         }
       ],
       "instructor": "Brian Adams",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "18",
       "crosslistings": [],
       "description": "Mechanics, heat and sound, including laboratory experiments and demonstrations. This course does not use calculus, has no prerequisites, and is appropriate for students pursuing pre-med or for students looking to satisfy a science distribution requirement. This course does not count toward the physics major or minor. This course is not appropriate for students who intend to major in physics, chemistry, or biology with the biochemistry emphasis.",
@@ -13930,7 +13930,7 @@
         }
       ],
       "instructor": "Brian Adams",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "18",
       "crosslistings": [],
       "description": "Mechanics, heat and sound, including laboratory experiments and demonstrations. This course does not use calculus, has no prerequisites, and is appropriate for students pursuing pre-med or for students looking to satisfy a science distribution requirement. This course does not count toward the physics major or minor. This course is not appropriate for students who intend to major in physics, chemistry, or biology with the biochemistry emphasis.",
@@ -14440,7 +14440,7 @@
         }
       ],
       "instructor": "Patrick Schmidt",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "25",
       "crosslistings": [],
       "description": "An exploration of the structure of the American Political System as seen through the decisions of the U.S. Supreme Court. The central topics include the development of the federal-state relationship, the separation of powers in the national government, the limits of government power over the economy, and the role of the judiciary. This course takes in the sweep of American history from 1789 to the present. Prerequisite(s): POLI 100 recommended.",
@@ -14636,7 +14636,7 @@
         }
       ],
       "instructor": "Rothin Datta",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "20",
       "crosslistings": [],
       "description": "This course fulfills the political theory requirement for the Political Science major. No prior experience required. According to Cedric Robinson, capitalism, from its advent, \"pursued essentially racial directions.\" This insight led Robinson to a theory of “racial capitalism” that has been taken up by several scholars across disciplines. Through this course, we will attempt to answer the following questions: What is racial capitalism? How do we understand its key components (racism and capitalism) and how do they relate to one other? Is the question of the relationship between racism and capitalism a historical one or a purely theoretical one? How have these concepts influenced contemporary political struggles? What role do slavery, property relations, prisons, and the police play in the reproduction of racial capitalism?",
@@ -14682,7 +14682,7 @@
         }
       ],
       "instructor": "Kiarina Kordela",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "20",
       "crosslistings": [
         "GERM 274-01 (10383)",
@@ -14756,7 +14756,7 @@
         }
       ],
       "instructor": "Paul Dosh",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "15",
       "crosslistings": [
         "AMST 294-02 (10578)",
@@ -14830,7 +14830,7 @@
         }
       ],
       "instructor": "Lesley Lavery",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "20",
       "crosslistings": [
         "EDUC 315-01 (10583)"
@@ -15533,7 +15533,7 @@
         }
       ],
       "instructor": "Brian Rood",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "32",
       "crosslistings": [],
       "description": "This course examines the experiences, causes, and treatments of the major forms of distress and disorder codified in the Diagnostic and Statistical Manual (DSM), including schizophrenia, mood disorders, anxiety disorders, dissociative disorders, stress disorders, and personality disorders. We critically evaluate theories and research derived from biological, genetic, psychological, interpersonal, and social-cultural perspectives. Group B course. Prerequisite(s): PSYC 100 or PSYC 180",
@@ -15578,7 +15578,7 @@
           "room": "THEATR 201"
         }
       ],
-      "instructor": "Keith HalperinCarolyn Dienhart",
+      "instructor": "Keith Halperin, Carolyn Dienhart",
       "open_seats": "6",
       "max_enrollment": "24",
       "crosslistings": [],
@@ -15819,7 +15819,7 @@
         }
       ],
       "instructor": "Grace Vieth",
-      "open_seats": "Closed 2",
+      "open_seats": "2",
       "max_enrollment": "16",
       "crosslistings": [],
       "description": "In this course, we will dive into the empirical study of close relationships (romantic relationships, friends, and family). We will review and discuss core theories within relationship science such as attachment theory and interdependence theory, how relationships progress from relationship initiation to committed partnerships, and new areas of research within the domain of close relationships (e.g. singlehood, adult friendships). Pre-requisites: PSYC 100; PSYC 201 or STAT 155; and an intermediate Psychology course.",
@@ -15842,7 +15842,7 @@
         }
       ],
       "instructor": "Keira Leneman",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "16",
       "crosslistings": [],
       "description": "With a focus on the United States, students in this community-engaged course will name and interrogate the causes and consequences of racism and white supremacy, and explore stress and policy as mechanisms of racial disparities in health and well-being. We will also identify sources of resilience and resistance against the negative consequences of racism and white supremacy. In partnering with a community organization, we will contribute to and learn from an organization that is actively building resilience and resistance against systemic racism, experience the realities of policy-making, and learn skills for community engaged work. Counts as a UP3 course. Pre-requisites: PSYC 100; PSYC 201 or STAT 155; and an intermediate Psychology course.",
@@ -15865,7 +15865,7 @@
         }
       ],
       "instructor": "Violet Brown",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "16",
       "crosslistings": [],
       "description": "How can a professional baseball player’s brain process a 100 mph fastball in time to swing? Why do neuroscientists increasingly view regular movement as one of the most accessible and well-evidenced tools for improving and sustaining mental health? This seminar examines athletics and exercise through the lens of psychology and neuroscience, from elite performance to the psychological benefits of everyday movement. Three questions drive this course: HOW DO ELITE ATHLETES DO IT? We’ll explore perceptual and cognitive expertise in athletics, including how experts anticipate, attend to, and interpret information differently from novices, and how the brain and behavior change as skills become automatic. HOW DO THEY KEEP DOING IT? We’ll examine the social and motivational forces that sustain athletic effort—how teams, coaching, and social identity shape performance; how habits form; and what neuroscience reveals about effort and fatigue. WHY SHOULD WE ALL DO IT? We’ll conclude by examining the psychological and neurological benefits of exercise, from its effects on stress and mood to evidence that exercise reshapes the very brain systems that mental health depends on. Pre-requisites: PSYC 100; PSYC 201 or STAT 155; and an intermediate Psychology course.",
@@ -15887,8 +15887,8 @@
           "room": "OLRI 352"
         }
       ],
-      "instructor": "Erika DeAngelisAriel JamesKeira LenemanMelina Singh",
-      "open_seats": "Closed 0",
+      "instructor": "Erika DeAngelis, Ariel James, Keira Leneman, Melina Singh",
+      "open_seats": "0",
       "max_enrollment": "8",
       "crosslistings": [],
       "description": "Directed Research provides an intensive research experience in which students engage fully in the research process and produce a complete study over the course of the semester. With the close support of a faculty member each step of the way, students design a research project intended to extend knowledge in a psychological area of their interest, collect and analyze data, write a research report that includes an extensive literature review, and present their project as a poster in a public setting. Directed research is open only to declared psychology majors; students are assigned to sections by the supervising faculty. This course fulfills the capstone requirement for the psychology major. Prerequisite(s): PSYC 301, at least one intermediate course, and at least one advanced course (or permission of instructor).",
@@ -15910,8 +15910,8 @@
           "room": "OLRI 349"
         }
       ],
-      "instructor": "Erika DeAngelisAriel JamesKeira LenemanMelina Singh",
-      "open_seats": "Closed 0",
+      "instructor": "Erika DeAngelis, Ariel James, Keira Leneman, Melina Singh",
+      "open_seats": "0",
       "max_enrollment": "4",
       "crosslistings": [],
       "description": "Directed Research provides an intensive research experience in which students engage fully in the research process and produce a complete study over the course of the semester. With the close support of a faculty member each step of the way, students design a research project intended to extend knowledge in a psychological area of their interest, collect and analyze data, write a research report that includes an extensive literature review, and present their project as a poster in a public setting. Directed research is open only to declared psychology majors; students are assigned to sections by the supervising faculty. This course fulfills the capstone requirement for the psychology major. Prerequisite(s): PSYC 301, at least one intermediate course, and at least one advanced course (or permission of instructor).",
@@ -15933,7 +15933,7 @@
           "room": "OLRI 370"
         }
       ],
-      "instructor": "Erika DeAngelisAriel JamesKeira LenemanMelina Singh",
+      "instructor": "Erika DeAngelis, Ariel James, Keira Leneman, Melina Singh",
       "open_seats": "2",
       "max_enrollment": "4",
       "crosslistings": [],
@@ -15956,8 +15956,8 @@
           "room": "HUM 102"
         }
       ],
-      "instructor": "Erika DeAngelisAriel JamesKeira LenemanMelina Singh",
-      "open_seats": "Closed 0",
+      "instructor": "Erika DeAngelis, Ariel James, Keira Leneman, Melina Singh",
+      "open_seats": "0",
       "max_enrollment": "4",
       "crosslistings": [],
       "description": "Directed Research provides an intensive research experience in which students engage fully in the research process and produce a complete study over the course of the semester. With the close support of a faculty member each step of the way, students design a research project intended to extend knowledge in a psychological area of their interest, collect and analyze data, write a research report that includes an extensive literature review, and present their project as a poster in a public setting. Directed research is open only to declared psychology majors; students are assigned to sections by the supervising faculty. This course fulfills the capstone requirement for the psychology major. Prerequisite(s): PSYC 301, at least one intermediate course, and at least one advanced course (or permission of instructor).",
@@ -16103,7 +16103,7 @@
           "room": "THEATR 205"
         }
       ],
-      "instructor": "Andrew OvermanJames Laine",
+      "instructor": "Andrew Overman, James Laine",
       "open_seats": "12",
       "max_enrollment": "25",
       "crosslistings": [
@@ -16225,7 +16225,7 @@
         }
       ],
       "instructor": "Erik Davis",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "12",
       "crosslistings": [],
       "description": "The course is an introduction to some of the important theoretical and methodological work conducted by scholars in various disciplines who hope to better define and understand religious phenomena. This seminar begins with some of the early twentieth century texts that are often cited and discussed by contemporary scholars of religion (e.g., Durkheim, Weber, Freud) and then turns to a number of investigations stemming from engagement with earlier theorists or refracting new concerns. The course inquires into the problems of defining and analyzing religious cultures, and the researcher’s position or positions in this analysis, as this has been approached from anthropological, sociological, and religious studies perspectives.",
@@ -16553,7 +16553,7 @@
         }
       ],
       "instructor": "Maria Fedorova",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "25",
       "crosslistings": [
         "HIST 262-01 (10657)"
@@ -16846,7 +16846,7 @@
           "room": "THEATR 213"
         }
       ],
-      "instructor": "Alicia MuñozErika Busse-Cárdenas",
+      "instructor": "Alicia Muñoz, Erika Busse-Cárdenas",
       "open_seats": "0",
       "max_enrollment": "16",
       "crosslistings": [
@@ -16871,7 +16871,7 @@
           "room": "THEATR 002"
         }
       ],
-      "instructor": "Khaldoun SammanErika Busse-Cárdenas",
+      "instructor": "Khaldoun Samman, Erika Busse-Cárdenas",
       "open_seats": "5",
       "max_enrollment": "19",
       "crosslistings": [],
@@ -17081,7 +17081,7 @@
         }
       ],
       "instructor": "Rosa Rull-Montoya",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "20",
       "crosslistings": [],
       "description": "Intermediate Spanish extends and deepens awareness and use of linguistic functions in Spanish. Three class hours a week with professor plus bi-weekly sessions with lab instructor for additional speaking practice and cultural engagement. Formal introduction to history and culture of Hispanophone countries. For admission into SPAN 204, students must have completed 203, or its equivalent, with a minimum grade of C-. Prerequisite(s): SPAN 102 or SPAN 110, or an equivalent, with a minimum grade of C-.",
@@ -17173,7 +17173,7 @@
         }
       ],
       "instructor": "Fernando Contreras",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "20",
       "crosslistings": [],
       "description": "Intermediate Spanish II extends and deepens awareness and use of linguistic functions in Spanish. Three class hours a week with professor plus bi-weekly sessions with lab instructor for additional speaking practice and cultural engagement. Formal introduction to history and culture of Hispanophone countries. Prerequisite(s): SPAN 203, or its equivalent, with a grade of C- or better.",
@@ -17407,7 +17407,7 @@
           "room": "THEATR 213"
         }
       ],
-      "instructor": "Alicia MuñozErika Busse-Cárdenas",
+      "instructor": "Alicia Muñoz, Erika Busse-Cárdenas",
       "open_seats": "0",
       "max_enrollment": "16",
       "crosslistings": [
@@ -17738,7 +17738,7 @@
         }
       ],
       "instructor": "Amin Alhashim",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "20",
       "crosslistings": [
         "COMP 212-01 (10200)"
@@ -17763,7 +17763,7 @@
         }
       ],
       "instructor": "Alicia Johnson",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "20",
       "crosslistings": [],
       "description": "The linear and logistic modeling techniques from STAT 155 are augmented with the three foundational machine learning tasks: regression, classification, and clustering. The course explores techniques central to these tasks, including methods of data exploration, supervised and unsupervised learning, parametric and nonparametric modeling, and model training and evaluation. As required by the application of these sophisticated techniques, the course also introduces foundational statistical computer programming concepts. Prerequisite(s): STAT 155.",
@@ -17786,7 +17786,7 @@
         }
       ],
       "instructor": "Alicia Johnson",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "20",
       "crosslistings": [],
       "description": "The linear and logistic modeling techniques from STAT 155 are augmented with the three foundational machine learning tasks: regression, classification, and clustering. The course explores techniques central to these tasks, including methods of data exploration, supervised and unsupervised learning, parametric and nonparametric modeling, and model training and evaluation. As required by the application of these sophisticated techniques, the course also introduces foundational statistical computer programming concepts. Prerequisite(s): STAT 155.",
@@ -18081,7 +18081,7 @@
         }
       ],
       "instructor": "Jill Lile",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "14",
       "crosslistings": [],
       "description": "This is a beginning ballet class designed for students who have never had ballet before. The goal is to demonstrate fundamental understanding and execution of basic ballet technique and to develop a foundation in movement that will carry over and support any other style of dance or physical practice. It will include barre and center work, across-the-floor combinations, and stretching and strengthening practices. Correct alignment, coordination, and body mechanics will be emphasized. May be repeated for credit. Letter grading. Every semester. (2 Credits)",
@@ -18127,7 +18127,7 @@
         }
       ],
       "instructor": "Mina Kinukawa",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "12",
       "crosslistings": [],
       "description": "Scenography is the creation of imagined spaces for performance. In this course we will study the fundamentals of scenography holistically, including scenic, lighting, costume, and sound design. Students will develop the ability to analyze and critique elements of performance design, articulate design ideas through written and verbal means, and complete a design project from textual analysis to tangible objects. This course is a prerequisite for intermediate and advanced design courses in Theater and Dance. Department provides course materials.",
@@ -18221,7 +18221,7 @@
         }
       ],
       "instructor": "Mina Kinukawa",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "13",
       "crosslistings": [],
       "description": "Students in this class will engage with costume design as both generative and collaborative artists. They will learn to conceptualize costumes for theater and dance productions drawing from a multitude of inspirations including the fine arts, costume/fashion history, music, literature, film, opera, and textiles. Class meetings will include discussions about readings and visual literacy, as well as hands-on exploration of a real-world design process including research, drawing and painting renderings, budgeting, fittings, and oral presentations of designs. Students will engage with both traditional and devised methods of developing characters and silhouettes to develop their unique vision for theatrical and dance productions. There will be 1-2 field trips to visit key resource locations for costume designers.",
@@ -18291,7 +18291,7 @@
           "room": "ARTCOM 102"
         }
       ],
-      "instructor": "Joanna Inglotkt shorb",
+      "instructor": "Joanna Inglot, kt shorb",
       "open_seats": "11",
       "max_enrollment": "20",
       "crosslistings": [
@@ -18365,7 +18365,7 @@
         }
       ],
       "instructor": "Randy Reyes",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "10",
       "crosslistings": [],
       "description": "This course prepares advanced theater students to direct public performances, and thus focuses on the acquisition of skills such as text analysis, dynamic storytelling, stage composition, and communication (with designers, actors, stage managers, and production team). Students will choose a scene from a play proposed by the instructor, research style and aesthetic, run auditions, cast the scene, facilitate a rehearsal process, and stage a live performance. They will also learn best collaborative practices, since the class unfolds in conversation with the Acting Approaches course (THDA360) and culminates in public performances at the James A. Williams Theater. Prerequisite(s): THDA 120 or THDA 235 or THDA 360, or permission of the instructor.",
@@ -18485,7 +18485,7 @@
           "room": "THEATR 121"
         }
       ],
-      "instructor": "Mina KinukawaThomas BarrettWu Chen Khoo",
+      "instructor": "Mina Kinukawa, Thomas Barrett, Wu Chen Khoo",
       "open_seats": "50",
       "max_enrollment": "50",
       "crosslistings": [],

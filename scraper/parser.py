@@ -16,6 +16,28 @@ from bs4 import BeautifulSoup, Tag
 CRN_RE = re.compile(r"^\s*([A-Z&]+)\s+(\S+)-(\S+)\s+\((\d+)\)\s*$")
 
 
+SEATS_NUMBER_RE = re.compile(r"-?\d+")
+
+
+def _normalize_seats(raw: str) -> str:
+    """
+    The registrar's raw text for open seats isn't consistent: usually a
+    plain number, but sometimes "Closed N" (the N still being the
+    meaningful count - e.g. "Closed 1" means 1 open seat, "Closed -1"
+    means over-enrolled by 1). Normalize all of that down to a single
+    integer string: take the LAST number found in the raw text (handles
+    "Closed 1" -> "1", "Closed -1" -> "-1"). Negative numbers are kept
+    as-is (they mean the section is over-enrolled by that many seats),
+    not clamped to 0 - the sign is meaningful information.
+    """
+    raw = (raw or "").strip()
+    matches = SEATS_NUMBER_RE.findall(raw)
+    if not matches:
+        return "0"
+    n = int(matches[-1])
+    return str(n)
+
+
 def _clean(s: str | None) -> str:
     if not s:
         return ""
@@ -138,8 +160,15 @@ def parse_schedule_html(html: str) -> list[dict]:
 
         title = _clean(tds[1].get_text())
         meetings = _parse_meetings(tds[2])
+        # Co-instructors are separated only by a bare <br> in the markup
+        # (e.g. "Jane Smith<br>John Doe") with no textual delimiter, so a
+        # plain get_text() call silently drops the separator and produces
+        # "Jane SmithJohn Doe". Replace each <br> with a real delimiter
+        # before extracting text so multiple instructors read correctly.
+        for br in tds[3].find_all("br"):
+            br.replace_with(", ")
         instructor = _clean(tds[3].get_text()).replace("Instructor:", "").strip()
-        open_seats = _clean(tds[4].get_text())
+        open_seats = _normalize_seats(_clean(tds[4].get_text()))
         max_enrollment = _clean(tds[5].get_text())
 
         # crosslistings live in the following SectionText row, if present

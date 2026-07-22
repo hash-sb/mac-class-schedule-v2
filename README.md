@@ -97,6 +97,49 @@ All of this is plain HTML/CSS/JS with no build step and no external
 services beyond the static JSON files - nothing is sent anywhere; "My
 schedule" and the term cache live only in your own browser's local storage.
 
+## Bug fixes (this round)
+
+A batch of real issues found in production, each root-caused rather than
+patched over:
+
+- **F5/reload showed stale content** — the service worker's caching strategy
+  returned cached content immediately instead of checking the network
+  first. Rewritten to network-first everywhere; cache is now purely an
+  offline fallback. Cache version bumped so existing installs pick up the
+  fix automatically.
+- **Open-seat counts were inconsistent** ("Closed 1", negative numbers like
+  "-2" for over-enrolled sections) — normalized in both `parser.py` (future
+  scrapes) and `app.js` (so already-scraped data displays correctly right
+  now): the trailing number is extracted ("Closed 1" → 1, "Closed -1" → -1).
+  Negative numbers are preserved as-is (they mean over-enrolled by that many
+  seats - real, useful information), not clamped to 0. Seat badges, sorting,
+  and the "open seats only" filter all use this consistently now - no more
+  "?" or word-based labels.
+- **A course spanning noon was misclassified as "evening"** (e.g. a
+  10:50am-1:00pm class) — the time parser was blindly copying a single
+  trailing "pm" to both the start and end time. Replaced with logic that
+  tries every valid AM/PM combination and keeps whichever produces a sane,
+  same-day class length.
+- **Multiple instructors ran together with no separator** (e.g. "Arjun
+  GuneratneTom Robertson") — co-instructors are separated in the source
+  markup by a bare `<br>` with no text between them, which a plain
+  `get_text()` call silently drops. Fixed by replacing each `<br>` with a
+  real delimiter before extracting text.
+- **The tip banner wouldn't close, and the active-filter chip row had the
+  same latent bug** — both elements declared `display: flex` unconditionally
+  in CSS, which overrides the browser's built-in `hidden` attribute
+  regardless of specificity. Fixed with a defensive `[hidden] { display:
+  none !important; }` rule.
+- **Cross-term search silently capped at 400 results** with no way to see
+  more — replaced with progressive "Show more" / "Show all" controls (capped
+  at 6,000 as an absolute safety ceiling so an unfiltered search can't hang
+  the browser).
+- **Filters reorganized**: one unified toolbar of consistent-height pill
+  controls instead of several stacked rows behind a disclosure; departments
+  are now a proper popover instead of an always-expanded scroll box.
+- **Year strip only shows years that actually have data** (no more disabled
+  placeholder buttons for gaps), and the current year auto-scrolls into view.
+
 ## Data-safety guarantee
 
 `run.py` never lets a bad scrape destroy good data. If a term already has a

@@ -31,48 +31,27 @@
 
 <main>
   <section class="controls" aria-label="Search and filters">
-    <div class="control-row">
-      <label class="field">
+    <div class="primary-row">
+      <label class="field field-term">
         <span class="field-label">Term</span>
         <select id="termSelect"></select>
         <span class="term-freshness" id="termFreshness"></span>
       </label>
 
       <label class="field field-grow">
-        <span class="field-label">Search this term</span>
+        <span class="field-label">Search</span>
         <input id="searchBox" type="text" placeholder="subject, course number, title, instructor, or CRN…" autocomplete="off">
-      </label>
-
-      <label class="field field-checkbox">
-        <input type="checkbox" id="searchAllToggle">
-        <span>Search every term instead</span>
       </label>
     </div>
 
-    <div class="control-row control-row-secondary">
-      <label class="field field-checkbox field-important">
+    <div class="filter-toolbar" role="group" aria-label="Filters">
+      <label class="filter-control filter-control-important" for="openSeatsToggle">
         <input type="checkbox" id="openSeatsToggle">
         <span>Open seats only</span>
       </label>
 
-      <label class="field">
-        <span class="field-label">Sort by</span>
-        <select id="sortSelect">
-          <option value="default">Subject (default)</option>
-          <option value="seats-desc">Most open seats</option>
-          <option value="seats-asc">Fewest open seats</option>
-          <option value="course-number">Course number</option>
-        </select>
-      </label>
-
-      <button type="button" class="share-btn" id="shareBtn">Copy link to this view</button>
-    </div>
-
-    <details class="more-filters" id="moreFilters">
-      <summary>More filters <span class="more-filters-hint" id="moreFiltersHint"></span></summary>
-      <div class="control-row control-row-tertiary">
-      <fieldset class="field day-filter">
-        <legend class="field-label">Meets on</legend>
+      <div class="filter-control day-filter" role="group" aria-label="Meets on">
+        <span class="filter-control-label">Meets on</span>
         <div class="day-checks" id="dayChecks">
           <label><input type="checkbox" value="M"><span>M</span></label>
           <label><input type="checkbox" value="T"><span>T</span></label>
@@ -80,26 +59,51 @@
           <label><input type="checkbox" value="R"><span>Th</span></label>
           <label><input type="checkbox" value="F"><span>F</span></label>
         </div>
-      </fieldset>
+      </div>
 
-      <label class="field">
-        <span class="field-label">Time of day</span>
+      <label class="filter-control" for="timeOfDaySelect">
+        <span class="filter-control-label">Time</span>
         <select id="timeOfDaySelect">
-          <option value="any">Any time</option>
-          <option value="morning">Morning (before 12pm)</option>
-          <option value="afternoon">Afternoon (12–5pm)</option>
-          <option value="evening">Evening (after 5pm)</option>
+          <option value="any">Any</option>
+          <option value="morning">Morning</option>
+          <option value="afternoon">Afternoon</option>
+          <option value="evening">Evening</option>
         </select>
       </label>
 
-      <div class="field field-grow subject-filter">
-        <span class="field-label">Departments <button type="button" id="clearSubjectsBtn" class="link-btn">clear</button></span>
-        <div class="subject-chip-box" id="subjectChipBox">
-          <!-- populated by app.js -->
+      <div class="filter-control dept-filter" id="deptFilter">
+        <button type="button" class="dept-filter-btn" id="deptFilterBtn" aria-haspopup="true" aria-expanded="false">
+          Departments<span id="deptFilterCount"></span> <span class="caret">▾</span>
+        </button>
+        <div class="dept-filter-panel" id="deptFilterPanel" hidden>
+          <div class="dept-filter-panel-head">
+            <span>Filter by department</span>
+            <button type="button" id="clearSubjectsBtn" class="link-btn">clear</button>
+          </div>
+          <div class="subject-chip-box" id="subjectChipBox">
+            <!-- populated by app.js -->
+          </div>
         </div>
       </div>
-      </div>
-    </details>
+
+      <label class="filter-control" for="sortSelect">
+        <span class="filter-control-label">Sort</span>
+        <select id="sortSelect">
+          <option value="default">Subject</option>
+          <option value="seats-desc">Most open seats</option>
+          <option value="seats-asc">Fewest open seats</option>
+          <option value="course-number">Course number</option>
+        </select>
+      </label>
+    </div>
+
+    <div class="utility-row">
+      <label class="field field-checkbox">
+        <input type="checkbox" id="searchAllToggle">
+        <span>Search every term instead</span>
+      </label>
+      <button type="button" class="share-btn" id="shareBtn">Copy link to this view</button>
+    </div>
 
     <div class="active-filters" id="activeFilters" hidden></div>
 
