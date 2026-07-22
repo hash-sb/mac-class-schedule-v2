@@ -44,10 +44,19 @@
       </label>
     </div>
 
-    <div class="filter-toolbar" role="group" aria-label="Filters">
-      <label class="filter-control filter-control-important" for="openSeatsToggle">
-        <input type="checkbox" id="openSeatsToggle">
-        <span>Open seats only</span>
+    <button type="button" class="mobile-filter-trigger" id="mobileFilterTrigger" hidden>
+      Filters <span id="mobileFilterCount"></span>
+    </button>
+
+    <div class="filter-toolbar" id="filterToolbar" role="group" aria-label="Filters">
+      <label class="filter-control filter-control-important" for="seatsThresholdSelect">
+        <span class="filter-control-label">Seats</span>
+        <select id="seatsThresholdSelect">
+          <option value="0">Any</option>
+          <option value="1">1+</option>
+          <option value="3">3+</option>
+          <option value="5">5+</option>
+        </select>
       </label>
 
       <div class="filter-control day-filter" role="group" aria-label="Meets on">
@@ -77,10 +86,11 @@
         </button>
         <div class="dept-filter-panel" id="deptFilterPanel" hidden>
           <div class="dept-filter-panel-head">
-            <span>Filter by department</span>
+            <span id="deptFilterScopeLabel">Filter by department</span>
             <button type="button" id="clearSubjectsBtn" class="link-btn">clear</button>
           </div>
-          <div class="subject-chip-box" id="subjectChipBox">
+          <input type="text" id="deptSearchInput" class="dept-search-input" placeholder="Search departments…" autocomplete="off">
+          <div class="subject-list" id="subjectChipBox">
             <!-- populated by app.js -->
           </div>
         </div>
@@ -95,12 +105,18 @@
           <option value="course-number">Course number</option>
         </select>
       </label>
+
+      <button type="button" class="reset-filters-btn" id="resetFiltersBtn">Reset filters</button>
     </div>
 
     <div class="utility-row">
       <label class="field field-checkbox">
         <input type="checkbox" id="searchAllToggle">
         <span>Search every term instead</span>
+      </label>
+      <label class="field field-checkbox">
+        <input type="checkbox" id="rememberFiltersToggle">
+        <span>Remember these filters next time</span>
       </label>
       <button type="button" class="share-btn" id="shareBtn">Copy link to this view</button>
     </div>
@@ -110,6 +126,17 @@
     <progress class="load-progress" id="loadProgress" hidden max="100" value="0"></progress>
     <p class="status-line" id="statusLine" aria-live="polite"></p>
   </section>
+
+  <!-- On narrow screens, #filterToolbar is moved in here by app.js (matchMedia),
+       and #mobileFilterTrigger opens it. On wide screens it stays inline above
+       and this dialog is unused. -->
+  <dialog id="mobileFilterDialog" class="tray-dialog mobile-filter-dialog">
+    <div class="dialog-head">
+      <h2>Filters</h2>
+      <button type="button" class="dialog-close" id="mobileFilterCloseBtn" aria-label="Close">✕</button>
+    </div>
+    <!-- #filterToolbar gets appended here on mobile -->
+  </dialog>
 
   <section class="changes-panel" id="changesPanel" hidden>
     <button type="button" class="changes-toggle" id="changesToggle">

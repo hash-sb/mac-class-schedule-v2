@@ -140,6 +140,33 @@ patched over:
 - **Year strip only shows years that actually have data** (no more disabled
   placeholder buttons for gaps), and the current year auto-scrolls into view.
 
+## Filter section improvements (this round)
+
+- **Seat-count threshold** replaces the old on/off "open seats only" toggle -
+  choose Any / 1+ / 3+ / 5+. Old shared links using the previous boolean
+  `seats=1` format still work identically (it parses as threshold=1).
+- **Zero-result recovery**: when a filter combination matches nothing, the
+  app suggests which single filter to drop and how many results you'd get
+  back, ranked by how much it would help - e.g. "Remove day filter (12
+  results)".
+- **Department picker**: now a searchable list instead of a scrolling chip
+  grid - shows full department names and a live section count per
+  department (not just the code), and a text box to jump straight to one
+  among 40+ subjects instead of scrolling. The panel header also says
+  whether you're filtering "this term" or "all terms" depending on whether
+  cross-term search is on.
+- **Mobile filter sheet**: below 720px wide, the filter toolbar moves (not
+  duplicates - same DOM nodes, so nothing can fall out of sync) into a
+  dialog opened by a "Filters" button showing how many are active. Rotating
+  a device or resizing across the breakpoint live re-homes it immediately.
+- **"Remember these filters next time"** (opt-in, off by default): when
+  checked, your day/time/department/seat-threshold picks are saved locally
+  and restored on your next visit - unless a shared link's URL explicitly
+  specifies its own filters, which always takes priority.
+- **Always-visible "Reset filters"** button in the toolbar (previously the
+  clear-all only appeared once 2+ filters were already active in the chip
+  row below results).
+
 ## Data-safety guarantee
 
 `run.py` never lets a bad scrape destroy good data. If a term already has a

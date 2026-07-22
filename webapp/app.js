@@ -10,6 +10,9 @@
   const IDB_STORE = "terms";
   const SCHEDULE_KEY = "macCourseArchive.schedule.v1";
   const HINT_DISMISSED_KEY = "macCourseArchive.hintDismissed.v1";
+  const REMEMBER_FILTERS_KEY = "macCourseArchive.rememberFilters.v1";
+  const SAVED_FILTERS_KEY = "macCourseArchive.savedFilters.v1";
+  const MOBILE_BREAKPOINT = "(max-width: 720px)";
   const DAY_TO_ICS = { M: "MO", T: "TU", W: "WE", R: "TH", F: "FR", S: "SA", U: "SU" };
 
   const els = {
@@ -17,7 +20,7 @@
     termSelect: document.getElementById("termSelect"),
     searchBox: document.getElementById("searchBox"),
     searchAllToggle: document.getElementById("searchAllToggle"),
-    openSeatsToggle: document.getElementById("openSeatsToggle"),
+    seatsThresholdSelect: document.getElementById("seatsThresholdSelect"),
     sortSelect: document.getElementById("sortSelect"),
     shareBtn: document.getElementById("shareBtn"),
     dayChecks: document.getElementById("dayChecks"),
@@ -61,6 +64,15 @@
     deptFilterBtn: document.getElementById("deptFilterBtn"),
     deptFilterPanel: document.getElementById("deptFilterPanel"),
     deptFilterCount: document.getElementById("deptFilterCount"),
+    deptFilterScopeLabel: document.getElementById("deptFilterScopeLabel"),
+    deptSearchInput: document.getElementById("deptSearchInput"),
+    resetFiltersBtn: document.getElementById("resetFiltersBtn"),
+    rememberFiltersToggle: document.getElementById("rememberFiltersToggle"),
+    filterToolbar: document.getElementById("filterToolbar"),
+    mobileFilterTrigger: document.getElementById("mobileFilterTrigger"),
+    mobileFilterCount: document.getElementById("mobileFilterCount"),
+    mobileFilterDialog: document.getElementById("mobileFilterDialog"),
+    mobileFilterCloseBtn: document.getElementById("mobileFilterCloseBtn"),
   };
 
   const THEME_KEY = "macCourseArchive.theme.v1";
@@ -144,24 +156,50 @@
     registerServiceWorker();
 
     // Restore state from the URL so links and back/forward behave like a real page.
+    // Priority for filter values specifically: URL param (if present at all) >
+    // remembered filters from a previous visit (if that's turned on) > default.
     const url = new URL(location.href);
     const urlTerm = url.searchParams.get("term");
     const urlQ = url.searchParams.get("q");
     const urlAll = url.searchParams.get("all") === "1";
-    const urlSeats = url.searchParams.get("seats") === "1";
     const urlSort = url.searchParams.get("sort");
-    const urlDays = (url.searchParams.get("days") || "").split(",").filter(Boolean);
-    const urlTime = url.searchParams.get("time");
-    const urlSubj = (url.searchParams.get("subj") || "").split(",").filter(Boolean);
     const urlCrn = url.searchParams.get("crn");
 
-    if (urlQ) els.searchBox.value = urlQ;
-    if (urlSeats) els.openSeatsToggle.checked = true;
-    if (urlSort && [...els.sortSelect.options].some((o) => o.value === urlSort)) els.sortSelect.value = urlSort;
-    if (urlTime && [...els.timeOfDaySelect.options].some((o) => o.value === urlTime)) els.timeOfDaySelect.value = urlTime;
-    urlDays.forEach((d) => selectedDays.add(d));
+    const rememberEnabled = localStorage.getItem(REMEMBER_FILTERS_KEY) === "1";
+    els.rememberFiltersToggle.checked = rememberEnabled;
+    let saved = {};
+    if (rememberEnabled) {
+      try {
+        saved = JSON.parse(localStorage.getItem(SAVED_FILTERS_KEY) || "{}");
+      } catch {
+        saved = {};
+      }
+    }
+
+    // seats: "seats=N" is the current format; a bare "seats=1" from an older
+    // shared link means the same thing as the old boolean "open seats only",
+    // and parses identically as a threshold of 1 - no special-casing needed.
+    const seatsThreshold = url.searchParams.has("seats")
+      ? parseInt(url.searchParams.get("seats"), 10) || 0
+      : saved.seats ?? 0;
+    els.seatsThresholdSelect.value = String(seatsThreshold);
+
+    const days = url.searchParams.has("days")
+      ? url.searchParams.get("days").split(",").filter(Boolean)
+      : saved.days ?? [];
+    days.forEach((d) => selectedDays.add(d));
     syncDayCheckboxes();
-    urlSubj.forEach((s) => selectedSubjects.add(s));
+
+    const timeValue = url.searchParams.has("time") ? url.searchParams.get("time") : saved.time ?? "any";
+    if ([...els.timeOfDaySelect.options].some((o) => o.value === timeValue)) els.timeOfDaySelect.value = timeValue;
+
+    const subj = url.searchParams.has("subj")
+      ? url.searchParams.get("subj").split(",").filter(Boolean)
+      : saved.subj ?? [];
+    subj.forEach((s) => selectedSubjects.add(s));
+
+    if (urlQ) els.searchBox.value = urlQ;
+    if (urlSort && [...els.sortSelect.options].some((o) => o.value === urlSort)) els.sortSelect.value = urlSort;
 
     const startTerm = index.some((t) => t.term_code === urlTerm) ? urlTerm : index[0].term_code;
     currentTermCode = startTerm;
@@ -175,6 +213,8 @@
     } else {
       await ensureTermLoaded(startTerm);
     }
+
+    initMobileFilterDialog();
 
     buildSubjectChips();
     updateTermFreshness();
@@ -195,7 +235,7 @@
     els.termSelect.addEventListener("change", () => selectTerm(els.termSelect.value));
     els.searchBox.addEventListener("input", debounce(() => { render(); updateUrl(); }, 120));
     els.searchAllToggle.addEventListener("change", onToggleSearchAll);
-    els.openSeatsToggle.addEventListener("change", () => { render(); updateUrl(); });
+    els.seatsThresholdSelect.addEventListener("change", () => { render(); updateUrl(); });
     els.sortSelect.addEventListener("change", () => { render(); updateUrl(); });
     els.shareBtn.addEventListener("click", copyShareLink);
     els.timeOfDaySelect.addEventListener("change", () => { render(); updateUrl(); });
@@ -230,6 +270,7 @@
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape" && !els.deptFilterPanel.hidden) closeDeptFilterPanel();
     });
+    els.deptSearchInput.addEventListener("input", () => renderSubjectRows(currentSubjectOptions()));
     els.hintDismissBtn.addEventListener("click", () => {
       localStorage.setItem(HINT_DISMISSED_KEY, "1");
       els.hintBanner.hidden = true;
@@ -242,6 +283,25 @@
       els.searchBox.focus();
     });
     els.themeToggle.addEventListener("click", toggleTheme);
+    els.resetFiltersBtn.addEventListener("click", resetAllFilters);
+    els.rememberFiltersToggle.addEventListener("change", () => {
+      localStorage.setItem(REMEMBER_FILTERS_KEY, els.rememberFiltersToggle.checked ? "1" : "0");
+      if (els.rememberFiltersToggle.checked) saveFiltersIfRemembering();
+      else localStorage.removeItem(SAVED_FILTERS_KEY);
+    });
+  }
+
+  function resetAllFilters() {
+    els.searchBox.value = "";
+    els.seatsThresholdSelect.value = "0";
+    els.timeOfDaySelect.value = "any";
+    els.sortSelect.value = "default";
+    selectedDays.clear();
+    syncDayCheckboxes();
+    selectedSubjects.clear();
+    buildSubjectChips();
+    render();
+    updateUrl();
   }
 
   function maybeShowHint() {
@@ -276,6 +336,37 @@
     });
   }
 
+  /**
+   * On narrow screens the filter toolbar doesn't fit comfortably inline, so
+   * it's physically moved (not duplicated - one set of DOM nodes, so state
+   * and event listeners never fall out of sync) into a dialog opened by a
+   * "Filters" button. On wide screens it moves back to its normal inline
+   * position. Crossing the breakpoint live (e.g. rotating a tablet) re-homes
+   * it immediately via the matchMedia listener.
+   */
+  function initMobileFilterDialog() {
+    const mq = window.matchMedia(MOBILE_BREAKPOINT);
+    const inlineAnchor = document.createComment("filter-toolbar-anchor");
+    els.filterToolbar.after(inlineAnchor);
+
+    const placeForViewport = (isMobile) => {
+      if (isMobile) {
+        els.mobileFilterDialog.appendChild(els.filterToolbar);
+      } else {
+        els.mobileFilterDialog.close();
+        inlineAnchor.after(els.filterToolbar);
+      }
+    };
+    placeForViewport(mq.matches);
+    mq.addEventListener("change", (e) => placeForViewport(e.matches));
+
+    els.mobileFilterTrigger.addEventListener("click", () => els.mobileFilterDialog.showModal());
+    els.mobileFilterCloseBtn.addEventListener("click", () => els.mobileFilterDialog.close());
+    els.mobileFilterDialog.addEventListener("click", (e) => {
+      if (e.target === els.mobileFilterDialog) els.mobileFilterDialog.close();
+    });
+  }
+
   function timeAgo(isoString) {
     if (!isoString) return "";
     const diffMs = Date.now() - new Date(isoString).getTime();
@@ -304,6 +395,16 @@
     els.deptFilterCount.textContent = selectedSubjects.size ? ` ${selectedSubjects.size}` : "";
   }
 
+  function updateMobileFilterCount() {
+    let count = 0;
+    if ((parseInt(els.seatsThresholdSelect.value, 10) || 0) > 0) count++;
+    if (selectedDays.size) count++;
+    if (els.timeOfDaySelect.value !== "any") count++;
+    if (selectedSubjects.size) count++;
+    els.mobileFilterCount.textContent = count ? String(count) : "";
+    els.resetFiltersBtn.disabled = count === 0 && !els.searchBox.value.trim();
+  }
+
   function openDeptFilterPanel() {
     els.deptFilterPanel.hidden = false;
     els.deptFilterBtn.setAttribute("aria-expanded", "true");
@@ -319,7 +420,7 @@
     const urlTerm = url.searchParams.get("term");
     const urlQ = url.searchParams.get("q") || "";
     const urlAll = url.searchParams.get("all") === "1";
-    const urlSeats = url.searchParams.get("seats") === "1";
+    const urlSeats = url.searchParams.has("seats") ? parseInt(url.searchParams.get("seats"), 10) || 0 : 0;
     const urlSort = url.searchParams.get("sort") || "default";
     const urlDays = (url.searchParams.get("days") || "").split(",").filter(Boolean);
     const urlTime = url.searchParams.get("time") || "any";
@@ -327,7 +428,7 @@
     const urlCrn = url.searchParams.get("crn");
 
     els.searchBox.value = urlQ;
-    els.openSeatsToggle.checked = urlSeats;
+    els.seatsThresholdSelect.value = String(urlSeats);
     els.sortSelect.value = [...els.sortSelect.options].some((o) => o.value === urlSort) ? urlSort : "default";
     els.timeOfDaySelect.value = [...els.timeOfDaySelect.options].some((o) => o.value === urlTime) ? urlTime : "any";
     selectedDays = new Set(urlDays);
@@ -358,7 +459,8 @@
     const q = els.searchBox.value.trim();
     q ? url.searchParams.set("q", q) : url.searchParams.delete("q");
     els.searchAllToggle.checked ? url.searchParams.set("all", "1") : url.searchParams.delete("all");
-    els.openSeatsToggle.checked ? url.searchParams.set("seats", "1") : url.searchParams.delete("seats");
+    const seatsThreshold = parseInt(els.seatsThresholdSelect.value, 10) || 0;
+    seatsThreshold > 0 ? url.searchParams.set("seats", String(seatsThreshold)) : url.searchParams.delete("seats");
     els.sortSelect.value !== "default" ? url.searchParams.set("sort", els.sortSelect.value) : url.searchParams.delete("sort");
     els.timeOfDaySelect.value !== "any" ? url.searchParams.set("time", els.timeOfDaySelect.value) : url.searchParams.delete("time");
     selectedDays.size ? url.searchParams.set("days", [...selectedDays].join(",")) : url.searchParams.delete("days");
@@ -367,6 +469,21 @@
     // (see copyCoursePermalink) - any other interaction invalidates it.
     url.searchParams.delete("crn");
     history.replaceState(null, "", url);
+    saveFiltersIfRemembering();
+  }
+
+  function saveFiltersIfRemembering() {
+    if (!els.rememberFiltersToggle.checked) return;
+    const seatsThreshold = parseInt(els.seatsThresholdSelect.value, 10) || 0;
+    localStorage.setItem(
+      SAVED_FILTERS_KEY,
+      JSON.stringify({
+        seats: seatsThreshold,
+        days: [...selectedDays],
+        time: els.timeOfDaySelect.value,
+        subj: [...selectedSubjects],
+      })
+    );
   }
 
   function copyShareLink() {
@@ -523,29 +640,66 @@
   // Subject chip filter
   // ---------------------------------------------------------------------
 
-  function buildSubjectChips() {
-    const subjects = new Map(); // code -> name
+  function currentSubjectOptions() {
+    const subjects = new Map(); // code -> {name, count}
     for (const c of currentCourses()) {
-      if (c.subject) subjects.set(c.subject, c.subject_name || c.subject);
+      if (!c.subject) continue;
+      const entry = subjects.get(c.subject) || { name: c.subject_name || c.subject, count: 0 };
+      entry.count++;
+      subjects.set(c.subject, entry);
     }
-    const sorted = [...subjects.entries()].sort((a, b) => a[0].localeCompare(b[0]));
+    return [...subjects.entries()]
+      .map(([code, { name, count }]) => ({ code, name, count }))
+      .sort((a, b) => a.code.localeCompare(b.code));
+  }
+
+  function renderSubjectRows(options) {
+    const q = els.deptSearchInput.value.trim().toLowerCase();
+    const filtered = q ? options.filter((o) => o.code.toLowerCase().includes(q) || o.name.toLowerCase().includes(q)) : options;
+
     els.subjectChipBox.innerHTML = "";
+    if (filtered.length === 0) {
+      const empty = document.createElement("p");
+      empty.className = "subject-list-empty";
+      empty.textContent = "No departments match.";
+      els.subjectChipBox.appendChild(empty);
+      return;
+    }
+
     const frag = document.createDocumentFragment();
-    for (const [code, name] of sorted) {
-      const chip = document.createElement("button");
-      chip.type = "button";
-      chip.className = "subject-chip" + (selectedSubjects.has(code) ? " is-selected" : "");
-      chip.textContent = code;
-      chip.title = name;
-      chip.addEventListener("click", () => {
+    for (const { code, name, count } of filtered) {
+      const row = document.createElement("label");
+      row.className = "subject-row" + (selectedSubjects.has(code) ? " is-selected" : "");
+      const cb = document.createElement("input");
+      cb.type = "checkbox";
+      cb.checked = selectedSubjects.has(code);
+      cb.addEventListener("change", () => {
         selectedSubjects.has(code) ? selectedSubjects.delete(code) : selectedSubjects.add(code);
-        buildSubjectChips();
+        renderSubjectRows(options); // refresh selection styling, keep the panel open
         render();
         updateUrl();
       });
-      frag.appendChild(chip);
+      const codeEl = document.createElement("span");
+      codeEl.className = "subj-code";
+      codeEl.textContent = code;
+      const nameEl = document.createElement("span");
+      nameEl.className = "subj-name";
+      nameEl.textContent = name;
+      const countEl = document.createElement("span");
+      countEl.className = "subj-count";
+      countEl.textContent = count;
+      row.append(cb, codeEl, nameEl, countEl);
+      frag.appendChild(row);
     }
     els.subjectChipBox.appendChild(frag);
+  }
+
+  function buildSubjectChips() {
+    els.deptSearchInput.value = "";
+    els.deptFilterScopeLabel.textContent = els.searchAllToggle.checked
+      ? "Filter by department (all terms)"
+      : "Filter by department (this term)";
+    renderSubjectRows(currentSubjectOptions());
   }
 
   // ---------------------------------------------------------------------
@@ -617,6 +771,80 @@
     return selectedSubjects.has(c.subject);
   }
 
+  function queryMatchesCourse(c, q) {
+    const haystack = [c.subject, c.course_number, c.section, c.crn, c.title, c.instructor, c.subject_name]
+      .join(" ")
+      .toLowerCase();
+    return haystack.includes(q);
+  }
+
+  /**
+   * Applies every active filter to `courses`, in one place, so both the real
+   * render() and the "what if I removed this filter?" zero-result
+   * suggestions (see computeRelaxationSuggestions) share exactly the same
+   * logic. Each `skipX` option lets a caller ask "what would match if this
+   * one filter weren't applied?" without duplicating the filter logic.
+   */
+  function applyFilters(courses, opts = {}) {
+    const q = els.searchBox.value.trim().toLowerCase();
+    let result = courses;
+    if (!opts.skipQuery && q) result = result.filter((c) => queryMatchesCourse(c, q));
+    if (!opts.skipSeats) {
+      const threshold = parseInt(els.seatsThresholdSelect.value, 10) || 0;
+      if (threshold > 0) result = result.filter((c) => normalizeSeatCount(c.open_seats) >= threshold);
+    }
+    if (!opts.skipDays) result = result.filter(matchesDayFilter);
+    if (!opts.skipTime) result = result.filter(matchesTimeFilter);
+    if (!opts.skipSubjects) result = result.filter(matchesSubjectFilter);
+    return result;
+  }
+
+  /** When a filter combination yields zero results, suggest which single filter to drop to get some back. */
+  function computeRelaxationSuggestions() {
+    const base = currentCourses();
+    const q = els.searchBox.value.trim();
+    const threshold = parseInt(els.seatsThresholdSelect.value, 10) || 0;
+    const candidates = [];
+
+    if (q) {
+      candidates.push({
+        label: `Clear search "${q}"`,
+        count: applyFilters(base, { skipQuery: true }).length,
+        action: () => { els.searchBox.value = ""; render(); updateUrl(); },
+      });
+    }
+    if (threshold > 0) {
+      candidates.push({
+        label: "Remove seat filter",
+        count: applyFilters(base, { skipSeats: true }).length,
+        action: () => { els.seatsThresholdSelect.value = "0"; render(); updateUrl(); },
+      });
+    }
+    if (selectedDays.size) {
+      candidates.push({
+        label: "Remove day filter",
+        count: applyFilters(base, { skipDays: true }).length,
+        action: () => { selectedDays.clear(); syncDayCheckboxes(); render(); updateUrl(); },
+      });
+    }
+    if (els.timeOfDaySelect.value !== "any") {
+      candidates.push({
+        label: "Remove time filter",
+        count: applyFilters(base, { skipTime: true }).length,
+        action: () => { els.timeOfDaySelect.value = "any"; render(); updateUrl(); },
+      });
+    }
+    if (selectedSubjects.size) {
+      candidates.push({
+        label: "Remove department filter",
+        count: applyFilters(base, { skipSubjects: true }).length,
+        action: () => { selectedSubjects.clear(); buildSubjectChips(); render(); updateUrl(); },
+      });
+    }
+
+    return candidates.filter((c) => c.count > 0).sort((a, b) => b.count - a.count).slice(0, 2);
+  }
+
   // ---------------------------------------------------------------------
   // Rendering
   // ---------------------------------------------------------------------
@@ -637,8 +865,12 @@
     const q = els.searchBox.value.trim();
     if (q) chips.push({ label: `"${q}"`, onRemove: () => { els.searchBox.value = ""; render(); updateUrl(); } });
 
-    if (els.openSeatsToggle.checked) {
-      chips.push({ label: "Open seats only", onRemove: () => { els.openSeatsToggle.checked = false; render(); updateUrl(); } });
+    const seatsThreshold = parseInt(els.seatsThresholdSelect.value, 10) || 0;
+    if (seatsThreshold > 0) {
+      chips.push({
+        label: `${seatsThreshold}+ seats`,
+        onRemove: () => { els.seatsThresholdSelect.value = "0"; render(); updateUrl(); },
+      });
     }
 
     if (selectedDays.size) {
@@ -696,17 +928,7 @@
       clearAll.type = "button";
       clearAll.className = "filter-chip clear-all";
       clearAll.textContent = "Clear all ✕";
-      clearAll.addEventListener("click", () => {
-        els.searchBox.value = "";
-        els.openSeatsToggle.checked = false;
-        els.timeOfDaySelect.value = "any";
-        selectedDays.clear();
-        syncDayCheckboxes();
-        selectedSubjects.clear();
-        buildSubjectChips();
-        render();
-        updateUrl();
-      });
+      clearAll.addEventListener("click", resetAllFilters);
       frag.appendChild(clearAll);
     }
     els.activeFilters.appendChild(frag);
@@ -717,7 +939,7 @@
       currentTermCode,
       els.searchAllToggle.checked,
       els.searchBox.value.trim().toLowerCase(),
-      els.openSeatsToggle.checked,
+      els.seatsThresholdSelect.value,
       els.sortSelect.value,
       els.timeOfDaySelect.value,
       [...selectedDays].sort(),
@@ -728,28 +950,14 @@
   function render() {
     renderActiveFilterChips();
     updateDeptFilterCount();
+    updateMobileFilterCount();
     const signature = currentFilterSignature();
     if (signature !== lastRenderSignature) {
       renderLimit = MAX_RENDERED; // a real filter/search/term change - start over at the top
       lastRenderSignature = signature;
     }
+    let courses = applyFilters(currentCourses());
     const q = els.searchBox.value.trim().toLowerCase();
-    let courses = currentCourses();
-
-    if (q) {
-      courses = courses.filter((c) => {
-        const haystack = [c.subject, c.course_number, c.section, c.crn, c.title, c.instructor, c.subject_name]
-          .join(" ")
-          .toLowerCase();
-        return haystack.includes(q);
-      });
-    }
-
-    if (els.openSeatsToggle.checked) {
-      courses = courses.filter((c) => normalizeSeatCount(c.open_seats) > 0);
-    }
-
-    courses = courses.filter((c) => matchesDayFilter(c) && matchesTimeFilter(c) && matchesSubjectFilter(c));
 
     const sortMode = els.sortSelect.value;
     if (sortMode === "seats-desc" || sortMode === "seats-asc") {
@@ -772,6 +980,21 @@
       empty.className = "empty-state";
       empty.textContent = q ? `No sections match "${q}".` : "No sections match the current filters.";
       els.results.appendChild(empty);
+
+      const suggestions = computeRelaxationSuggestions();
+      if (suggestions.length) {
+        const box = document.createElement("div");
+        box.className = "empty-state-suggestions";
+        for (const s of suggestions) {
+          const btn = document.createElement("button");
+          btn.type = "button";
+          btn.className = "suggestion-btn";
+          btn.textContent = `${s.label} (${s.count} result${s.count === 1 ? "" : "s"})`;
+          btn.addEventListener("click", s.action);
+          box.appendChild(btn);
+        }
+        els.results.appendChild(box);
+      }
       setStatus("");
       return;
     }
