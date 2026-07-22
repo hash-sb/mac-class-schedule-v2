@@ -1,7 +1,7 @@
 {
   "term_code": "202150",
   "term_label": "Summer II 2021",
-  "scraped_at": "2026-07-21T00:07:55.991099+00:00",
+  "scraped_at": "2026-07-22T01:49:12.953837+00:00",
   "course_count": 96,
   "courses": [
     {
@@ -44,7 +44,7 @@
           "room": ""
         }
       ],
-      "instructor": "Duchess HarrisHana Dinku",
+      "instructor": "Duchess Harris, Hana Dinku",
       "open_seats": "0",
       "max_enrollment": "20",
       "crosslistings": [
@@ -70,7 +70,7 @@
         }
       ],
       "instructor": "Amy Sullivan",
-      "open_seats": "Closed 10",
+      "open_seats": "10",
       "max_enrollment": "25",
       "crosslistings": [
         "Mode of Instruction: Remote; cross-listed with HIST 271-01"
@@ -95,7 +95,7 @@
         }
       ],
       "instructor": "Karin Aguilar-San Juan",
-      "open_seats": "Closed 10",
+      "open_seats": "10",
       "max_enrollment": "30",
       "crosslistings": [
         "Mode of Instruction: Hybrid"
@@ -120,7 +120,7 @@
         }
       ],
       "instructor": "Scott Legge",
-      "open_seats": "Closed 2",
+      "open_seats": "2",
       "max_enrollment": "18",
       "crosslistings": [
         "Mode of Instruction: Remote; course reserved for incoming first years"
@@ -170,7 +170,7 @@
         }
       ],
       "instructor": "Jenna Rice Rahaim",
-      "open_seats": "Closed 8",
+      "open_seats": "8",
       "max_enrollment": "20",
       "crosslistings": [
         "Mode of Instruction: Hybrid; cross-listed with INTL 253-01"
@@ -195,7 +195,7 @@
         }
       ],
       "instructor": "Joanna Inglot",
-      "open_seats": "Closed 3",
+      "open_seats": "3",
       "max_enrollment": "16",
       "crosslistings": [
         "Mode of Instruction: Hybrid"
@@ -220,7 +220,7 @@
         }
       ],
       "instructor": "Eric Carroll",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "18",
       "crosslistings": [
         "Mode of Instruction: Remote"
@@ -245,7 +245,7 @@
         }
       ],
       "instructor": "Summer Hills-Bonczyk",
-      "open_seats": "Closed 3",
+      "open_seats": "3",
       "max_enrollment": "16",
       "crosslistings": [
         "Mode of Instruction: Hybrid"
@@ -345,7 +345,7 @@
         }
       ],
       "instructor": "Devavani Chatterjea",
-      "open_seats": "Closed 3",
+      "open_seats": "3",
       "max_enrollment": "20",
       "crosslistings": [
         "Mode of Instruction: Remote"
@@ -470,7 +470,7 @@
         }
       ],
       "instructor": "Lisa Lendway",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "30",
       "crosslistings": [
         "Mode of Instruction: Remote; cross-listed with STAT 112-01"
@@ -495,7 +495,7 @@
         }
       ],
       "instructor": "Susan Fox",
-      "open_seats": "Closed 2",
+      "open_seats": "2",
       "max_enrollment": "30",
       "crosslistings": [
         "Mode of Instruction: Hybrid"
@@ -645,7 +645,7 @@
         }
       ],
       "instructor": "Tina Kruse",
-      "open_seats": "Closed -2",
+      "open_seats": "-2",
       "max_enrollment": "25",
       "crosslistings": [
         "Mode of Instruction: Remote; cross-listed with PSYC 220-02"
@@ -670,7 +670,7 @@
         }
       ],
       "instructor": "Michael Prior",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "16",
       "crosslistings": [
         "Mode of Instruction: Remote; course reserved for incoming first years"
@@ -695,7 +695,7 @@
         }
       ],
       "instructor": "Sally Franson",
-      "open_seats": "Closed 4",
+      "open_seats": "4",
       "max_enrollment": "16",
       "crosslistings": [
         "Mode of Instruction: Hybrid"
@@ -720,7 +720,7 @@
         }
       ],
       "instructor": "Melissa Cundieff",
-      "open_seats": "Closed 2",
+      "open_seats": "2",
       "max_enrollment": "18",
       "crosslistings": [
         "Mode of Instruction: Hybrid"
@@ -772,7 +772,7 @@
         }
       ],
       "instructor": "Melissa Cundieff",
-      "open_seats": "Closed 8",
+      "open_seats": "8",
       "max_enrollment": "26",
       "crosslistings": [
         "Mode of Instruction: Hybrid"
@@ -797,7 +797,7 @@
         }
       ],
       "instructor": "Anna Lindquist",
-      "open_seats": "Closed 6",
+      "open_seats": "6",
       "max_enrollment": "26",
       "crosslistings": [
         "Mode of Instruction: Remote; cross-listed with GEOL 104-01"
@@ -847,7 +847,7 @@
         }
       ],
       "instructor": "Chris Wells",
-      "open_seats": "Closed 3",
+      "open_seats": "3",
       "max_enrollment": "30",
       "crosslistings": [
         "Mode of Instruction: Remote; cross-listed with HIST 234-01"
@@ -872,7 +872,7 @@
         }
       ],
       "instructor": "Christie Manning",
-      "open_seats": "Closed 8",
+      "open_seats": "8",
       "max_enrollment": "25",
       "crosslistings": [
         "Mode of Instruction: Hybrid; cross-listed with PSYC 270-01"
@@ -897,7 +897,7 @@
         }
       ],
       "instructor": "Juliette Rogers",
-      "open_seats": "Closed 7",
+      "open_seats": "7",
       "max_enrollment": "20",
       "crosslistings": [
         "Mode of Instruction: Hybrid"
@@ -997,7 +997,7 @@
         }
       ],
       "instructor": "Daniel Trudeau",
-      "open_seats": "Closed 9",
+      "open_seats": "9",
       "max_enrollment": "20",
       "crosslistings": [
         "Mode of Instruction: Hybrid"
@@ -1022,7 +1022,7 @@
         }
       ],
       "instructor": "Kristina Curry Rogers",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "32",
       "crosslistings": [
         "Mode of Instruction: Remote"
@@ -1047,7 +1047,7 @@
         }
       ],
       "instructor": "Kelly MacGregor",
-      "open_seats": "Closed 3",
+      "open_seats": "3",
       "max_enrollment": "30",
       "crosslistings": [
         "Mode of Instruction: Remote"
@@ -1072,7 +1072,7 @@
         }
       ],
       "instructor": "Anna Lindquist",
-      "open_seats": "Closed 6",
+      "open_seats": "6",
       "max_enrollment": "26",
       "crosslistings": [
         "Mode of Instruction: Remote; cross-listed with ENVI 104-01"
@@ -1124,7 +1124,7 @@
         }
       ],
       "instructor": "Chris Wells",
-      "open_seats": "Closed 3",
+      "open_seats": "3",
       "max_enrollment": "30",
       "crosslistings": [
         "Mode of Instruction: Remote; cross-listed with ENVI 234-01"
@@ -1149,7 +1149,7 @@
         }
       ],
       "instructor": "Amy Sullivan",
-      "open_seats": "Closed 10",
+      "open_seats": "10",
       "max_enrollment": "25",
       "crosslistings": [
         "Mode of Instruction: Remote"
@@ -1199,7 +1199,7 @@
         }
       ],
       "instructor": "Ernesto Capello",
-      "open_seats": "Closed 8",
+      "open_seats": "8",
       "max_enrollment": "20",
       "crosslistings": [
         "Mode of Instruction: Hybrid; cross-listed with LATI 285-01"
@@ -1248,7 +1248,7 @@
           "room": "MARKIM DAVIS"
         }
       ],
-      "instructor": "Harry Waters Jr.Marjorie Trueblood",
+      "instructor": "Harry Waters Jr., Marjorie Trueblood",
       "open_seats": "5",
       "max_enrollment": "20",
       "crosslistings": [
@@ -1298,7 +1298,7 @@
           "room": ""
         }
       ],
-      "instructor": "Karin VélezDonna Maeda",
+      "instructor": "Karin Vélez, Donna Maeda",
       "open_seats": "5",
       "max_enrollment": "10",
       "crosslistings": [
@@ -1324,7 +1324,7 @@
         }
       ],
       "instructor": "Wendy Weber",
-      "open_seats": "Closed 5",
+      "open_seats": "5",
       "max_enrollment": "24",
       "crosslistings": [
         "Mode of Instruction: Remote"
@@ -1349,7 +1349,7 @@
         }
       ],
       "instructor": "Jenna Rice Rahaim",
-      "open_seats": "Closed 8",
+      "open_seats": "8",
       "max_enrollment": "20",
       "crosslistings": [
         "Mode of Instruction: Hybrid; cross-listed with ANTH 253-01"
@@ -1452,7 +1452,7 @@
         }
       ],
       "instructor": "Ernesto Capello",
-      "open_seats": "Closed 8",
+      "open_seats": "8",
       "max_enrollment": "20",
       "crosslistings": [
         "Mode of Instruction: Hybrid; cross-listed with HIST 285-01"
@@ -1502,7 +1502,7 @@
         }
       ],
       "instructor": "Jessica Love-Nichols",
-      "open_seats": "Closed -1",
+      "open_seats": "-1",
       "max_enrollment": "25",
       "crosslistings": [
         "Mode of Instruction: Remote"
@@ -1552,7 +1552,7 @@
         }
       ],
       "instructor": "Dave Ehren",
-      "open_seats": "Closed 2",
+      "open_seats": "2",
       "max_enrollment": "25",
       "crosslistings": [
         "Mode of Instruction: Hybrid"
@@ -1602,7 +1602,7 @@
         }
       ],
       "instructor": "Brad Stiffler",
-      "open_seats": "Closed 4",
+      "open_seats": "4",
       "max_enrollment": "18",
       "crosslistings": [
         "Mode of Instruction: Remote"
@@ -1654,7 +1654,7 @@
         }
       ],
       "instructor": "Mark Mandarano",
-      "open_seats": "Closed 9",
+      "open_seats": "9",
       "max_enrollment": "25",
       "crosslistings": [
         "Mode of Instruction: Remote"
@@ -1679,7 +1679,7 @@
         }
       ],
       "instructor": "Chuen-Fung Wong",
-      "open_seats": "Closed 8",
+      "open_seats": "8",
       "max_enrollment": "24",
       "crosslistings": [
         "Mode of Instruction: Remote"
@@ -1729,7 +1729,7 @@
         }
       ],
       "instructor": "Geoffrey Gorham",
-      "open_seats": "Closed 7",
+      "open_seats": "7",
       "max_enrollment": "25",
       "crosslistings": [
         "Mode of Instruction: Hybrid"
@@ -1754,7 +1754,7 @@
         }
       ],
       "instructor": "Samuel Asarnow",
-      "open_seats": "Closed 3",
+      "open_seats": "3",
       "max_enrollment": "25",
       "crosslistings": [
         "Mode of Instruction: Remote"
@@ -1804,7 +1804,7 @@
         }
       ],
       "instructor": "Andrew Latham",
-      "open_seats": "Closed 7",
+      "open_seats": "7",
       "max_enrollment": "28",
       "crosslistings": [
         "Mode of Instruction: Remote"
@@ -1959,7 +1959,7 @@
         }
       ],
       "instructor": "Cory Fleck",
-      "open_seats": "Closed 11",
+      "open_seats": "11",
       "max_enrollment": "35",
       "crosslistings": [
         "Mode of Instruction: Remote"
@@ -2012,7 +2012,7 @@
         }
       ],
       "instructor": "Tina Kruse",
-      "open_seats": "Closed -2",
+      "open_seats": "-2",
       "max_enrollment": "25",
       "crosslistings": [
         "Mode of Instruction: Remote; cross-listed with EDUC 220-02"
@@ -2037,7 +2037,7 @@
         }
       ],
       "instructor": "Christie Manning",
-      "open_seats": "Closed 8",
+      "open_seats": "8",
       "max_enrollment": "25",
       "crosslistings": [
         "Mode of Instruction: Hybrid; cross-listed with ENVI 270-01"
@@ -2087,7 +2087,7 @@
         }
       ],
       "instructor": "James Laine",
-      "open_seats": "Closed 5",
+      "open_seats": "5",
       "max_enrollment": "20",
       "crosslistings": [
         "Mode of Instruction: Remote"
@@ -2139,7 +2139,7 @@
         }
       ],
       "instructor": "Khaldoun Samman",
-      "open_seats": "Closed 3",
+      "open_seats": "3",
       "max_enrollment": "20",
       "crosslistings": [
         "Mode of Instruction: Remote"
@@ -2214,7 +2214,7 @@
         }
       ],
       "instructor": "Rosa Rull-Montoya",
-      "open_seats": "Closed 2",
+      "open_seats": "2",
       "max_enrollment": "16",
       "crosslistings": [
         "Mode of Instruction: Hybrid"
@@ -2264,7 +2264,7 @@
         }
       ],
       "instructor": "Blanca Gimeno Escudero",
-      "open_seats": "Closed 3",
+      "open_seats": "3",
       "max_enrollment": "16",
       "crosslistings": [
         "Mode of Instruction: Hybrid"
@@ -2289,7 +2289,7 @@
         }
       ],
       "instructor": "Lisa Lendway",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "30",
       "crosslistings": [
         "Mode of Instruction: Remote; cross-listed with COMP 112-01"
@@ -2314,7 +2314,7 @@
         }
       ],
       "instructor": "Kelsey McDonald",
-      "open_seats": "Closed 9",
+      "open_seats": "9",
       "max_enrollment": "28",
       "crosslistings": [
         "Mode of Instruction: Remote"
@@ -2391,7 +2391,7 @@
         }
       ],
       "instructor": "Katharine Horowitz",
-      "open_seats": "Closed 2",
+      "open_seats": "2",
       "max_enrollment": "20",
       "crosslistings": [
         "Mode of Instruction: Remote"
@@ -2416,7 +2416,7 @@
         }
       ],
       "instructor": "Myrl Beam",
-      "open_seats": "Closed 8",
+      "open_seats": "8",
       "max_enrollment": "16",
       "crosslistings": [
         "Mode of Instruction: Hybrid"
