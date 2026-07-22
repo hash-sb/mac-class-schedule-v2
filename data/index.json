@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-07-22T01:22:59.863167+00:00",
+  "generated_at": "2026-07-22T01:25:08.672377+00:00",
   "terms": [
     {
       "term_code": "200910",
       "term_label": "Fall 2008",
       "course_count": 684,
-      "scraped_at": "2026-07-20T23:44:48.685315+00:00"
+      "scraped_at": "2026-07-22T01:23:59.401569+00:00"
     },
     {
       "term_code": "200930",
       "term_label": "Spring 2009",
       "course_count": 668,
-      "scraped_at": "2026-07-20T23:45:23.025781+00:00"
+      "scraped_at": "2026-07-22T01:24:34.112542+00:00"
     },
     {
       "term_code": "200940",
       "term_label": "Summer I 2009",
       "course_count": 1,
-      "scraped_at": "2026-07-20T23:45:29.545122+00:00"
+      "scraped_at": "2026-07-22T01:24:40.911774+00:00"
     },
     {
       "term_code": "201010",

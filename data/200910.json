@@ -1,7 +1,7 @@
 {
   "term_code": "200910",
   "term_label": "Fall 2008",
-  "scraped_at": "2026-07-20T23:44:48.685315+00:00",
+  "scraped_at": "2026-07-22T01:23:59.401569+00:00",
   "course_count": 684,
   "courses": [
     {
@@ -641,7 +641,7 @@
           "room": "CARN 05"
         }
       ],
-      "instructor": "Jack WeatherfordNaran Bilik",
+      "instructor": "Jack Weatherford, Naran Bilik",
       "open_seats": "6",
       "max_enrollment": "15",
       "crosslistings": [],
@@ -1985,7 +1985,7 @@
           "room": "OLRI 250"
         }
       ],
-      "instructor": "Devavani ChatterjeaPaul Overvoorde",
+      "instructor": "Devavani Chatterjea, Paul Overvoorde",
       "open_seats": "-8",
       "max_enrollment": "24",
       "crosslistings": [],
@@ -2170,7 +2170,7 @@
           "room": "OLRI 273"
         }
       ],
-      "instructor": "Sarah BoyerKristina Curry Rogers",
+      "instructor": "Sarah Boyer, Kristina Curry Rogers",
       "open_seats": "0",
       "max_enrollment": "24",
       "crosslistings": [],
@@ -2193,7 +2193,7 @@
           "room": "OLRI 273"
         }
       ],
-      "instructor": "Sarah BoyerKristina Curry Rogers",
+      "instructor": "Sarah Boyer, Kristina Curry Rogers",
       "open_seats": "-1",
       "max_enrollment": "24",
       "crosslistings": [],
@@ -2241,7 +2241,7 @@
           "room": "OLRI 284"
         }
       ],
-      "instructor": "Jerald DoschMichael Anderson",
+      "instructor": "Jerald Dosch, Michael Anderson",
       "open_seats": "4",
       "max_enrollment": "22",
       "crosslistings": [
@@ -2266,7 +2266,7 @@
           "room": "OLRI 284"
         }
       ],
-      "instructor": "Jerald DoschMichael Anderson",
+      "instructor": "Jerald Dosch, Michael Anderson",
       "open_seats": "9",
       "max_enrollment": "22",
       "crosslistings": [
@@ -5970,7 +5970,7 @@
           "room": "OLRI 284"
         }
       ],
-      "instructor": "Jerald DoschMichael Anderson",
+      "instructor": "Jerald Dosch, Michael Anderson",
       "open_seats": "4",
       "max_enrollment": "22",
       "crosslistings": [
@@ -5995,7 +5995,7 @@
           "room": "OLRI 284"
         }
       ],
-      "instructor": "Jerald DoschMichael Anderson",
+      "instructor": "Jerald Dosch, Michael Anderson",
       "open_seats": "9",
       "max_enrollment": "22",
       "crosslistings": [
@@ -10374,7 +10374,7 @@
           "room": "HUM 212"
         }
       ],
-      "instructor": "Peter WeisenselJulia Chadaga",
+      "instructor": "Peter Weisensel, Julia Chadaga",
       "open_seats": "6",
       "max_enrollment": "25",
       "crosslistings": [
@@ -10904,7 +10904,7 @@
           "room": "HUM 212"
         }
       ],
-      "instructor": "Peter WeisenselJulia Chadaga",
+      "instructor": "Peter Weisensel, Julia Chadaga",
       "open_seats": "6",
       "max_enrollment": "25",
       "crosslistings": [
@@ -15511,7 +15511,7 @@
           "room": "OLRI 352"
         }
       ],
-      "instructor": "Harold BrullScott Gregory",
+      "instructor": "Harold Brull, Scott Gregory",
       "open_seats": "16",
       "max_enrollment": "24",
       "crosslistings": [],
@@ -16123,7 +16123,7 @@
           "room": "HUM 212"
         }
       ],
-      "instructor": "Julia ChadagaPeter Weisensel",
+      "instructor": "Julia Chadaga, Peter Weisensel",
       "open_seats": "6",
       "max_enrollment": "25",
       "crosslistings": [
@@ -16408,7 +16408,7 @@
           "room": "CARN 105"
         }
       ],
-      "instructor": "Mahnaz KoushaErik Larson",
+      "instructor": "Mahnaz Kousha, Erik Larson",
       "open_seats": "5",
       "max_enrollment": "16",
       "crosslistings": [],
