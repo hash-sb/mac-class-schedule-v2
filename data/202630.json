@@ -1,7 +1,7 @@
 {
   "term_code": "202630",
   "term_label": "Spring 2026",
-  "scraped_at": "2026-07-21T05:30:43.917077+00:00",
+  "scraped_at": "2026-07-22T02:14:18.784076+00:00",
   "course_count": 743,
   "courses": [
     {
@@ -295,7 +295,7 @@
           "room": "HUM 215"
         }
       ],
-      "instructor": "Jake NagasawaMichael Prior",
+      "instructor": "Jake Nagasawa, Michael Prior",
       "open_seats": "4",
       "max_enrollment": "20",
       "crosslistings": [
@@ -370,7 +370,7 @@
           "room": "HUM 214"
         }
       ],
-      "instructor": "Julie DolanDuchess Harris",
+      "instructor": "Julie Dolan, Duchess Harris",
       "open_seats": "0",
       "max_enrollment": "15",
       "crosslistings": [
@@ -1458,7 +1458,7 @@
           "room": "MAIN 111"
         }
       ],
-      "instructor": "Erik DavisJake Nagasawa",
+      "instructor": "Erik Davis, Jake Nagasawa",
       "open_seats": "-1",
       "max_enrollment": "16",
       "crosslistings": [
@@ -1838,7 +1838,7 @@
           "room": "OLRI 284"
         }
       ],
-      "instructor": "Simone MaddoxJerald Dosch",
+      "instructor": "Simone Maddox, Jerald Dosch",
       "open_seats": "5",
       "max_enrollment": "22",
       "crosslistings": [
@@ -2238,7 +2238,7 @@
           "room": "OLRI 284"
         }
       ],
-      "instructor": "Simone MaddoxJerald Dosch",
+      "instructor": "Simone Maddox, Jerald Dosch",
       "open_seats": "0",
       "max_enrollment": "12",
       "crosslistings": [
@@ -2263,7 +2263,7 @@
           "room": "OLRI 273"
         }
       ],
-      "instructor": "Simone MaddoxJerald Dosch",
+      "instructor": "Simone Maddox, Jerald Dosch",
       "open_seats": "0",
       "max_enrollment": "12",
       "crosslistings": [
@@ -2488,7 +2488,7 @@
           "room": "OLRI 253"
         }
       ],
-      "instructor": "Mary HeskelAdrienne Keller",
+      "instructor": "Mary Heskel, Adrienne Keller",
       "open_seats": "5",
       "max_enrollment": "12",
       "crosslistings": [
@@ -2513,7 +2513,7 @@
           "room": "OLRI 253"
         }
       ],
-      "instructor": "Mary HeskelAdrienne Keller",
+      "instructor": "Mary Heskel, Adrienne Keller",
       "open_seats": "5",
       "max_enrollment": "12",
       "crosslistings": [
@@ -2838,7 +2838,7 @@
           "room": "OLRI 347"
         }
       ],
-      "instructor": "Amy RiceMarc Rodwogin",
+      "instructor": "Amy Rice, Marc Rodwogin",
       "open_seats": "1",
       "max_enrollment": "36",
       "crosslistings": [
@@ -2864,7 +2864,7 @@
           "room": "OLRI 347"
         }
       ],
-      "instructor": "Amy RiceSophia Lemonholm",
+      "instructor": "Amy Rice, Sophia Lemonholm",
       "open_seats": "6",
       "max_enrollment": "36",
       "crosslistings": [
@@ -2890,7 +2890,7 @@
           "room": "OLRI 347"
         }
       ],
-      "instructor": "Amy RiceSophia Lemonholm",
+      "instructor": "Amy Rice, Sophia Lemonholm",
       "open_seats": "20",
       "max_enrollment": "36",
       "crosslistings": [
@@ -2916,7 +2916,7 @@
           "room": "OLRI 347"
         }
       ],
-      "instructor": "Amy RiceSophia Lemonholm",
+      "instructor": "Amy Rice, Sophia Lemonholm",
       "open_seats": "13",
       "max_enrollment": "36",
       "crosslistings": [
@@ -4924,7 +4924,7 @@
           "room": "LIBR 250"
         }
       ],
-      "instructor": "James DawesBret Jackson",
+      "instructor": "James Dawes, Bret Jackson",
       "open_seats": "4",
       "max_enrollment": "24",
       "crosslistings": [
@@ -6220,7 +6220,7 @@
           "room": "LIBR 250"
         }
       ],
-      "instructor": "James DawesBret Jackson",
+      "instructor": "James Dawes, Bret Jackson",
       "open_seats": "4",
       "max_enrollment": "24",
       "crosslistings": [
@@ -6536,7 +6536,7 @@
           "room": "HUM 215"
         }
       ],
-      "instructor": "Jake NagasawaMichael Prior",
+      "instructor": "Jake Nagasawa, Michael Prior",
       "open_seats": "4",
       "max_enrollment": "20",
       "crosslistings": [
@@ -6561,7 +6561,7 @@
           "room": "LIBR 250"
         }
       ],
-      "instructor": "Aisling QuigleyBenjamin Voigt",
+      "instructor": "Aisling Quigley, Benjamin Voigt",
       "open_seats": "5",
       "max_enrollment": "18",
       "crosslistings": [
@@ -6780,7 +6780,7 @@
           "room": "OLRI 284"
         }
       ],
-      "instructor": "Simone MaddoxJerald Dosch",
+      "instructor": "Simone Maddox, Jerald Dosch",
       "open_seats": "5",
       "max_enrollment": "22",
       "crosslistings": [
@@ -9748,7 +9748,7 @@
           "room": "THEATR 101"
         }
       ],
-      "instructor": "Beth Severy-HovenLaurie Adamson",
+      "instructor": "Beth Severy-Hoven, Laurie Adamson",
       "open_seats": "15",
       "max_enrollment": "20",
       "crosslistings": [
@@ -11888,7 +11888,7 @@
           "room": "HUM 401"
         }
       ],
-      "instructor": "Michael GriffinMozhdeh Khodarahmi",
+      "instructor": "Michael Griffin, Mozhdeh Khodarahmi",
       "open_seats": "4",
       "max_enrollment": "20",
       "crosslistings": [],
@@ -12058,7 +12058,7 @@
           "room": "LIBR 250"
         }
       ],
-      "instructor": "Aisling QuigleyBenjamin Voigt",
+      "instructor": "Aisling Quigley, Benjamin Voigt",
       "open_seats": "5",
       "max_enrollment": "18",
       "crosslistings": [
@@ -12834,7 +12834,7 @@
           "room": "MAIN 111"
         }
       ],
-      "instructor": "Erik DavisJake Nagasawa",
+      "instructor": "Erik Davis, Jake Nagasawa",
       "open_seats": "-1",
       "max_enrollment": "16",
       "crosslistings": [
@@ -14200,7 +14200,7 @@
           "room": "HUM 214"
         }
       ],
-      "instructor": "Julie DolanDuchess Harris",
+      "instructor": "Julie Dolan, Duchess Harris",
       "open_seats": "0",
       "max_enrollment": "15",
       "crosslistings": [
@@ -15190,7 +15190,7 @@
           "room": "OLRI 300"
         }
       ],
-      "instructor": "Ariel JamesSteve GuglielmoBrooke LeaKeira Leneman",
+      "instructor": "Ariel James, Steve Guglielmo, Brooke Lea, Keira Leneman",
       "open_seats": "0",
       "max_enrollment": "8",
       "crosslistings": [],
@@ -15213,7 +15213,7 @@
           "room": "OLRI 349"
         }
       ],
-      "instructor": "Ariel JamesSteve GuglielmoBrooke LeaKeira Leneman",
+      "instructor": "Ariel James, Steve Guglielmo, Brooke Lea, Keira Leneman",
       "open_seats": "0",
       "max_enrollment": "8",
       "crosslistings": [],
@@ -15236,7 +15236,7 @@
           "room": "OLRI 352"
         }
       ],
-      "instructor": "Ariel JamesSteve GuglielmoBrooke LeaKeira Leneman",
+      "instructor": "Ariel James, Steve Guglielmo, Brooke Lea, Keira Leneman",
       "open_seats": "0",
       "max_enrollment": "8",
       "crosslistings": [],
@@ -15259,7 +15259,7 @@
           "room": "OLRI 270"
         }
       ],
-      "instructor": "Ariel JamesSteve GuglielmoBrooke LeaKeira Leneman",
+      "instructor": "Ariel James, Steve Guglielmo, Brooke Lea, Keira Leneman",
       "open_seats": "0",
       "max_enrollment": "4",
       "crosslistings": [],
@@ -15305,7 +15305,7 @@
           "room": "MAIN 111"
         }
       ],
-      "instructor": "Erik DavisJake Nagasawa",
+      "instructor": "Erik Davis, Jake Nagasawa",
       "open_seats": "-1",
       "max_enrollment": "16",
       "crosslistings": [
@@ -17508,7 +17508,7 @@
           "room": "THEATR 121"
         }
       ],
-      "instructor": "Mina KinukawaRandy Reyes",
+      "instructor": "Mina Kinukawa, Randy Reyes",
       "open_seats": "25",
       "max_enrollment": "50",
       "crosslistings": [
@@ -17533,7 +17533,7 @@
           "room": "THEATR 121"
         }
       ],
-      "instructor": "Mina KinukawaJill LileMarciano Silva Dos Santos",
+      "instructor": "Mina Kinukawa, Jill Lile, Marciano Silva Dos Santos",
       "open_seats": "29",
       "max_enrollment": "50",
       "crosslistings": [
@@ -17558,7 +17558,7 @@
           "room": "THEATR 121"
         }
       ],
-      "instructor": "Thomas BarrettMina Kinukawa",
+      "instructor": "Thomas Barrett, Mina Kinukawa",
       "open_seats": "38",
       "max_enrollment": "50",
       "crosslistings": [

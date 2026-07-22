@@ -1,7 +1,7 @@
 {
   "term_code": "202610",
   "term_label": "Fall 2025",
-  "scraped_at": "2026-07-21T00:16:19.409077+00:00",
+  "scraped_at": "2026-07-22T01:58:01.995778+00:00",
   "course_count": 767,
   "courses": [
     {
@@ -925,7 +925,7 @@
           "room": "ART 302"
         }
       ],
-      "instructor": "Megan VosslerMary Heskel",
+      "instructor": "Megan Vossler, Mary Heskel",
       "open_seats": "2",
       "max_enrollment": "15",
       "crosslistings": [
@@ -950,7 +950,7 @@
           "room": "ARTCOM 202"
         }
       ],
-      "instructor": "Megan VosslerMatt Burgess",
+      "instructor": "Megan Vossler, Matt Burgess",
       "open_seats": "1",
       "max_enrollment": "18",
       "crosslistings": [
@@ -2026,7 +2026,7 @@
           "room": "ART 302"
         }
       ],
-      "instructor": "Megan VosslerMary Heskel",
+      "instructor": "Megan Vossler, Mary Heskel",
       "open_seats": "2",
       "max_enrollment": "15",
       "crosslistings": [
@@ -2318,7 +2318,7 @@
           "room": "OLRI 254"
         }
       ],
-      "instructor": "Getiria OnsongoRobin Shields-Cutler",
+      "instructor": "Getiria Onsongo, Robin Shields-Cutler",
       "open_seats": "-4",
       "max_enrollment": "24",
       "crosslistings": [
@@ -2933,7 +2933,7 @@
           "room": "OLRI 341"
         }
       ],
-      "instructor": "Amy RiceMarc Rodwogin",
+      "instructor": "Amy Rice, Marc Rodwogin",
       "open_seats": "2",
       "max_enrollment": "36",
       "crosslistings": [
@@ -2959,7 +2959,7 @@
           "room": "OLRI 341"
         }
       ],
-      "instructor": "Amy RiceLeah Witus",
+      "instructor": "Amy Rice, Leah Witus",
       "open_seats": "-1",
       "max_enrollment": "36",
       "crosslistings": [
@@ -2985,7 +2985,7 @@
           "room": "OLRI 385"
         }
       ],
-      "instructor": "Amy RiceSophia Lemonholm",
+      "instructor": "Amy Rice, Sophia Lemonholm",
       "open_seats": "1",
       "max_enrollment": "36",
       "crosslistings": [
@@ -5017,7 +5017,7 @@
           "room": "OLRI 254"
         }
       ],
-      "instructor": "Getiria OnsongoRobin Shields-Cutler",
+      "instructor": "Getiria Onsongo, Robin Shields-Cutler",
       "open_seats": "-4",
       "max_enrollment": "24",
       "crosslistings": [
@@ -5372,7 +5372,7 @@
           "room": "LIBR 250"
         }
       ],
-      "instructor": "Allan Martinez VenegasErik Halaas",
+      "instructor": "Allan Martinez Venegas, Erik Halaas",
       "open_seats": "8",
       "max_enrollment": "25",
       "crosslistings": [],
@@ -6443,7 +6443,7 @@
           "room": "ARTCOM 202"
         }
       ],
-      "instructor": "Megan VosslerMatt Burgess",
+      "instructor": "Megan Vossler, Matt Burgess",
       "open_seats": "1",
       "max_enrollment": "18",
       "crosslistings": [
@@ -6564,7 +6564,7 @@
           "room": "LIBR 250"
         }
       ],
-      "instructor": "Annie BaxterCurtis Gilbert",
+      "instructor": "Annie Baxter, Curtis Gilbert",
       "open_seats": "3",
       "max_enrollment": "20",
       "crosslistings": [],
@@ -6587,7 +6587,7 @@
           "room": "THEATR 202"
         }
       ],
-      "instructor": "Matt BurgessErnesto Capello",
+      "instructor": "Matt Burgess, Ernesto Capello",
       "open_seats": "1",
       "max_enrollment": "22",
       "crosslistings": [
@@ -6708,7 +6708,7 @@
           "room": "HUM 212"
         }
       ],
-      "instructor": "David MartynAndrew Billing",
+      "instructor": "David Martyn, Andrew Billing",
       "open_seats": "-2",
       "max_enrollment": "18",
       "crosslistings": [
@@ -7509,7 +7509,7 @@
           "room": "THEATR 213"
         }
       ],
-      "instructor": "Katrina PhillipsMarianne Milligan",
+      "instructor": "Katrina Phillips, Marianne Milligan",
       "open_seats": "6",
       "max_enrollment": "18",
       "crosslistings": [
@@ -8381,7 +8381,7 @@
           "room": "HUM 212"
         }
       ],
-      "instructor": "David MartynAndrew Billing",
+      "instructor": "David Martyn, Andrew Billing",
       "open_seats": "-2",
       "max_enrollment": "18",
       "crosslistings": [
@@ -9539,7 +9539,7 @@
           "room": "HUM 212"
         }
       ],
-      "instructor": "David MartynAndrew Billing",
+      "instructor": "David Martyn, Andrew Billing",
       "open_seats": "-2",
       "max_enrollment": "18",
       "crosslistings": [
@@ -10072,7 +10072,7 @@
           "room": "THEATR 202"
         }
       ],
-      "instructor": "Matt BurgessErnesto Capello",
+      "instructor": "Matt Burgess, Ernesto Capello",
       "open_seats": "1",
       "max_enrollment": "22",
       "crosslistings": [
@@ -10097,7 +10097,7 @@
           "room": "THEATR 213"
         }
       ],
-      "instructor": "Katrina PhillipsMarianne Milligan",
+      "instructor": "Katrina Phillips, Marianne Milligan",
       "open_seats": "6",
       "max_enrollment": "18",
       "crosslistings": [
@@ -13354,7 +13354,7 @@
           "room": ""
         }
       ],
-      "instructor": "Dina KountoupesRussell Adams",
+      "instructor": "Dina Kountoupes, Russell Adams",
       "open_seats": "9",
       "max_enrollment": "20",
       "crosslistings": [
@@ -16349,7 +16349,7 @@
           "room": "CARN 05"
         }
       ],
-      "instructor": "Erik LarsonKhaldoun Samman",
+      "instructor": "Erik Larson, Khaldoun Samman",
       "open_seats": "11",
       "max_enrollment": "23",
       "crosslistings": [],
@@ -18070,7 +18070,7 @@
           "room": "THEATR 121"
         }
       ],
-      "instructor": "Mina KinukawaRobert Rosen",
+      "instructor": "Mina Kinukawa, Robert Rosen",
       "open_seats": "38",
       "max_enrollment": "50",
       "crosslistings": [
@@ -18095,7 +18095,7 @@
           "room": ""
         }
       ],
-      "instructor": "Mina KinukawaJill LileMarciano Silva Dos Santos",
+      "instructor": "Mina Kinukawa, Jill Lile, Marciano Silva Dos Santos",
       "open_seats": "41",
       "max_enrollment": "50",
       "crosslistings": [],
@@ -18118,7 +18118,7 @@
           "room": "THEATR 121"
         }
       ],
-      "instructor": "Mina KinukawaThomas BarrettWu Chen Khoo",
+      "instructor": "Mina Kinukawa, Thomas Barrett, Wu Chen Khoo",
       "open_seats": "41",
       "max_enrollment": "50",
       "crosslistings": [

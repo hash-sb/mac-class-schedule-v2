@@ -1,7 +1,7 @@
 {
   "term_code": "202330",
   "term_label": "Spring 2023",
-  "scraped_at": "2026-07-21T00:10:49.634528+00:00",
+  "scraped_at": "2026-07-22T01:52:20.162503+00:00",
   "course_count": 753,
   "courses": [
     {
@@ -2951,7 +2951,7 @@
           "room": ""
         }
       ],
-      "instructor": "Amy RiceMarc Rodwogin",
+      "instructor": "Amy Rice, Marc Rodwogin",
       "open_seats": "5",
       "max_enrollment": "36",
       "crosslistings": [
@@ -2977,7 +2977,7 @@
           "room": ""
         }
       ],
-      "instructor": "Amy RiceSusan Green",
+      "instructor": "Amy Rice, Susan Green",
       "open_seats": "12",
       "max_enrollment": "36",
       "crosslistings": [
@@ -3972,7 +3972,7 @@
           "room": "MAIN 010"
         }
       ],
-      "instructor": "Brian LushPamela Klasova",
+      "instructor": "Brian Lush, Pamela Klasova",
       "open_seats": "7",
       "max_enrollment": "24",
       "crosslistings": [
@@ -6340,7 +6340,7 @@
           "room": "MUSIC 228"
         }
       ],
-      "instructor": "Emma TörzsMark Mazullo",
+      "instructor": "Emma Törzs, Mark Mazullo",
       "open_seats": "2",
       "max_enrollment": "20",
       "crosslistings": [
@@ -9593,7 +9593,7 @@
           "room": "THEATR 204"
         }
       ],
-      "instructor": "Vittorio AddonaSamuel Asarnow",
+      "instructor": "Vittorio Addona, Samuel Asarnow",
       "open_seats": "35",
       "max_enrollment": "50",
       "crosslistings": [
@@ -9624,7 +9624,7 @@
           "room": "ARTCOM 202"
         }
       ],
-      "instructor": "Vittorio AddonaSamuel Asarnow",
+      "instructor": "Vittorio Addona, Samuel Asarnow",
       "open_seats": "9",
       "max_enrollment": "25",
       "crosslistings": [],
@@ -11906,7 +11906,7 @@
           "room": "MUSIC 228"
         }
       ],
-      "instructor": "Mark MazulloEmma Törzs",
+      "instructor": "Mark Mazullo, Emma Törzs",
       "open_seats": "2",
       "max_enrollment": "20",
       "crosslistings": [
@@ -12944,7 +12944,7 @@
           "room": "LEOCTR FIELDHOUSE"
         }
       ],
-      "instructor": "Gregg OlsonMadeline Buckley",
+      "instructor": "Gregg Olson, Madeline Buckley",
       "open_seats": "3",
       "max_enrollment": "20",
       "crosslistings": [],
@@ -13358,7 +13358,7 @@
           "room": "OLRI 404"
         }
       ],
-      "instructor": "John GallagherJohn Cannon",
+      "instructor": "John Gallagher, John Cannon",
       "open_seats": "1",
       "max_enrollment": "14",
       "crosslistings": [
@@ -14770,7 +14770,7 @@
           "room": "OLRI 352"
         }
       ],
-      "instructor": "Alexander RomanAnne Rial",
+      "instructor": "Alexander Roman, Anne Rial",
       "open_seats": "0",
       "max_enrollment": "16",
       "crosslistings": [],
@@ -15201,7 +15201,7 @@
           "room": "MAIN 111"
         }
       ],
-      "instructor": "William HartJames Laine",
+      "instructor": "William Hart, James Laine",
       "open_seats": "14",
       "max_enrollment": "20",
       "crosslistings": [],
@@ -17969,7 +17969,7 @@
           "room": ""
         }
       ],
-      "instructor": "Mina KinukawaThomas Barrett",
+      "instructor": "Mina Kinukawa, Thomas Barrett",
       "open_seats": "21",
       "max_enrollment": "35",
       "crosslistings": [

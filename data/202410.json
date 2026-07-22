@@ -1,7 +1,7 @@
 {
   "term_code": "202410",
   "term_label": "Fall 2023",
-  "scraped_at": "2026-07-21T00:12:15.645038+00:00",
+  "scraped_at": "2026-07-22T01:53:49.381619+00:00",
   "course_count": 783,
   "courses": [
     {
@@ -341,7 +341,7 @@
           "room": "MARKIM 201"
         }
       ],
-      "instructor": "Kirisitina SailiataSamuel Wegner",
+      "instructor": "Kirisitina Sailiata, Samuel Wegner",
       "open_seats": "2",
       "max_enrollment": "12",
       "crosslistings": [
@@ -1319,7 +1319,7 @@
           "room": "ARTCOM 202"
         }
       ],
-      "instructor": "Megan VosslerMatt Burgess",
+      "instructor": "Megan Vossler, Matt Burgess",
       "open_seats": "0",
       "max_enrollment": "16",
       "crosslistings": [
@@ -2995,7 +2995,7 @@
           "room": ""
         }
       ],
-      "instructor": "Amy RiceMarc Rodwogin",
+      "instructor": "Amy Rice, Marc Rodwogin",
       "open_seats": "1",
       "max_enrollment": "36",
       "crosslistings": [
@@ -3021,7 +3021,7 @@
           "room": ""
         }
       ],
-      "instructor": "Amy RiceMalia Borg",
+      "instructor": "Amy Rice, Malia Borg",
       "open_seats": "2",
       "max_enrollment": "36",
       "crosslistings": [
@@ -3047,7 +3047,7 @@
           "room": ""
         }
       ],
-      "instructor": "Amy RiceKelsey Boyle",
+      "instructor": "Amy Rice, Kelsey Boyle",
       "open_seats": "3",
       "max_enrollment": "36",
       "crosslistings": [
@@ -6749,7 +6749,7 @@
           "room": "ARTCOM 202"
         }
       ],
-      "instructor": "Matt BurgessMegan Vossler",
+      "instructor": "Matt Burgess, Megan Vossler",
       "open_seats": "0",
       "max_enrollment": "16",
       "crosslistings": [
@@ -7617,7 +7617,7 @@
           "room": "MARKIM 201"
         }
       ],
-      "instructor": "Kirisitina SailiataSamuel Wegner",
+      "instructor": "Kirisitina Sailiata, Samuel Wegner",
       "open_seats": "2",
       "max_enrollment": "12",
       "crosslistings": [
@@ -13537,7 +13537,7 @@
           "room": "STAD FIELD"
         }
       ],
-      "instructor": "Dina KountoupesRussell AdamsJenelle Zumbusch",
+      "instructor": "Dina Kountoupes, Russell Adams, Jenelle Zumbusch",
       "open_seats": "23",
       "max_enrollment": "30",
       "crosslistings": [
@@ -15360,7 +15360,7 @@
           "room": "THEATR 202"
         }
       ],
-      "instructor": "Karen GrabowKeith Halperin",
+      "instructor": "Karen Grabow, Keith Halperin",
       "open_seats": "3",
       "max_enrollment": "24",
       "crosslistings": [],
@@ -15573,7 +15573,7 @@
           "room": "OLRI 352"
         }
       ],
-      "instructor": "Anne RialAlexander Roman",
+      "instructor": "Anne Rial, Alexander Roman",
       "open_seats": "0",
       "max_enrollment": "16",
       "crosslistings": [],
@@ -16477,7 +16477,7 @@
           "room": "CARN 304"
         }
       ],
-      "instructor": "Erika Busse-CárdenasChristina Hughes",
+      "instructor": "Erika Busse-Cárdenas, Christina Hughes",
       "open_seats": "3",
       "max_enrollment": "19",
       "crosslistings": [],
@@ -18747,7 +18747,7 @@
           "room": "THEATR 121"
         }
       ],
-      "instructor": "Cláudia Tatinge NascimentoThomas BarrettBarbra Berlovitz",
+      "instructor": "Cláudia Tatinge Nascimento, Thomas Barrett, Barbra Berlovitz",
       "open_seats": "39",
       "max_enrollment": "50",
       "crosslistings": [
@@ -18795,7 +18795,7 @@
           "room": ""
         }
       ],
-      "instructor": "Thomas BarrettMaryBeth GagnerWu Chen Khoo",
+      "instructor": "Thomas Barrett, MaryBeth Gagner, Wu Chen Khoo",
       "open_seats": "22",
       "max_enrollment": "35",
       "crosslistings": [

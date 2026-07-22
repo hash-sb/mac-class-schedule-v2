@@ -1,7 +1,7 @@
 {
   "term_code": "202510",
   "term_label": "Fall 2024",
-  "scraped_at": "2026-07-21T00:14:17.881526+00:00",
+  "scraped_at": "2026-07-22T01:55:53.987355+00:00",
   "course_count": 791,
   "courses": [
     {
@@ -708,7 +708,7 @@
           "room": "CARN 404"
         }
       ],
-      "instructor": "Brittany LandorfJenna Rice Rahaim",
+      "instructor": "Brittany Landorf, Jenna Rice Rahaim",
       "open_seats": "5",
       "max_enrollment": "20",
       "crosslistings": [
@@ -779,7 +779,7 @@
           "room": "CARN 404"
         }
       ],
-      "instructor": "Arjun GuneratneJenna Rice Rahaim",
+      "instructor": "Arjun Guneratne, Jenna Rice Rahaim",
       "open_seats": "2",
       "max_enrollment": "20",
       "crosslistings": [
@@ -2670,7 +2670,7 @@
           "room": "OLRI 100"
         }
       ],
-      "instructor": "Kristina Curry RogersRaymond Rogers",
+      "instructor": "Kristina Curry Rogers, Raymond Rogers",
       "open_seats": "0",
       "max_enrollment": "16",
       "crosslistings": [
@@ -2970,7 +2970,7 @@
           "room": "OLRI 341"
         }
       ],
-      "instructor": "Marc RodwoginSusan Green",
+      "instructor": "Marc Rodwogin, Susan Green",
       "open_seats": "1",
       "max_enrollment": "36",
       "crosslistings": [
@@ -2996,7 +2996,7 @@
           "room": "OLRI 341"
         }
       ],
-      "instructor": "Malia BorgAmy Rice",
+      "instructor": "Malia Borg, Amy Rice",
       "open_seats": "0",
       "max_enrollment": "36",
       "crosslistings": [
@@ -3022,7 +3022,7 @@
           "room": "OLRI 341"
         }
       ],
-      "instructor": "Malia BorgAmy Rice",
+      "instructor": "Malia Borg, Amy Rice",
       "open_seats": "0",
       "max_enrollment": "36",
       "crosslistings": [
@@ -4232,7 +4232,7 @@
           "room": "OLRI 100"
         }
       ],
-      "instructor": "James LaineAndrew Overman",
+      "instructor": "James Laine, Andrew Overman",
       "open_seats": "7",
       "max_enrollment": "30",
       "crosslistings": [
@@ -4874,7 +4874,7 @@
           "room": "OLRI 258"
         }
       ],
-      "instructor": "Tia-Simone GardnerGetiria OnsongoAisling Quigley",
+      "instructor": "Tia-Simone Gardner, Getiria Onsongo, Aisling Quigley",
       "open_seats": "2",
       "max_enrollment": "16",
       "crosslistings": [
@@ -5465,7 +5465,7 @@
           "room": "THEATR 204"
         }
       ],
-      "instructor": "Louisa BradtmillerSarah West",
+      "instructor": "Louisa Bradtmiller, Sarah West",
       "open_seats": "3",
       "max_enrollment": "25",
       "crosslistings": [
@@ -5998,7 +5998,7 @@
           "room": "HUM 400"
         }
       ],
-      "instructor": "Brian LozenskiCait Bergeon",
+      "instructor": "Brian Lozenski, Cait Bergeon",
       "open_seats": "1",
       "max_enrollment": "17",
       "crosslistings": [
@@ -6680,7 +6680,7 @@
           "room": "MAIN 009"
         }
       ],
-      "instructor": "Annie BaxterCurtis Gilbert",
+      "instructor": "Annie Baxter, Curtis Gilbert",
       "open_seats": "0",
       "max_enrollment": "16",
       "crosslistings": [],
@@ -7364,7 +7364,7 @@
           "room": "THEATR 204"
         }
       ],
-      "instructor": "Louisa BradtmillerSarah West",
+      "instructor": "Louisa Bradtmiller, Sarah West",
       "open_seats": "3",
       "max_enrollment": "25",
       "crosslistings": [
@@ -9260,7 +9260,7 @@
           "room": "OLRI 100"
         }
       ],
-      "instructor": "Kristina Curry RogersRaymond Rogers",
+      "instructor": "Kristina Curry Rogers, Raymond Rogers",
       "open_seats": "0",
       "max_enrollment": "16",
       "crosslistings": [
@@ -9471,7 +9471,7 @@
           "room": "ARTCOM 202"
         }
       ],
-      "instructor": "Brigetta AbelLaurie Adamson",
+      "instructor": "Brigetta Abel, Laurie Adamson",
       "open_seats": "0",
       "max_enrollment": "18",
       "crosslistings": [
@@ -10348,7 +10348,7 @@
           "room": "ARTCOM 202"
         }
       ],
-      "instructor": "Brigetta AbelLaurie Adamson",
+      "instructor": "Brigetta Abel, Laurie Adamson",
       "open_seats": "0",
       "max_enrollment": "18",
       "crosslistings": [
@@ -10584,7 +10584,7 @@
           "room": "CARN 404"
         }
       ],
-      "instructor": "Brittany LandorfJenna Rice Rahaim",
+      "instructor": "Brittany Landorf, Jenna Rice Rahaim",
       "open_seats": "5",
       "max_enrollment": "20",
       "crosslistings": [
@@ -10609,7 +10609,7 @@
           "room": "CARN 404"
         }
       ],
-      "instructor": "Brittany LandorfJenna Rice Rahaim",
+      "instructor": "Brittany Landorf, Jenna Rice Rahaim",
       "open_seats": "1",
       "max_enrollment": "20",
       "crosslistings": [
@@ -10711,7 +10711,7 @@
           "room": "CARN 404"
         }
       ],
-      "instructor": "Arjun GuneratneJenna Rice Rahaim",
+      "instructor": "Arjun Guneratne, Jenna Rice Rahaim",
       "open_seats": "2",
       "max_enrollment": "20",
       "crosslistings": [
@@ -12308,7 +12308,7 @@
           "room": "OLRI 258"
         }
       ],
-      "instructor": "Tia-Simone GardnerGetiria OnsongoAisling Quigley",
+      "instructor": "Tia-Simone Gardner, Getiria Onsongo, Aisling Quigley",
       "open_seats": "2",
       "max_enrollment": "16",
       "crosslistings": [
@@ -12333,7 +12333,7 @@
           "room": "HUM 226"
         }
       ],
-      "instructor": "Michael GriffinMozhdeh KhodarahmiTamatha Perlman",
+      "instructor": "Michael Griffin, Mozhdeh Khodarahmi, Tamatha Perlman",
       "open_seats": "0",
       "max_enrollment": "17",
       "crosslistings": [
@@ -12381,7 +12381,7 @@
           "room": "CARN 404"
         }
       ],
-      "instructor": "Brittany LandorfJenna Rice Rahaim",
+      "instructor": "Brittany Landorf, Jenna Rice Rahaim",
       "open_seats": "1",
       "max_enrollment": "20",
       "crosslistings": [
@@ -13359,7 +13359,7 @@
           "room": "LEOCTR STUDIO 1"
         }
       ],
-      "instructor": "Jordyn LehmannSara Augustin",
+      "instructor": "Jordyn Lehmann, Sara Augustin",
       "open_seats": "9",
       "max_enrollment": "20",
       "crosslistings": [],
@@ -13382,7 +13382,7 @@
           "room": "LEOCTR STUDIO 1"
         }
       ],
-      "instructor": "Jordyn LehmannSara Augustin",
+      "instructor": "Jordyn Lehmann, Sara Augustin",
       "open_seats": "4",
       "max_enrollment": "20",
       "crosslistings": [],
@@ -15265,7 +15265,7 @@
           "room": "THEATR 203"
         }
       ],
-      "instructor": "Keith HalperinKaren Grabow",
+      "instructor": "Keith Halperin, Karen Grabow",
       "open_seats": "12",
       "max_enrollment": "24",
       "crosslistings": [],
@@ -15476,7 +15476,7 @@
           "room": "OLRI 270"
         }
       ],
-      "instructor": "Anne RialAlexander Roman",
+      "instructor": "Anne Rial, Alexander Roman",
       "open_seats": "0",
       "max_enrollment": "16",
       "crosslistings": [],
@@ -15783,7 +15783,7 @@
           "room": "OLRI 100"
         }
       ],
-      "instructor": "James LaineAndrew Overman",
+      "instructor": "James Laine, Andrew Overman",
       "open_seats": "7",
       "max_enrollment": "30",
       "crosslistings": [
@@ -16546,7 +16546,7 @@
           "room": "THEATR 206"
         }
       ],
-      "instructor": "Erik LarsonChristina Hughes",
+      "instructor": "Erik Larson, Christina Hughes",
       "open_seats": "5",
       "max_enrollment": "29",
       "crosslistings": [],
@@ -18735,7 +18735,7 @@
           "room": "THEATR 121"
         }
       ],
-      "instructor": "Wu Chen KhooThomas BarrettMaryBeth Gagner",
+      "instructor": "Wu Chen Khoo, Thomas Barrett, MaryBeth Gagner",
       "open_seats": "38",
       "max_enrollment": "50",
       "crosslistings": [],

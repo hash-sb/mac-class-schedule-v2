@@ -1,7 +1,7 @@
 {
   "term_code": "201010",
   "term_label": "Fall 2009",
-  "scraped_at": "2026-07-20T23:46:28.315440+00:00",
+  "scraped_at": "2026-07-22T01:25:48.367383+00:00",
   "course_count": 722,
   "courses": [
     {
@@ -69,7 +69,7 @@
         }
       ],
       "instructor": "Kristin Naca",
-      "open_seats": "Closed 4",
+      "open_seats": "4",
       "max_enrollment": "20",
       "crosslistings": [
         "ENGL 105-01; First day attendance required"
@@ -94,7 +94,7 @@
         }
       ],
       "instructor": "Scott Shoemaker",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "20",
       "crosslistings": [
         "First day attendance required"
@@ -144,7 +144,7 @@
         }
       ],
       "instructor": "Daniel Gilbert",
-      "open_seats": "Closed 4",
+      "open_seats": "4",
       "max_enrollment": "20",
       "crosslistings": [
         "GEOG 250-01"
@@ -318,7 +318,7 @@
         }
       ],
       "instructor": "Peter Rachleff",
-      "open_seats": "Closed -3",
+      "open_seats": "-3",
       "max_enrollment": "25",
       "crosslistings": [
         "HIST 235-01"
@@ -343,7 +343,7 @@
         }
       ],
       "instructor": "Marceline DuBose",
-      "open_seats": "Closed -1",
+      "open_seats": "-1",
       "max_enrollment": "25",
       "crosslistings": [
         "EDUC 340-01; First day attendance required"
@@ -418,7 +418,7 @@
         }
       ],
       "instructor": "Daylanne English",
-      "open_seats": "Closed 4",
+      "open_seats": "4",
       "max_enrollment": "20",
       "crosslistings": [
         "ENGL 380-01"
@@ -788,7 +788,7 @@
         }
       ],
       "instructor": "Dianna Shandy",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "20",
       "crosslistings": [
         "INTL 362-01"
@@ -859,7 +859,7 @@
         }
       ],
       "instructor": "Megan Vossler",
-      "open_seats": "Closed 5",
+      "open_seats": "5",
       "max_enrollment": "15",
       "crosslistings": [
         "First day attendance required"
@@ -1007,7 +1007,7 @@
         }
       ],
       "instructor": "Winston Kyan",
-      "open_seats": "Closed -7",
+      "open_seats": "-7",
       "max_enrollment": "20",
       "crosslistings": [
         "ASIA 170-01; First day attendance required"
@@ -1182,7 +1182,7 @@
         }
       ],
       "instructor": "Joanna Inglot",
-      "open_seats": "Closed -1",
+      "open_seats": "-1",
       "max_enrollment": "20",
       "crosslistings": [
         "WGSS 252-01"
@@ -1670,7 +1670,7 @@
         }
       ],
       "instructor": "Winston Kyan",
-      "open_seats": "Closed -7",
+      "open_seats": "-7",
       "max_enrollment": "20",
       "crosslistings": [
         "ART 170-01; First day attendance required"
@@ -2053,7 +2053,7 @@
         }
       ],
       "instructor": "Elizabeth Jansen",
-      "open_seats": "Closed -4",
+      "open_seats": "-4",
       "max_enrollment": "30",
       "crosslistings": [
         "WGSS 117-01; First day attendance required"
@@ -2078,7 +2078,7 @@
         }
       ],
       "instructor": "Jerald Dosch",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "16",
       "crosslistings": [
         "ENVI 194-02; first day attendance required"
@@ -2128,7 +2128,7 @@
         }
       ],
       "instructor": "Jerald Dosch",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "16",
       "crosslistings": [
         "ENVI 194-L2; First day attendance required"
@@ -2296,7 +2296,7 @@
           "room": "OLRI 273"
         }
       ],
-      "instructor": "Kristina Curry RogersMichael Anderson",
+      "instructor": "Kristina Curry Rogers, Michael Anderson",
       "open_seats": "4",
       "max_enrollment": "24",
       "crosslistings": [
@@ -2321,7 +2321,7 @@
           "room": "OLRI 273"
         }
       ],
-      "instructor": "Michael AndersonKristina Curry Rogers",
+      "instructor": "Michael Anderson, Kristina Curry Rogers",
       "open_seats": "9",
       "max_enrollment": "24",
       "crosslistings": [
@@ -2560,7 +2560,7 @@
         }
       ],
       "instructor": "Devavani Chatterjea",
-      "open_seats": "Closed 2",
+      "open_seats": "2",
       "max_enrollment": "12",
       "crosslistings": [
         "First day attendance required"
@@ -2585,7 +2585,7 @@
         }
       ],
       "instructor": "Devavani Chatterjea",
-      "open_seats": "Closed 2",
+      "open_seats": "2",
       "max_enrollment": "12",
       "crosslistings": [
         "First day attendance required"
@@ -2806,7 +2806,7 @@
         }
       ],
       "instructor": "Lin Aanonsen",
-      "open_seats": "Closed -1",
+      "open_seats": "-1",
       "max_enrollment": "16",
       "crosslistings": [
         "PSYC 386-01"
@@ -2856,7 +2856,7 @@
         }
       ],
       "instructor": "Mary Montgomery",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "12",
       "crosslistings": [
         "First day attendance required"
@@ -3208,7 +3208,7 @@
         }
       ],
       "instructor": "Ronald Brisbois",
-      "open_seats": "Closed -3",
+      "open_seats": "-3",
       "max_enrollment": "60",
       "crosslistings": [
         "First day attendance required"
@@ -3233,7 +3233,7 @@
         }
       ],
       "instructor": "Susan Green",
-      "open_seats": "Closed 5",
+      "open_seats": "5",
       "max_enrollment": "20",
       "crosslistings": [
         "First day attendance required"
@@ -3258,7 +3258,7 @@
         }
       ],
       "instructor": "Ronald Brisbois",
-      "open_seats": "Closed 5",
+      "open_seats": "5",
       "max_enrollment": "20",
       "crosslistings": [
         "First day attendance required"
@@ -3283,7 +3283,7 @@
         }
       ],
       "instructor": "Susan Green",
-      "open_seats": "Closed 2",
+      "open_seats": "2",
       "max_enrollment": "20",
       "crosslistings": [
         "First day attendance required"
@@ -3379,7 +3379,7 @@
         }
       ],
       "instructor": "Robert Rossi",
-      "open_seats": "Closed -3",
+      "open_seats": "-3",
       "max_enrollment": "10",
       "crosslistings": [],
       "description": "This course covers topics in macroscopic physical chemistry dealing with the bulk properties of matter and energy. These topics include the properties of gases, the First and Second Laws of thermodynamics and their application to physical and chemical systems, phase and chemical equilibria, rates of reactions and chemical kinetics, and x-ray diffractometry. Prerequisites: Chemistry 112 or 115, Physics 227, and Math 137. Three lectures and three hours laboratory per week. Fall semester. (4 credits)",
@@ -3760,7 +3760,7 @@
         }
       ],
       "instructor": "Beth Severy-Hoven",
-      "open_seats": "Closed 7",
+      "open_seats": "7",
       "max_enrollment": "28",
       "crosslistings": [
         "WGSS 127-01"
@@ -4306,7 +4306,7 @@
           "room": "OLRI 245"
         }
       ],
-      "instructor": "Susan FoxShilad SenLibby Shoop",
+      "instructor": "Susan Fox, Shilad Sen, Libby Shoop",
       "open_seats": "17",
       "max_enrollment": "26",
       "crosslistings": [],
@@ -4401,7 +4401,7 @@
         }
       ],
       "instructor": "Jeff Evans",
-      "open_seats": "Closed 3",
+      "open_seats": "3",
       "max_enrollment": "25",
       "crosslistings": [],
       "description": "Accounting is the language of business. One of the objectives of this course is to learn that \"language.\" The emphasis will be on understanding financial statements both for profit and non-profit organizations. International accounting, ethics and investment decisions are also covered. This course is designed for students who desire an understanding of the elements of accounting as a component of a liberal arts education as well as for those who would like to study further in accounting or business. No prerequisite. Every semester. (4 credits)",
@@ -4726,7 +4726,7 @@
         }
       ],
       "instructor": "Sarah West",
-      "open_seats": "Closed -1",
+      "open_seats": "-1",
       "max_enrollment": "30",
       "crosslistings": [],
       "description": "Methodology of economic science; theory of consumer behavior; theory of the firm; market structure and price determination; factor markets and income distribution; general equilibrium analysis; market failure. Prerequisites: Economics 119, one Economics 200 level course, and Math 135 or 237. Not open to first-year students except by permission of the instructor. Every semester. (4 credits)",
@@ -4795,7 +4795,7 @@
         }
       ],
       "instructor": "Gary Krueger",
-      "open_seats": "Closed -1",
+      "open_seats": "-1",
       "max_enrollment": "22",
       "crosslistings": [],
       "description": "This course investigates the methods economists use to test theories and conduct economic forecasts. This course will provide the student with the ability to design, conduct, and evaluate empirical work in economics and other social sciences. The primary focus of the course is on the final project that consists of a research paper that will integrate library research, economic theory, and econometric analysis. The course will take a \"hands on\" approach as much as possible with weekly use of the microcomputer in class. Prerequisites: Economics 119, any Economics course in the 200s, Math 135 or 137 and Math 153 or 154 or 155. Every semester. (4 credits)",
@@ -4818,7 +4818,7 @@
         }
       ],
       "instructor": "Gary Krueger",
-      "open_seats": "Closed -1",
+      "open_seats": "-1",
       "max_enrollment": "22",
       "crosslistings": [],
       "description": "This course investigates the methods economists use to test theories and conduct economic forecasts. This course will provide the student with the ability to design, conduct, and evaluate empirical work in economics and other social sciences. The primary focus of the course is on the final project that consists of a research paper that will integrate library research, economic theory, and econometric analysis. The course will take a \"hands on\" approach as much as possible with weekly use of the microcomputer in class. Prerequisites: Economics 119, any Economics course in the 200s, Math 135 or 137 and Math 153 or 154 or 155. Every semester. (4 credits)",
@@ -4841,7 +4841,7 @@
         }
       ],
       "instructor": "Gary Krueger",
-      "open_seats": "Closed -3",
+      "open_seats": "-3",
       "max_enrollment": "22",
       "crosslistings": [],
       "description": "This course investigates the methods economists use to test theories and conduct economic forecasts. This course will provide the student with the ability to design, conduct, and evaluate empirical work in economics and other social sciences. The primary focus of the course is on the final project that consists of a research paper that will integrate library research, economic theory, and econometric analysis. The course will take a \"hands on\" approach as much as possible with weekly use of the microcomputer in class. Prerequisites: Economics 119, any Economics course in the 200s, Math 135 or 137 and Math 153 or 154 or 155. Every semester. (4 credits)",
@@ -4864,7 +4864,7 @@
         }
       ],
       "instructor": "Gary Krueger",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "22",
       "crosslistings": [],
       "description": "This course investigates the methods economists use to test theories and conduct economic forecasts. This course will provide the student with the ability to design, conduct, and evaluate empirical work in economics and other social sciences. The primary focus of the course is on the final project that consists of a research paper that will integrate library research, economic theory, and econometric analysis. The course will take a \"hands on\" approach as much as possible with weekly use of the microcomputer in class. Prerequisites: Economics 119, any Economics course in the 200s, Math 135 or 137 and Math 153 or 154 or 155. Every semester. (4 credits)",
@@ -5082,7 +5082,7 @@
         }
       ],
       "instructor": "Marceline DuBose",
-      "open_seats": "Closed -1",
+      "open_seats": "-1",
       "max_enrollment": "25",
       "crosslistings": [
         "AMST 345-01; First day attendance required"
@@ -5180,7 +5180,7 @@
         }
       ],
       "instructor": "Kristin Naca",
-      "open_seats": "Closed 4",
+      "open_seats": "4",
       "max_enrollment": "20",
       "crosslistings": [
         "AMST 194-01; First day attendance required"
@@ -5354,7 +5354,7 @@
         }
       ],
       "instructor": "Peter Bognanni",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "16",
       "crosslistings": [
         "Course available only to those who will be freshmen",
@@ -5380,7 +5380,7 @@
         }
       ],
       "instructor": "Peter Bognanni",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "16",
       "crosslistings": [
         "Course available only to those who will be freshmen",
@@ -5579,8 +5579,8 @@
           "room": "MAIN 003"
         }
       ],
-      "instructor": "Ping WangMartin Gunderson",
-      "open_seats": "Closed -2",
+      "instructor": "Ping Wang, Martin Gunderson",
+      "open_seats": "-2",
       "max_enrollment": "16",
       "crosslistings": [
         "PHIL 194-01",
@@ -5677,7 +5677,7 @@
         }
       ],
       "instructor": "Neil Chudgar",
-      "open_seats": "Closed -1",
+      "open_seats": "-1",
       "max_enrollment": "20",
       "crosslistings": [],
       "description": "A study of British literature from about 1660 to 1800. The course will examine the works of writers such as John Dryden, Jonathan Swift, Alexander Pope, Samuel Johnson, Fanny Burney, Henry Fielding, Oliver Goldsmith, William Blake, and Jane Austen. There may be some texts by continental writers, such as Voltaire, included. Emphasis upon the period’s major genres and modes of writing, such as drama, lyric poetry, satire, the epistolary novel, and the gothic novel. Recent criticism of this period will be considered as well. Alternate years. (4 credits)",
@@ -5700,7 +5700,7 @@
         }
       ],
       "instructor": "Casey Jarrin",
-      "open_seats": "Closed -1",
+      "open_seats": "-1",
       "max_enrollment": "20",
       "crosslistings": [],
       "description": "A study of works of British and Irish fiction, poetry, drama, and non-fiction prose from 1900 to the present. Along with novelists such as those enumerated under English 341 below, this course treats selected poets such as W. B. Yeats, W. H. Auden, Stevie Smith, and Philip Larkin, playwrights from the Irish National Theater at the beginning of the century (Lady Gregory, Sean O’Casey, J. M. Synge) through Samuel Beckett to current dramatists such as Michael Frayn or Tom Stoppard, and non-fiction commentary from Virginia Woolf, George Orwell, and others. Alternate years. (4 credits)",
@@ -5748,7 +5748,7 @@
         }
       ],
       "instructor": "James Dawes",
-      "open_seats": "Closed -1",
+      "open_seats": "-1",
       "max_enrollment": "20",
       "crosslistings": [
         "First day attendance required"
@@ -5773,7 +5773,7 @@
         }
       ],
       "instructor": "James Dawes",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "20",
       "crosslistings": [],
       "description": "America in the first half of the twentieth century seemed to be infatuated with the future¿with skyscrapers and automobiles, Hollywood cinema and big business. But in an age that also saw the struggle of Progressivism, the Great Depression, and two foreign wars, many voices called attention to the dark side of success. This course will include such authors as Edith Wharton, F. Scott Fitzgerald, Sinclair Lewis, Ernest Hemingway, Gertrude Stein, T. S. Eliot, Zora Neale Hurston, William Faulkner, Willa Cather, Dorothy Parker, William Carlos Williams, Wallace Stevens, Langston Hughes, Walker Evans and James Agee, Eugene O’Neill, and Dashiell Hammett. Alternate years. (4 credits)",
@@ -5821,7 +5821,7 @@
         }
       ],
       "instructor": "Peter Bognanni",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "16",
       "crosslistings": [
         "First day attendance required"
@@ -5846,7 +5846,7 @@
         }
       ],
       "instructor": "Marlon James",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "16",
       "crosslistings": [
         "First day attendance required"
@@ -5946,7 +5946,7 @@
         }
       ],
       "instructor": "David Moore",
-      "open_seats": "Closed -6",
+      "open_seats": "-6",
       "max_enrollment": "20",
       "crosslistings": [
         "HMCS 367-01",
@@ -5972,7 +5972,7 @@
         }
       ],
       "instructor": "Daylanne English",
-      "open_seats": "Closed 4",
+      "open_seats": "4",
       "max_enrollment": "20",
       "crosslistings": [
         "AMST 380-01"
@@ -5997,7 +5997,7 @@
         }
       ],
       "instructor": "Casey Jarrin",
-      "open_seats": "Closed -3",
+      "open_seats": "-3",
       "max_enrollment": "20",
       "crosslistings": [
         "HMCS 394-02; First day attendance required"
@@ -6047,7 +6047,7 @@
         }
       ],
       "instructor": "Marlon James",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "12",
       "crosslistings": [
         "First day attendance required"
@@ -6096,7 +6096,7 @@
           "room": "OLRI 275"
         }
       ],
-      "instructor": "Louisa BradtmillerJerald Dosch",
+      "instructor": "Louisa Bradtmiller, Jerald Dosch",
       "open_seats": "4",
       "max_enrollment": "21",
       "crosslistings": [
@@ -6122,7 +6122,7 @@
         }
       ],
       "instructor": "Jerald Dosch",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "16",
       "crosslistings": [
         "BIOL 194-01; First day attendance required"
@@ -6146,7 +6146,7 @@
           "room": "OLRI 241"
         }
       ],
-      "instructor": "Roopali PhadkeKelly MacGregor",
+      "instructor": "Roopali Phadke, Kelly MacGregor",
       "open_seats": "0",
       "max_enrollment": "17",
       "crosslistings": [
@@ -6199,8 +6199,8 @@
           "room": "MAIN 003"
         }
       ],
-      "instructor": "Ping WangMartin Gunderson",
-      "open_seats": "Closed -2",
+      "instructor": "Ping Wang, Martin Gunderson",
+      "open_seats": "-2",
       "max_enrollment": "16",
       "crosslistings": [
         "ENGL 194-01",
@@ -6251,7 +6251,7 @@
         }
       ],
       "instructor": "Jerald Dosch",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "16",
       "crosslistings": [
         "BIOL 194-L1; First day attendance required"
@@ -6276,7 +6276,7 @@
         }
       ],
       "instructor": "Stephanie Rutherford",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "24",
       "crosslistings": [
         "POLI 215-01; First day attendance required"
@@ -6351,7 +6351,7 @@
         }
       ],
       "instructor": "William Moseley",
-      "open_seats": "Closed -4",
+      "open_seats": "-4",
       "max_enrollment": "30",
       "crosslistings": [
         "GEOG 232-01"
@@ -6376,7 +6376,7 @@
         }
       ],
       "instructor": "Stephanie Rutherford",
-      "open_seats": "Closed 3",
+      "open_seats": "3",
       "max_enrollment": "25",
       "crosslistings": [
         "HIST 234-01; First day attendance required"
@@ -6401,7 +6401,7 @@
         }
       ],
       "instructor": "Stephanie Rutherford",
-      "open_seats": "Closed -3",
+      "open_seats": "-3",
       "max_enrollment": "20",
       "crosslistings": [
         "HIST 237-01; First day attendance required"
@@ -6589,7 +6589,7 @@
         }
       ],
       "instructor": "Ellen Arnold",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "25",
       "crosslistings": [
         "HIST 294-01"
@@ -6614,7 +6614,7 @@
         }
       ],
       "instructor": "William Moseley",
-      "open_seats": "Closed 2",
+      "open_seats": "2",
       "max_enrollment": "15",
       "crosslistings": [
         "GEOG 488-01",
@@ -7669,7 +7669,7 @@
         }
       ],
       "instructor": "William Moseley",
-      "open_seats": "Closed -4",
+      "open_seats": "-4",
       "max_enrollment": "30",
       "crosslistings": [
         "ENVI 232-01"
@@ -7694,7 +7694,7 @@
         }
       ],
       "instructor": "David Lanegran",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "35",
       "crosslistings": [],
       "description": "This course seeks to explain the evolving pattern of cities across the earth in terms of the distribution and movement of resources and people. In addition, a careful analysis of the development and internal spatial structure of North American cities will be carried out. Much class time will be spent on discussion of contemporary urban problems such as segregation, unequal investment, and control of public space as well as attempts at their solution. This is intended for all students intending to major in Urban Studies. Field work required. No prerequisite. Fall semester. (4 credits)",
@@ -7765,7 +7765,7 @@
         }
       ],
       "instructor": "Daniel Gilbert",
-      "open_seats": "Closed 4",
+      "open_seats": "4",
       "max_enrollment": "20",
       "crosslistings": [
         "AMST 250-01"
@@ -7813,7 +7813,7 @@
         }
       ],
       "instructor": "Helen Hazen",
-      "open_seats": "Closed -4",
+      "open_seats": "-4",
       "max_enrollment": "30",
       "crosslistings": [
         "INTL 294-02; First day attendance required"
@@ -7861,7 +7861,7 @@
         }
       ],
       "instructor": "Holly Barcus",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "12",
       "crosslistings": [
         "First day attendance required; $20 lab fee will be charged."
@@ -7886,7 +7886,7 @@
         }
       ],
       "instructor": "Birgit Muehlenhaus",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "12",
       "crosslistings": [
         "First day attendance required; lab required."
@@ -7911,7 +7911,7 @@
         }
       ],
       "instructor": "William Moseley",
-      "open_seats": "Closed 2",
+      "open_seats": "2",
       "max_enrollment": "15",
       "crosslistings": [
         "ENVI 477-01",
@@ -8129,7 +8129,7 @@
           "room": "OLRI 241"
         }
       ],
-      "instructor": "Kelly MacGregorRoopali Phadke",
+      "instructor": "Kelly MacGregor, Roopali Phadke",
       "open_seats": "0",
       "max_enrollment": "17",
       "crosslistings": [],
@@ -10541,7 +10541,7 @@
         }
       ],
       "instructor": "Stephanie Rutherford",
-      "open_seats": "Closed 3",
+      "open_seats": "3",
       "max_enrollment": "25",
       "crosslistings": [
         "ENVI 234-01; First day attendance required"
@@ -10566,7 +10566,7 @@
         }
       ],
       "instructor": "Peter Rachleff",
-      "open_seats": "Closed -3",
+      "open_seats": "-3",
       "max_enrollment": "25",
       "crosslistings": [
         "AMST 310-01"
@@ -10591,7 +10591,7 @@
         }
       ],
       "instructor": "Stephanie Rutherford",
-      "open_seats": "Closed -3",
+      "open_seats": "-3",
       "max_enrollment": "20",
       "crosslistings": [
         "ENVI 237-01; First day attendance required"
@@ -10687,7 +10687,7 @@
         }
       ],
       "instructor": "Ellen Arnold",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "25",
       "crosslistings": [],
       "description": "*Cross-listed with ENVI 294-02; From 1347-1350, a great plague swept across Europe, killing an estimated 1/3 of the entire human population. As if that wasn¿t bad enough, the fourteenth century also witnessed animal diseases, famines, large-scale climate change, and the human crisis of war. This had both immediate and long-term effects on medieval Europe, changing daily life, social networks, and economic decision making. Understanding the degree to which the medieval world was altered by (and survived) this natural disaster also offers glimpses of medieval psychology, scientific knowledge, spirituality, and aesthetics. We will also set the medieval epidemic in its broader context, by discussing problems in studying historical plagues and by looking at the earlier outbreak of plague in Europe at the end of the Roman Empire.",
@@ -10735,7 +10735,7 @@
         }
       ],
       "instructor": "Peter Weisensel",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "25",
       "crosslistings": [],
       "description": "This class will study the idea of socialism from its earliest forms in ancient times to its present through a series of original socialist texts. Two professors, one in history and the other in philosophy will teach it. We will engage thinkers like Plato, Thomas More, the early French communists, the Utopians, Marx and Engels (the heart of the course) and their Revisionists, the Fabians (an Anglo-Saxon alternative), Lenin and Stalin, the Frankfurt School, the socialist feminists, and contemporary socialist thinkers. We will study socialism critically: we will recognize its strengths but also identify its flaws when we see them. We will contextualize these socialist texts, that is, study how changes in real-world circumstances change the way socialism is written or used. Lastly, we will try to understand the gap between socialist theory as written by intellectuals and the way socialism is understood by ordinary working people. The class is discussion-based. Exams will be in class. Often students will be expected to lead class discussions. Students who have already taken Hist. 255 and Phil. 255 may not take this course. Otherwise, the course is open to all students, first year students with the permission of the instructors.",
@@ -10948,7 +10948,7 @@
         }
       ],
       "instructor": "Corby Kelly",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "33",
       "crosslistings": [
         "CLAS 121-01",
@@ -11074,7 +11074,7 @@
         }
       ],
       "instructor": "John Kim",
-      "open_seats": "Closed 3",
+      "open_seats": "3",
       "max_enrollment": "25",
       "crosslistings": [
         "Suitable for new first years."
@@ -11150,7 +11150,7 @@
         }
       ],
       "instructor": "Paula Cooey",
-      "open_seats": "Closed 6",
+      "open_seats": "6",
       "max_enrollment": "20",
       "crosslistings": [
         "RELI 235-01"
@@ -11175,7 +11175,7 @@
         }
       ],
       "instructor": "David Moore",
-      "open_seats": "Closed -6",
+      "open_seats": "-6",
       "max_enrollment": "20",
       "crosslistings": [
         "ENGL 367-01",
@@ -11252,7 +11252,7 @@
         }
       ],
       "instructor": "Casey Jarrin",
-      "open_seats": "Closed -3",
+      "open_seats": "-3",
       "max_enrollment": "20",
       "crosslistings": [
         "ENGL 386-01; First day attendance required"
@@ -11448,7 +11448,7 @@
         }
       ],
       "instructor": "Erik Larson",
-      "open_seats": "Closed -1",
+      "open_seats": "-1",
       "max_enrollment": "15",
       "crosslistings": [
         "SOCI 280-01; First day attendance required"
@@ -11498,7 +11498,7 @@
         }
       ],
       "instructor": "Helen Hazen",
-      "open_seats": "Closed -4",
+      "open_seats": "-4",
       "max_enrollment": "30",
       "crosslistings": [
         "GEOG 256-01; First day attendance required"
@@ -11571,7 +11571,7 @@
         }
       ],
       "instructor": "Dianna Shandy",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "20",
       "crosslistings": [
         "ANTH 362-01"
@@ -11596,7 +11596,7 @@
         }
       ],
       "instructor": "David Moore",
-      "open_seats": "Closed -6",
+      "open_seats": "-6",
       "max_enrollment": "20",
       "crosslistings": [
         "ENGL 367-01",
@@ -11622,7 +11622,7 @@
         }
       ],
       "instructor": "William Moseley",
-      "open_seats": "Closed 2",
+      "open_seats": "2",
       "max_enrollment": "15",
       "crosslistings": [
         "ENVI 477-01",
@@ -12178,7 +12178,7 @@
         }
       ],
       "instructor": "Teresa Kupin-Escobar",
-      "open_seats": "Closed 3",
+      "open_seats": "3",
       "max_enrollment": "17",
       "crosslistings": [
         "HISP 307-01; First day attendance required"
@@ -12355,7 +12355,7 @@
         }
       ],
       "instructor": "John Haiman",
-      "open_seats": "Closed 2",
+      "open_seats": "2",
       "max_enrollment": "12",
       "crosslistings": [],
       "description": "Languages are constantly changing. The English written by Chaucer 600 years ago is now very difficult to understand without annotation, not to mention anything written a few centuries before that. This course investigates the nature of language change, how to determine a language’s history, its relationship to other languages and the search for common ancestors or \"proto-languages.\" We will discuss changes at various linguistic levels: sound change, lexical change, syntactic change and changes in word meaning over time. Although much of the work done in this field involves Indo-European languages, we will also look at change in many other language families. This is a practical course, most of class time will be spent DOING historical linguistics, rather than talking about it. We will be looking at data sets from many different languages and trying to make sense of them. In the cases where we have examples of many related languages, we will try to reconstruct what the parent language must have looked like. Prerequisite: either Linguistics 100 (Introduction to Linguistics) or 104 (Sounds of Language). Next offered Fall 2007. (4 credits)",
@@ -12378,7 +12378,7 @@
         }
       ],
       "instructor": "Christina Esposito",
-      "open_seats": "Closed -5",
+      "open_seats": "-5",
       "max_enrollment": "8",
       "crosslistings": [],
       "description": "This course is the natural extension of the Sounds of Language course, as well as the prerequisite to the capstone course in the cognitive track. Students learn how to conduct linguistic research from the bottom up, from forming a hypothesis to constructing word and sentence lists for elicitation, or stimuli for recognition, to recording speakers, running tests, analyzing the data obtained, and writing up the final research paper. By the end of the semester, students should be familiar with all the equipment in the linguistics laboratory and what kinds of questions each is designed to explore, and to be able to conduct their own independent research. Prerequisite: Linguistics 104, Sounds of Language. Next offered Spring 2008. (4 credits)",
@@ -13840,8 +13840,8 @@
           "room": "MAIN 003"
         }
       ],
-      "instructor": "Martin GundersonPing Wang",
-      "open_seats": "Closed -2",
+      "instructor": "Martin Gunderson, Ping Wang",
+      "open_seats": "-2",
       "max_enrollment": "16",
       "crosslistings": [
         "ENGL 194-01",
@@ -14099,7 +14099,7 @@
         }
       ],
       "instructor": "Anita Bendickson",
-      "open_seats": "Closed 4",
+      "open_seats": "4",
       "max_enrollment": "30",
       "crosslistings": [],
       "description": "",
@@ -14237,7 +14237,7 @@
         }
       ],
       "instructor": "Matthew Parrington",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "6",
       "crosslistings": [],
       "description": "",
@@ -14329,7 +14329,7 @@
         }
       ],
       "instructor": "Kristine Spangard",
-      "open_seats": "Closed 16",
+      "open_seats": "16",
       "max_enrollment": "25",
       "crosslistings": [],
       "description": "",
@@ -15108,7 +15108,7 @@
         }
       ],
       "instructor": "Patrick Schmidt",
-      "open_seats": "Closed 6",
+      "open_seats": "6",
       "max_enrollment": "25",
       "crosslistings": [],
       "description": "An exploration of the structure of the American political system as seen through the decisions of the U.S. Supreme Court. Topics include the separation of powers in the federal government, the scope of executive power, and the development of federal-state relations over the course of American history. The material also includes the nature of judicial review, economic rights and contemporary questions about the limits of government power. Political Science 100 recommended. Every year. (4 credits)",
@@ -15157,7 +15157,7 @@
         }
       ],
       "instructor": "Stephanie Rutherford",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "24",
       "crosslistings": [
         "ENVI 215-01"
@@ -15182,7 +15182,7 @@
         }
       ],
       "instructor": "Wendy Weber",
-      "open_seats": "Closed 4",
+      "open_seats": "4",
       "max_enrollment": "25",
       "crosslistings": [],
       "description": "This course is designed to introduce students to global governance. It begins with a discussion of the concept of global governance. It then turns to some of the central features of contemporary global governance, including the changing status of the state and of international/world organizations and the role of global civil society. The emphasis here is on how patterns of global governance have changed and are changing and on the implications of these changes for democracy, social justice, etc. The remainder of the course focuses on the areas of international peace and security, human rights and international humanitarian law, and economic governance. By addressing such topics as the International Criminal Court and the role of the IMF and the World Bank in economic development, these parts of the course highlight the contested nature of global governance in each of the three issue areas. Political Science 120 recommended. Every year. (4 credits)",
@@ -15306,7 +15306,7 @@
         }
       ],
       "instructor": "Paru Shah",
-      "open_seats": "Closed 3",
+      "open_seats": "3",
       "max_enrollment": "25",
       "crosslistings": [],
       "description": "This course focuses on a central question in political science and urban public policy¿how can public institutions be redesigned to improve accountability? We will examine this question with particular attention to governance and politics in urban public school systems. The course will include a significant experiential/engagement component, which will allow students to interact with some of the key players in urban education politics within the Twin Cities.",
@@ -15329,7 +15329,7 @@
         }
       ],
       "instructor": "Patrick Schmidt",
-      "open_seats": "Closed 4",
+      "open_seats": "4",
       "max_enrollment": "20",
       "crosslistings": [],
       "description": "This seminar-style course explores American political development, examining how law, when influenced by economic ideologies or the focus of contests among economic interests, has had a significant impact on persons of identity. Topics include the property rights of women in early America, the law of slavery, and the legal development of Native American law, before reaching contemporary questions of inclusion and exclusion in law. Prior course work in American history, political science, or legal studies strongly recommended. Alternate years. (4 credits)",
@@ -15421,7 +15421,7 @@
         }
       ],
       "instructor": "David Blaney",
-      "open_seats": "Closed -2",
+      "open_seats": "-2",
       "max_enrollment": "16",
       "crosslistings": [],
       "description": "The research seminar is designed to fulfill partially the capstone experience requirement for political science majors. It is expected that students will have taken the required foundations, methods and intermediate courses prior to beginning the seminar. The goal of the Senior Research Seminar is to launch students on a culminating academic experience organized around the supervised independent study of a political science topic of particular interest and relevance to them. The Seminar is premised on the assumption that students will have a working familiarity with the foundational knowledge in the sub-field(s) relevant to their research project, a mastery of the practical skills introduced in the foundations courses and further developed in the intermediate courses, and a willingness to engage actively in a rigorous, sustained inquiry into an important topic. It is also premised on the assumption that students will take responsibility for managing their own self-directed learning processes. The Senior Research Seminar will normally involve one or more faculty members \"coaching\" students through the process of defining a significant and important political science research question, developing a thesis, designing an appropriate research program, and writing a substantial portion of a draft Honors thesis or senior independent project. Following successful completion of the Seminar, students participating in the Honors Program are required to enroll in political science independent project. Students not participating in the Honors Program who nevertheless wish to continue with their research should enroll in Political Science 614 (Senior Independent Project). Every Fall. (4 credits)",
@@ -15444,7 +15444,7 @@
         }
       ],
       "instructor": "Paru Shah",
-      "open_seats": "Closed -2",
+      "open_seats": "-2",
       "max_enrollment": "16",
       "crosslistings": [],
       "description": "The research seminar is designed to fulfill partially the capstone experience requirement for political science majors. It is expected that students will have taken the required foundations, methods and intermediate courses prior to beginning the seminar. The goal of the Senior Research Seminar is to launch students on a culminating academic experience organized around the supervised independent study of a political science topic of particular interest and relevance to them. The Seminar is premised on the assumption that students will have a working familiarity with the foundational knowledge in the sub-field(s) relevant to their research project, a mastery of the practical skills introduced in the foundations courses and further developed in the intermediate courses, and a willingness to engage actively in a rigorous, sustained inquiry into an important topic. It is also premised on the assumption that students will take responsibility for managing their own self-directed learning processes. The Senior Research Seminar will normally involve one or more faculty members \"coaching\" students through the process of defining a significant and important political science research question, developing a thesis, designing an appropriate research program, and writing a substantial portion of a draft Honors thesis or senior independent project. Following successful completion of the Seminar, students participating in the Honors Program are required to enroll in political science independent project. Students not participating in the Honors Program who nevertheless wish to continue with their research should enroll in Political Science 614 (Senior Independent Project). Every Fall. (4 credits)",
@@ -15690,7 +15690,7 @@
         }
       ],
       "instructor": "Brooke Lea",
-      "open_seats": "Closed 9",
+      "open_seats": "9",
       "max_enrollment": "48",
       "crosslistings": [],
       "description": "This course is an introduction to the basic principles of research in psychology. We focus on how to design and execute psychological studies, analyze and interpret data, and write research reports. Students conduct studies in different areas of psychology (e.g., social, clinical, cognitive) that illustrate basic methodology and learn statistical techniques commonly used to understand psychological data. The course includes a laboratory component that facilitates expertise with computer statistical software and increases familiarity with American Psychological Association style. Prerequisite: Psychology 100. Permission of instructor is required for first year students. Every semester. (4 credits)",
@@ -15713,7 +15713,7 @@
         }
       ],
       "instructor": "Brooke Lea",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "12",
       "crosslistings": [],
       "description": "This course is an introduction to the basic principles of research in psychology. We focus on how to design and execute psychological studies, analyze and interpret data, and write research reports. Students conduct studies in different areas of psychology (e.g., social, clinical, cognitive) that illustrate basic methodology and learn statistical techniques commonly used to understand psychological data. The course includes a laboratory component that facilitates expertise with computer statistical software and increases familiarity with American Psychological Association style. Prerequisite: Psychology 100. Permission of instructor is required for first year students. Every semester. (4 credits)",
@@ -15736,7 +15736,7 @@
         }
       ],
       "instructor": "Brooke Lea",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "12",
       "crosslistings": [],
       "description": "This course is an introduction to the basic principles of research in psychology. We focus on how to design and execute psychological studies, analyze and interpret data, and write research reports. Students conduct studies in different areas of psychology (e.g., social, clinical, cognitive) that illustrate basic methodology and learn statistical techniques commonly used to understand psychological data. The course includes a laboratory component that facilitates expertise with computer statistical software and increases familiarity with American Psychological Association style. Prerequisite: Psychology 100. Permission of instructor is required for first year students. Every semester. (4 credits)",
@@ -15853,7 +15853,7 @@
         }
       ],
       "instructor": "Brooke Lea",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "24",
       "crosslistings": [],
       "description": "A survey of the experimental analysis of the mind. Topics include attention, memory and forgetting, problem solving, creativity, reasoning, and language. Special emphasis is given to the study of discourse comprehension and reading. The weekly laboratory sessions afford students an opportunity to interact directly with cognitive phenomena and research methods. Group A course. Prerequisite: Psychology 100. Fall semester. (4 credits)",
@@ -15876,7 +15876,7 @@
         }
       ],
       "instructor": "Brooke Lea",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "24",
       "crosslistings": [],
       "description": "A survey of the experimental analysis of the mind. Topics include attention, memory and forgetting, problem solving, creativity, reasoning, and language. Special emphasis is given to the study of discourse comprehension and reading. The weekly laboratory sessions afford students an opportunity to interact directly with cognitive phenomena and research methods. Group A course. Prerequisite: Psychology 100. Fall semester. (4 credits)",
@@ -16019,7 +16019,7 @@
           "room": "OLRI 101"
         }
       ],
-      "instructor": "Jaine StraussDarcy BurgundChristie ManningSun No",
+      "instructor": "Jaine Strauss, Darcy Burgund, Christie Manning, Sun No",
       "open_seats": "3",
       "max_enrollment": "30",
       "crosslistings": [],
@@ -16068,7 +16068,7 @@
         }
       ],
       "instructor": "Jaine Strauss",
-      "open_seats": "Closed -2",
+      "open_seats": "-2",
       "max_enrollment": "18",
       "crosslistings": [],
       "description": "This course examines specific applications of psychological principles to the mental health field, focusing on strategies for therapeutic intervention. We will pay particular attention to the issues raised by traditional clinical practice, such as ethics, the politics and economics of mental health, and cultural biases, and consider alternatives to mainstream clinical services, including art therapy, spirituality, and non-Western healing. Prerequisites: Psychology 100, Psychology 200 or Psychology 201, Psychology 252 or permission of instructor. Fall semester. (4 credits)",
@@ -16091,7 +16091,7 @@
         }
       ],
       "instructor": "Lin Aanonsen",
-      "open_seats": "Closed -1",
+      "open_seats": "-1",
       "max_enrollment": "16",
       "crosslistings": [
         "BIOL 486-01"
@@ -16139,7 +16139,7 @@
         }
       ],
       "instructor": "Rachel Lucas-Thompson",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "16",
       "crosslistings": [],
       "description": "This seminar will examine individual functioning and development using a social-ecological framework (i.e., we will discuss the ways in which the multiple contexts in which we live and interact with others impact our development and functioning across the lifespan). We will specifically focus on the roles of the family system, work and school, poverty/welfare, social support, health care, media, cultural values, national customs, and historical time in shaping development and functioning. Also discussed will be the ways by which individuals affect the ecologies in which they develop and live. Culture and Context course. Prerequisite: Senior major or minor.",
@@ -16256,7 +16256,7 @@
         }
       ],
       "instructor": "Erik Davis",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "15",
       "crosslistings": [],
       "description": "Since the beginnings of the European colonial encounter with Buddhism, Buddhism has often been presented (by Europeans and Asians alike) as an atheistic, practical, philosophy, opposed to ritual and superstition. Yet, wherever Buddhism has taken root, the practices of Buddhism are often deeply involved with, and perhaps even rooted in, strong beliefs in spirits, gods, ghosts, and magic. This class examines \"the supernatural\" in Buddhist lands and Buddhism’s interaction with the same, along with an examination of three different theories of how this connection should be conceived. Sections on Tibet and East Asia will be included, but the general geographic focus will remain on Southeast Asia.",
@@ -16279,7 +16279,7 @@
         }
       ],
       "instructor": "Brett Wilson",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "15",
       "crosslistings": [],
       "description": "This course offers an introduction to the Qur¿an (Koran), the central text of Islam. Students will read the Qur¿an in translation, explore traditions of Qur¿anic interpretation, and engage recent academic approaches to understanding the text. In addition to considering the original context of the Qur¿an and its relationship to Biblical materials, the course will examine contemporary controversies surrounding the text and its import for living Muslim communities. No prerequisites. (4 credits)",
@@ -16325,7 +16325,7 @@
         }
       ],
       "instructor": "Paula Cooey",
-      "open_seats": "Closed 6",
+      "open_seats": "6",
       "max_enrollment": "20",
       "crosslistings": [
         "HMCS 294-04"
@@ -16420,7 +16420,7 @@
           "room": "MAIN 001"
         }
       ],
-      "instructor": "Susanna DrakePaula Cooey",
+      "instructor": "Susanna Drake, Paula Cooey",
       "open_seats": "8",
       "max_enrollment": "25",
       "crosslistings": [],
@@ -16871,7 +16871,7 @@
         }
       ],
       "instructor": "Deborah Smith",
-      "open_seats": "Closed -3",
+      "open_seats": "-3",
       "max_enrollment": "16",
       "crosslistings": [],
       "description": "",
@@ -16917,7 +16917,7 @@
         }
       ],
       "instructor": "Mahnaz Kousha",
-      "open_seats": "Closed -7",
+      "open_seats": "-7",
       "max_enrollment": "16",
       "crosslistings": [],
       "description": "This class introduces students to the methodologies and analytic techniques of fieldwork and ethnography: participant observation, interviewing, and the use of documents. Students will read exemplary, book-length studies and will conduct an extensive field research for their final project. Every year. (4 credits)",
@@ -16940,7 +16940,7 @@
         }
       ],
       "instructor": "Erik Larson",
-      "open_seats": "Closed -1",
+      "open_seats": "-1",
       "max_enrollment": "15",
       "crosslistings": [
         "INTL 280-01; First day attendance required"
@@ -16964,7 +16964,7 @@
           "room": "CARN 208"
         }
       ],
-      "instructor": "Mahnaz KoushaErik Larson",
+      "instructor": "Mahnaz Kousha, Erik Larson",
       "open_seats": "3",
       "max_enrollment": "16",
       "crosslistings": [],
@@ -17036,7 +17036,7 @@
         }
       ],
       "instructor": "Wynn Fricke",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "20",
       "crosslistings": [],
       "description": "This course will introduce you to dance in various ways: through performance attendance, video viewing, class discussions, readings, guests and studio movement participation. From a global view point we will look at dance as culturally coded embodied knowledge, investigating forms, styles, and contexts. We will examine the function of dance in the lives of individuals and societies through various cultural lenses including feminist, Africanist and ethnological perspectives. This investigation of dance theory and practice will include a weekly movement lab. No previous experience necessary. Every fall. (4 credits)",
@@ -17389,7 +17389,7 @@
         }
       ],
       "instructor": "Beth Cleary",
-      "open_seats": "Closed -1",
+      "open_seats": "-1",
       "max_enrollment": "12",
       "crosslistings": [
         "Permission of instructor required."
@@ -17793,7 +17793,7 @@
         }
       ],
       "instructor": "Elizabeth Jansen",
-      "open_seats": "Closed -4",
+      "open_seats": "-4",
       "max_enrollment": "30",
       "crosslistings": [
         "BIOL 117-01; First day attendance required"
@@ -17818,7 +17818,7 @@
         }
       ],
       "instructor": "Beth Severy-Hoven",
-      "open_seats": "Closed 7",
+      "open_seats": "7",
       "max_enrollment": "28",
       "crosslistings": [
         "CLAS 127-01"
@@ -18001,7 +18001,7 @@
         }
       ],
       "instructor": "Joanna Inglot",
-      "open_seats": "Closed -1",
+      "open_seats": "-1",
       "max_enrollment": "20",
       "crosslistings": [
         "ART 252-01"

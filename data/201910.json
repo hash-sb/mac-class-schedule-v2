@@ -1,7 +1,7 @@
 {
   "term_code": "201910",
   "term_label": "Fall 2018",
-  "scraped_at": "2026-07-21T00:02:50.522975+00:00",
+  "scraped_at": "2026-07-22T01:43:41.975721+00:00",
   "course_count": 786,
   "courses": [
     {
@@ -88,7 +88,7 @@
         }
       ],
       "instructor": "Lesley Lavery",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "25",
       "crosslistings": [
         "POLI 203-01"
@@ -113,7 +113,7 @@
         }
       ],
       "instructor": "Crystal Moten",
-      "open_seats": "Closed 10",
+      "open_seats": "10",
       "max_enrollment": "20",
       "crosslistings": [
         "First day attendance required; cross-listed with HIST 219-01"
@@ -163,7 +163,7 @@
         }
       ],
       "instructor": "Crystal Moten",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "16",
       "crosslistings": [
         "HIST 229-01",
@@ -189,7 +189,7 @@
         }
       ],
       "instructor": "Brian Lozenski",
-      "open_seats": "Closed -6",
+      "open_seats": "-6",
       "max_enrollment": "25",
       "crosslistings": [
         "First day attendance required; cross-listed with EDUC 240-01"
@@ -239,7 +239,7 @@
         }
       ],
       "instructor": "Daylanne English",
-      "open_seats": "Closed 2",
+      "open_seats": "2",
       "max_enrollment": "20",
       "crosslistings": [
         "ENGL 275-01"
@@ -413,7 +413,7 @@
         }
       ],
       "instructor": "Claudia Giannini",
-      "open_seats": "Closed 3",
+      "open_seats": "3",
       "max_enrollment": "15",
       "crosslistings": [
         "First day attendance required; cross-listed with SPAN 308-01",
@@ -610,7 +610,7 @@
         }
       ],
       "instructor": "Marianne Milligan",
-      "open_seats": "Closed 3",
+      "open_seats": "3",
       "max_enrollment": "17",
       "crosslistings": [
         "LING 206-01; limit will reflect 3 seats held for SR",
@@ -684,7 +684,7 @@
         }
       ],
       "instructor": "Jenna Rice Rahaim",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "20",
       "crosslistings": [
         "INTL 253-01"
@@ -905,7 +905,7 @@
         }
       ],
       "instructor": "Megan Vossler",
-      "open_seats": "Closed 3",
+      "open_seats": "3",
       "max_enrollment": "15",
       "crosslistings": [
         "First day attendance required"
@@ -930,7 +930,7 @@
         }
       ],
       "instructor": "Summer Hills-Bonczyk",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "14",
       "crosslistings": [
         "First day attendance required; $100 material fee required"
@@ -955,7 +955,7 @@
         }
       ],
       "instructor": "Summer Hills-Bonczyk",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "14",
       "crosslistings": [
         "First day attendance required; $100 material fee required"
@@ -1076,7 +1076,7 @@
         }
       ],
       "instructor": "Eric Carroll",
-      "open_seats": "Closed 2",
+      "open_seats": "2",
       "max_enrollment": "16",
       "crosslistings": [
         "First day attendance required; $75 materials fee required"
@@ -1176,7 +1176,7 @@
         }
       ],
       "instructor": "Eric Carroll",
-      "open_seats": "Closed -2",
+      "open_seats": "-2",
       "max_enrollment": "16",
       "crosslistings": [],
       "description": "In this class we explore the fundamentals of two-dimensional design through a series of hands-on and digital projects. Topics such as process, pattern, iconography, collage and typeface are explored through both fine-art and commercial design projects. Demonstrations, field trips, and artist talks are included in addition to lab time and class discussions. Software explored includes Adobe Illustrator, Photoshop, and InDesign. Three two-hour periods per week.",
@@ -1274,8 +1274,8 @@
           "room": "ARTCOM 102"
         }
       ],
-      "instructor": "Joanna InglotJulia Chadaga",
-      "open_seats": "Closed -1",
+      "instructor": "Joanna Inglot, Julia Chadaga",
+      "open_seats": "-1",
       "max_enrollment": "20",
       "crosslistings": [
         "RUSS 294-01",
@@ -1301,7 +1301,7 @@
         }
       ],
       "instructor": "Amanda Lovelee",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "16",
       "crosslistings": [
         "First day attendance required; ACTC students may register on the first day of class",
@@ -1327,7 +1327,7 @@
         }
       ],
       "instructor": "Megan Vossler",
-      "open_seats": "Closed -1",
+      "open_seats": "-1",
       "max_enrollment": "10",
       "crosslistings": [
         "First day attendance required"
@@ -1377,7 +1377,7 @@
         }
       ],
       "instructor": "Nicole Simpkins",
-      "open_seats": "Closed -1",
+      "open_seats": "-1",
       "max_enrollment": "6",
       "crosslistings": [],
       "description": "This course is a continuation of ART 236, focusing on individually generated projects. There is an introduction of new techniques appropriate for content such as monoprint, collograph, screenprint, photo-printmaking and computer-based processes. Field trips, and arranged meetings.",
@@ -1676,7 +1676,7 @@
         }
       ],
       "instructor": "Sarah Boyer",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "16",
       "crosslistings": [
         "First day attendance required; ACTC students may register on the first day of class",
@@ -1855,7 +1855,7 @@
         }
       ],
       "instructor": "Steven Sundby",
-      "open_seats": "Closed 3",
+      "open_seats": "3",
       "max_enrollment": "18",
       "crosslistings": [
         "2 credits; first day attendance required; ACTC students may register on the first day of class",
@@ -1933,7 +1933,7 @@
         }
       ],
       "instructor": "Lin Aanonsen",
-      "open_seats": "Closed -5",
+      "open_seats": "-5",
       "max_enrollment": "36",
       "crosslistings": [
         "First day attendance required; ACTC students may register on the first day of class",
@@ -2217,7 +2217,7 @@
         }
       ],
       "instructor": "Kathryn Splan",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "16",
       "crosslistings": [
         "First day lab attendance required; cross-listed with CHEM 351-L2"
@@ -2267,7 +2267,7 @@
         }
       ],
       "instructor": "Randy Daughters",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "16",
       "crosslistings": [
         "First day attendance required; ACTC students may register on the first day of class",
@@ -2293,7 +2293,7 @@
         }
       ],
       "instructor": "Randy Daughters",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "16",
       "crosslistings": [
         "First day lab attendance required; ACTC students may register on the first day of class",
@@ -2319,7 +2319,7 @@
         }
       ],
       "instructor": "Devavani Chatterjea",
-      "open_seats": "Closed -1",
+      "open_seats": "-1",
       "max_enrollment": "14",
       "crosslistings": [
         "First day attendance required; ACTC students may register on the first day of class",
@@ -2345,7 +2345,7 @@
         }
       ],
       "instructor": "Devavani Chatterjea",
-      "open_seats": "Closed -1",
+      "open_seats": "-1",
       "max_enrollment": "14",
       "crosslistings": [
         "First day lab attendance required; ACTC students may register on the first day of class",
@@ -2371,7 +2371,7 @@
         }
       ],
       "instructor": "Robin Shields-Cutler",
-      "open_seats": "Closed -2",
+      "open_seats": "-2",
       "max_enrollment": "16",
       "crosslistings": [
         "First day attendance required; ACTC students may register on the first day of class",
@@ -2397,7 +2397,7 @@
         }
       ],
       "instructor": "Robin Shields-Cutler",
-      "open_seats": "Closed -2",
+      "open_seats": "-2",
       "max_enrollment": "16",
       "crosslistings": [
         "First day lab attendance required; ACTC students may register on the first day of class",
@@ -2900,7 +2900,7 @@
         }
       ],
       "instructor": "Amy Rice",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "18",
       "crosslistings": [
         "First day attendance required; $12 lab fee charged"
@@ -3413,7 +3413,7 @@
         }
       ],
       "instructor": "Kathryn Splan",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "16",
       "crosslistings": [
         "First day lab attendance required; cross-listed with BIOL 351-L2"
@@ -3486,7 +3486,7 @@
         }
       ],
       "instructor": "Paul Fischer",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "9",
       "crosslistings": [
         "First day attendance required"
@@ -3536,7 +3536,7 @@
         }
       ],
       "instructor": "Paul Fischer",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "9",
       "crosslistings": [
         "First day attendance required"
@@ -4145,7 +4145,7 @@
         }
       ],
       "instructor": "Brian Lush",
-      "open_seats": "Closed 2",
+      "open_seats": "2",
       "max_enrollment": "25",
       "crosslistings": [
         "HIST 121-01"
@@ -5573,7 +5573,7 @@
         }
       ],
       "instructor": "Felix Friedt",
-      "open_seats": "Closed -1",
+      "open_seats": "-1",
       "max_enrollment": "25",
       "crosslistings": [],
       "description": "This course explores the theoretical foundations and empirical realities of international trade flows, commercial policies (tariffs, quotas, etc.) and international finance. The course emphasizes the welfare implications of international trade and commercial policies and links these to discussion of disputes over international trade agreements. The international finance portion of the course covers the foreign exchange market, balance of payments analysis and an introduction to open economy macroeconomics. Recommended for students majoring in international studies. This course counts as a Group E elective. Prerequisite(s): ECON 119. C- or higher required for all prerequisites.",
@@ -5596,7 +5596,7 @@
         }
       ],
       "instructor": "Samantha Cakir",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "25",
       "crosslistings": [],
       "description": "The field of health economics applies microeconomic theory to the study of health care, drawing on concepts from public, labor, and development economics and industrial orgainzation. The healthcare industry is one of the largest in the US, representing nearly 18% of the GDP and comprising a large share of the typical household budget. The role of government regulation in healthcare is significant and unique to the industry. This class will review topics relevant to the healthcare and health insurance industries in the US, other developed countries, and developing nations including determinants of demand, pricing of healthcare services, the role of insurance and its reforms, incentives and hurdles for health technology innovations, and the role of health in economic development. We will also examine the traditional methods for evaluating healthcare services including cost benefit and cost effectiveness analysis. This course counts as a Group E elective. Prerequisite(s): ECON 119. C- or higher required for all prerequisites.",
@@ -5618,7 +5618,7 @@
           "room": "OLRI 301"
         }
       ],
-      "instructor": "Sarah WestLouisa Bradtmiller",
+      "instructor": "Sarah West, Louisa Bradtmiller",
       "open_seats": "3",
       "max_enrollment": "25",
       "crosslistings": [
@@ -5668,7 +5668,7 @@
         }
       ],
       "instructor": "Joyce Minor",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "24",
       "crosslistings": [
         "Limit will reflect 8 seats for SR",
@@ -6017,7 +6017,7 @@
         }
       ],
       "instructor": "Tina Kruse",
-      "open_seats": "Closed -1",
+      "open_seats": "-1",
       "max_enrollment": "25",
       "crosslistings": [
         "First day attendance required; cross-listed with PSYC 220-01"
@@ -6042,7 +6042,7 @@
         }
       ],
       "instructor": "Brian Lozenski",
-      "open_seats": "Closed -6",
+      "open_seats": "-6",
       "max_enrollment": "25",
       "crosslistings": [
         "First day attendance required; cross-listed with AMST 240-01"
@@ -6091,7 +6091,7 @@
           "room": "ARTCOM 102"
         }
       ],
-      "instructor": "Ruthanne Kurth-SchaiJerald Dosch",
+      "instructor": "Ruthanne Kurth-Schai, Jerald Dosch",
       "open_seats": "7",
       "max_enrollment": "16",
       "crosslistings": [
@@ -6124,7 +6124,7 @@
           "room": "OLRI 370"
         }
       ],
-      "instructor": "Ruthanne Kurth-SchaiJerald Dosch",
+      "instructor": "Ruthanne Kurth-Schai, Jerald Dosch",
       "open_seats": "7",
       "max_enrollment": "16",
       "crosslistings": [
@@ -6224,7 +6224,7 @@
         }
       ],
       "instructor": "Daylanne English",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "20",
       "crosslistings": [
         "First day attendance required"
@@ -6345,7 +6345,7 @@
         }
       ],
       "instructor": "Benjamin Voigt",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "16",
       "crosslistings": [],
       "description": "What makes a story move, a poem sing, an essay say? How do writers get from blank pages to thinking, feeling readers? In this first foray in creative writing, we’ll begin to explore the huge range of things language can do, and try a few of them out ourselves. Together we’ll read like writers, write like readers, and work the muscles of our imaginations. Our concentrated study of a range of texts will introduce you to the mechanics of fiction, poetry and nonfiction. Frequent writing exercises will help develop your technique, and prepare you to compose a handful of longer, more thought-out pieces. Discussing your classmates’ writing, you’ll also train to be good literary citizens. The course will consist, in other words, of serious play and playful work. Come prepared, and by the end, you’ll know more about the practice of literature, your own process as a writer, and possibly yourself.",
@@ -6483,7 +6483,7 @@
         }
       ],
       "instructor": "Sierra Lomuto",
-      "open_seats": "Closed 3",
+      "open_seats": "3",
       "max_enrollment": "20",
       "crosslistings": [],
       "description": "In what ways can a medieval poet help us think in new and expanded ways about our own modern world? In this course, we will read Chaucer’s The Canterbury Tales in its original Middle English alongside modern adaptations (no previous experience with Middle English necessary or expected). We will explore the poetics and politics of Chaucer’s late fourteenth-century masterpiece, as we delve into the global and multilingual past of medieval England. We will also explore how modern poets, filmmakers, and authors have interpreted Chaucer for present-day audiences. What do adaptations tell us about their particular social, cultural, and political conditions of production; and how do they help us gain more clarity about the original? Contemporary readings will include Amy Tan’s Saving Fish from Drowning (2005), Patience Agbabi’s Telling Tales (2015), the poetry and prose collection Refugee Tales (2016), Kim Zarins’s Sometimes We Tell the Truth (2016), and the 2003 BBC mini-series The Canterbury Tales; and through the digital humanities “Global Chaucers Project,” we will also explore the non-Anglophone translation history of Chaucer’s works. Assignments will include regular quizzes, a take-home midterm exam, a collaborative annotated bibliography, and a final project for which students may produce their own adaptation of The Canterbury Tales.",
@@ -6552,7 +6552,7 @@
         }
       ],
       "instructor": "Daylanne English",
-      "open_seats": "Closed 2",
+      "open_seats": "2",
       "max_enrollment": "20",
       "crosslistings": [
         "AMST 275-01"
@@ -6577,7 +6577,7 @@
         }
       ],
       "instructor": "James Dawes",
-      "open_seats": "Closed 2",
+      "open_seats": "2",
       "max_enrollment": "20",
       "crosslistings": [],
       "description": "As the US tottered on the brink of its bloody Civil War, a small group of strange and visionary artists started a revolution. During the span of just five years, in one of history’s most astonishing creative convergences, the most elegant, profane, unhinged, heart-wrenching, and influential works of US literature were published. Emerson, Hawthorne, Stowe, Thoreau, Douglass, Melville, Dickinson, Whitman, and Jacobs – together these artists produced a canon of literature that revealed both the demons and angels of our histories and futures. They invented a spiritual movement of unprecedented optimism at the same time that they despaired over what they had become. Everything that was written in the US afterwards would have to come to terms with the brilliant and disturbing achievements of this cluster of outsiders, mystics, and heroes. In this course we will read the landmark texts of this era from literary, historical, and philosophical perspectives.",
@@ -6623,7 +6623,7 @@
         }
       ],
       "instructor": "Matt Burgess",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "16",
       "crosslistings": [],
       "description": "In this creative writing workshop course, students will write an original short story in prose and then re-vision that work into a variety of visual media, such as photography, comics, and film. No artistic or technical skills required--just a willingness to try new things and experiment with form. Readings may include selections from the Grimm Brothers, \"Calvin and Hobbes,\" Kara Walker’s art installations, the work of Mariko and Jillian Tamaki, and Barry Jenkins’s \"Moonlight.\" Prerequisite: ENGL 150 taken at Macalester.",
@@ -6646,7 +6646,7 @@
         }
       ],
       "instructor": "Marlon James",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "16",
       "crosslistings": [],
       "description": "How To Tell a True Story: Essay. Back when Michel Montaigne invented the essay he knew that it was the journey that was important, not the destination. In nearly every other class you will take at Macalester, an essay isn’t complete without a conclusion. In this class, conclusions are nice if they happen, but they are also beside the point. Even the word “essay” originally meant, “an attempt.” So let’s attempt. Instead of coming to conclusions, we will look at the essay as a forum for exploration. Journeys, more than destinations. You will learn that this is truly the most flexible (and most fun) of literary forms precisely because even one that goes nowhere, can enter challenging and meaningful territory. They can be lyrical or narrative; personal or political; funny or tragic; song like or poetic; show or tell. Follow Patricia Hampl, who on realizing that her childhood memories of piano lessons never happened, wrote an essay about memory vs. imagination. Or Geoff Dyer, who on failing to write a biography of DH Lawrence wrote a book about failing to write a book. Or Phillip Lopate, whom one day just stood in front of a mirror and wrote down everything he saw. It’s not about writing better. It’s about seeing better. And letting your new eyes lead to new writing. See you in class. Prerequisite: English 150 (Introduction to Creative Writing) taken at Macalester.",
@@ -6860,7 +6860,7 @@
         }
       ],
       "instructor": "Anna Lindquist",
-      "open_seats": "Closed 6",
+      "open_seats": "6",
       "max_enrollment": "24",
       "crosslistings": [
         "GEOL 104-01"
@@ -7186,7 +7186,7 @@
           "room": "OLRI 301"
         }
       ],
-      "instructor": "Louisa BradtmillerSarah West",
+      "instructor": "Louisa Bradtmiller, Sarah West",
       "open_seats": "3",
       "max_enrollment": "25",
       "crosslistings": [
@@ -7238,7 +7238,7 @@
         }
       ],
       "instructor": "Christie Manning",
-      "open_seats": "Closed -1",
+      "open_seats": "-1",
       "max_enrollment": "20",
       "crosslistings": [
         "First day attendance required; cross-listed with PSYC 270-01; ACTC students may register on the first day of class",
@@ -7263,7 +7263,7 @@
           "room": "ARTCOM 102"
         }
       ],
-      "instructor": "Jerald DoschRuthanne Kurth-Schai",
+      "instructor": "Jerald Dosch, Ruthanne Kurth-Schai",
       "open_seats": "7",
       "max_enrollment": "16",
       "crosslistings": [
@@ -7296,7 +7296,7 @@
           "room": "OLRI 370"
         }
       ],
-      "instructor": "Jerald DoschRuthanne Kurth-Schai",
+      "instructor": "Jerald Dosch, Ruthanne Kurth-Schai",
       "open_seats": "7",
       "max_enrollment": "16",
       "crosslistings": [
@@ -7479,7 +7479,7 @@
         }
       ],
       "instructor": "Amanda Lovelee",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "16",
       "crosslistings": [
         "First day attendance required; ACTC students may register on the first day of class",
@@ -8657,7 +8657,7 @@
         }
       ],
       "instructor": "Ashley Nepp",
-      "open_seats": "Closed 2",
+      "open_seats": "2",
       "max_enrollment": "12",
       "crosslistings": [],
       "description": "This course allows students to participate in a \"real world\" application of their GIS knowledge and skills in a collaborative research project setting. Project focus is on urban GIS and questions developed by and for neighborhoods and other community research organizations. Content of the course includes development of the research project, acquisition and utilization of data used in urban analysis, data manipulation and analytical techniques unique to urban GIS, and geographical data visualization. Laboratory work is required. Prerequisite(s): GEOG 225 and permission of instructor.",
@@ -8853,7 +8853,7 @@
         }
       ],
       "instructor": "Anna Lindquist",
-      "open_seats": "Closed 6",
+      "open_seats": "6",
       "max_enrollment": "24",
       "crosslistings": [
         "ENVI 104-01"
@@ -9051,7 +9051,7 @@
         }
       ],
       "instructor": "Anna Lindquist",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "18",
       "crosslistings": [],
       "description": "This course examines the relationships between symmetry, chemistry, physical and optical properties, and occurrence of minerals. General cosmochemistry, geochemistry and crystal growth will also be discussed. Laboratory projects include crystal morphology and symmetry, optical mineralogy, x-ray diffraction, wet chemistry, and the identification of common rock-forming minerals. Three hours lecture and three hours lab per week. Field trips.",
@@ -9074,7 +9074,7 @@
         }
       ],
       "instructor": "Anna Lindquist",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "18",
       "crosslistings": [],
       "description": "This course examines the relationships between symmetry, chemistry, physical and optical properties, and occurrence of minerals. General cosmochemistry, geochemistry and crystal growth will also be discussed. Laboratory projects include crystal morphology and symmetry, optical mineralogy, x-ray diffraction, wet chemistry, and the identification of common rock-forming minerals. Three hours lecture and three hours lab per week. Field trips.",
@@ -9774,7 +9774,7 @@
         }
       ],
       "instructor": "Brian Lush",
-      "open_seats": "Closed 2",
+      "open_seats": "2",
       "max_enrollment": "25",
       "crosslistings": [
         "CLAS 121-01"
@@ -9945,7 +9945,7 @@
         }
       ],
       "instructor": "Crystal Moten",
-      "open_seats": "Closed 10",
+      "open_seats": "10",
       "max_enrollment": "20",
       "crosslistings": [
         "First day attendance required;cross-listed with AMST 219-01"
@@ -9995,7 +9995,7 @@
         }
       ],
       "instructor": "Crystal Moten",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "16",
       "crosslistings": [
         "First day attendance required; cross listed with AMST 229-01",
@@ -10196,7 +10196,7 @@
         }
       ],
       "instructor": "Amy Sullivan",
-      "open_seats": "Closed -3",
+      "open_seats": "-3",
       "max_enrollment": "16",
       "crosslistings": [
         "First day attendance required"
@@ -10298,7 +10298,7 @@
         }
       ],
       "instructor": "Cameron Bradley",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "12",
       "crosslistings": [
         "Not open to First Year students"
@@ -10373,7 +10373,7 @@
         }
       ],
       "instructor": "Scott Pribnow",
-      "open_seats": "Closed -3",
+      "open_seats": "-3",
       "max_enrollment": "16",
       "crosslistings": [
         "2 credits"
@@ -10648,7 +10648,7 @@
         }
       ],
       "instructor": "Jenna Rice Rahaim",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "20",
       "crosslistings": [
         "ANTH 253-01"
@@ -10698,7 +10698,7 @@
         }
       ],
       "instructor": "James von Geldern",
-      "open_seats": "Closed 5",
+      "open_seats": "5",
       "max_enrollment": "25",
       "crosslistings": [
         "RUSS 272-01"
@@ -10723,7 +10723,7 @@
         }
       ],
       "instructor": "Kata Chillag",
-      "open_seats": "Closed 8",
+      "open_seats": "8",
       "max_enrollment": "25",
       "crosslistings": [],
       "description": "This course introduces and explores the major health problems facing developing countries, and the main approaches to remediation. The course considers the social determinants of health, and the need for public health programs to address the root causes of health inequities as well as illness itself. Focus is at the country, international-organization, and donor levels. Attention will be given to major indicators, recent trends, policies, and metrics for monitoring progress. A case study, such as international tuberculosis control, will be used as an applied analysis.",
@@ -10745,8 +10745,8 @@
           "room": "ARTCOM 102"
         }
       ],
-      "instructor": "Joanna InglotJulia Chadaga",
-      "open_seats": "Closed -1",
+      "instructor": "Joanna Inglot, Julia Chadaga",
+      "open_seats": "-1",
       "max_enrollment": "20",
       "crosslistings": [
         "ART 294-04",
@@ -10772,7 +10772,7 @@
         }
       ],
       "instructor": "Brad Stiffler",
-      "open_seats": "Closed 4",
+      "open_seats": "4",
       "max_enrollment": "25",
       "crosslistings": [
         "MCST 294-01"
@@ -10848,7 +10848,7 @@
         }
       ],
       "instructor": "Nadya Nedelsky",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "15",
       "crosslistings": [],
       "description": "Drawing on several disciplines, this course confronts global hatred from three angles. The first is the hater’s internal world and looks at how human nature, genetic structure/instincts, and individual psychology may foster hatred. The second is external, exploring the role history, culture, ideology, social structure, religion, and mass psychology play. The third seeks to apply the insights gained from the first two, asking: how might we break the devastating cycles of hatred so present in our world? Prerequisite(s): Senior standing or permission of instructor.",
@@ -11445,7 +11445,7 @@
         }
       ],
       "instructor": "Toni Dorca",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "15",
       "crosslistings": [
         "First day attendance required; cross-listed with SPAN 307-01"
@@ -11470,7 +11470,7 @@
         }
       ],
       "instructor": "Claudia Giannini",
-      "open_seats": "Closed 3",
+      "open_seats": "3",
       "max_enrollment": "15",
       "crosslistings": [
         "First day attendance required; cross-listed with AMST 308-01",
@@ -11694,7 +11694,7 @@
         }
       ],
       "instructor": "Marianne Milligan",
-      "open_seats": "Closed 3",
+      "open_seats": "3",
       "max_enrollment": "17",
       "crosslistings": [
         "ANTH 206-01; limit will reflect 3 seats held for SR",
@@ -11898,7 +11898,7 @@
         }
       ],
       "instructor": "Vittorio Addona",
-      "open_seats": "Closed -6",
+      "open_seats": "-6",
       "max_enrollment": "24",
       "crosslistings": [
         "ACTC students may register on the first day of class",
@@ -12340,7 +12340,7 @@
         }
       ],
       "instructor": "Alicia Johnson",
-      "open_seats": "Closed -3",
+      "open_seats": "-3",
       "max_enrollment": "24",
       "crosslistings": [
         "First day attendance required; ACTC students may register on the first day of class",
@@ -12366,7 +12366,7 @@
         }
       ],
       "instructor": "Lisa Lendway",
-      "open_seats": "Closed 4",
+      "open_seats": "4",
       "max_enrollment": "24",
       "crosslistings": [
         "First day attendance required; ACTC students may register on the first day of class",
@@ -12470,7 +12470,7 @@
         }
       ],
       "instructor": "Alicia Johnson",
-      "open_seats": "Closed 2",
+      "open_seats": "2",
       "max_enrollment": "24",
       "crosslistings": [
         "First day attendance required; ACTC students may register on the first day of class",
@@ -12496,7 +12496,7 @@
         }
       ],
       "instructor": "Alicia Johnson",
-      "open_seats": "Closed 11",
+      "open_seats": "11",
       "max_enrollment": "24",
       "crosslistings": [
         "First day attendance required; ACTC students may register on the first day of class",
@@ -12626,7 +12626,7 @@
         }
       ],
       "instructor": "Vittorio Addona",
-      "open_seats": "Closed -3",
+      "open_seats": "-3",
       "max_enrollment": "18",
       "crosslistings": [
         "ACTC students may register on the first day of class",
@@ -12652,7 +12652,7 @@
         }
       ],
       "instructor": "Vittorio Addona",
-      "open_seats": "Closed 2",
+      "open_seats": "2",
       "max_enrollment": "18",
       "crosslistings": [
         "ACTC students may register on the first day of class",
@@ -12724,7 +12724,7 @@
         }
       ],
       "instructor": "Morgan Adamson",
-      "open_seats": "Closed -1",
+      "open_seats": "-1",
       "max_enrollment": "21",
       "crosslistings": [],
       "description": "This course introduces the aesthetics of film as well as selected issues in contemporary film studies. Its aesthetic approach isolates the features that constitute film as a distinct art form: narrative or non-narrative structure, staging, cinematography, editing, and sound. Topics in contemporary film studies that might be considered include one or more of the following: cultural studies and film, industrial organization and globalization, representations of gender and race, and theories of authorship, horror, and spectatorship. Several papers, a test covering basic film terms, and a short video project emphasizing abstract form are required. Suitable for first year students.",
@@ -12918,7 +12918,7 @@
         }
       ],
       "instructor": "Brad Stiffler",
-      "open_seats": "Closed 4",
+      "open_seats": "4",
       "max_enrollment": "25",
       "crosslistings": [
         "INTL 294-02"
@@ -13860,7 +13860,7 @@
         }
       ],
       "instructor": "Geoffrey Gorham",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "20",
       "crosslistings": [],
       "description": "A study of major philosophers of ancient Greece, Rome and the medieval period, including the Pre-Socratics, Plato, Aristotle, Epicurus, the Stoics, Augustine, Anselm, and Aquinas.",
@@ -13883,7 +13883,7 @@
         }
       ],
       "instructor": "Samuel Asarnow",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "20",
       "crosslistings": [],
       "description": "Bioethics deals with a variety of ethical issues arising in the context of medical care and biomedical research. These issues include informed consent, euthanasia, reproductive rights, confidentiality, and the distribution of health care resources. The course uses ethical theory to shed light on issues in medicine, and issues in medicine to illuminate ethical theory.",
@@ -13906,7 +13906,7 @@
         }
       ],
       "instructor": "Geoffrey Gorham",
-      "open_seats": "Closed -2",
+      "open_seats": "-2",
       "max_enrollment": "16",
       "crosslistings": [],
       "description": "Metaphysics - the investigation of the fundamental categories of being - is as old as philosophy itself. This class is devoted to the most important and intriguing metaphysical theories and problems of contemporary philosophy. Specific topics will vary from year to year depending on student and faculty interest but will likely include: time and space, freedom and determinism, infinity, identity, causality, death, the origin and demise of the universe, abstract and fictional objects, necessity and possibility, human nature and transhumanism, and the categories of race and gender. We will also be concerned with the relationship between metaphysics and other domains within and beyond philosophy, such as literature and natural science. Classes will be seminar-style, focused on discussion of readings and student work.",
@@ -13975,7 +13975,7 @@
         }
       ],
       "instructor": "Samuel Asarnow",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "15",
       "crosslistings": [],
       "description": "A capstone experience in philosophy for senior majors. Each participant in the seminar will be expected to write an essay reflective of scholarly standards within the discipline on a question of their own choosing, within a collaborative and supportive environment. Participants in the seminar will help one another develop their capstone papers and prepare to present them publicly at the end of the semester. Readings may be assigned as appropriate with regard to student-identified topics. Prerequisite(s): Philosophy major and senior status, or permission of instructor.",
@@ -14044,7 +14044,7 @@
         }
       ],
       "instructor": "Anita Bendickson",
-      "open_seats": "Closed 6",
+      "open_seats": "6",
       "max_enrollment": "25",
       "crosslistings": [],
       "description": "This class is based on Hatha Yoga. Class work is centered in physical posture (asana) practice and breath work (pranayama). These two limbs of yoga allow the student to become familiar with his/her own body and the way the minds inhabits it. Basic yoga poses (asana) are introduced and added to each week progressing from beginner poses to intermediate poses with advanced variations offered for more experienced students. Yoga class starts with centering breath work and moves into postures (asana) and movement (vinyasa) which warm up the muscles and open the joints as postures are explored. Props are employed to allow proper alignment. Class work ends with a cool down period to allow the student to come into balance and a relaxation (shavasana). Any level of fitness is appropriate! Inform instructor of limitations so practice can be adjusted for you. Come to the practice with an open mind and a desire to explore, embrace and inhabit your best self in a supportive, non-competitive space.",
@@ -14090,7 +14090,7 @@
         }
       ],
       "instructor": "Anita Bendickson",
-      "open_seats": "Closed 3",
+      "open_seats": "3",
       "max_enrollment": "25",
       "crosslistings": [],
       "description": "This class is based on Hatha Yoga. Class work is centered in physical posture (asana) practice and breath work (pranayama). These two limbs of yoga allow the student to become familiar with his/her own body and the way the minds inhabits it. Basic yoga poses (asana) are introduced and added to each week progressing from beginner poses to intermediate poses with advanced variations offered for more experienced students. Yoga class starts with centering breath work and moves into postures (asana) and movement (vinyasa) which warm up the muscles and open the joints as postures are explored. Props are employed to allow proper alignment. Class work ends with a cool down period to allow the student to come into balance and a relaxation (shavasana). Any level of fitness is appropriate! Inform instructor of limitations so practice can be adjusted for you. Come to the practice with an open mind and a desire to explore, embrace and inhabit your best self in a supportive, non-competitive space.",
@@ -14159,7 +14159,7 @@
         }
       ],
       "instructor": "Kristine Spangard",
-      "open_seats": "Closed 12",
+      "open_seats": "12",
       "max_enrollment": "25",
       "crosslistings": [],
       "description": "Pilates is a mind-body discipline that uses non-impact exercises designed by Joseph Pilates to develop strength, flexibility, stability, coordination, and physical awareness. Practiced regularly, Pilates improves control and endurance in the entire body. Students learn Pilates breathing, principles, and its progressive repertoire, and how to apply them to correct their own movement patterns. Pilates enhances performance in other athletic activities and also in the activities of daily life. Students are expected to come ready to learn about a new way of moving with awareness. Regular attendance and focused attention are essential; cell phones are not allowed in the class. Dress for movement, but clothing should not be too baggy. Classes are suitable for students of any level. No prior experience necessary. Pilates exercises can be modified to benefit all body types and backgrounds. All are welcome!",
@@ -14228,7 +14228,7 @@
         }
       ],
       "instructor": "Don DeBoer",
-      "open_seats": "Closed 6",
+      "open_seats": "6",
       "max_enrollment": "25",
       "crosslistings": [],
       "description": "This course will introduce students to the basic elements of salsa dancing especially as it is done in nightclubs throughout the world. The course will include basic elements in addition to stylistic differences that may other related Latin dances. The class promises to be a good aerobic workout and will also take place in a variety of formats including: solo, line, partner, and group.",
@@ -14948,7 +14948,7 @@
         }
       ],
       "instructor": "Lesley Lavery",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "25",
       "crosslistings": [
         "AMST 203-01"
@@ -15072,7 +15072,7 @@
         }
       ],
       "instructor": "Julie Dolan",
-      "open_seats": "Closed -4",
+      "open_seats": "-4",
       "max_enrollment": "25",
       "crosslistings": [],
       "description": "This course will equip you with the skills and intuition to think about politics in a more critical and organized way. You will practice the scientific method - identifying a problem worthy of study, developing testable hypotheses, designing a research strategy, gathering data, analyzing data, and interpreting your results - and contemplate the philosophical conundrums that underlie our efforts to describe, explain, and interpret complex phenomena. Every Semester. (4 credits) Empirical Methods: The department requires its majors to take one course in empirical research methodology, preferably before their junior year. There are a number of courses that fulfill this requirement, including: POLI 272, SOCI 269, SOCI 270, SOCI 275. In some cases, research methods courses taken in other social science disciplines may be used to fulfill this requirement following approval by the political science department chair.",
@@ -15235,7 +15235,7 @@
         }
       ],
       "instructor": "Andrew Latham",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "20",
       "crosslistings": [
         "Sophomore standing or permission of instructor required"
@@ -15260,7 +15260,7 @@
         }
       ],
       "instructor": "David Blaney",
-      "open_seats": "Closed 4",
+      "open_seats": "4",
       "max_enrollment": "20",
       "crosslistings": [
         "Sophomore standing or permission of instructor required"
@@ -15671,7 +15671,7 @@
         }
       ],
       "instructor": "Brooke Lea",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "24",
       "crosslistings": [],
       "description": "This course is an introduction to the basic principles of research in psychology, with an emphasis on statistical techniques used in psychological science. We examine how to test psychological hypotheses using various statistical analyses, and we consider the pros and cons of experimental, quasi-experimental, and correlational research designs. The course includes a weekly laboratory component in which students develop proficiency with statistical software, writing reports in American Psychological Association style, and familiarity with experimental techniques unique to behavioral research. Prerequisite(s): PSYC 100 Permission of instructor is required for first year students",
@@ -15694,7 +15694,7 @@
         }
       ],
       "instructor": "Brooke Lea",
-      "open_seats": "Closed -1",
+      "open_seats": "-1",
       "max_enrollment": "12",
       "crosslistings": [],
       "description": "This course is an introduction to the basic principles of research in psychology, with an emphasis on statistical techniques used in psychological science. We examine how to test psychological hypotheses using various statistical analyses, and we consider the pros and cons of experimental, quasi-experimental, and correlational research designs. The course includes a weekly laboratory component in which students develop proficiency with statistical software, writing reports in American Psychological Association style, and familiarity with experimental techniques unique to behavioral research. Prerequisite(s): PSYC 100 Permission of instructor is required for first year students",
@@ -15717,7 +15717,7 @@
         }
       ],
       "instructor": "Brooke Lea",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "12",
       "crosslistings": [],
       "description": "This course is an introduction to the basic principles of research in psychology, with an emphasis on statistical techniques used in psychological science. We examine how to test psychological hypotheses using various statistical analyses, and we consider the pros and cons of experimental, quasi-experimental, and correlational research designs. The course includes a weekly laboratory component in which students develop proficiency with statistical software, writing reports in American Psychological Association style, and familiarity with experimental techniques unique to behavioral research. Prerequisite(s): PSYC 100 Permission of instructor is required for first year students",
@@ -15740,7 +15740,7 @@
         }
       ],
       "instructor": "Tina Kruse",
-      "open_seats": "Closed -1",
+      "open_seats": "-1",
       "max_enrollment": "25",
       "crosslistings": [
         "First day attendance required; cross-listed with EDUC 220-01"
@@ -15765,7 +15765,7 @@
         }
       ],
       "instructor": "Darcy Burgund",
-      "open_seats": "Closed 2",
+      "open_seats": "2",
       "max_enrollment": "24",
       "crosslistings": [
         "ACTC students may register on the first day of class",
@@ -15791,7 +15791,7 @@
         }
       ],
       "instructor": "Darcy Burgund",
-      "open_seats": "Closed 2",
+      "open_seats": "2",
       "max_enrollment": "24",
       "crosslistings": [],
       "description": "Cognitive neuroscience is a relatively recent discipline that combines cognitive science and cognitive psychology with biology and neuroscience to investigate how the brain enables the myriad of complex functions we know as the mind. This course will explore basic concepts and contemporary topics in the field, focusing in particular on the methods used in cognitive neuroscience research. Through lecture and lab sessions, students will learn to read and interpret primary source material, design and implement cognitive neuroscience studies, and present research in verbal and written forms. Overall, students will gain an appreciation for the amazing intricacy of the brain-mind relationship, as well as a sense of how this relationship may be understood eventually using cognitive neuroscience techniques. Group A course. Prerequisite(s): PSYC 180 or PSYC 100.",
@@ -15907,7 +15907,7 @@
           "room": "OLRI 352"
         }
       ],
-      "instructor": "Karen GrabowKeith Halperin",
+      "instructor": "Karen Grabow, Keith Halperin",
       "open_seats": "20",
       "max_enrollment": "28",
       "crosslistings": [],
@@ -15956,7 +15956,7 @@
         }
       ],
       "instructor": "Christie Manning",
-      "open_seats": "Closed -1",
+      "open_seats": "-1",
       "max_enrollment": "20",
       "crosslistings": [
         "First day attendance required; cross-listed with ENVI 270-01; ACTC students may register on the first day of class",
@@ -15982,7 +15982,7 @@
         }
       ],
       "instructor": "Jaine Strauss",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "32",
       "crosslistings": [],
       "description": "This course examines multiple, interactive factors that contribute to human health; we take a biopsychsocial approach to understanding how best to promote and maintain health, prevent and treat illness, and adapt and thrive in the context of chronic illness. We discuss the roles of stress, coping, immune response, social relationships, personality, and structural inequalities in the progression and prevention of disease. We also address some ways in which behaviors (e.g., physical activity, nutrition, substance use, sleep) can contribute to wellbeing or sickness, and we examine behavior change strategies that can help improve our own and out community’s health habits. Group B course. Prerequisite(s): PSYC 100",
@@ -16028,7 +16028,7 @@
         }
       ],
       "instructor": "Joan Ostrove",
-      "open_seats": "Closed 2",
+      "open_seats": "2",
       "max_enrollment": "16",
       "crosslistings": [],
       "description": "What is \"disability\" and what does an understanding of disability tell us about human experience more generally? What is a \"disability identity\" and what implications might claiming that identity have for psychological well-being and social change? How do stereotypes of disabled people and expectations of \"normality\" affect everyone’s lives (not just those with disabilities)? Why don’t many Deaf people consider themselves \"disabled?\" What might we learn from shifting the \"problem\" of disability from the individual person to the social environment? This course will explore these and many other questions that emerge from thinking about the experience of disability (and its intersection with identities based on gender, race, class, and sexuality). Grounded in a critical disability and Deaf studies framework that considers the socially, culturally, linguistically, and historically constructed meaning of physical, sensory, and cognitive \"impairments,\" the course will rely on theoretical and empirical readings from psychology and related disciplines, memoir, film, and guest visitors as we explore the social and psychological meanings of disability. Prerequisite(s): PSYC 100 and PSYC 201",
@@ -16051,7 +16051,7 @@
         }
       ],
       "instructor": "Brian Rood",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "20",
       "crosslistings": [],
       "description": "This course examines specific applications of psychological principles to the mental health field by exploring strategies for therapeutic intervention. We discuss a wide range of approaches (e.g., psychoanalysis; humanistic therapy; cognitive behavioral and dialectical behavior therapy; mindfulness based stress reduction; family therapy; art therapy) and we consider issues raised by traditional clinical practice, such as ethics, the politics and economics of mental health, and cultural biases. NOTE: Students who have taken European Clinical Psychology through the DIS study away program must have instructor permission to enroll. Prerequisite(s): PSYC 100 and either PSYC 252 or PSYC 272",
@@ -16122,7 +16122,7 @@
         }
       ],
       "instructor": "Katrina Schleisman",
-      "open_seats": "Closed 0",
+      "open_seats": "0",
       "max_enrollment": "16",
       "crosslistings": [],
       "description": "Memory is fundamental to our lives. It underlies our ability to share experiences and culture; it defines how we are unique. In this course we will explore various types of memory that have been identified through research into human and non-human animal behavior and brain function. We will explore questions such as: how can we have vivid, movie-like memories for events that never happened? We will see how this mismatch between experience and memory can be viewed both as a problem that can result in memory errors, and as a positive form of cognitive flexibility. The key focus of this course is to explore the question: how are memories stored in and retrieved from the brain? We will discuss research that relates behavior to brain function, and gain a better understanding of how the structure of our nervous system enables insights into how our memory systems work. Prerequisites include PSYC 100 or 180 and PSYC 201 or MATH 155.",
@@ -16144,7 +16144,7 @@
           "room": "OLRI 300"
         }
       ],
-      "instructor": "Steve GuglielmoDarcy BurgundMorgan JeraldJoan Ostrove",
+      "instructor": "Steve Guglielmo, Darcy Burgund, Morgan Jerald, Joan Ostrove",
       "open_seats": "3",
       "max_enrollment": "28",
       "crosslistings": [],
@@ -16617,7 +16617,7 @@
         }
       ],
       "instructor": "James von Geldern",
-      "open_seats": "Closed 5",
+      "open_seats": "5",
       "max_enrollment": "25",
       "crosslistings": [
         "INTL 272-01"
@@ -16641,8 +16641,8 @@
           "room": "ARTCOM 102"
         }
       ],
-      "instructor": "Julia ChadagaJoanna Inglot",
-      "open_seats": "Closed -1",
+      "instructor": "Julia Chadaga, Joanna Inglot",
+      "open_seats": "-1",
       "max_enrollment": "20",
       "crosslistings": [
         "ART 294-04",
@@ -16931,7 +16931,7 @@
         }
       ],
       "instructor": "Erik Larson",
-      "open_seats": "Closed 2",
+      "open_seats": "2",
       "max_enrollment": "20",
       "crosslistings": [],
       "description": "Economic activity is a form of social activity: people attribute meaning to economic activity, they pursue such activity in relation to others, and this activity is patterned and organized. Starting from these premises, economic sociologists ask a wide range of questions, such as: How do people find jobs? What historical and social legacies affect prospects for development? How do art dealers know how to set prices on unique original works of art? What social arrangements influence economic inequalities? In what ways do people mix economic activities and intimacy? By surveying recent developments in economic sociology, this course introduces students to the kinds of questions that economic sociologists ask, the types of evidence they use, and the range of answers they generate. Students do not need a background in economics or sociology for this course.",
@@ -17001,7 +17001,7 @@
           "room": "CARN 208"
         }
       ],
-      "instructor": "Erika Busse-CárdenasErik Larson",
+      "instructor": "Erika Busse-Cárdenas, Erik Larson",
       "open_seats": "5",
       "max_enrollment": "20",
       "crosslistings": [],
@@ -18227,7 +18227,7 @@
         }
       ],
       "instructor": "Toni Dorca",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "15",
       "crosslistings": [
         "First day attendance required; cross-listed with LATI 307-01"
@@ -18252,7 +18252,7 @@
         }
       ],
       "instructor": "Claudia Giannini",
-      "open_seats": "Closed 3",
+      "open_seats": "3",
       "max_enrollment": "15",
       "crosslistings": [
         "First day attendance required; cross-listed with AMST 308-01",
@@ -18477,7 +18477,7 @@
         }
       ],
       "instructor": "Cláudia Tatinge Nascimento",
-      "open_seats": "Closed 2",
+      "open_seats": "2",
       "max_enrollment": "16",
       "crosslistings": [],
       "description": "An introduction to the fundamental techniques of realistic acting. Through improvisation, physical and vocal exercises, text and character analysis, and scene studies, the student is introduced to the process of acting preparation and performance. Limited to 16 students.",
@@ -18970,7 +18970,7 @@
           "room": ""
         }
       ],
-      "instructor": "Cláudia Tatinge NascimentoThomas Barrett",
+      "instructor": "Cláudia Tatinge Nascimento, Thomas Barrett",
       "open_seats": "11",
       "max_enrollment": "20",
       "crosslistings": [],
@@ -19147,7 +19147,7 @@
         }
       ],
       "instructor": "Crystal Moten",
-      "open_seats": "Closed 1",
+      "open_seats": "1",
       "max_enrollment": "16",
       "crosslistings": [
         "First day attendance required; cross-listed with AMST 229-01",

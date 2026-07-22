@@ -1,7 +1,7 @@
 {
   "term_code": "202430",
   "term_label": "Spring 2024",
-  "scraped_at": "2026-07-21T00:12:52.884174+00:00",
+  "scraped_at": "2026-07-22T01:54:28.872447+00:00",
   "course_count": 781,
   "courses": [
     {
@@ -447,7 +447,7 @@
           "room": "HUM 314"
         }
       ],
-      "instructor": "Duchess HarrisJuliette Rogers",
+      "instructor": "Duchess Harris, Juliette Rogers",
       "open_seats": "9",
       "max_enrollment": "20",
       "crosslistings": [
@@ -762,7 +762,7 @@
           "room": "CARN 304"
         }
       ],
-      "instructor": "Olga GonzálezErika Busse-Cárdenas",
+      "instructor": "Olga González, Erika Busse-Cárdenas",
       "open_seats": "9",
       "max_enrollment": "20",
       "crosslistings": [
@@ -1726,7 +1726,7 @@
           "room": "HUM 112"
         }
       ],
-      "instructor": "Rivi Handler-SpitzPenelope Geng",
+      "instructor": "Rivi Handler-Spitz, Penelope Geng",
       "open_seats": "6",
       "max_enrollment": "20",
       "crosslistings": [
@@ -3096,7 +3096,7 @@
           "room": "OLRI 341"
         }
       ],
-      "instructor": "Amy RiceMarc Rodwogin",
+      "instructor": "Amy Rice, Marc Rodwogin",
       "open_seats": "0",
       "max_enrollment": "36",
       "crosslistings": [
@@ -3122,7 +3122,7 @@
           "room": "OLRI 341"
         }
       ],
-      "instructor": "Malia BorgAmy Rice",
+      "instructor": "Malia Borg, Amy Rice",
       "open_seats": "9",
       "max_enrollment": "36",
       "crosslistings": [
@@ -4004,7 +4004,7 @@
           "room": "HUM 112"
         }
       ],
-      "instructor": "Rivi Handler-SpitzPenelope Geng",
+      "instructor": "Rivi Handler-Spitz, Penelope Geng",
       "open_seats": "6",
       "max_enrollment": "20",
       "crosslistings": [
@@ -5297,7 +5297,7 @@
           "room": "THEATR 213"
         }
       ],
-      "instructor": "Bret JacksonJames Dawes",
+      "instructor": "Bret Jackson, James Dawes",
       "open_seats": "2",
       "max_enrollment": "24",
       "crosslistings": [
@@ -6483,7 +6483,7 @@
           "room": "THEATR 213"
         }
       ],
-      "instructor": "James DawesBret Jackson",
+      "instructor": "James Dawes, Bret Jackson",
       "open_seats": "2",
       "max_enrollment": "24",
       "crosslistings": [
@@ -6748,7 +6748,7 @@
           "room": "HUM 112"
         }
       ],
-      "instructor": "Penelope GengRivi Handler-Spitz",
+      "instructor": "Penelope Geng, Rivi Handler-Spitz",
       "open_seats": "6",
       "max_enrollment": "20",
       "crosslistings": [
@@ -8400,7 +8400,7 @@
           "room": "HUM 314"
         }
       ],
-      "instructor": "Juliette RogersDuchess Harris",
+      "instructor": "Juliette Rogers, Duchess Harris",
       "open_seats": "9",
       "max_enrollment": "20",
       "crosslistings": [
@@ -10053,7 +10053,7 @@
           "room": "HUM 214"
         }
       ],
-      "instructor": "Ernesto CapelloMaria Fedorova",
+      "instructor": "Ernesto Capello, Maria Fedorova",
       "open_seats": "3",
       "max_enrollment": "20",
       "crosslistings": [
@@ -10350,7 +10350,7 @@
           "room": "CARN 411"
         }
       ],
-      "instructor": "Erik LarsonPatrick Schmidt",
+      "instructor": "Erik Larson, Patrick Schmidt",
       "open_seats": "16",
       "max_enrollment": "25",
       "crosslistings": [
@@ -10400,7 +10400,7 @@
           "room": ""
         }
       ],
-      "instructor": "Samuel AsarnowLeslie Myint",
+      "instructor": "Samuel Asarnow, Leslie Myint",
       "open_seats": "2",
       "max_enrollment": "25",
       "crosslistings": [
@@ -10431,7 +10431,7 @@
           "room": ""
         }
       ],
-      "instructor": "Leslie MyintSamuel Asarnow",
+      "instructor": "Leslie Myint, Samuel Asarnow",
       "open_seats": "19",
       "max_enrollment": "25",
       "crosslistings": [
@@ -13783,7 +13783,7 @@
           "room": "LEOCTR FIELDHOUSE"
         }
       ],
-      "instructor": "Gregg OlsonMadeline Buckley",
+      "instructor": "Gregg Olson, Madeline Buckley",
       "open_seats": "9",
       "max_enrollment": "20",
       "crosslistings": [
@@ -14107,7 +14107,7 @@
           "room": "OLRI 404"
         }
       ],
-      "instructor": "Anna WilliamsJohn Cannon",
+      "instructor": "Anna Williams, John Cannon",
       "open_seats": "10",
       "max_enrollment": "16",
       "crosslistings": [],
@@ -14130,7 +14130,7 @@
           "room": "OLRI 404"
         }
       ],
-      "instructor": "Anna WilliamsJohn Cannon",
+      "instructor": "Anna Williams, John Cannon",
       "open_seats": "5",
       "max_enrollment": "8",
       "crosslistings": [
@@ -14155,7 +14155,7 @@
           "room": "OLRI 404"
         }
       ],
-      "instructor": "Anna WilliamsJohn Cannon",
+      "instructor": "Anna Williams, John Cannon",
       "open_seats": "5",
       "max_enrollment": "8",
       "crosslistings": [
@@ -16316,7 +16316,7 @@
           "room": "HUM 214"
         }
       ],
-      "instructor": "Maria FedorovaErnesto Capello",
+      "instructor": "Maria Fedorova, Ernesto Capello",
       "open_seats": "3",
       "max_enrollment": "20",
       "crosslistings": [
@@ -16615,7 +16615,7 @@
           "room": "CARN 304"
         }
       ],
-      "instructor": "Erika Busse-CárdenasOlga González",
+      "instructor": "Erika Busse-Cárdenas, Olga González",
       "open_seats": "9",
       "max_enrollment": "20",
       "crosslistings": [
@@ -18647,7 +18647,7 @@
           "room": ""
         }
       ],
-      "instructor": "Thomas BarrettMaryBeth GagnerWu Chen Khoo",
+      "instructor": "Thomas Barrett, MaryBeth Gagner, Wu Chen Khoo",
       "open_seats": "22",
       "max_enrollment": "35",
       "crosslistings": [],
