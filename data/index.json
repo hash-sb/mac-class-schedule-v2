@@ -1,6 +1,270 @@
 {
-  "generated_at": "2026-07-22T01:10:26.246977+00:00",
+  "generated_at": "2026-07-23T00:42:08.458402+00:00",
   "terms": [
+    {
+      "term_code": "200910",
+      "term_label": "Fall 2008",
+      "course_count": 684,
+      "scraped_at": "2026-07-22T01:23:59.401569+00:00"
+    },
+    {
+      "term_code": "200930",
+      "term_label": "Spring 2009",
+      "course_count": 668,
+      "scraped_at": "2026-07-22T01:24:34.112542+00:00"
+    },
+    {
+      "term_code": "200940",
+      "term_label": "Summer I 2009",
+      "course_count": 1,
+      "scraped_at": "2026-07-22T01:24:40.911774+00:00"
+    },
+    {
+      "term_code": "201010",
+      "term_label": "Fall 2009",
+      "course_count": 722,
+      "scraped_at": "2026-07-22T01:25:48.367383+00:00"
+    },
+    {
+      "term_code": "201030",
+      "term_label": "Spring 2010",
+      "course_count": 698,
+      "scraped_at": "2026-07-22T01:26:26.767262+00:00"
+    },
+    {
+      "term_code": "201050",
+      "term_label": "Summer II 2010",
+      "course_count": 1,
+      "scraped_at": "2026-07-22T01:27:05.244845+00:00"
+    },
+    {
+      "term_code": "201110",
+      "term_label": "Fall 2010",
+      "course_count": 711,
+      "scraped_at": "2026-07-22T01:27:41.817121+00:00"
+    },
+    {
+      "term_code": "201130",
+      "term_label": "Spring 2011",
+      "course_count": 695,
+      "scraped_at": "2026-07-22T01:28:19.859172+00:00"
+    },
+    {
+      "term_code": "201210",
+      "term_label": "Fall 2011",
+      "course_count": 714,
+      "scraped_at": "2026-07-22T01:29:52.723690+00:00"
+    },
+    {
+      "term_code": "201230",
+      "term_label": "Spring 2012",
+      "course_count": 697,
+      "scraped_at": "2026-07-22T01:30:32.171096+00:00"
+    },
+    {
+      "term_code": "201250",
+      "term_label": "Summer II 2012",
+      "course_count": 2,
+      "scraped_at": "2026-07-22T01:31:05.291305+00:00"
+    },
+    {
+      "term_code": "201310",
+      "term_label": "Fall 2012",
+      "course_count": 718,
+      "scraped_at": "2026-07-22T01:31:41.930225+00:00"
+    },
+    {
+      "term_code": "201330",
+      "term_label": "Spring 2013",
+      "course_count": 697,
+      "scraped_at": "2026-07-22T01:32:21.654307+00:00"
+    },
+    {
+      "term_code": "201350",
+      "term_label": "Summer II 2013",
+      "course_count": 2,
+      "scraped_at": "2026-07-22T01:32:54.017342+00:00"
+    },
+    {
+      "term_code": "201430",
+      "term_label": "Spring 2014",
+      "course_count": 696,
+      "scraped_at": "2026-07-22T01:34:26.614165+00:00"
+    },
+    {
+      "term_code": "201510",
+      "term_label": "Fall 2014",
+      "course_count": 760,
+      "scraped_at": "2026-07-22T01:35:55.088270+00:00"
+    },
+    {
+      "term_code": "201530",
+      "term_label": "Spring 2015",
+      "course_count": 714,
+      "scraped_at": "2026-07-22T01:36:31.772887+00:00"
+    },
+    {
+      "term_code": "201540",
+      "term_label": "Summer I 2015",
+      "course_count": 1,
+      "scraped_at": "2026-07-22T01:36:40.070612+00:00"
+    },
+    {
+      "term_code": "201550",
+      "term_label": "Summer II 2015",
+      "course_count": 1,
+      "scraped_at": "2026-07-22T01:36:49.918955+00:00"
+    },
+    {
+      "term_code": "201610",
+      "term_label": "Fall 2015",
+      "course_count": 765,
+      "scraped_at": "2026-07-22T01:37:31.027094+00:00"
+    },
+    {
+      "term_code": "201630",
+      "term_label": "Spring 2016",
+      "course_count": 722,
+      "scraped_at": "2026-07-22T01:38:08.970468+00:00"
+    },
+    {
+      "term_code": "201650",
+      "term_label": "Summer II 2016",
+      "course_count": 2,
+      "scraped_at": "2026-07-22T01:38:44.041269+00:00"
+    },
+    {
+      "term_code": "201710",
+      "term_label": "Fall 2016",
+      "course_count": 763,
+      "scraped_at": "2026-07-22T01:39:22.206600+00:00"
+    },
+    {
+      "term_code": "201730",
+      "term_label": "Spring 2017",
+      "course_count": 733,
+      "scraped_at": "2026-07-22T01:40:01.236302+00:00"
+    },
+    {
+      "term_code": "201810",
+      "term_label": "Fall 2017",
+      "course_count": 761,
+      "scraped_at": "2026-07-22T01:41:29.927991+00:00"
+    },
+    {
+      "term_code": "201830",
+      "term_label": "Spring 2018",
+      "course_count": 721,
+      "scraped_at": "2026-07-22T01:42:09.198765+00:00"
+    },
+    {
+      "term_code": "201910",
+      "term_label": "Fall 2018",
+      "course_count": 786,
+      "scraped_at": "2026-07-22T01:43:41.975721+00:00"
+    },
+    {
+      "term_code": "201930",
+      "term_label": "Spring 2019",
+      "course_count": 743,
+      "scraped_at": "2026-07-22T01:44:18.378519+00:00"
+    },
+    {
+      "term_code": "202010",
+      "term_label": "Fall 2019",
+      "course_count": 767,
+      "scraped_at": "2026-07-22T01:45:50.689829+00:00"
+    },
+    {
+      "term_code": "202030",
+      "term_label": "Spring 2020",
+      "course_count": 726,
+      "scraped_at": "2026-07-22T01:46:28.508305+00:00"
+    },
+    {
+      "term_code": "202110",
+      "term_label": "Fall 2020",
+      "course_count": 592,
+      "scraped_at": "2026-07-22T01:47:58.916131+00:00"
+    },
+    {
+      "term_code": "202130",
+      "term_label": "Spring 2021",
+      "course_count": 606,
+      "scraped_at": "2026-07-22T01:48:36.142966+00:00"
+    },
+    {
+      "term_code": "202150",
+      "term_label": "Summer II 2021",
+      "course_count": 96,
+      "scraped_at": "2026-07-22T01:49:12.953837+00:00"
+    },
+    {
+      "term_code": "202210",
+      "term_label": "Fall 2021",
+      "course_count": 764,
+      "scraped_at": "2026-07-22T01:49:50.494056+00:00"
+    },
+    {
+      "term_code": "202230",
+      "term_label": "Spring 2022",
+      "course_count": 755,
+      "scraped_at": "2026-07-22T01:50:29.428115+00:00"
+    },
+    {
+      "term_code": "202310",
+      "term_label": "Fall 2022",
+      "course_count": 768,
+      "scraped_at": "2026-07-22T01:51:59.529985+00:00"
+    },
+    {
+      "term_code": "202320",
+      "term_label": "January 2023",
+      "course_count": 1,
+      "scraped_at": "2026-07-22T01:52:09.058789+00:00"
+    },
+    {
+      "term_code": "202330",
+      "term_label": "Spring 2023",
+      "course_count": 753,
+      "scraped_at": "2026-07-22T01:52:20.162503+00:00"
+    },
+    {
+      "term_code": "202410",
+      "term_label": "Fall 2023",
+      "course_count": 783,
+      "scraped_at": "2026-07-22T01:53:49.381619+00:00"
+    },
+    {
+      "term_code": "202430",
+      "term_label": "Spring 2024",
+      "course_count": 781,
+      "scraped_at": "2026-07-22T01:54:28.872447+00:00"
+    },
+    {
+      "term_code": "202510",
+      "term_label": "Fall 2024",
+      "course_count": 791,
+      "scraped_at": "2026-07-22T01:55:53.987355+00:00"
+    },
+    {
+      "term_code": "202530",
+      "term_label": "Spring 2025",
+      "course_count": 775,
+      "scraped_at": "2026-07-22T01:56:29.266728+00:00"
+    },
+    {
+      "term_code": "202610",
+      "term_label": "Fall 2025",
+      "course_count": 767,
+      "scraped_at": "2026-07-22T01:58:01.995778+00:00"
+    },
+    {
+      "term_code": "202630",
+      "term_label": "Spring 2026",
+      "course_count": 743,
+      "scraped_at": "2026-07-22T02:14:18.784076+00:00"
+    },
     {
       "term_code": "202710",
       "term_label": "Fall 2026",
