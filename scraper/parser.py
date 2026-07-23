@@ -17,6 +17,8 @@ CRN_RE = re.compile(r"^\s*([A-Z&]+)\s+(\S+)-(\S+)\s+\((\d+)\)\s*$")
 
 
 SEATS_NUMBER_RE = re.compile(r"-?\d+")
+CROSSLISTING_ENTRY_RE = re.compile(r"[A-Z&]+\s+\S+-\S+\s+\(\d+\)")
+SEAT_RESERVATION_RE = re.compile(r"(?:\d+\s+)?seats?\s+saved\s+for.*", re.IGNORECASE)
 
 
 def _normalize_seats(raw: str) -> str:
@@ -171,15 +173,30 @@ def parse_schedule_html(html: str) -> list[dict]:
         open_seats = _normalize_seats(_clean(tds[4].get_text()))
         max_enrollment = _clean(tds[5].get_text())
 
-        # crosslistings live in the following SectionText row, if present
+        # crosslistings live in the following SectionText row, if present.
+        # That paragraph sometimes ALSO contains an unrelated seat-reservation
+        # note (e.g. "Cross-listed with STAT 112-01 (10184); seats saved for:
+        # 4 seniors, 6 juniors, ...") - naively splitting the whole paragraph
+        # on commas would tear that note apart into bogus extra "crosslisting"
+        # entries. And when a course has ONLY a reservation note with no
+        # actual cross-listing (very common - just "10 seats saved for
+        # incoming First-Years"), that text must not be treated as a
+        # crosslisting at all. So: only treat it as a crosslisting list if the
+        # paragraph actually starts with "Cross-listed with", and extract just
+        # the clean "SUBJ NUM-SEC (CRN)" designations via regex - which finds
+        # them correctly regardless of what other text surrounds them.
         crosslistings: list[str] = []
+        seat_reservations = ""
         next_row = main_row.find_next_sibling("tr")
         if next_row and next_row.find("td", class_="SectionText"):
             p = next_row.find("p", class_="crosslisting")
             if p:
-                xl_text = _clean(p.get_text())
-                xl_text = re.sub(r"^Cross-listed with\s*", "", xl_text)
-                crosslistings = [x.strip() for x in re.split(r",| and ", xl_text) if x.strip()]
+                full_text = _clean(p.get_text())
+                if full_text.startswith("Cross-listed with"):
+                    crosslistings = CROSSLISTING_ENTRY_RE.findall(full_text)
+                m = SEAT_RESERVATION_RE.search(full_text)
+                if m:
+                    seat_reservations = _clean(m.group(0))
 
         detail_id = detail_link_to_id.get(crn)
         detail = _parse_detail_block(detail_divs_by_id.get(detail_id)) if detail_id else _parse_detail_block(None)
@@ -197,6 +214,7 @@ def parse_schedule_html(html: str) -> list[dict]:
                 "open_seats": open_seats,
                 "max_enrollment": max_enrollment,
                 "crosslistings": crosslistings,
+                "seat_reservations": seat_reservations,
                 **detail,
             }
         )

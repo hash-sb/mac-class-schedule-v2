@@ -86,10 +86,6 @@ to touch the parser.
 - **Seat-count trend chart**: "Show seat trend" on a section renders a small
   sparkline from that term's change log, if any history has accumulated.
 - **Light/dark theme toggle** (sun/moon button, top right), persisted.
-- **Installable / offline-capable** (PWA): a manifest + service worker cache
-  the app shell so it loads instantly and still works offline after a first
-  visit; data files are cached network-first so you get fresh data when
-  online and the last-seen data when you don't.
 - **Print support**: the schedule tray has a "Print" button that produces a
   clean, chrome-free printout of just your added sections.
 
@@ -139,6 +135,51 @@ patched over:
   are now a proper popover instead of an always-expanded scroll box.
 - **Year strip only shows years that actually have data** (no more disabled
   placeholder buttons for gaps), and the current year auto-scrolls into view.
+
+## More fixes (this round)
+
+- **Course-row layout bug**: in cross-term search mode, the summary grid only
+  defined 5 columns for 6 grid items (once the per-row term tag became
+  visible), so the expand/collapse "+" had nowhere to go and wrapped onto
+  its own line. Fixed by adding the missing column.
+- **Select-vs-button background mismatch**: the Time/Sort dropdowns are
+  native `<select>` elements, which some browsers render with their own
+  default chrome even when a custom background is set, unless `appearance`
+  is explicitly reset - unlike the Departments control, which is a plain
+  `<button>` with no such fight. Added `appearance: none` plus a lightweight
+  custom arrow so all three now render identically.
+- **Sort by term** (only shown once "search every term" is on, since it's
+  meaningless otherwise): newest-first or oldest-first, using each course's
+  term code for correct chronological ordering. Verified against a
+  synthetic multi-year dataset.
+- **"Must use a private window to see updates" — service worker retired
+  entirely.** The offline/installable (PWA) feature from an earlier round
+  kept causing real staleness bugs even after being switched to a
+  network-first strategy: some visitors still needed a private window to
+  see a deployed change. For a project where showing *current* data -
+  especially seat counts during registration - matters far more than
+  instant load or offline browsing, that's not an acceptable trade-off.
+  `sw.js` is now a "kill switch": it unregisters itself and clears every
+  cache it ever created, so anyone who still has an old version installed
+  self-heals automatically (browsers keep checking an *existing*
+  registration for updates on every navigation, whether or not the page
+  calls `register()` again - so this happens without any action from you).
+  `app.js` no longer registers a service worker at all, so new visitors
+  never pick one up going forward. If you still see stale content after
+  this deploys, one hard refresh (Ctrl+Shift+R / Cmd+Shift+R) should be all
+  it takes, if it isn't already resolved by the time you notice.
+- **Cross-listing text corruption**: the raw source sometimes appends an
+  unrelated seat-reservation note to the same paragraph as a cross-listing
+  (e.g. `"Cross-listed with STAT 112-01 (10184); seats saved for: 4
+  seniors, 6 juniors, ..."`), and the old parsing logic split that whole
+  paragraph on every comma, tearing the reservation note into bogus extra
+  "crosslisting" entries. A second, related bug: courses with *only* a
+  reservation note and no actual cross-listing were incorrectly treated as
+  cross-listed at all. Both fixed - cross-listings are now extracted via a
+  targeted pattern match regardless of surrounding text, and the
+  reservation note is correctly captured as its own `seat_reservations`
+  field (shown as "Reserved seats" in a course's details) instead of being
+  corrupted or fabricated.
 
 ## More improvements (this round)
 

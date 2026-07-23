@@ -154,7 +154,12 @@
     updateScheduleFabCount();
     maybeShowHint();
     initTheme();
-    registerServiceWorker();
+    // Note: no service worker is registered here. It was retired after
+    // repeatedly causing staleness bugs (see sw.js for the full story) -
+    // anyone who still has an old version installed gets cleaned up
+    // automatically, since browsers keep checking an EXISTING registration
+    // for updates on subsequent navigations regardless of whether this page
+    // calls register() again. We just don't want to register a fresh one.
 
     // Restore state from the URL so links and back/forward behave like a real page.
     // Priority for filter values specifically: URL param (if present at all) >
@@ -217,6 +222,7 @@
     } else {
       await ensureTermLoaded(startTerm);
     }
+    syncTermSortOptions(urlAll);
 
     initMobileFilterDialog();
 
@@ -330,15 +336,6 @@
     const next = document.documentElement.dataset.theme === "light" ? "dark" : "light";
     applyTheme(next);
     localStorage.setItem(THEME_KEY, next);
-  }
-
-  function registerServiceWorker() {
-    if (!("serviceWorker" in navigator)) return;
-    // Relative path, so it still works if the app is served from a subpath
-    // (e.g. a project page at username.github.io/repo-name/).
-    navigator.serviceWorker.register("sw.js").catch(() => {
-      // offline/installable support is a nice-to-have - never block the app on it
-    });
   }
 
   /**
@@ -455,6 +452,7 @@
       els.results.classList.toggle("is-cross-term", urlAll);
       if (urlAll) await ensureSearchIndexLoaded();
     }
+    syncTermSortOptions(urlAll);
     buildSubjectChips();
     render();
     if (urlCrn) focusCourseByCrn(urlCrn);
@@ -636,9 +634,18 @@
     return searchIndexCache;
   }
 
+  function syncTermSortOptions(crossTermActive) {
+    document.getElementById("sortTermDesc").hidden = !crossTermActive;
+    document.getElementById("sortTermAsc").hidden = !crossTermActive;
+    if (!crossTermActive && (els.sortSelect.value === "term-desc" || els.sortSelect.value === "term-asc")) {
+      els.sortSelect.value = "default"; // that sort mode no longer makes sense once term is fixed
+    }
+  }
+
   async function onToggleSearchAll(e) {
     els.results.classList.toggle("is-cross-term", e.target.checked);
     if (e.target.checked) await ensureSearchIndexLoaded();
+    syncTermSortOptions(e.target.checked);
     selectedSubjects.clear();
     buildSubjectChips();
     render();
@@ -1023,6 +1030,12 @@
         if (na !== nb) return na - nb;
         return (a.section || "").localeCompare(b.section || "");
       });
+    } else if (sortMode === "term-desc" || sortMode === "term-asc") {
+      const dir = sortMode === "term-desc" ? -1 : 1;
+      courses = [...courses].sort((a, b) => {
+        const cmp = a._term_code < b._term_code ? -1 : a._term_code > b._term_code ? 1 : 0;
+        return cmp * dir;
+      });
     }
 
     if (els.mergeCrossListedToggle.checked) {
@@ -1223,6 +1236,7 @@
       ["Max enrollment", c.max_enrollment || "—"],
     ];
     if (c.crosslistings && c.crosslistings.length) factsList.push(["Cross-listed with", c.crosslistings.join(", ")]);
+    if (c.seat_reservations) factsList.push(["Reserved seats", c.seat_reservations]);
     if (c.distribution_requirements) factsList.push(["Distribution", c.distribution_requirements]);
     if (c.gen_ed_requirements) factsList.push(["General education", c.gen_ed_requirements]);
 
