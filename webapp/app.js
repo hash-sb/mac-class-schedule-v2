@@ -605,6 +605,7 @@
     setStatus(`Loading ${labelFor(termCode)}…`);
     const res = await fetch(`${DATA_DIR}/${termCode}.json`);
     const payload = await res.json();
+    normalizeCrosslistings(payload.courses);
     termCache.set(termCode, payload);
     idbPutTerm(termCode, payload); // fire-and-forget
     setStatus("");
@@ -623,6 +624,7 @@
     try {
       const res = await fetch(`${DATA_DIR}/search-index.json`);
       const payload = await res.json();
+      normalizeCrosslistings(payload.courses);
       searchIndexCache = payload.courses.map((c) => ({ ...c, _term_label: c.term_label, _term_code: c.term_code }));
     } catch {
       searchIndexCache = [];
@@ -796,6 +798,37 @@
    * aliases as "SUBJ NUM-SEC (CRN)" strings, which is all we need both to
    * detect the group and to build a combined label for it.
    */
+
+  // Some older terms embed extra text (e.g. seat notes) directly inside the
+  // crosslistings string after the designation.  This function normalises each
+  // course in place: it strips the extra text out of crosslistings and, if
+  // seat_reservations is empty, promotes that text there instead.
+  const CROSSLISTING_DESIGNATION_RE = /^([A-Z&]+\s+\S+-\S+\s+\(\d+\))(.*)/s;
+  function normalizeCourseCrosslistings(c) {
+    if (!c.crosslistings || !c.crosslistings.length) return;
+    const cleanListings = [];
+    const extraParts = [];
+    for (const cl of c.crosslistings) {
+      const m = cl.match(CROSSLISTING_DESIGNATION_RE);
+      if (m) {
+        cleanListings.push(m[1]);
+        const extra = m[2].replace(/^[\s;,]+/, "").trim();
+        if (extra) extraParts.push(extra);
+      } else {
+        cleanListings.push(cl);
+      }
+    }
+    c.crosslistings = cleanListings;
+    if (!c.seat_reservations && extraParts.length) {
+      c.seat_reservations = extraParts.join("; ");
+    }
+  }
+
+  function normalizeCrosslistings(courses) {
+    for (const c of courses) normalizeCourseCrosslistings(c);
+    return courses;
+  }
+
   function crnsFromCrosslistings(crosslistings) {
     const crns = [];
     for (const s of crosslistings || []) {
@@ -816,7 +849,7 @@
       const ownDesignation = `${c.subject} ${c.course_number}-${c.section} (${c.crn})`;
       result.push({
         ...c,
-        _mergedLabel: linkedCrns.length ? [ownDesignation, ...c.crosslistings].join(" / ") : null,
+        _mergedLabel: linkedCrns.length ? [ownDesignation, ...(c.crosslistings || [])].join(" / ") : null,
       });
     }
     return result;
