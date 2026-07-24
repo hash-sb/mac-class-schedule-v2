@@ -598,6 +598,7 @@
     const meta = index.find((t) => t.term_code === termCode);
     const cached = await idbGetTerm(termCode);
     if (cached && meta && cached.scraped_at === meta.scraped_at) {
+      normalizeCrosslistings(cached.payload.courses);
       termCache.set(termCode, cached.payload);
       return cached.payload;
     }
@@ -847,9 +848,13 @@
       linkedCrns.forEach((crn) => seenCrns.add(crn));
       seenCrns.add(c.crn);
       const ownDesignation = `${c.subject} ${c.course_number}-${c.section} (${c.crn})`;
+      const crossDesignations = (c.crosslistings || []).map((s) => {
+        const m = s.match(/[A-Z&]+\s+\S+-\S+\s+\(\d+\)/);
+        return m ? m[0] : s;
+      });
       result.push({
         ...c,
-        _mergedLabel: linkedCrns.length ? [ownDesignation, ...(c.crosslistings || [])].join(" / ") : null,
+        _mergedLabel: linkedCrns.length ? [ownDesignation, ...crossDesignations].join(" / ") : null,
       });
     }
     return result;
