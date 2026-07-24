@@ -343,6 +343,15 @@ select option {
   color: var(--amber-bright);
 }
 
+/* Time and Sort selects — styled to match the Department button */
+.filter-control-select { padding: 0 0.9rem; cursor: pointer; }
+.filter-control-select:hover { border-color: var(--amber); }
+.filter-select-label {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--paper-dim);
+}
+
 /* department popover */
 .dept-filter { position: relative; padding: 0; border: none; background: none; height: auto; }
 .dept-filter-btn {
