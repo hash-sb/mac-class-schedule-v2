@@ -61,6 +61,10 @@
     scheduleConflicts: document.getElementById("scheduleConflicts"),
     themeToggle: document.getElementById("themeToggle"),
     printScheduleBtn: document.getElementById("printScheduleBtn"),
+    seatsFilter: document.getElementById("seatsFilter"),
+    seatsFilterBtn: document.getElementById("seatsFilterBtn"),
+    seatsFilterPanel: document.getElementById("seatsFilterPanel"),
+    seatsFilterValue: document.getElementById("seatsFilterValue"),
     timeFilter: document.getElementById("timeFilter"),
     timeFilterBtn: document.getElementById("timeFilterBtn"),
     timeFilterPanel: document.getElementById("timeFilterPanel"),
@@ -293,6 +297,7 @@
         updateUrl();
       });
     }
+    wireSelectFilter(els.seatsFilterBtn, els.seatsFilterPanel, els.seatsThresholdSelect);
     wireSelectFilter(els.timeFilterBtn, els.timeFilterPanel, els.timeOfDaySelect);
     wireSelectFilter(els.sortFilterBtn, els.sortFilterPanel, els.sortSelect);
 
@@ -453,6 +458,7 @@
 
   function closeAllSelectFilters() {
     [
+      { panel: els.seatsFilterPanel, btn: els.seatsFilterBtn },
       { panel: els.timeFilterPanel, btn: els.timeFilterBtn },
       { panel: els.sortFilterPanel, btn: els.sortFilterBtn },
     ].forEach(({ panel, btn }) => {
@@ -1110,6 +1116,7 @@
         btn.classList.toggle("is-selected", btn.dataset.value === val);
       });
     }
+    syncOne(els.seatsThresholdSelect, els.seatsFilterValue, els.seatsFilterPanel);
     syncOne(els.timeOfDaySelect, els.timeFilterValue, els.timeFilterPanel);
     syncOne(els.sortSelect, els.sortFilterValue, els.sortFilterPanel);
   }
