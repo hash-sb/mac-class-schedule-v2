@@ -830,33 +830,44 @@
     return courses;
   }
 
-  function crnsFromCrosslistings(crosslistings) {
-    const crns = [];
-    for (const s of crosslistings || []) {
-      const m = s.match(/\((\d+)\)/);
-      if (m) crns.push(m[1]);
-    }
-    return crns;
-  }
-
   function dedupeCrossListed(courses) {
-    const seen = new Set(); // "termCode:crn" keys so CRNs from different terms don't collide
-    const key = (termCode, crn) => `${termCode}:${crn}`;
+    // Build a lookup so we can resolve "SUBJ NUM-SEC" → CRN when crosslistings
+    // don't include an explicit CRN (common in older terms).
+    const bySns = new Map();
+    for (const c of courses) {
+      bySns.set(`${c._term_code}:${c.subject}:${c.course_number}:${c.section}`, c.crn);
+    }
+
+    // Parse a single crosslistings entry. Returns {crn, label} when the entry
+    // contains a recognisable course designation, or null when it is only a
+    // note/description (so it is silently dropped from the merged label).
+    function parseCrossLink(entry, termCode) {
+      // Format 1: "SUBJ NUM-SEC (CRN)" — explicit CRN already present
+      const m1 = entry.match(/([A-Z][A-Z&]+\s+\S+-\S+)\s+\((\d+)\)/);
+      if (m1) return { crn: m1[2], label: m1[0] };
+      // Format 2: "SUBJ NUM-SEC" without CRN — look up CRN from the courses list
+      // Require ≥2 uppercase letters so single-letter words ("I", "A") don't match.
+      const m2 = entry.match(/\b([A-Z][A-Z&]+)\s+(\d+\w*)-(\w+)\b/);
+      if (m2) {
+        const crn = bySns.get(`${termCode}:${m2[1]}:${m2[2]}:${m2[3]}`);
+        if (crn) return { crn, label: `${m2[1]} ${m2[2]}-${m2[3]} (${crn})` };
+      }
+      return null; // not a cross-listing — skip (avoids dumping notes/descriptions into the label)
+    }
+
+    const seen = new Set(); // "termCode:crn" so CRNs from different terms don't collide
+    const termCrnKey = (t, crn) => `${t}:${crn}`;
     const result = [];
     for (const c of courses) {
       const termCode = c._term_code;
-      if (seen.has(key(termCode, c.crn))) continue; // already folded into an earlier row's merged label
-      const linkedCrns = crnsFromCrosslistings(c.crosslistings);
-      linkedCrns.forEach((crn) => seen.add(key(termCode, crn)));
-      seen.add(key(termCode, c.crn));
+      if (seen.has(termCrnKey(termCode, c.crn))) continue;
+      const links = (c.crosslistings || []).map(s => parseCrossLink(s, termCode)).filter(Boolean);
+      links.forEach(({ crn }) => seen.add(termCrnKey(termCode, crn)));
+      seen.add(termCrnKey(termCode, c.crn));
       const ownDesignation = `${c.subject} ${c.course_number}-${c.section} (${c.crn})`;
-      const crossDesignations = (c.crosslistings || []).map((s) => {
-        const m = s.match(/[A-Z&]+\s+\S+-\S+\s+\(\d+\)/);
-        return m ? m[0] : s;
-      });
       result.push({
         ...c,
-        _mergedLabel: linkedCrns.length ? [ownDesignation, ...crossDesignations].join(" / ") : null,
+        _mergedLabel: links.length ? [ownDesignation, ...links.map(l => l.label)].join(" / ") : null,
       });
     }
     return result;
