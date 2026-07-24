@@ -840,13 +840,15 @@
   }
 
   function dedupeCrossListed(courses) {
-    const seenCrns = new Set();
+    const seen = new Set(); // "termCode:crn" keys so CRNs from different terms don't collide
+    const key = (termCode, crn) => `${termCode}:${crn}`;
     const result = [];
     for (const c of courses) {
-      if (seenCrns.has(c.crn)) continue; // already folded into an earlier row's merged label
+      const termCode = c._term_code;
+      if (seen.has(key(termCode, c.crn))) continue; // already folded into an earlier row's merged label
       const linkedCrns = crnsFromCrosslistings(c.crosslistings);
-      linkedCrns.forEach((crn) => seenCrns.add(crn));
-      seenCrns.add(c.crn);
+      linkedCrns.forEach((crn) => seen.add(key(termCode, crn)));
+      seen.add(key(termCode, c.crn));
       const ownDesignation = `${c.subject} ${c.course_number}-${c.section} (${c.crn})`;
       const crossDesignations = (c.crosslistings || []).map((s) => {
         const m = s.match(/[A-Z&]+\s+\S+-\S+\s+\(\d+\)/);
