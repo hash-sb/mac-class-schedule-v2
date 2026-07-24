@@ -35,6 +35,7 @@ SEARCH_INDEX_FIELDS = [
     "instructor",
     "open_seats",
     "max_enrollment",
+    "crosslistings",
 ]
 
 
@@ -45,7 +46,7 @@ def iter_term_files(data_dir: Path):
         if not m:
             continue
         try:
-            payload = json.loads(path.read_text())
+            payload = json.loads(path.read_text(encoding="utf-8"))
         except (json.JSONDecodeError, OSError):
             continue
         yield m.group(1), payload
