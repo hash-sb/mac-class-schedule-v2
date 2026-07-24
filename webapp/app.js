@@ -61,6 +61,14 @@
     scheduleConflicts: document.getElementById("scheduleConflicts"),
     themeToggle: document.getElementById("themeToggle"),
     printScheduleBtn: document.getElementById("printScheduleBtn"),
+    timeFilter: document.getElementById("timeFilter"),
+    timeFilterBtn: document.getElementById("timeFilterBtn"),
+    timeFilterPanel: document.getElementById("timeFilterPanel"),
+    timeFilterValue: document.getElementById("timeFilterValue"),
+    sortFilter: document.getElementById("sortFilter"),
+    sortFilterBtn: document.getElementById("sortFilterBtn"),
+    sortFilterPanel: document.getElementById("sortFilterPanel"),
+    sortFilterValue: document.getElementById("sortFilterValue"),
     deptFilter: document.getElementById("deptFilter"),
     deptFilterBtn: document.getElementById("deptFilterBtn"),
     deptFilterPanel: document.getElementById("deptFilterPanel"),
@@ -263,6 +271,31 @@
       render();
       updateUrl();
     });
+    function wireSelectFilter(btnEl, panelEl, selectEl) {
+      btnEl.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const isOpen = !panelEl.hidden;
+        closeAllSelectFilters();
+        closeDeptFilterPanel();
+        if (!isOpen) {
+          panelEl.hidden = false;
+          btnEl.setAttribute("aria-expanded", "true");
+        }
+      });
+      panelEl.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const opt = e.target.closest(".select-filter-option");
+        if (!opt) return;
+        selectEl.value = opt.dataset.value;
+        panelEl.hidden = true;
+        btnEl.setAttribute("aria-expanded", "false");
+        render();
+        updateUrl();
+      });
+    }
+    wireSelectFilter(els.timeFilterBtn, els.timeFilterPanel, els.timeOfDaySelect);
+    wireSelectFilter(els.sortFilterBtn, els.sortFilterPanel, els.sortSelect);
+
     els.deptFilterBtn.addEventListener("click", () => {
       els.deptFilterPanel.hidden ? openDeptFilterPanel() : closeDeptFilterPanel();
     });
@@ -278,8 +311,9 @@
       if (els.deptFilter.contains(e.target)) return; // click was on the toggle button itself
       closeDeptFilterPanel();
     });
+    document.addEventListener("click", () => closeAllSelectFilters());
     document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape" && !els.deptFilterPanel.hidden) closeDeptFilterPanel();
+      if (e.key === "Escape") { closeDeptFilterPanel(); closeAllSelectFilters(); }
     });
     els.deptSearchInput.addEventListener("input", () => renderSubjectRows(currentSubjectOptions()));
     els.hintDismissBtn.addEventListener("click", () => {
@@ -415,6 +449,16 @@
   function closeDeptFilterPanel() {
     els.deptFilterPanel.hidden = true;
     els.deptFilterBtn.setAttribute("aria-expanded", "false");
+  }
+
+  function closeAllSelectFilters() {
+    [
+      { panel: els.timeFilterPanel, btn: els.timeFilterBtn },
+      { panel: els.sortFilterPanel, btn: els.sortFilterBtn },
+    ].forEach(({ panel, btn }) => {
+      panel.hidden = true;
+      btn.setAttribute("aria-expanded", "false");
+    });
   }
 
   async function onPopState() {
@@ -1057,7 +1101,21 @@
     ]);
   }
 
+  function syncSelectFilters() {
+    function syncOne(selectEl, valueEl, panelEl) {
+      const val = selectEl.value;
+      const opt = [...selectEl.options].find((o) => o.value === val);
+      if (valueEl) valueEl.textContent = opt ? opt.textContent : val;
+      if (panelEl) panelEl.querySelectorAll(".select-filter-option").forEach((btn) => {
+        btn.classList.toggle("is-selected", btn.dataset.value === val);
+      });
+    }
+    syncOne(els.timeOfDaySelect, els.timeFilterValue, els.timeFilterPanel);
+    syncOne(els.sortSelect, els.sortFilterValue, els.sortFilterPanel);
+  }
+
   function render() {
+    syncSelectFilters();
     renderActiveFilterChips();
     updateDeptFilterCount();
     updateMobileFilterCount();

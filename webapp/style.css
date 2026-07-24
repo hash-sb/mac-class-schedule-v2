@@ -343,14 +343,58 @@ select option {
   color: var(--amber-bright);
 }
 
-/* Time and Sort selects — styled to match the Department button */
-.filter-control-select { padding: 0 0.9rem; cursor: pointer; }
-.filter-control-select:hover { border-color: var(--amber); }
+/* Time and Sort custom dropdowns — match the Department button/panel pattern */
+.select-filter { position: relative; }
+.select-filter-btn {
+  height: 2.5rem;
+  padding: 0 0.9rem;
+  background: var(--ink-800);
+  border: 1px solid var(--ink-600);
+  border-radius: 999px;
+  color: var(--paper);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  white-space: nowrap;
+}
+.select-filter-btn:hover { border-color: var(--amber); }
+.select-filter-btn .caret { font-size: 0.7rem; color: var(--paper-dim); }
 .filter-select-label {
   font-family: var(--font-body);
   font-size: 0.85rem;
   color: var(--paper-dim);
 }
+.select-filter-panel {
+  position: absolute;
+  top: calc(100% + 0.4rem);
+  left: 0;
+  z-index: 30;
+  min-width: 11rem;
+  background: var(--ink-900);
+  border: 1px solid var(--ink-600);
+  border-radius: 6px;
+  padding: 0.3rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+.select-filter-option {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  color: var(--paper);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  padding: 0.45rem 0.7rem;
+  border-radius: 4px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.select-filter-option:hover { background: var(--ink-700); }
+.select-filter-option.is-selected { color: var(--amber-bright); font-weight: 600; }
 
 /* department popover */
 .dept-filter { position: relative; padding: 0; border: none; background: none; height: auto; }
