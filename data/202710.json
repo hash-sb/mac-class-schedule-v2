@@ -1,7 +1,7 @@
 {
   "term_code": "202710",
   "term_label": "Fall 2026",
-  "scraped_at": "2026-07-23T02:27:02.263674+00:00",
+  "scraped_at": "2026-07-24T02:24:01.905819+00:00",
   "course_count": 782,
   "courses": [
     {
@@ -1602,7 +1602,7 @@
         }
       ],
       "instructor": "Arthur Mitchell",
-      "open_seats": "1",
+      "open_seats": "2",
       "max_enrollment": "20",
       "crosslistings": [
         "JAPA 254-01 (10437)"
@@ -11282,7 +11282,7 @@
         }
       ],
       "instructor": "Ritsuko Larson",
-      "open_seats": "3",
+      "open_seats": "4",
       "max_enrollment": "18",
       "crosslistings": [],
       "seat_reservations": "",
@@ -11354,7 +11354,7 @@
         }
       ],
       "instructor": "Kyoshin Sasahara",
-      "open_seats": "2",
+      "open_seats": "3",
       "max_enrollment": "12",
       "crosslistings": [],
       "seat_reservations": "",
@@ -11402,7 +11402,7 @@
         }
       ],
       "instructor": "Arthur Mitchell",
-      "open_seats": "1",
+      "open_seats": "2",
       "max_enrollment": "20",
       "crosslistings": [
         "ASIA 254-01 (10438)"
@@ -12116,7 +12116,7 @@
         }
       ],
       "instructor": "Yariana Diaz",
-      "open_seats": "3",
+      "open_seats": "4",
       "max_enrollment": "24",
       "crosslistings": [],
       "seat_reservations": "",
@@ -14872,7 +14872,7 @@
         }
       ],
       "instructor": "Andrew Latham",
-      "open_seats": "6",
+      "open_seats": "7",
       "max_enrollment": "20",
       "crosslistings": [],
       "seat_reservations": "",
