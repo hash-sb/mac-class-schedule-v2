@@ -880,11 +880,13 @@
     return courses;
   }
 
-  function dedupeCrossListed(courses) {
+  function dedupeCrossListed(allCourses, filteredCourses) {
     // Build a lookup so we can resolve "SUBJ NUM-SEC" → CRN when crosslistings
     // don't include an explicit CRN (common in older terms).
+    // Use ALL courses (not just filtered) so that filters removing one half of a
+    // cross-listed pair (e.g. Dept=COMP hiding MATH 112) don't break the lookup.
     const bySns = new Map();
-    for (const c of courses) {
+    for (const c of allCourses) {
       bySns.set(`${c._term_code}:${c.subject}:${c.course_number}:${c.section}`, c.crn);
     }
 
@@ -908,7 +910,7 @@
     const seen = new Set(); // "termCode:crn" so CRNs from different terms don't collide
     const termCrnKey = (t, crn) => `${t}:${crn}`;
     const result = [];
-    for (const c of courses) {
+    for (const c of filteredCourses) {
       const termCode = c._term_code;
       if (seen.has(termCrnKey(termCode, c.crn))) continue;
       const links = (c.crosslistings || []).map(s => parseCrossLink(s, termCode)).filter(Boolean);
@@ -1131,7 +1133,8 @@
       renderLimit = MAX_RENDERED; // a real filter/search/term change - start over at the top
       lastRenderSignature = signature;
     }
-    let courses = applyFilters(currentCourses());
+    const allCourses = currentCourses();
+    let courses = applyFilters(allCourses);
     const q = els.searchBox.value.trim().toLowerCase();
 
     const sortMode = els.sortSelect.value;
@@ -1155,7 +1158,7 @@
     }
 
     if (els.mergeCrossListedToggle.checked) {
-      courses = dedupeCrossListed(courses);
+      courses = dedupeCrossListed(allCourses, courses);
     }
 
     els.results.innerHTML = "";
