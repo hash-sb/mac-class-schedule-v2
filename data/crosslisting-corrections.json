@@ -1,0 +1,11 @@
+{
+  "crosslistings": [
+    {
+      "term_code": "201810",
+      "crn": "10923",
+      "find": "CIMP 112-01",
+      "replace": "COMP 112-01",
+      "note": "Typo in scraped data: CIMP should be COMP (MATH 112-01 cross-listed with COMP 112-01 in Fall 2017)"
+    }
+  ]
+}

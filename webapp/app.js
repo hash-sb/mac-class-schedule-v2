@@ -100,6 +100,8 @@
   let mySchedule = loadSchedule();
   /** flat, compact array of every course across every term, or null until loaded */
   let searchIndexCache = null;
+  /** "termCode:crn" → [{find, replace}] corrections for scraped-data typos */
+  const crosslistingCorrections = new Map();
 
   init();
 
@@ -159,6 +161,7 @@
       return;
     }
 
+    await loadCrosslistingCorrections();
     buildTermSelect();
     buildEraStrip();
     wireControls();
@@ -648,7 +651,7 @@
     const meta = index.find((t) => t.term_code === termCode);
     const cached = await idbGetTerm(termCode);
     if (cached && meta && cached.scraped_at === meta.scraped_at) {
-      normalizeCrosslistings(cached.payload.courses);
+      normalizeCrosslistings(cached.payload.courses, termCode);
       termCache.set(termCode, cached.payload);
       return cached.payload;
     }
@@ -656,7 +659,7 @@
     setStatus(`Loading ${labelFor(termCode)}…`);
     const res = await fetch(`${DATA_DIR}/${termCode}.json`);
     const payload = await res.json();
-    normalizeCrosslistings(payload.courses);
+    normalizeCrosslistings(payload.courses, termCode);
     termCache.set(termCode, payload);
     idbPutTerm(termCode, payload); // fire-and-forget
     setStatus("");
@@ -875,8 +878,36 @@
     }
   }
 
-  function normalizeCrosslistings(courses) {
-    for (const c of courses) normalizeCourseCrosslistings(c);
+  async function loadCrosslistingCorrections() {
+    try {
+      const res = await fetch(`${DATA_DIR}/crosslisting-corrections.json`);
+      if (!res.ok) return;
+      const data = await res.json();
+      for (const entry of (data.crosslistings || [])) {
+        const key = `${entry.term_code}:${entry.crn}`;
+        if (!crosslistingCorrections.has(key)) crosslistingCorrections.set(key, []);
+        crosslistingCorrections.get(key).push({ find: entry.find, replace: entry.replace });
+      }
+    } catch {
+      // optional file — silently ignore if missing or malformed
+    }
+  }
+
+  function normalizeCrosslistings(courses, termCode) {
+    for (const c of courses) {
+      normalizeCourseCrosslistings(c);
+      if (crosslistingCorrections.size && c.crosslistings) {
+        const tc = termCode || c.term_code;
+        const fixes = crosslistingCorrections.get(`${tc}:${c.crn}`);
+        if (fixes) {
+          c.crosslistings = c.crosslistings.map((cl) => {
+            let s = cl;
+            for (const { find, replace } of fixes) s = s.split(find).join(replace);
+            return s;
+          });
+        }
+      }
+    }
     return courses;
   }
 
