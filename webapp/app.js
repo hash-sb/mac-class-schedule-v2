@@ -16,7 +16,12 @@
   const DAY_TO_ICS = { M: "MO", T: "TU", W: "WE", R: "TH", F: "FR", S: "SA", U: "SU" };
 
   const els = {
-    eraStrip: document.getElementById("eraStrip"),
+    termPicker: document.getElementById("termPicker"),
+    termPickerBtn: document.getElementById("termPickerBtn"),
+    termPickerPanel: document.getElementById("termPickerPanel"),
+    termPickerLabel: document.getElementById("termPickerLabel"),
+    termSeasonTabs: document.getElementById("termSeasonTabs"),
+    termList: document.getElementById("termList"),
     termSelect: document.getElementById("termSelect"),
     searchBox: document.getElementById("searchBox"),
     searchAllToggle: document.getElementById("searchAllToggle"),
@@ -164,7 +169,6 @@
 
     await loadCrosslistingCorrections();
     buildTermSelect();
-    buildEraStrip();
     wireControls();
     wireDialogs();
     updateScheduleFabCount();
@@ -229,7 +233,7 @@
     const startTerm = index.some((t) => t.term_code === urlTerm) ? urlTerm : index[0].term_code;
     currentTermCode = startTerm;
     els.termSelect.value = startTerm;
-    markActiveEra(startTerm);
+    syncTermPicker(startTerm);
 
     if (urlAll) {
       els.searchAllToggle.checked = true;
@@ -258,7 +262,15 @@
   }
 
   function wireControls() {
-    els.termSelect.addEventListener("change", () => selectTerm(els.termSelect.value));
+    els.termPickerBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      els.termPickerPanel.hidden ? openTermPicker() : closeTermPicker();
+    });
+    els.termPickerPanel.addEventListener("click", (e) => e.stopPropagation());
+    els.termSeasonTabs.addEventListener("click", (e) => {
+      const tab = e.target.closest(".term-season-tab");
+      if (tab) filterTermsBySeason(tab.dataset.season);
+    });
     els.searchBox.addEventListener("input", debounce(() => { render(); updateUrl(); }, 120));
     els.searchAllToggle.addEventListener("change", onToggleSearchAll);
     els.seatsThresholdSelect.addEventListener("change", () => { render(); updateUrl(); });
@@ -320,9 +332,9 @@
       if (els.deptFilter.contains(e.target)) return; // click was on the toggle button itself
       closeDeptFilterPanel();
     });
-    document.addEventListener("click", () => closeAllSelectFilters());
+    document.addEventListener("click", () => { closeAllSelectFilters(); closeTermPicker(); });
     document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") { closeDeptFilterPanel(); closeAllSelectFilters(); }
+      if (e.key === "Escape") { closeDeptFilterPanel(); closeAllSelectFilters(); closeTermPicker(); }
     });
     els.deptSearchInput.addEventListener("input", () => renderSubjectRows(currentSubjectOptions()));
     els.hintDismissBtn.addEventListener("click", () => {
@@ -496,7 +508,7 @@
     if (urlTerm && urlTerm !== currentTermCode) {
       currentTermCode = urlTerm;
       els.termSelect.value = urlTerm;
-      markActiveEra(urlTerm);
+      syncTermPicker(urlTerm);
       await ensureTermLoaded(urlTerm);
       updateTermFreshness();
       loadChangesPanel();
@@ -587,54 +599,96 @@
   // ---------------------------------------------------------------------
 
   function buildTermSelect() {
+    // Hidden select keeps existing URL-state and value reads working
     els.termSelect.innerHTML = index
-      .map((t) => `<option value="${t.term_code}">${t.term_label} · ${t.course_count} sections</option>`)
+      .map((t) => `<option value="${t.term_code}">${t.term_label}</option>`)
       .join("");
-  }
 
-  function buildEraStrip() {
-    const byYear = new Map();
-    for (const t of index) {
-      const y = Number(t.term_label.split(" ").pop());
-      if (!byYear.has(y)) byYear.set(y, []);
-      byYear.get(y).push(t);
+    function termAcademicYear(label) {
+      const parts = label.split(" ");
+      const calYear = Number(parts[parts.length - 1]);
+      const fallYear = parts[0] === "Fall" ? calYear : calYear - 1;
+      return `${fallYear}–${String(fallYear + 1).slice(-2)}`;
     }
-    const seasonPriority = ["Fall", "Spring", "January", "Summer I", "Summer II", "Summer III"];
-    const years = [...byYear.keys()].sort((a, b) => a - b);
+    function termSeason(label) {
+      const s = label.split(" ")[0].toLowerCase();
+      return ["fall", "january", "spring"].includes(s) ? s : "summer";
+    }
+
+    // Group by academic year; index is already sorted newest-first
+    const byAY = new Map();
+    for (const t of index) {
+      const ay = termAcademicYear(t.term_label);
+      if (!byAY.has(ay)) byAY.set(ay, []);
+      byAY.get(ay).push(t);
+    }
 
     const frag = document.createDocumentFragment();
-    for (const y of years) {
-      const terms = byYear.get(y);
-      terms.sort((a, b) => seasonPriority.indexOf(a.term_label.split(" ")[0]) - seasonPriority.indexOf(b.term_label.split(" ")[0]));
-      const btn = document.createElement("button");
-      btn.className = "era-btn";
-      btn.type = "button";
-      btn.textContent = y;
-      btn.dataset.year = y;
-      btn.title = terms.map((t) => t.term_label).join(", ");
-      btn.addEventListener("click", () => selectTerm(terms[0].term_code));
-      frag.appendChild(btn);
+    for (const [ay, terms] of byAY) {
+      const group = document.createElement("div");
+      group.className = "term-year-group";
+
+      const ayLabel = document.createElement("div");
+      ayLabel.className = "term-year-label";
+      ayLabel.textContent = ay;
+      group.appendChild(ayLabel);
+
+      for (const t of terms) {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "term-option";
+        btn.dataset.termCode = t.term_code;
+        btn.dataset.season = termSeason(t.term_label);
+        btn.textContent = t.term_label.replace(/\s+\d{4}$/, ""); // "Fall 2017" → "Fall"
+        btn.title = `${t.term_label} · ${t.course_count} sections`;
+        btn.addEventListener("click", () => { closeTermPicker(); selectTerm(t.term_code); });
+        group.appendChild(btn);
+      }
+      frag.appendChild(group);
     }
-    els.eraStrip.appendChild(frag);
+    els.termList.appendChild(frag);
   }
 
-  function markActiveEra(termCode) {
-    const label = index.find((t) => t.term_code === termCode)?.term_label;
-    if (!label) return;
-    const year = label.split(" ").pop();
-    let activeBtn = null;
-    els.eraStrip.querySelectorAll(".era-btn").forEach((b) => {
-      const isActive = b.dataset.year === year;
-      b.classList.toggle("is-active", isActive);
-      if (isActive) activeBtn = b;
+  function syncTermPicker(termCode) {
+    const t = index.find((t) => t.term_code === termCode);
+    if (t) els.termPickerLabel.textContent = t.term_label;
+    els.termList.querySelectorAll(".term-option").forEach((btn) => {
+      btn.classList.toggle("is-active", btn.dataset.termCode === termCode);
     });
-    if (activeBtn) activeBtn.scrollIntoView({ inline: "center", block: "nearest", behavior: "smooth" });
+    if (!els.termPickerPanel.hidden) {
+      els.termList.querySelector(".term-option.is-active")?.scrollIntoView({ block: "nearest" });
+    }
+  }
+
+  function openTermPicker() {
+    closeAllSelectFilters();
+    closeDeptFilterPanel();
+    els.termPickerPanel.hidden = false;
+    els.termPickerBtn.setAttribute("aria-expanded", "true");
+    els.termList.querySelector(".term-option.is-active")?.scrollIntoView({ block: "nearest" });
+  }
+
+  function closeTermPicker() {
+    els.termPickerPanel.hidden = true;
+    els.termPickerBtn.setAttribute("aria-expanded", "false");
+  }
+
+  function filterTermsBySeason(season) {
+    els.termSeasonTabs.querySelectorAll(".term-season-tab").forEach((tab) => {
+      tab.classList.toggle("is-active", tab.dataset.season === season);
+    });
+    els.termList.querySelectorAll(".term-option").forEach((btn) => {
+      btn.hidden = season !== "all" && btn.dataset.season !== season;
+    });
+    els.termList.querySelectorAll(".term-year-group").forEach((group) => {
+      group.hidden = [...group.querySelectorAll(".term-option")].every((b) => b.hidden);
+    });
   }
 
   async function selectTerm(termCode) {
     currentTermCode = termCode;
     els.termSelect.value = termCode;
-    markActiveEra(termCode);
+    syncTermPicker(termCode);
     els.searchAllToggle.checked = false;
     els.results.classList.remove("is-cross-term");
     await ensureTermLoaded(termCode);
