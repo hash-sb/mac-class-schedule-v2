@@ -927,13 +927,13 @@
     function parseCrossLink(entry, termCode) {
       // Format 1: "SUBJ NUM-SEC (CRN)" — explicit CRN already present
       const m1 = entry.match(/([A-Z][A-Z&]+\s+\S+-\S+)\s+\((\d+)\)/);
-      if (m1) return { crn: m1[2], label: m1[0] };
+      if (m1) return { crn: m1[2], label: m1[1] };
       // Format 2: "SUBJ NUM-SEC" without CRN — look up CRN from the courses list
       // Require ≥2 uppercase letters so single-letter words ("I", "A") don't match.
       const m2 = entry.match(/\b([A-Z][A-Z&]+)\s+(\d+\w*)-(\w+)\b/);
       if (m2) {
         const crn = bySns.get(`${termCode}:${m2[1]}:${m2[2]}:${m2[3]}`);
-        if (crn) return { crn, label: `${m2[1]} ${m2[2]}-${m2[3]} (${crn})` };
+        if (crn) return { crn, label: `${m2[1]} ${m2[2]}-${m2[3]}` };
       }
       return null; // not a cross-listing — skip (avoids dumping notes/descriptions into the label)
     }
@@ -947,7 +947,7 @@
       const links = (c.crosslistings || []).map(s => parseCrossLink(s, termCode)).filter(Boolean);
       links.forEach(({ crn }) => seen.add(termCrnKey(termCode, crn)));
       seen.add(termCrnKey(termCode, c.crn));
-      const ownDesignation = `${c.subject} ${c.course_number}-${c.section} (${c.crn})`;
+      const ownDesignation = `${c.subject} ${c.course_number}-${c.section}`;
       result.push({
         ...c,
         _mergedLabel: links.length ? [ownDesignation, ...links.map(l => l.label)].join(" / ") : null,
