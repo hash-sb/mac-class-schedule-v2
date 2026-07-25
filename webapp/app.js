@@ -29,6 +29,7 @@
     subjectChipBox: document.getElementById("subjectChipBox"),
     clearSubjectsBtn: document.getElementById("clearSubjectsBtn"),
     statusLine: document.getElementById("statusLine"),
+    resultCount: document.getElementById("resultCount"),
     results: document.getElementById("results"),
     lastUpdated: document.getElementById("lastUpdated"),
     rowTemplate: document.getElementById("courseRowTemplate"),
@@ -1214,6 +1215,7 @@
         }
         els.results.appendChild(box);
       }
+      els.resultCount.hidden = true;
       setStatus("");
       return;
     }
@@ -1278,11 +1280,11 @@
       els.results.appendChild(wrap);
     }
 
-    setStatus(
-      truncated
-        ? `Showing ${Math.min(renderLimit, courses.length).toLocaleString()} of ${courses.length.toLocaleString()} matches.`
-        : `${courses.length} section${courses.length === 1 ? "" : "s"}.`
-    );
+    els.resultCount.textContent = truncated
+      ? `Showing ${Math.min(renderLimit, courses.length).toLocaleString()} of ${courses.length.toLocaleString()}`
+      : `${courses.length.toLocaleString()} section${courses.length === 1 ? "" : "s"}`;
+    els.resultCount.hidden = false;
+    setStatus("");
   }
 
   function buildCourseRow(c, q) {

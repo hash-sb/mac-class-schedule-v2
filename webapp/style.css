@@ -549,6 +549,18 @@ mark {
   padding: 0 0.05em;
 }
 
+.results-meta {
+  display: flex;
+  align-items: center;
+  min-height: 2rem;
+}
+.result-count {
+  margin-left: auto;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--paper-dim);
+  white-space: nowrap;
+}
 .status-line {
   margin: 0;
   font-family: var(--font-mono);
