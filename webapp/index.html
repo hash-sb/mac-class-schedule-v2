@@ -49,26 +49,6 @@
     </button>
 
     <div class="filter-toolbar" id="filterToolbar" role="group" aria-label="Filters">
-      <div class="select-filter" id="seatsFilter">
-        <button type="button" class="select-filter-btn" id="seatsFilterBtn" aria-haspopup="listbox" aria-expanded="false">
-          <span class="filter-select-label">Seats</span>
-          <span id="seatsFilterValue">Any</span>
-          <span class="caret">▾</span>
-        </button>
-        <div class="select-filter-panel" id="seatsFilterPanel" hidden>
-          <button type="button" class="select-filter-option is-selected" data-value="0">Any</button>
-          <button type="button" class="select-filter-option" data-value="1">1+</button>
-          <button type="button" class="select-filter-option" data-value="3">3+</button>
-          <button type="button" class="select-filter-option" data-value="5">5+</button>
-        </div>
-        <select id="seatsThresholdSelect" hidden aria-hidden="true">
-          <option value="0">Any</option>
-          <option value="1">1+</option>
-          <option value="3">3+</option>
-          <option value="5">5+</option>
-        </select>
-      </div>
-
       <div class="filter-control day-filter" role="group" aria-label="Meets on">
         <span class="filter-control-label">Meets on</span>
         <div class="day-checks" id="dayChecks">
@@ -114,6 +94,26 @@
             <!-- populated by app.js -->
           </div>
         </div>
+      </div>
+
+      <div class="select-filter" id="seatsFilter">
+        <button type="button" class="select-filter-btn" id="seatsFilterBtn" aria-haspopup="listbox" aria-expanded="false">
+          <span class="filter-select-label">Seats</span>
+          <span id="seatsFilterValue">Any</span>
+          <span class="caret">▾</span>
+        </button>
+        <div class="select-filter-panel" id="seatsFilterPanel" hidden>
+          <button type="button" class="select-filter-option is-selected" data-value="0">Any</button>
+          <button type="button" class="select-filter-option" data-value="1">1+</button>
+          <button type="button" class="select-filter-option" data-value="3">3+</button>
+          <button type="button" class="select-filter-option" data-value="5">5+</button>
+        </div>
+        <select id="seatsThresholdSelect" hidden aria-hidden="true">
+          <option value="0">Any</option>
+          <option value="1">1+</option>
+          <option value="3">3+</option>
+          <option value="5">5+</option>
+        </select>
       </div>
 
       <div class="select-filter" id="sortFilter">
