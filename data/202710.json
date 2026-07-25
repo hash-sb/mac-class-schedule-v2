@@ -1,7 +1,7 @@
 {
   "term_code": "202710",
   "term_label": "Fall 2026",
-  "scraped_at": "2026-07-24T02:24:01.905819+00:00",
+  "scraped_at": "2026-07-25T02:22:58.904549+00:00",
   "course_count": 782,
   "courses": [
     {
@@ -5707,7 +5707,7 @@
           "room": "CARN 305"
         }
       ],
-      "instructor": "",
+      "instructor": "Alexander Von Hafften",
       "open_seats": "2",
       "max_enrollment": "25",
       "crosslistings": [],
