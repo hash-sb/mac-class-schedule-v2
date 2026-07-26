@@ -832,7 +832,7 @@ mark {
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .mobile-filter-dialog[open] { animation: none; }
+  .filter-sidebar { transition: none; }
 }
 
 /* ---------- changes panel ---------- */
@@ -1325,52 +1325,16 @@ dialog.tray-dialog::backdrop { background: rgba(0,0,0,0.6); }
   margin-left: 0.3rem;
 }
 
-/* ---- mobile filter bottom drawer ---- */
+/* ---- sidebar overlay (mobile left-side drawer) ---- */
 
-.mobile-filter-dialog {
-  /* Anchor to bottom of viewport, full width */
+.sidebar-overlay {
+  display: none;
   position: fixed;
-  inset: auto 0 0 0;
-  margin: 0;
-  width: 100%;
-  max-width: 100%;
-  max-height: 85vh;
-  border-radius: 12px 12px 0 0;
-  border-left: none;
-  border-right: none;
-  border-bottom: none;
-  padding: 0 1.25rem 1.5rem;
-  overflow-y: auto;
+  inset: 0;
+  z-index: 49;
+  background: rgba(0, 0, 0, 0.45);
 }
-
-/* Drag handle above the dialog-head */
-.mobile-filter-dialog::before {
-  content: "";
-  display: block;
-  width: 2.5rem;
-  height: 3px;
-  background: var(--ink-600);
-  border-radius: 999px;
-  margin: 0.75rem auto 0.5rem;
-}
-
-@keyframes drawer-slide-up {
-  from { transform: translateY(100%); }
-  to { transform: translateY(0); }
-}
-.mobile-filter-dialog[open] {
-  animation: drawer-slide-up 0.25s cubic-bezier(0.32, 0.72, 0, 1);
-}
-
-.mobile-filter-dialog .dept-filter-panel {
-  position: static;
-  width: auto;
-  max-width: none;
-  box-shadow: none;
-  border: none;
-  margin-top: 0.4rem;
-}
-.mobile-filter-dialog .reset-filters-btn { width: 100%; }
+.sidebar-overlay.is-visible { display: block; }
 
 @media (max-width: 720px) {
   main { padding: 1.5rem 1rem 5rem; }
@@ -1382,11 +1346,35 @@ dialog.tray-dialog::backdrop { background: rgba(0,0,0,0.6); }
     align-items: end;
     margin-bottom: 1rem;
   }
-  /* Collapse to single column; sidebar is hidden — app.js moves the
-     filter toolbar into #mobileFilterDialog instead. */
+  /* Collapse to single column; sidebar becomes a fixed left-side overlay. */
   .page-layout { grid-template-columns: 1fr; }
-  .filter-sidebar { display: none; }
-  /* Keep sidebar-open-btn off even if JS un-hides it (mobile uses mobile-filter-trigger instead). */
+  .filter-sidebar {
+    display: flex !important;
+    position: fixed;
+    inset: 0 auto 0 0;   /* top 0, right auto, bottom 0, left 0 */
+    width: min(85vw, 22rem);
+    max-height: 100dvh;
+    border-radius: 0 12px 12px 0;
+    border-left: none;
+    border-top: none;
+    border-bottom: none;
+    z-index: 50;
+    overflow-y: auto;
+    transform: translateX(-110%);
+    transition: transform 0.28s cubic-bezier(0.32, 0.72, 0, 1);
+  }
+  .filter-sidebar.is-mobile-open {
+    transform: translateX(0);
+    box-shadow: 4px 0 24px rgba(0, 0, 0, 0.5);
+  }
+  /* sticky trigger so it doesn't scroll off-screen */
+  .mobile-filter-trigger {
+    position: sticky;
+    top: 0.5rem;
+    z-index: 10;
+    margin-bottom: 0.25rem;
+  }
+  /* Keep sidebar-open-btn off on mobile (mobile uses mobile-filter-trigger). */
   .sidebar-open-btn { display: none !important; }
   /* Term + search fill the width in primary-row on mobile */
   .primary-row .field-term { min-width: 10rem; }

@@ -199,15 +199,8 @@
 
   </div><!-- /page-layout -->
 
-  <!-- On narrow screens, #filterToolbar is moved in here by app.js (matchMedia),
-       and #mobileFilterTrigger opens it. On wide screens it stays in the sidebar. -->
-  <dialog id="mobileFilterDialog" class="tray-dialog mobile-filter-dialog" aria-labelledby="mobileFilterDialogTitle">
-    <div class="dialog-head">
-      <h2 id="mobileFilterDialogTitle">Filters</h2>
-      <button type="button" class="dialog-close" id="mobileFilterCloseBtn" aria-label="Close">✕</button>
-    </div>
-    <!-- #filterToolbar gets appended here on mobile -->
-  </dialog>
+  <!-- Tap-outside overlay for mobile sidebar -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
 </main>
 
 <footer class="site-footer">

@@ -84,8 +84,7 @@
     filterToolbar: document.getElementById("filterToolbar"),
     mobileFilterTrigger: document.getElementById("mobileFilterTrigger"),
     mobileFilterCount: document.getElementById("mobileFilterCount"),
-    mobileFilterDialog: document.getElementById("mobileFilterDialog"),
-    mobileFilterCloseBtn: document.getElementById("mobileFilterCloseBtn"),
+    sidebarOverlay: document.getElementById("sidebarOverlay"),
     filterSidebar: document.getElementById("filterSidebar"),
     sidebarCollapseBtn: document.getElementById("sidebarCollapseBtn"),
     sidebarOpenBtn: document.getElementById("sidebarOpenBtn"),
@@ -423,50 +422,64 @@
    * it immediately via the matchMedia listener.
    */
   function setSidebarOpen(open) {
-    els.filterSidebar.hidden = !open;
-    els.sidebarOpenBtn.hidden = open;
-    els.pageLayout.classList.toggle("sidebar-collapsed", !open);
-    localStorage.setItem(SIDEBAR_KEY, open ? "1" : "0");
+    if (window.matchMedia(MOBILE_BREAKPOINT).matches) {
+      els.filterSidebar.classList.toggle("is-mobile-open", open);
+      els.sidebarOverlay.classList.toggle("is-visible", open);
+      document.body.style.overflow = open ? "hidden" : "";
+    } else {
+      els.filterSidebar.hidden = !open;
+      els.sidebarOpenBtn.hidden = open;
+      els.pageLayout.classList.toggle("sidebar-collapsed", !open);
+      localStorage.setItem(SIDEBAR_KEY, open ? "1" : "0");
+    }
   }
 
   function initSidebar() {
-    const open = localStorage.getItem(SIDEBAR_KEY) !== "0";
-    setSidebarOpen(open);
+    // On mobile the sidebar starts closed (overlay); on desktop restore from pref.
+    if (!window.matchMedia(MOBILE_BREAKPOINT).matches) {
+      const open = localStorage.getItem(SIDEBAR_KEY) !== "0";
+      setSidebarOpen(open);
+    }
     els.sidebarCollapseBtn.addEventListener("click", () => setSidebarOpen(false));
     els.sidebarOpenBtn.addEventListener("click", () => setSidebarOpen(true));
   }
 
   function initMobileFilterDialog() {
     const mq = window.matchMedia(MOBILE_BREAKPOINT);
-    // Anchors mark where each group lives in the sidebar so we can restore them.
+    // Anchor marks where term+search live in the sidebar on desktop.
     const termSearchAnchor = document.createComment("term-search-anchor");
-    els.termPicker.after(termSearchAnchor); // placed after termPicker in sidebar
-    const toolbarAnchor = document.createComment("filter-toolbar-anchor");
-    els.filterToolbar.after(toolbarAnchor);
+    els.termPicker.after(termSearchAnchor);
 
     const placeForViewport = (isMobile) => {
       els.mobileFilterTrigger.hidden = !isMobile;
       if (isMobile) {
-        // Term + search → primary-row (visible at top on mobile)
+        // Term + search → primary-row (always visible at top on mobile)
         els.primaryRow.appendChild(els.termPicker);
         els.primaryRow.appendChild(els.searchLabel);
-        // Filters → mobile dialog
-        els.mobileFilterDialog.appendChild(els.filterToolbar);
+        // Filter toolbar stays in the sidebar (now a left-side overlay).
+        // Remove hidden attr so the sidebar is in the display tree (just off-screen via transform).
+        els.filterSidebar.removeAttribute("hidden");
+        els.filterSidebar.classList.remove("is-mobile-open");
+        els.sidebarOverlay.classList.remove("is-visible");
+        document.body.style.overflow = "";
       } else {
-        els.mobileFilterDialog.close();
-        // Restore term + search into sidebar (after their anchor, in order)
+        // Restore desktop: close overlay state, put term+search back in sidebar
+        els.filterSidebar.classList.remove("is-mobile-open");
+        els.sidebarOverlay.classList.remove("is-visible");
+        document.body.style.overflow = "";
         termSearchAnchor.after(els.termPicker, els.searchLabel);
-        // Restore filter toolbar into sidebar
-        toolbarAnchor.after(els.filterToolbar);
+        // Re-apply desktop sidebar visibility
+        const open = localStorage.getItem(SIDEBAR_KEY) !== "0";
+        setSidebarOpen(open);
       }
     };
     placeForViewport(mq.matches);
     mq.addEventListener("change", (e) => placeForViewport(e.matches));
 
-    els.mobileFilterTrigger.addEventListener("click", () => els.mobileFilterDialog.showModal());
-    els.mobileFilterCloseBtn.addEventListener("click", () => els.mobileFilterDialog.close());
-    els.mobileFilterDialog.addEventListener("click", (e) => {
-      if (e.target === els.mobileFilterDialog) els.mobileFilterDialog.close();
+    els.mobileFilterTrigger.addEventListener("click", () => setSidebarOpen(true));
+    els.sidebarOverlay.addEventListener("click", () => setSidebarOpen(false));
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && window.matchMedia(MOBILE_BREAKPOINT).matches) setSidebarOpen(false);
     });
   }
 
