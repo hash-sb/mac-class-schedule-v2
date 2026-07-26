@@ -65,8 +65,9 @@
       </label>
 
       <div class="filter-toolbar" id="filterToolbar" role="group" aria-label="Filters">
-        <div class="filter-control day-filter" role="group" aria-label="Meets on">
-          <span class="filter-control-label">Meets on</span>
+
+        <div class="filter-field">
+          <span class="field-label">Meets on</span>
           <div class="day-checks" id="dayChecks">
             <label><input type="checkbox" value="M"><span>M</span></label>
             <label><input type="checkbox" value="T"><span>T</span></label>
@@ -76,17 +77,13 @@
           </div>
         </div>
 
-        <div class="select-filter" id="timeFilter">
-          <button type="button" class="select-filter-btn" id="timeFilterBtn" aria-haspopup="listbox" aria-expanded="false">
-            <span class="filter-select-label">Time</span>
-            <span id="timeFilterValue">Any</span>
-            <span class="caret">▾</span>
-          </button>
-          <div class="select-filter-panel" id="timeFilterPanel" hidden>
-            <button type="button" class="select-filter-option is-selected" data-value="any">Any</button>
-            <button type="button" class="select-filter-option" data-value="morning">Morning</button>
-            <button type="button" class="select-filter-option" data-value="afternoon">Afternoon</button>
-            <button type="button" class="select-filter-option" data-value="evening">Evening</button>
+        <div class="filter-field">
+          <span class="field-label">Time of day</span>
+          <div class="filter-btn-group" id="timeFilter" role="group">
+            <button type="button" class="filter-btn-opt is-selected" data-value="any">Any</button>
+            <button type="button" class="filter-btn-opt" data-value="morning">Morning</button>
+            <button type="button" class="filter-btn-opt" data-value="afternoon">Afternoon</button>
+            <button type="button" class="filter-btn-opt" data-value="evening">Evening</button>
           </div>
           <select id="timeOfDaySelect" hidden aria-hidden="true">
             <option value="any">Any</option>
@@ -96,33 +93,32 @@
           </select>
         </div>
 
-        <div class="filter-control dept-filter" id="deptFilter">
-          <button type="button" class="dept-filter-btn" id="deptFilterBtn" aria-haspopup="true" aria-expanded="false">
-            <span class="filter-select-label">Dept</span><span id="deptFilterCount"></span> <span class="caret">▾</span>
-          </button>
-          <div class="dept-filter-panel" id="deptFilterPanel" hidden>
-            <div class="dept-filter-panel-head">
-              <span id="deptFilterScopeLabel">Filter by department</span>
-              <button type="button" id="clearSubjectsBtn" class="link-btn">clear</button>
-            </div>
-            <input type="text" id="deptSearchInput" class="dept-search-input" placeholder="Search departments…" autocomplete="off">
-            <div class="subject-list" id="subjectChipBox">
-              <!-- populated by app.js -->
+        <div class="filter-field">
+          <span class="field-label">Department</span>
+          <div class="dept-filter" id="deptFilter">
+            <button type="button" class="dept-filter-btn" id="deptFilterBtn" aria-haspopup="true" aria-expanded="false">
+              <span class="dept-filter-default">Any</span><span id="deptFilterCount"></span> <span class="caret">▾</span>
+            </button>
+            <div class="dept-filter-panel" id="deptFilterPanel" hidden>
+              <div class="dept-filter-panel-head">
+                <span id="deptFilterScopeLabel">Filter by department</span>
+                <button type="button" id="clearSubjectsBtn" class="link-btn">clear</button>
+              </div>
+              <input type="text" id="deptSearchInput" class="dept-search-input" placeholder="Search departments…" autocomplete="off">
+              <div class="subject-list" id="subjectChipBox">
+                <!-- populated by app.js -->
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="select-filter" id="seatsFilter">
-          <button type="button" class="select-filter-btn" id="seatsFilterBtn" aria-haspopup="listbox" aria-expanded="false">
-            <span class="filter-select-label">Seats</span>
-            <span id="seatsFilterValue">Any</span>
-            <span class="caret">▾</span>
-          </button>
-          <div class="select-filter-panel" id="seatsFilterPanel" hidden>
-            <button type="button" class="select-filter-option is-selected" data-value="0">Any</button>
-            <button type="button" class="select-filter-option" data-value="1">1+</button>
-            <button type="button" class="select-filter-option" data-value="3">3+</button>
-            <button type="button" class="select-filter-option" data-value="5">5+</button>
+        <div class="filter-field">
+          <span class="field-label">Open seats</span>
+          <div class="filter-btn-group" id="seatsFilter" role="group">
+            <button type="button" class="filter-btn-opt is-selected" data-value="0">Any</button>
+            <button type="button" class="filter-btn-opt" data-value="1">1+</button>
+            <button type="button" class="filter-btn-opt" data-value="3">3+</button>
+            <button type="button" class="filter-btn-opt" data-value="5">5+</button>
           </div>
           <select id="seatsThresholdSelect" hidden aria-hidden="true">
             <option value="0">Any</option>
@@ -132,28 +128,30 @@
           </select>
         </div>
 
-        <div class="select-filter" id="sortFilter">
-          <button type="button" class="select-filter-btn" id="sortFilterBtn" aria-haspopup="listbox" aria-expanded="false">
-            <span class="filter-select-label">Sort</span>
-            <span id="sortFilterValue">Subject</span>
-            <span class="caret">▾</span>
-          </button>
-          <div class="select-filter-panel" id="sortFilterPanel" hidden>
-            <button type="button" class="select-filter-option is-selected" data-value="default">Subject</button>
-            <button type="button" class="select-filter-option" data-value="seats-desc">Most open seats</button>
-            <button type="button" class="select-filter-option" data-value="seats-asc">Fewest open seats</button>
-            <button type="button" class="select-filter-option" data-value="course-number">Course number</button>
-            <button type="button" class="select-filter-option" id="sortTermDesc" data-value="term-desc" hidden>Term (newest first)</button>
-            <button type="button" class="select-filter-option" id="sortTermAsc" data-value="term-asc" hidden>Term (oldest first)</button>
+        <div class="filter-field">
+          <span class="field-label">Sort by</span>
+          <div class="select-filter" id="sortFilter">
+            <button type="button" class="select-filter-btn" id="sortFilterBtn" aria-haspopup="listbox" aria-expanded="false">
+              <span id="sortFilterValue">Subject</span>
+              <span class="caret">▾</span>
+            </button>
+            <div class="select-filter-panel" id="sortFilterPanel" hidden>
+              <button type="button" class="select-filter-option is-selected" data-value="default">Subject</button>
+              <button type="button" class="select-filter-option" data-value="seats-desc">Most open seats</button>
+              <button type="button" class="select-filter-option" data-value="seats-asc">Fewest open seats</button>
+              <button type="button" class="select-filter-option" data-value="course-number">Course number</button>
+              <button type="button" class="select-filter-option" id="sortTermDesc" data-value="term-desc" hidden>Term (newest first)</button>
+              <button type="button" class="select-filter-option" id="sortTermAsc" data-value="term-asc" hidden>Term (oldest first)</button>
+            </div>
+            <select id="sortSelect" hidden aria-hidden="true">
+              <option value="default">Subject</option>
+              <option value="seats-desc">Most open seats</option>
+              <option value="seats-asc">Fewest open seats</option>
+              <option value="course-number">Course number</option>
+              <option value="term-desc">Term (newest first)</option>
+              <option value="term-asc">Term (oldest first)</option>
+            </select>
           </div>
-          <select id="sortSelect" hidden aria-hidden="true">
-            <option value="default">Subject</option>
-            <option value="seats-desc">Most open seats</option>
-            <option value="seats-asc">Fewest open seats</option>
-            <option value="course-number">Course number</option>
-            <option value="term-desc">Term (newest first)</option>
-            <option value="term-asc">Term (oldest first)</option>
-          </select>
         </div>
 
         <button type="button" class="reset-filters-btn" id="resetFiltersBtn">Reset</button>

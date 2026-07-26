@@ -68,13 +68,7 @@
     themeToggle: document.getElementById("themeToggle"),
     printScheduleBtn: document.getElementById("printScheduleBtn"),
     seatsFilter: document.getElementById("seatsFilter"),
-    seatsFilterBtn: document.getElementById("seatsFilterBtn"),
-    seatsFilterPanel: document.getElementById("seatsFilterPanel"),
-    seatsFilterValue: document.getElementById("seatsFilterValue"),
     timeFilter: document.getElementById("timeFilter"),
-    timeFilterBtn: document.getElementById("timeFilterBtn"),
-    timeFilterPanel: document.getElementById("timeFilterPanel"),
-    timeFilterValue: document.getElementById("timeFilterValue"),
     sortFilter: document.getElementById("sortFilter"),
     sortFilterBtn: document.getElementById("sortFilterBtn"),
     sortFilterPanel: document.getElementById("sortFilterPanel"),
@@ -323,9 +317,21 @@
         updateUrl();
       });
     }
-    wireSelectFilter(els.seatsFilterBtn, els.seatsFilterPanel, els.seatsThresholdSelect);
-    wireSelectFilter(els.timeFilterBtn, els.timeFilterPanel, els.timeOfDaySelect);
     wireSelectFilter(els.sortFilterBtn, els.sortFilterPanel, els.sortSelect);
+    els.timeFilter.addEventListener("click", (e) => {
+      const btn = e.target.closest(".filter-btn-opt");
+      if (!btn) return;
+      els.timeOfDaySelect.value = btn.dataset.value;
+      render();
+      updateUrl();
+    });
+    els.seatsFilter.addEventListener("click", (e) => {
+      const btn = e.target.closest(".filter-btn-opt");
+      if (!btn) return;
+      els.seatsThresholdSelect.value = btn.dataset.value;
+      render();
+      updateUrl();
+    });
 
     els.deptFilterBtn.addEventListener("click", () => {
       els.deptFilterPanel.hidden ? openDeptFilterPanel() : closeDeptFilterPanel();
@@ -489,7 +495,7 @@
   }
 
   function updateDeptFilterCount() {
-    els.deptFilterCount.textContent = selectedSubjects.size ? ` ${selectedSubjects.size}` : "";
+    els.deptFilterCount.textContent = selectedSubjects.size ? String(selectedSubjects.size) : "";
   }
 
   function updateMobileFilterCount() {
@@ -513,14 +519,8 @@
   }
 
   function closeAllSelectFilters() {
-    [
-      { panel: els.seatsFilterPanel, btn: els.seatsFilterBtn },
-      { panel: els.timeFilterPanel, btn: els.timeFilterBtn },
-      { panel: els.sortFilterPanel, btn: els.sortFilterBtn },
-    ].forEach(({ panel, btn }) => {
-      panel.hidden = true;
-      btn.setAttribute("aria-expanded", "false");
-    });
+    els.sortFilterPanel.hidden = true;
+    els.sortFilterBtn.setAttribute("aria-expanded", "false");
   }
 
   async function onPopState() {
@@ -1308,17 +1308,20 @@
   }
 
   function syncSelectFilters() {
-    function syncOne(selectEl, valueEl, panelEl) {
-      const val = selectEl.value;
-      const opt = [...selectEl.options].find((o) => o.value === val);
-      if (valueEl) valueEl.textContent = opt ? opt.textContent : val;
-      if (panelEl) panelEl.querySelectorAll(".select-filter-option").forEach((btn) => {
-        btn.classList.toggle("is-selected", btn.dataset.value === val);
-      });
-    }
-    syncOne(els.seatsThresholdSelect, els.seatsFilterValue, els.seatsFilterPanel);
-    syncOne(els.timeOfDaySelect, els.timeFilterValue, els.timeFilterPanel);
-    syncOne(els.sortSelect, els.sortFilterValue, els.sortFilterPanel);
+    // Inline button groups: highlight the active option
+    els.timeFilter.querySelectorAll(".filter-btn-opt").forEach((btn) => {
+      btn.classList.toggle("is-selected", btn.dataset.value === els.timeOfDaySelect.value);
+    });
+    els.seatsFilter.querySelectorAll(".filter-btn-opt").forEach((btn) => {
+      btn.classList.toggle("is-selected", btn.dataset.value === els.seatsThresholdSelect.value);
+    });
+    // Sort dropdown
+    const sortVal = els.sortSelect.value;
+    const sortOpt = [...els.sortSelect.options].find((o) => o.value === sortVal);
+    if (els.sortFilterValue) els.sortFilterValue.textContent = sortOpt ? sortOpt.textContent : sortVal;
+    els.sortFilterPanel.querySelectorAll(".select-filter-option").forEach((btn) => {
+      btn.classList.toggle("is-selected", btn.dataset.value === sortVal);
+    });
   }
 
   function render() {
