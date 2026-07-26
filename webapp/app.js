@@ -673,7 +673,10 @@
         btn.className = "term-option";
         btn.dataset.termCode = t.term_code;
         btn.dataset.season = termSeason(t.term_label);
-        btn.textContent = t.term_label.replace(/\s+\d{4}$/, ""); // "Fall 2017" → "Fall"
+        // Short label strips the year for the "All" grouped view; full label used when filtered by season.
+        btn.dataset.shortLabel = t.term_label.replace(/\s+\d{4}$/, "");
+        btn.dataset.fullLabel = t.term_label;
+        btn.textContent = btn.dataset.shortLabel;
         btn.title = `${t.term_label} · ${t.course_count} sections`;
         btn.addEventListener("click", () => { closeTermPicker(); selectTerm(t.term_code); });
         group.appendChild(btn);
@@ -711,11 +714,19 @@
     els.termSeasonTabs.querySelectorAll(".term-season-tab").forEach((tab) => {
       tab.classList.toggle("is-active", tab.dataset.season === season);
     });
+    const isAll = season === "all";
     els.termList.querySelectorAll(".term-option").forEach((btn) => {
-      btn.hidden = season !== "all" && btn.dataset.season !== season;
+      const visible = isAll || btn.dataset.season === season;
+      btn.hidden = !visible;
+      // Full label ("Fall 2026") when filtered by season; short label ("Fall") in grouped "All" view.
+      btn.textContent = isAll ? btn.dataset.shortLabel : btn.dataset.fullLabel;
     });
     els.termList.querySelectorAll(".term-year-group").forEach((group) => {
-      group.hidden = [...group.querySelectorAll(".term-option")].every((b) => b.hidden);
+      const anyVisible = [...group.querySelectorAll(".term-option")].some((b) => !b.hidden);
+      group.hidden = !anyVisible;
+      // Year-group heading is redundant when each button already shows the full label with year.
+      const heading = group.querySelector(".term-year-label");
+      if (heading) heading.hidden = !isAll;
     });
   }
 
