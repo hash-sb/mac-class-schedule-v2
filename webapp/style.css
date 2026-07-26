@@ -277,7 +277,8 @@ main {
 /* Term picker and search box fill the sidebar width */
 .filter-sidebar .field { width: 100%; }
 .filter-sidebar .field-grow { flex: none; }
-.filter-sidebar .field-grow input { width: 100%; box-sizing: border-box; }
+.filter-sidebar .field-grow input { width: 100%; box-sizing: border-box; border-radius: 6px; }
+.filter-sidebar .term-picker-btn { height: 2.4rem; border-radius: 6px; }
 .filter-sidebar .term-picker-panel { width: 14rem; }
 
 /* Filter toolbar vertical layout inside sidebar */
@@ -329,6 +330,8 @@ main {
   margin-left: 0;
   width: 100%;
   text-align: center;
+  height: 2.4rem;
+  border-radius: 6px;
 }
 
 /* Utility row stacks vertically in sidebar */
@@ -532,8 +535,10 @@ select option {
 .select-filter-btn:hover { border-color: var(--amber); }
 .select-filter-btn .caret { font-size: 0.7rem; color: var(--paper-dim); }
 .filter-select-label {
-  font-family: var(--font-body);
-  font-size: 0.85rem;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
   color: var(--paper-dim);
 }
 .select-filter-panel {
