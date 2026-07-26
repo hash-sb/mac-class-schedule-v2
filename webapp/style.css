@@ -1338,14 +1338,6 @@ dialog.tray-dialog::backdrop { background: rgba(0,0,0,0.6); }
 
 @media (max-width: 720px) {
   main { padding: 1.5rem 1rem 5rem; }
-  /* Show primary-row (term + search moved here from sidebar by JS) */
-  .primary-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.25rem;
-    align-items: end;
-    margin-bottom: 1rem;
-  }
   /* Collapse to single column; sidebar becomes a fixed left-side overlay. */
   .page-layout { grid-template-columns: 1fr; }
   .filter-sidebar {
@@ -1376,10 +1368,6 @@ dialog.tray-dialog::backdrop { background: rgba(0,0,0,0.6); }
   }
   /* Keep sidebar-open-btn off on mobile (mobile uses mobile-filter-trigger). */
   .sidebar-open-btn { display: none !important; }
-  /* Term + search fill the width in primary-row on mobile */
-  .primary-row .field-term { min-width: 10rem; }
-  .primary-row .field-grow { flex: 1 1 14rem; }
-  .primary-row .term-picker-panel { width: 15rem; }
 }
 
 /* ---------- skip link ---------- */

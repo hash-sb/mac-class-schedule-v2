@@ -446,29 +446,21 @@
 
   function initMobileFilterDialog() {
     const mq = window.matchMedia(MOBILE_BREAKPOINT);
-    // Anchor marks where term+search live in the sidebar on desktop.
-    const termSearchAnchor = document.createComment("term-search-anchor");
-    els.termPicker.after(termSearchAnchor);
 
     const placeForViewport = (isMobile) => {
       els.mobileFilterTrigger.hidden = !isMobile;
       if (isMobile) {
-        // Term + search → primary-row (always visible at top on mobile)
-        els.primaryRow.appendChild(els.termPicker);
-        els.primaryRow.appendChild(els.searchLabel);
-        // Filter toolbar stays in the sidebar (now a left-side overlay).
+        // Term, search, and filters all stay in the sidebar overlay on mobile.
         // Remove hidden attr so the sidebar is in the display tree (just off-screen via transform).
         els.filterSidebar.removeAttribute("hidden");
         els.filterSidebar.classList.remove("is-mobile-open");
         els.sidebarOverlay.classList.remove("is-visible");
         document.body.style.overflow = "";
       } else {
-        // Restore desktop: close overlay state, put term+search back in sidebar
+        // Restore desktop: close overlay state, re-apply sidebar preference.
         els.filterSidebar.classList.remove("is-mobile-open");
         els.sidebarOverlay.classList.remove("is-visible");
         document.body.style.overflow = "";
-        termSearchAnchor.after(els.termPicker, els.searchLabel);
-        // Re-apply desktop sidebar visibility
         const open = localStorage.getItem(SIDEBAR_KEY) !== "0";
         setSidebarOpen(open);
       }
