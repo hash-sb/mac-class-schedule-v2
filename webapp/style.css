@@ -1333,6 +1333,21 @@ dialog.tray-dialog::backdrop { background: rgba(0,0,0,0.6); }
   #scheduleDialog .schedule-item { border-color: #999 !important; break-inside: avoid; }
   #scheduleDialog .schedule-item-code { color: #000 !important; }
   #scheduleDialog .schedule-item-meta { color: #333 !important; }
+
+  /* Calendar view: drop translucent backgrounds (suppressed by browsers anyway),
+     widen the colored left border so each block is clearly distinct on paper. */
+  .cal-event {
+    background: transparent !important;
+    border-left-width: 5px !important;
+    color: #000 !important;
+  }
+  .cal-event-code { color: #000 !important; font-weight: 700 !important; }
+  .cal-event-title { color: #333 !important; opacity: 1 !important; }
+  .cal-day-head { color: #333 !important; border-color: #bbb !important; }
+  .cal-corner { border-color: #bbb !important; }
+  .cal-hour-line { border-top-color: #ddd !important; }
+  .cal-hour-label { color: #666 !important; }
+  .cal-day-col { border-color: #ddd !important; }
 }
 
 /* ---------- show more / show all ---------- */
