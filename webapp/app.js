@@ -963,6 +963,7 @@
       const nameEl = document.createElement("span");
       nameEl.className = "subj-name";
       nameEl.textContent = name;
+      nameEl.title = name;
       const countEl = document.createElement("span");
       countEl.className = "subj-count";
       countEl.textContent = count;
