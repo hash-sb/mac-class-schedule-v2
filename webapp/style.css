@@ -208,7 +208,7 @@ main {
 
 .page-layout {
   display: grid;
-  grid-template-columns: 15rem 1fr;
+  grid-template-columns: 18rem 1fr;
   gap: 1.5rem;
   align-items: start;
 }
@@ -267,9 +267,13 @@ main {
   max-width: none;
   box-shadow: none;
   border: none;
-  border-radius: 0;
-  padding: 0.4rem 0.3rem;
-  margin-top: 0;
+  padding: 0;
+  margin-top: 0.25rem;
+}
+.filter-sidebar .subj-name {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: unset;
 }
 .filter-sidebar .reset-filters-btn {
   width: 100%;
