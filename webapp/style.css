@@ -115,54 +115,94 @@ a { color: var(--amber-bright); }
   max-width: 38rem;
 }
 
-/* ---------- era strip: signature element ---------- */
+/* ---------- term picker ---------- */
 
-.era-strip {
+.term-picker { position: relative; }
+
+.term-picker-btn {
   display: flex;
-  overflow-x: auto;
-  gap: 0;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  width: 100%;
+  background: var(--ink-800);
+  border: 1px solid var(--ink-600);
+  border-radius: 4px;
+  color: var(--paper);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  padding: 0.6rem 0.75rem;
+  cursor: pointer;
+  text-align: left;
+}
+.term-picker-btn:hover { border-color: var(--amber); }
+.term-picker-btn .caret { color: var(--paper-dim); font-size: 0.7rem; flex-shrink: 0; }
+
+.term-picker-panel {
+  position: absolute;
+  top: calc(100% + 0.3rem);
+  left: 0;
+  z-index: 40;
+  width: 16rem;
+  max-height: 28rem;
   background: var(--ink-900);
-  border-bottom: 1px solid var(--rule);
-  padding: 0 1.5rem;
-  scrollbar-width: thin;
-  scroll-snap-type: x proximity;
-  -webkit-mask-image: linear-gradient(to right, transparent, black 28px, black calc(100% - 28px), transparent);
-  mask-image: linear-gradient(to right, transparent, black 28px, black calc(100% - 28px), transparent);
+  border: 1px solid var(--ink-600);
+  border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
-.era-strip::-webkit-scrollbar { height: 5px; }
-.era-strip::-webkit-scrollbar-thumb { background: var(--ink-600); }
-
-.era-btn {
-  flex: none;
-  scroll-snap-align: center;
-  font-family: var(--font-mono);
-  font-size: 0.86rem;
-  font-weight: 500;
-  color: var(--paper-dim);
+.term-season-tabs {
+  display: flex;
+  border-bottom: 1px solid var(--ink-600);
+  flex-shrink: 0;
+}
+.term-season-tab {
+  flex: 1;
   background: none;
   border: none;
-  border-right: 1px solid var(--rule);
-  padding: 0.9rem 1.15rem;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  color: var(--paper-dim);
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  padding: 0.5rem 0.2rem;
+  cursor: pointer;
+}
+.term-season-tab:hover { color: var(--paper); }
+.term-season-tab.is-active { color: var(--amber-bright); border-bottom-color: var(--amber); }
+
+.term-list { overflow-y: auto; padding: 0.3rem; }
+
+.term-year-group { margin-bottom: 0.1rem; }
+
+.term-year-label {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--paper-dim);
+  padding: 0.4rem 0.7rem 0.15rem;
+}
+
+.term-option {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  color: var(--paper);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  padding: 0.35rem 0.7rem 0.35rem 1.1rem;
+  border-radius: 4px;
   cursor: pointer;
   white-space: nowrap;
-  position: relative;
 }
-
-.era-btn:hover { color: var(--paper); background: var(--ink-800); }
-
-.era-btn.is-active {
-  color: var(--amber-bright);
-  font-weight: 700;
-  background: rgba(217, 164, 65, 0.08);
-}
-.era-btn.is-active::after {
-  content: "";
-  position: absolute;
-  left: 0; right: 0; bottom: -1px;
-  height: 2px;
-  background: var(--amber);
-}
+.term-option:hover { background: var(--ink-700); }
+.term-option.is-active { color: var(--amber-bright); font-weight: 600; }
 
 /* ---------- controls ---------- */
 

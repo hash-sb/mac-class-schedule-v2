@@ -21,10 +21,6 @@
   <button type="button" class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark theme">☀</button>
 </header>
 
-<nav class="era-strip" id="eraStrip" aria-label="Jump to academic year">
-  <!-- populated by app.js -->
-</nav>
-
 <div class="hint-banner" id="hintBanner" hidden>
   <span id="hintText">Tip: click a course to expand it, then add it to your schedule — look for the button bottom-right.</span>
   <button type="button" id="hintDismissBtn" aria-label="Dismiss tip">Got it ✕</button>
@@ -33,10 +29,24 @@
 <main id="mainContent">
   <section class="controls" aria-label="Search and filters">
     <div class="primary-row">
-      <label class="field field-term">
+      <div class="field field-term term-picker" id="termPicker">
         <span class="field-label">Term <span class="term-freshness" id="termFreshness"></span></span>
-        <select id="termSelect"></select>
-      </label>
+        <button type="button" class="term-picker-btn" id="termPickerBtn" aria-haspopup="listbox" aria-expanded="false">
+          <span id="termPickerLabel">—</span>
+          <span class="caret">▾</span>
+        </button>
+        <div class="term-picker-panel" id="termPickerPanel" hidden>
+          <div class="term-season-tabs" id="termSeasonTabs">
+            <button type="button" class="term-season-tab is-active" data-season="all">All</button>
+            <button type="button" class="term-season-tab" data-season="fall">Fall</button>
+            <button type="button" class="term-season-tab" data-season="spring">Spring</button>
+            <button type="button" class="term-season-tab" data-season="january">Jan</button>
+            <button type="button" class="term-season-tab" data-season="summer">Summer</button>
+          </div>
+          <div class="term-list" id="termList"></div>
+        </div>
+        <select id="termSelect" hidden aria-hidden="true"></select>
+      </div>
 
       <label class="field field-grow">
         <span class="field-label">Search</span>
