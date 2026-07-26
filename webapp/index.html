@@ -107,6 +107,24 @@
         </div>
 
         <div class="filter-field">
+          <span class="field-label">Level</span>
+          <div class="filter-btn-group" id="levelFilter" role="group">
+            <button type="button" class="filter-btn-opt is-selected" data-value="any">Any</button>
+            <button type="button" class="filter-btn-opt" data-value="100">100s</button>
+            <button type="button" class="filter-btn-opt" data-value="200">200s</button>
+            <button type="button" class="filter-btn-opt" data-value="300">300s</button>
+            <button type="button" class="filter-btn-opt" data-value="400">400s+</button>
+          </div>
+          <select id="levelSelect" hidden aria-hidden="true">
+            <option value="any">Any</option>
+            <option value="100">100s</option>
+            <option value="200">200s</option>
+            <option value="300">300s</option>
+            <option value="400">400s+</option>
+          </select>
+        </div>
+
+        <div class="filter-field">
           <span class="field-label">Open seats</span>
           <div class="filter-btn-group" id="seatsFilter" role="group">
             <button type="button" class="filter-btn-opt is-selected" data-value="0">Any</button>

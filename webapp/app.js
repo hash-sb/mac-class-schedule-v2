@@ -72,6 +72,8 @@
     themeToggle: document.getElementById("themeToggle"),
     printScheduleBtn: document.getElementById("printScheduleBtn"),
     seatsFilter: document.getElementById("seatsFilter"),
+    levelFilter: document.getElementById("levelFilter"),
+    levelSelect: document.getElementById("levelSelect"),
     timeFilter: document.getElementById("timeFilter"),
     sortFilter: document.getElementById("sortFilter"),
     sortFilterBtn: document.getElementById("sortFilterBtn"),
@@ -235,6 +237,8 @@
     if (urlQ) els.searchBox.value = urlQ;
     const urlInstructor = url.searchParams.get("instructor") || "";
     if (urlInstructor) els.instructorFilterInput.value = urlInstructor;
+    const urlLevel = url.searchParams.get("level") || "any";
+    if ([...els.levelSelect.options].some((o) => o.value === urlLevel)) els.levelSelect.value = urlLevel;
     if (urlSort && [...els.sortSelect.options].some((o) => o.value === urlSort)) els.sortSelect.value = urlSort;
 
     const startTerm = index.some((t) => t.term_code === urlTerm) ? urlTerm : index[0].term_code;
@@ -336,6 +340,13 @@
       render();
       updateUrl();
     });
+    els.levelFilter.addEventListener("click", (e) => {
+      const btn = e.target.closest(".filter-btn-opt");
+      if (!btn) return;
+      els.levelSelect.value = btn.dataset.value;
+      render();
+      updateUrl();
+    });
 
     els.deptFilterBtn.addEventListener("click", () => {
       els.deptFilterPanel.hidden ? openDeptFilterPanel() : closeDeptFilterPanel();
@@ -386,6 +397,7 @@
     els.searchBox.value = "";
     els.seatsThresholdSelect.value = "0";
     els.timeOfDaySelect.value = "any";
+    els.levelSelect.value = "any";
     els.sortSelect.value = "default";
     els.instructorFilterInput.value = "";
     selectedDays.clear();
@@ -531,6 +543,7 @@
     if (els.timeOfDaySelect.value !== "any") count++;
     if (selectedSubjects.size) count++;
     if (els.instructorFilterInput.value.trim()) count++;
+    if (els.levelSelect.value !== "any") count++;
     els.mobileFilterCount.textContent = count ? String(count) : "";
     els.resetFiltersBtn.disabled = count === 0 && !els.searchBox.value.trim() && !els.instructorFilterInput.value.trim();
   }
@@ -612,6 +625,7 @@
     selectedSubjects.size ? url.searchParams.set("subj", [...selectedSubjects].join(",")) : url.searchParams.delete("subj");
     const instrVal = els.instructorFilterInput.value.trim();
     instrVal ? url.searchParams.set("instructor", instrVal) : url.searchParams.delete("instructor");
+    els.levelSelect.value !== "any" ? url.searchParams.set("level", els.levelSelect.value) : url.searchParams.delete("level");
     els.mergeCrossListedToggle.checked ? url.searchParams.set("merge", "1") : url.searchParams.delete("merge");
     // crn is only ever set by the explicit "copy link to this course" action
     // (see copyCoursePermalink) - any other interaction invalidates it.
@@ -1177,6 +1191,17 @@
       const instrQ = els.instructorFilterInput.value.trim().toLowerCase();
       if (instrQ) result = result.filter((c) => (c.instructor || "").toLowerCase().includes(instrQ));
     }
+    if (!opts.skipLevel) {
+      const level = els.levelSelect.value;
+      if (level !== "any") {
+        const lo = parseInt(level, 10);
+        result = result.filter((c) => {
+          const num = parseInt(c.course_number, 10);
+          if (isNaN(num)) return false;
+          return level === "400" ? num >= 400 : num >= lo && num < lo + 100;
+        });
+      }
+    }
     return result;
   }
 
@@ -1227,6 +1252,13 @@
         label: "Remove instructor filter",
         count: applyFilters(base, { skipInstructor: true }).length,
         action: () => { els.instructorFilterInput.value = ""; render(); updateUrl(); },
+      });
+    }
+    if (els.levelSelect.value !== "any") {
+      candidates.push({
+        label: "Remove level filter",
+        count: applyFilters(base, { skipLevel: true }).length,
+        action: () => { els.levelSelect.value = "any"; render(); updateUrl(); },
       });
     }
 
@@ -1294,6 +1326,14 @@
       });
     }
 
+    if (els.levelSelect.value !== "any") {
+      const LEVEL_LABELS = { "100": "100-level", "200": "200-level", "300": "300-level", "400": "400-level+" };
+      chips.push({
+        label: LEVEL_LABELS[els.levelSelect.value] || els.levelSelect.value,
+        onRemove: () => { els.levelSelect.value = "any"; render(); updateUrl(); },
+      });
+    }
+
     if (crossTermMode) {
       const label = crossTermSeason ? CROSS_LABELS[crossTermSeason] : "All terms";
       chips.push({
@@ -1353,6 +1393,7 @@
       [...selectedSubjects].sort(),
       els.mergeCrossListedToggle.checked,
       els.instructorFilterInput.value.trim().toLowerCase(),
+      els.levelSelect.value,
     ]);
   }
 
@@ -1363,6 +1404,9 @@
     });
     els.seatsFilter.querySelectorAll(".filter-btn-opt").forEach((btn) => {
       btn.classList.toggle("is-selected", btn.dataset.value === els.seatsThresholdSelect.value);
+    });
+    els.levelFilter.querySelectorAll(".filter-btn-opt").forEach((btn) => {
+      btn.classList.toggle("is-selected", btn.dataset.value === els.levelSelect.value);
     });
     // Sort dropdown
     const sortVal = els.sortSelect.value;
