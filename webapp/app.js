@@ -13,6 +13,7 @@
   const REMEMBER_FILTERS_KEY = "macCourseArchive.rememberFilters.v1";
   const SAVED_FILTERS_KEY = "macCourseArchive.savedFilters.v1";
   const MOBILE_BREAKPOINT = "(max-width: 720px)";
+  const SIDEBAR_KEY = "macCourseArchive.sidebarOpen.v1";
   const DAY_TO_ICS = { M: "MO", T: "TU", W: "WE", R: "TH", F: "FR", S: "SA", U: "SU" };
 
   const els = {
@@ -92,6 +93,11 @@
     mobileFilterCount: document.getElementById("mobileFilterCount"),
     mobileFilterDialog: document.getElementById("mobileFilterDialog"),
     mobileFilterCloseBtn: document.getElementById("mobileFilterCloseBtn"),
+    filterSidebar: document.getElementById("filterSidebar"),
+    sidebarCollapseBtn: document.getElementById("sidebarCollapseBtn"),
+    sidebarOpenBtn: document.getElementById("sidebarOpenBtn"),
+    pageLayout: document.getElementById("pageLayout"),
+    pageMain: document.getElementById("pageMain"),
   };
 
   const THEME_KEY = "macCourseArchive.theme.v1";
@@ -244,6 +250,7 @@
     }
     syncTermSortOptions(urlAll);
 
+    initSidebar();
     initMobileFilterDialog();
 
     buildSubjectChips();
@@ -401,12 +408,27 @@
    * position. Crossing the breakpoint live (e.g. rotating a tablet) re-homes
    * it immediately via the matchMedia listener.
    */
+  function setSidebarOpen(open) {
+    els.filterSidebar.hidden = !open;
+    els.sidebarOpenBtn.hidden = open;
+    els.pageLayout.classList.toggle("sidebar-collapsed", !open);
+    localStorage.setItem(SIDEBAR_KEY, open ? "1" : "0");
+  }
+
+  function initSidebar() {
+    const open = localStorage.getItem(SIDEBAR_KEY) !== "0";
+    setSidebarOpen(open);
+    els.sidebarCollapseBtn.addEventListener("click", () => setSidebarOpen(false));
+    els.sidebarOpenBtn.addEventListener("click", () => setSidebarOpen(true));
+  }
+
   function initMobileFilterDialog() {
     const mq = window.matchMedia(MOBILE_BREAKPOINT);
     const inlineAnchor = document.createComment("filter-toolbar-anchor");
     els.filterToolbar.after(inlineAnchor);
 
     const placeForViewport = (isMobile) => {
+      els.mobileFilterTrigger.hidden = !isMobile;
       if (isMobile) {
         els.mobileFilterDialog.appendChild(els.filterToolbar);
       } else {

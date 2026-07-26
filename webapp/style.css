@@ -204,29 +204,152 @@ a { color: var(--amber-bright); }
 .term-option:hover { background: var(--ink-700); }
 .term-option.is-active { color: var(--amber-bright); font-weight: 600; }
 
-/* ---------- controls ---------- */
+/* ---------- layout ---------- */
 
 main {
-  max-width: 62rem;
+  max-width: 80rem;
   margin: 0 auto;
   padding: 2rem 1.5rem 5rem;
 }
 
-.controls {
-  display: flex;
-  flex-direction: column;
-  gap: 0.85rem;
-  margin-bottom: 2rem;
-}
-
-/* ---- primary row: term + search, always full prominence ---- */
+/* ---- primary row: term + search, always full-width above the two columns ---- */
 
 .primary-row {
   display: flex;
   flex-wrap: wrap;
   gap: 1.25rem;
   align-items: end;
+  margin-bottom: 1.25rem;
 }
+
+/* ---- two-column layout ---- */
+
+.page-layout {
+  display: grid;
+  grid-template-columns: 15rem 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+.page-layout.sidebar-collapsed {
+  grid-template-columns: 1fr;
+}
+
+/* ---- filter sidebar ---- */
+
+.filter-sidebar {
+  position: sticky;
+  top: 1rem;
+  background: var(--ink-900);
+  border: 1px solid var(--ink-700);
+  border-radius: 8px;
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.sidebar-hd {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--ink-700);
+}
+.sidebar-heading {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--paper-dim);
+}
+.sidebar-collapse-btn {
+  background: none;
+  border: none;
+  color: var(--paper-dim);
+  cursor: pointer;
+  padding: 0.1rem 0.35rem;
+  font-size: 0.8rem;
+  border-radius: 3px;
+  line-height: 1;
+}
+.sidebar-collapse-btn:hover { color: var(--paper); background: var(--ink-700); }
+
+/* Filter toolbar vertical layout inside sidebar */
+.filter-sidebar .filter-toolbar {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.4rem;
+}
+.filter-sidebar .filter-control {
+  height: auto;
+  min-height: 2.4rem;
+  border-radius: 6px;
+  padding: 0.45rem 0.75rem;
+}
+.filter-sidebar .select-filter-btn {
+  width: 100%;
+  height: 2.4rem;
+  border-radius: 6px;
+}
+.filter-sidebar .dept-filter {
+  border: 1px solid var(--ink-600);
+  border-radius: 6px;
+}
+.filter-sidebar .dept-filter-btn {
+  width: 100%;
+  height: 2.4rem;
+  min-height: 2.4rem;
+  border-radius: 6px;
+  padding: 0 0.9rem;
+}
+/* Panels open inline (static) in sidebar — no floated overlay */
+.filter-sidebar .select-filter-panel {
+  position: static;
+  box-shadow: none;
+  margin-top: 0.2rem;
+  border-radius: 4px;
+}
+.filter-sidebar .dept-filter-panel {
+  position: static;
+  width: auto;
+  max-width: none;
+  box-shadow: none;
+  border: none;
+  border-radius: 0;
+  padding: 0.4rem 0.3rem;
+  margin-top: 0;
+}
+.filter-sidebar .reset-filters-btn {
+  margin-left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+/* Utility row stacks vertically in sidebar */
+.filter-sidebar .utility-row {
+  flex-direction: column;
+  gap: 0.55rem;
+  padding-top: 0.4rem;
+}
+.filter-sidebar .share-btn { margin-left: 0; width: 100%; text-align: center; }
+
+/* ---- sidebar-open button (desktop, sidebar collapsed) ---- */
+.sidebar-open-btn {
+  background: none;
+  border: 1px solid var(--ink-600);
+  color: var(--paper-dim);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  padding: 0.4rem 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  white-space: nowrap;
+}
+.sidebar-open-btn:hover { color: var(--amber-bright); border-color: var(--amber); }
+
+/* ---- main content column ---- */
+.page-main { display: flex; flex-direction: column; gap: 0.4rem; min-width: 0; }
 
 .field {
   display: flex;
@@ -1222,13 +1345,13 @@ dialog.tray-dialog::backdrop { background: rgba(0,0,0,0.6); }
 .mobile-filter-dialog .reset-filters-btn { margin-left: 0; align-self: stretch; }
 
 @media (max-width: 720px) {
-  /* Only hide the toolbar while it's still in its normal inline position
-     (a direct child of .controls). app.js moves it into #mobileFilterDialog
-     at this breakpoint via matchMedia, at which point it's no longer a
-     direct child of .controls and this rule stops matching it - so it
-     displays normally inside the dialog instead. */
-  .controls > .filter-toolbar { display: none; }
-  .mobile-filter-trigger { display: block; }
+  main { padding: 1.5rem 1rem 5rem; }
+  /* Collapse to single column; sidebar is hidden — app.js moves the
+     filter toolbar into #mobileFilterDialog instead. */
+  .page-layout { grid-template-columns: 1fr; }
+  .filter-sidebar { display: none; }
+  /* Keep sidebar-open-btn off even if JS un-hides it (mobile uses mobile-filter-trigger instead). */
+  .sidebar-open-btn { display: none !important; }
 }
 
 /* ---------- skip link ---------- */
