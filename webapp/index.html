@@ -123,6 +123,11 @@
         </div>
 
         <div class="filter-field">
+          <span class="field-label">Instructor</span>
+          <input type="text" id="instructorFilterInput" class="filter-text-input" placeholder="Filter by name…" autocomplete="off">
+        </div>
+
+        <div class="filter-field">
           <span class="field-label">Sort by</span>
           <div class="select-filter" id="sortFilter">
             <button type="button" class="select-filter-btn" id="sortFilterBtn" aria-haspopup="listbox" aria-expanded="false">
@@ -214,8 +219,13 @@
     <h2 id="scheduleDialogTitle">My schedule</h2>
     <button type="button" class="dialog-close" id="scheduleCloseBtn" aria-label="Close">✕</button>
   </div>
+  <div class="schedule-view-toggle" id="scheduleViewToggle">
+    <button type="button" class="view-toggle-btn is-active" data-view="list">List</button>
+    <button type="button" class="view-toggle-btn" data-view="calendar">Calendar</button>
+  </div>
   <div id="scheduleConflicts" class="schedule-conflicts" hidden></div>
   <div id="scheduleList" class="schedule-list"><!-- populated by app.js --></div>
+  <div id="scheduleCalendar" class="schedule-calendar" hidden></div>
   <div class="dialog-actions">
     <button type="button" class="secondary-btn" id="printScheduleBtn">Print</button>
     <button type="button" class="secondary-btn" id="exportCsvBtn">Export as CSV</button>
@@ -277,6 +287,8 @@
     </div>
   </article>
 </template>
+
+<div id="toast" class="toast" aria-live="polite"></div>
 
 <script src="app.js"></script>
 </body>

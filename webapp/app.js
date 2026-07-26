@@ -47,6 +47,10 @@
     scheduleDialog: document.getElementById("scheduleDialog"),
     scheduleCloseBtn: document.getElementById("scheduleCloseBtn"),
     scheduleList: document.getElementById("scheduleList"),
+    scheduleCalendar: document.getElementById("scheduleCalendar"),
+    scheduleViewToggle: document.getElementById("scheduleViewToggle"),
+    instructorFilterInput: document.getElementById("instructorFilterInput"),
+    toast: document.getElementById("toast"),
     exportIcsBtn: document.getElementById("exportIcsBtn"),
     exportDialog: document.getElementById("exportDialog"),
     exportCloseBtn: document.getElementById("exportCloseBtn"),
@@ -229,6 +233,8 @@
     els.mergeCrossListedToggle.checked = mergeCrossListed;
 
     if (urlQ) els.searchBox.value = urlQ;
+    const urlInstructor = url.searchParams.get("instructor") || "";
+    if (urlInstructor) els.instructorFilterInput.value = urlInstructor;
     if (urlSort && [...els.sortSelect.options].some((o) => o.value === urlSort)) els.sortSelect.value = urlSort;
 
     const startTerm = index.some((t) => t.term_code === urlTerm) ? urlTerm : index[0].term_code;
@@ -351,16 +357,21 @@
       if (e.key === "Escape") { closeDeptFilterPanel(); closeAllSelectFilters(); closeTermPicker(); }
     });
     els.deptSearchInput.addEventListener("input", () => renderSubjectRows(currentSubjectOptions()));
+    els.instructorFilterInput.addEventListener("input", debounce(() => { render(); updateUrl(); }, 150));
     els.hintDismissBtn.addEventListener("click", () => {
       localStorage.setItem(HINT_DISMISSED_KEY, "1");
       els.hintBanner.hidden = true;
     });
     document.addEventListener("keydown", (e) => {
-      if (e.key !== "/" || e.metaKey || e.ctrlKey || e.altKey) return;
+      const isSlash = e.key === "/" && !e.metaKey && !e.ctrlKey && !e.altKey;
+      const isCtrlK = e.key === "k" && e.ctrlKey && !e.metaKey && !e.altKey;
+      if (!isSlash && !isCtrlK) return;
       const tag = (e.target.tagName || "").toLowerCase();
       if (tag === "input" || tag === "textarea" || e.target.isContentEditable) return;
       e.preventDefault();
-      els.searchBox.focus();
+      if (window.matchMedia(MOBILE_BREAKPOINT).matches) setSidebarOpen(true);
+      // Small delay on mobile so the sidebar finishes sliding in before focusing
+      setTimeout(() => { els.searchBox.focus(); els.searchBox.select(); }, window.matchMedia(MOBILE_BREAKPOINT).matches ? 300 : 0);
     });
     els.themeToggle.addEventListener("click", toggleTheme);
     els.resetFiltersBtn.addEventListener("click", resetAllFilters);
@@ -376,6 +387,7 @@
     els.seatsThresholdSelect.value = "0";
     els.timeOfDaySelect.value = "any";
     els.sortSelect.value = "default";
+    els.instructorFilterInput.value = "";
     selectedDays.clear();
     syncDayCheckboxes();
     selectedSubjects.clear();
@@ -472,6 +484,16 @@
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape" && window.matchMedia(MOBILE_BREAKPOINT).matches) setSidebarOpen(false);
     });
+
+    // Swipe left on the sidebar to close it on mobile
+    let swipeStartX = 0;
+    els.filterSidebar.addEventListener("touchstart", (e) => {
+      swipeStartX = e.touches[0].clientX;
+    }, { passive: true });
+    els.filterSidebar.addEventListener("touchend", (e) => {
+      if (!window.matchMedia(MOBILE_BREAKPOINT).matches) return;
+      if (swipeStartX - e.changedTouches[0].clientX > 60) setSidebarOpen(false);
+    }, { passive: true });
   }
 
   function timeAgo(isoString) {
@@ -508,8 +530,9 @@
     if (selectedDays.size) count++;
     if (els.timeOfDaySelect.value !== "any") count++;
     if (selectedSubjects.size) count++;
+    if (els.instructorFilterInput.value.trim()) count++;
     els.mobileFilterCount.textContent = count ? String(count) : "";
-    els.resetFiltersBtn.disabled = count === 0 && !els.searchBox.value.trim();
+    els.resetFiltersBtn.disabled = count === 0 && !els.searchBox.value.trim() && !els.instructorFilterInput.value.trim();
   }
 
   function openDeptFilterPanel() {
@@ -587,6 +610,8 @@
     els.timeOfDaySelect.value !== "any" ? url.searchParams.set("time", els.timeOfDaySelect.value) : url.searchParams.delete("time");
     selectedDays.size ? url.searchParams.set("days", [...selectedDays].join(",")) : url.searchParams.delete("days");
     selectedSubjects.size ? url.searchParams.set("subj", [...selectedSubjects].join(",")) : url.searchParams.delete("subj");
+    const instrVal = els.instructorFilterInput.value.trim();
+    instrVal ? url.searchParams.set("instructor", instrVal) : url.searchParams.delete("instructor");
     els.mergeCrossListedToggle.checked ? url.searchParams.set("merge", "1") : url.searchParams.delete("merge");
     // crn is only ever set by the explicit "copy link to this course" action
     // (see copyCoursePermalink) - any other interaction invalidates it.
@@ -1148,6 +1173,10 @@
     if (!opts.skipDays) result = result.filter(matchesDayFilter);
     if (!opts.skipTime) result = result.filter(matchesTimeFilter);
     if (!opts.skipSubjects) result = result.filter(matchesSubjectFilter);
+    if (!opts.skipInstructor) {
+      const instrQ = els.instructorFilterInput.value.trim().toLowerCase();
+      if (instrQ) result = result.filter((c) => (c.instructor || "").toLowerCase().includes(instrQ));
+    }
     return result;
   }
 
@@ -1191,6 +1220,13 @@
         label: "Remove department filter",
         count: applyFilters(base, { skipSubjects: true }).length,
         action: () => { selectedSubjects.clear(); buildSubjectChips(); render(); updateUrl(); },
+      });
+    }
+    if (els.instructorFilterInput.value.trim()) {
+      candidates.push({
+        label: "Remove instructor filter",
+        count: applyFilters(base, { skipInstructor: true }).length,
+        action: () => { els.instructorFilterInput.value = ""; render(); updateUrl(); },
       });
     }
 
@@ -1247,6 +1283,14 @@
       chips.push({
         label: [...selectedSubjects].join(", "),
         onRemove: () => { selectedSubjects.clear(); buildSubjectChips(); render(); updateUrl(); },
+      });
+    }
+
+    const instrVal = els.instructorFilterInput.value.trim();
+    if (instrVal) {
+      chips.push({
+        label: `Instructor: ${instrVal}`,
+        onRemove: () => { els.instructorFilterInput.value = ""; render(); updateUrl(); },
       });
     }
 
@@ -1308,6 +1352,7 @@
       [...selectedDays].sort(),
       [...selectedSubjects].sort(),
       els.mergeCrossListedToggle.checked,
+      els.instructorFilterInput.value.trim().toLowerCase(),
     ]);
   }
 
@@ -1915,6 +1960,14 @@
     return mySchedule.some((s) => scheduleKey(s.term_code, s.crn) === key);
   }
 
+  let toastTimer = null;
+  function showToast(msg) {
+    els.toast.textContent = msg;
+    els.toast.classList.add("is-visible");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => els.toast.classList.remove("is-visible"), 2200);
+  }
+
   function addToSchedule(c) {
     const key = scheduleKey(c._term_code, c.crn);
     if (isInSchedule(key)) return;
@@ -1930,6 +1983,7 @@
       meetings: c.meetings,
     });
     saveSchedule();
+    showToast(`${c.subject} ${c.course_number} added to My Schedule`);
   }
 
   function removeFromSchedule(key) {
@@ -1985,6 +2039,108 @@
       }
     }
     return { conflicts, conflictKeys };
+  }
+
+  const CAL_COLORS = [
+    { bg: "rgba(217,164,65,0.2)",  border: "#d9a441", text: "#f0c060" },
+    { bg: "rgba(77,182,172,0.2)",  border: "#4db6ac", text: "#80cbc4" },
+    { bg: "rgba(121,134,203,0.2)", border: "#7986cb", text: "#9fa8da" },
+    { bg: "rgba(229,115,115,0.2)", border: "#e57373", text: "#ef9a9a" },
+    { bg: "rgba(129,199,132,0.2)", border: "#81c784", text: "#a5d6a7" },
+    { bg: "rgba(255,138,101,0.2)", border: "#ff8a65", text: "#ffab91" },
+    { bg: "rgba(186,104,200,0.2)", border: "#ba68c8", text: "#ce93d8" },
+    { bg: "rgba(79,195,247,0.2)",  border: "#4fc3f7", text: "#81d4fa" },
+  ];
+  const CAL_START_MIN  = 7 * 60;
+  const CAL_END_MIN    = 22 * 60;
+  const CAL_RANGE_MIN  = CAL_END_MIN - CAL_START_MIN;
+  const CAL_HEIGHT_PX  = 600;
+  const CAL_DAYS       = ["M", "T", "W", "R", "F"];
+  const CAL_DAY_LABELS = { M: "Mon", T: "Tue", W: "Wed", R: "Thu", F: "Fri" };
+
+  function renderScheduleCalendar() {
+    const cal = els.scheduleCalendar;
+    cal.innerHTML = "";
+    const grid = document.createElement("div");
+    grid.className = "cal-grid";
+
+    // Header row
+    grid.appendChild(Object.assign(document.createElement("div"), { className: "cal-corner" }));
+    for (const d of CAL_DAYS) {
+      const head = document.createElement("div");
+      head.className = "cal-day-head";
+      head.textContent = CAL_DAY_LABELS[d];
+      grid.appendChild(head);
+    }
+
+    // Time gutter
+    const timeCol = document.createElement("div");
+    timeCol.className = "cal-time-col";
+    timeCol.style.height = CAL_HEIGHT_PX + "px";
+
+    // Day columns
+    const dayCols = {};
+    for (const d of CAL_DAYS) {
+      const col = document.createElement("div");
+      col.className = "cal-day-col";
+      col.style.height = CAL_HEIGHT_PX + "px";
+      dayCols[d] = col;
+    }
+
+    // Hour lines + labels
+    for (let m = CAL_START_MIN; m <= CAL_END_MIN; m += 60) {
+      const top = (m - CAL_START_MIN) / CAL_RANGE_MIN * CAL_HEIGHT_PX;
+      const hr = m / 60;
+      const lbl = document.createElement("div");
+      lbl.className = "cal-hour-label";
+      lbl.style.top = top + "px";
+      lbl.textContent = hr === 12 ? "12pm" : hr < 12 ? `${hr}am` : `${hr - 12}pm`;
+      timeCol.appendChild(lbl);
+      if (m > CAL_START_MIN) {
+        for (const d of CAL_DAYS) {
+          const line = document.createElement("div");
+          line.className = "cal-hour-line";
+          line.style.top = top + "px";
+          dayCols[d].appendChild(line);
+        }
+      }
+    }
+
+    // Course blocks
+    mySchedule.forEach((s, idx) => {
+      const color = CAL_COLORS[idx % CAL_COLORS.length];
+      for (const meeting of (s.meetings || [])) {
+        const meetDays = dayLettersOf(meeting.days);
+        const t = parseTimeRange(meeting.time);
+        if (!meetDays.length || !t) continue;
+        const startMin = t.startHour * 60 + t.startMin;
+        const endMin   = t.endHour   * 60 + t.endMin;
+        const top    = (Math.max(startMin, CAL_START_MIN) - CAL_START_MIN) / CAL_RANGE_MIN * CAL_HEIGHT_PX;
+        const height = (Math.min(endMin, CAL_END_MIN) - Math.max(startMin, CAL_START_MIN)) / CAL_RANGE_MIN * CAL_HEIGHT_PX;
+        for (const d of meetDays) {
+          if (!dayCols[d]) continue;
+          const ev = document.createElement("div");
+          ev.className = "cal-event";
+          ev.style.cssText = `top:${top}px;height:${Math.max(height, 18)}px;background:${color.bg};border-left-color:${color.border};color:${color.text}`;
+          ev.title = `${s.subject} ${s.course_number}: ${s.title} · ${meeting.time}`;
+          const codeEl = document.createElement("div");
+          codeEl.className = "cal-event-code";
+          codeEl.textContent = `${s.subject} ${s.course_number}`;
+          ev.appendChild(codeEl);
+          if (height >= 28) {
+            const titleEl = document.createElement("div");
+            titleEl.className = "cal-event-title";
+            titleEl.textContent = s.title;
+            ev.appendChild(titleEl);
+          }
+          dayCols[d].appendChild(ev);
+        }
+      }
+    });
+
+    grid.appendChild(timeCol);
+    for (const d of CAL_DAYS) grid.appendChild(dayCols[d]);
+    cal.appendChild(grid);
   }
 
   function renderScheduleTray() {
@@ -2045,7 +2201,21 @@
   function wireDialogs() {
     els.scheduleFab.addEventListener("click", () => {
       renderScheduleTray();
+      // Re-render calendar if that view is active
+      const isCalendar = els.scheduleViewToggle.querySelector(".is-active")?.dataset.view === "calendar";
+      els.scheduleList.hidden = isCalendar;
+      els.scheduleCalendar.hidden = !isCalendar;
+      if (isCalendar) renderScheduleCalendar();
       els.scheduleDialog.showModal();
+    });
+    els.scheduleViewToggle.addEventListener("click", (e) => {
+      const btn = e.target.closest(".view-toggle-btn");
+      if (!btn) return;
+      els.scheduleViewToggle.querySelectorAll(".view-toggle-btn").forEach((b) => b.classList.toggle("is-active", b === btn));
+      const isCalendar = btn.dataset.view === "calendar";
+      els.scheduleList.hidden = isCalendar;
+      els.scheduleCalendar.hidden = !isCalendar;
+      if (isCalendar) renderScheduleCalendar();
     });
     els.scheduleCloseBtn.addEventListener("click", () => els.scheduleDialog.close());
     els.historyCloseBtn.addEventListener("click", () => els.historyDialog.close());
