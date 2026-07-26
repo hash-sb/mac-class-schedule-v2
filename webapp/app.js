@@ -98,6 +98,8 @@
     sidebarOpenBtn: document.getElementById("sidebarOpenBtn"),
     pageLayout: document.getElementById("pageLayout"),
     pageMain: document.getElementById("pageMain"),
+    primaryRow: document.getElementById("primaryRow"),
+    searchLabel: document.getElementById("searchLabel"),
   };
 
   const THEME_KEY = "macCourseArchive.theme.v1";
@@ -424,16 +426,26 @@
 
   function initMobileFilterDialog() {
     const mq = window.matchMedia(MOBILE_BREAKPOINT);
-    const inlineAnchor = document.createComment("filter-toolbar-anchor");
-    els.filterToolbar.after(inlineAnchor);
+    // Anchors mark where each group lives in the sidebar so we can restore them.
+    const termSearchAnchor = document.createComment("term-search-anchor");
+    els.termPicker.after(termSearchAnchor); // placed after termPicker in sidebar
+    const toolbarAnchor = document.createComment("filter-toolbar-anchor");
+    els.filterToolbar.after(toolbarAnchor);
 
     const placeForViewport = (isMobile) => {
       els.mobileFilterTrigger.hidden = !isMobile;
       if (isMobile) {
+        // Term + search → primary-row (visible at top on mobile)
+        els.primaryRow.appendChild(els.termPicker);
+        els.primaryRow.appendChild(els.searchLabel);
+        // Filters → mobile dialog
         els.mobileFilterDialog.appendChild(els.filterToolbar);
       } else {
         els.mobileFilterDialog.close();
-        inlineAnchor.after(els.filterToolbar);
+        // Restore term + search into sidebar (after their anchor, in order)
+        termSearchAnchor.after(els.termPicker, els.searchLabel);
+        // Restore filter toolbar into sidebar
+        toolbarAnchor.after(els.filterToolbar);
       }
     };
     placeForViewport(mq.matches);

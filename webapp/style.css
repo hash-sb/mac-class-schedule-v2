@@ -212,14 +212,10 @@ main {
   padding: 2rem 1.5rem 5rem;
 }
 
-/* ---- primary row: term + search, always full-width above the two columns ---- */
+/* ---- primary row: mobile-only; term + search live in sidebar on desktop ---- */
 
 .primary-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.25rem;
-  align-items: end;
-  margin-bottom: 1.25rem;
+  display: none; /* hidden on desktop — term+search are in the sidebar */
 }
 
 /* ---- two-column layout ---- */
@@ -273,6 +269,12 @@ main {
   line-height: 1;
 }
 .sidebar-collapse-btn:hover { color: var(--paper); background: var(--ink-700); }
+
+/* Term picker and search box fill the sidebar width */
+.filter-sidebar .field { width: 100%; }
+.filter-sidebar .field-grow { flex: none; }
+.filter-sidebar .field-grow input { width: 100%; box-sizing: border-box; }
+.filter-sidebar .term-picker-panel { width: 14rem; }
 
 /* Filter toolbar vertical layout inside sidebar */
 .filter-sidebar .filter-toolbar {
@@ -1346,12 +1348,24 @@ dialog.tray-dialog::backdrop { background: rgba(0,0,0,0.6); }
 
 @media (max-width: 720px) {
   main { padding: 1.5rem 1rem 5rem; }
+  /* Show primary-row (term + search moved here from sidebar by JS) */
+  .primary-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    align-items: end;
+    margin-bottom: 1rem;
+  }
   /* Collapse to single column; sidebar is hidden — app.js moves the
      filter toolbar into #mobileFilterDialog instead. */
   .page-layout { grid-template-columns: 1fr; }
   .filter-sidebar { display: none; }
   /* Keep sidebar-open-btn off even if JS un-hides it (mobile uses mobile-filter-trigger instead). */
   .sidebar-open-btn { display: none !important; }
+  /* Term + search fill the width in primary-row on mobile */
+  .primary-row .field-term { min-width: 10rem; }
+  .primary-row .field-grow { flex: 1 1 14rem; }
+  .primary-row .term-picker-panel { width: 15rem; }
 }
 
 /* ---------- skip link ---------- */

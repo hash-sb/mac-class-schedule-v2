@@ -27,32 +27,8 @@
 </div>
 
 <main id="mainContent">
-  <!-- Primary row: term + search, always full-width above the two-column layout -->
-  <div class="primary-row">
-    <div class="field field-term term-picker" id="termPicker">
-      <span class="field-label">Term <span class="term-freshness" id="termFreshness"></span></span>
-      <button type="button" class="term-picker-btn" id="termPickerBtn" aria-haspopup="listbox" aria-expanded="false">
-        <span id="termPickerLabel">—</span>
-        <span class="caret">▾</span>
-      </button>
-      <div class="term-picker-panel" id="termPickerPanel" hidden>
-        <div class="term-season-tabs" id="termSeasonTabs">
-          <button type="button" class="term-season-tab is-active" data-season="all">All</button>
-          <button type="button" class="term-season-tab" data-season="fall">Fall</button>
-          <button type="button" class="term-season-tab" data-season="spring">Spring</button>
-          <button type="button" class="term-season-tab" data-season="january">Jan</button>
-          <button type="button" class="term-season-tab" data-season="summer">Summer</button>
-        </div>
-        <div class="term-list" id="termList"></div>
-      </div>
-      <select id="termSelect" hidden aria-hidden="true"></select>
-    </div>
-
-    <label class="field field-grow">
-      <span class="field-label">Search</span>
-      <input id="searchBox" type="text" placeholder="subject, course number, title, instructor, or CRN…" autocomplete="off">
-    </label>
-  </div>
+  <!-- Mobile-only header: term + search move here from sidebar on narrow screens via JS -->
+  <div class="primary-row" id="primaryRow"></div>
 
   <!-- Two-column layout: collapsible filter sidebar + main content -->
   <div class="page-layout" id="pageLayout">
@@ -62,6 +38,31 @@
         <span class="sidebar-heading">Filters</span>
         <button type="button" class="sidebar-collapse-btn" id="sidebarCollapseBtn" aria-label="Collapse filters">◂</button>
       </div>
+
+      <!-- Term + Search live here on desktop; JS moves them to #primaryRow on mobile -->
+      <div class="field field-term term-picker" id="termPicker">
+        <span class="field-label">Term <span class="term-freshness" id="termFreshness"></span></span>
+        <button type="button" class="term-picker-btn" id="termPickerBtn" aria-haspopup="listbox" aria-expanded="false">
+          <span id="termPickerLabel">—</span>
+          <span class="caret">▾</span>
+        </button>
+        <div class="term-picker-panel" id="termPickerPanel" hidden>
+          <div class="term-season-tabs" id="termSeasonTabs">
+            <button type="button" class="term-season-tab is-active" data-season="all">All</button>
+            <button type="button" class="term-season-tab" data-season="fall">Fall</button>
+            <button type="button" class="term-season-tab" data-season="spring">Spring</button>
+            <button type="button" class="term-season-tab" data-season="january">Jan</button>
+            <button type="button" class="term-season-tab" data-season="summer">Summer</button>
+          </div>
+          <div class="term-list" id="termList"></div>
+        </div>
+        <select id="termSelect" hidden aria-hidden="true"></select>
+      </div>
+
+      <label class="field field-grow" id="searchLabel">
+        <span class="field-label">Search</span>
+        <input id="searchBox" type="text" placeholder="subject, course number, title, instructor, or CRN…" autocomplete="off">
+      </label>
 
       <div class="filter-toolbar" id="filterToolbar" role="group" aria-label="Filters">
         <div class="filter-control day-filter" role="group" aria-label="Meets on">
