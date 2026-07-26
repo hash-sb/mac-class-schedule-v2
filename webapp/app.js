@@ -90,7 +90,6 @@
     sidebarOpenBtn: document.getElementById("sidebarOpenBtn"),
     pageLayout: document.getElementById("pageLayout"),
     pageMain: document.getElementById("pageMain"),
-    primaryRow: document.getElementById("primaryRow"),
     searchLabel: document.getElementById("searchLabel"),
   };
 
