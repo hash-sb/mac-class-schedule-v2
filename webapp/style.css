@@ -203,6 +203,10 @@ a { color: var(--amber-bright); }
 }
 .term-option:hover { background: var(--ink-700); }
 .term-option.is-active { color: var(--amber-bright); font-weight: 600; }
+.term-divider { border: none; border-top: 1px solid var(--ink-700); margin: 0.3rem 0.3rem; }
+.term-option-cross { color: var(--teal); }
+.term-option-cross:hover { color: var(--teal); }
+.term-option-cross.is-active { color: var(--teal); font-weight: 600; }
 
 /* ---------- layout ---------- */
 

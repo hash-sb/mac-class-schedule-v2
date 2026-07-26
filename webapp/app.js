@@ -25,7 +25,6 @@
     termList: document.getElementById("termList"),
     termSelect: document.getElementById("termSelect"),
     searchBox: document.getElementById("searchBox"),
-    searchAllToggle: document.getElementById("searchAllToggle"),
     seatsThresholdSelect: document.getElementById("seatsThresholdSelect"),
     mergeCrossListedToggle: document.getElementById("mergeCrossListedToggle"),
     sortSelect: document.getElementById("sortSelect"),
@@ -109,6 +108,8 @@
   /** term_code -> full payload {..., courses:[...]} */
   const termCache = new Map();
   let currentTermCode = null;
+  let crossTermMode = false;
+  let crossTermSeason = null; // null = all seasons, or "fall"/"spring"/"january"/"summer"
   let selectedDays = new Set();
   let selectedSubjects = new Set();
   let mySchedule = loadSchedule();
@@ -195,7 +196,7 @@
     const url = new URL(location.href);
     const urlTerm = url.searchParams.get("term");
     const urlQ = url.searchParams.get("q");
-    const urlAll = url.searchParams.get("all") === "1";
+    const urlAllParam = url.searchParams.get("all"); // "1" = all terms, season name = all of that season
     const urlSort = url.searchParams.get("sort");
     const urlCrn = url.searchParams.get("crn");
 
@@ -241,16 +242,17 @@
     const startTerm = index.some((t) => t.term_code === urlTerm) ? urlTerm : index[0].term_code;
     currentTermCode = startTerm;
     els.termSelect.value = startTerm;
-    syncTermPicker(startTerm);
 
-    if (urlAll) {
-      els.searchAllToggle.checked = true;
+    if (urlAllParam) {
+      crossTermMode = true;
+      crossTermSeason = (urlAllParam === "1") ? null : urlAllParam;
       els.results.classList.add("is-cross-term");
       await ensureSearchIndexLoaded();
     } else {
       await ensureTermLoaded(startTerm);
     }
-    syncTermSortOptions(urlAll);
+    syncTermPicker(startTerm);
+    syncTermSortOptions(crossTermMode);
 
     initSidebar();
     initMobileFilterDialog();
@@ -281,7 +283,6 @@
       if (tab) filterTermsBySeason(tab.dataset.season);
     });
     els.searchBox.addEventListener("input", debounce(() => { render(); updateUrl(); }, 120));
-    els.searchAllToggle.addEventListener("change", onToggleSearchAll);
     els.seatsThresholdSelect.addEventListener("change", () => { render(); updateUrl(); });
     els.mergeCrossListedToggle.addEventListener("change", () => { render(); updateUrl(); });
     els.sortSelect.addEventListener("change", () => { render(); updateUrl(); });
@@ -374,6 +375,11 @@
     selectedDays.clear();
     syncDayCheckboxes();
     selectedSubjects.clear();
+    crossTermMode = false;
+    crossTermSeason = null;
+    els.results.classList.remove("is-cross-term");
+    syncTermSortOptions(false);
+    syncTermPicker(currentTermCode);
     buildSubjectChips();
     render();
     updateUrl();
@@ -521,7 +527,9 @@
     const url = new URL(location.href);
     const urlTerm = url.searchParams.get("term");
     const urlQ = url.searchParams.get("q") || "";
-    const urlAll = url.searchParams.get("all") === "1";
+    const urlAllParam = url.searchParams.get("all");
+    const newCrossMode = !!urlAllParam;
+    const newCrossSeason = (!urlAllParam || urlAllParam === "1") ? null : urlAllParam;
     const urlSeats = url.searchParams.has("seats") ? parseInt(url.searchParams.get("seats"), 10) || 0 : 0;
     const urlSort = url.searchParams.get("sort") || "default";
     const urlDays = (url.searchParams.get("days") || "").split(",").filter(Boolean);
@@ -542,17 +550,18 @@
     if (urlTerm && urlTerm !== currentTermCode) {
       currentTermCode = urlTerm;
       els.termSelect.value = urlTerm;
-      syncTermPicker(urlTerm);
       await ensureTermLoaded(urlTerm);
       updateTermFreshness();
       loadChangesPanel();
     }
-    if (urlAll !== els.searchAllToggle.checked) {
-      els.searchAllToggle.checked = urlAll;
-      els.results.classList.toggle("is-cross-term", urlAll);
-      if (urlAll) await ensureSearchIndexLoaded();
+    if (newCrossMode !== crossTermMode || newCrossSeason !== crossTermSeason) {
+      crossTermMode = newCrossMode;
+      crossTermSeason = newCrossSeason;
+      els.results.classList.toggle("is-cross-term", crossTermMode);
+      if (crossTermMode) await ensureSearchIndexLoaded();
     }
-    syncTermSortOptions(urlAll);
+    syncTermPicker(currentTermCode);
+    syncTermSortOptions(crossTermMode);
     buildSubjectChips();
     render();
     if (urlCrn) focusCourseByCrn(urlCrn);
@@ -563,7 +572,11 @@
     url.searchParams.set("term", currentTermCode);
     const q = els.searchBox.value.trim();
     q ? url.searchParams.set("q", q) : url.searchParams.delete("q");
-    els.searchAllToggle.checked ? url.searchParams.set("all", "1") : url.searchParams.delete("all");
+    if (crossTermMode) {
+      url.searchParams.set("all", crossTermSeason || "1");
+    } else {
+      url.searchParams.delete("all");
+    }
     const seatsThreshold = parseInt(els.seatsThresholdSelect.value, 10) || 0;
     seatsThreshold > 0 ? url.searchParams.set("seats", String(seatsThreshold)) : url.searchParams.delete("seats");
     els.sortSelect.value !== "default" ? url.searchParams.set("sort", els.sortSelect.value) : url.searchParams.delete("sort");
@@ -657,6 +670,34 @@
       byAY.get(ay).push(t);
     }
 
+    // Cross-term search options — one per season tab; visibility tracks the active tab
+    const CROSS_OPTIONS = [
+      { season: "all",     label: "Search all terms" },
+      { season: "fall",    label: "Search all Fall terms" },
+      { season: "spring",  label: "Search all Spring terms" },
+      { season: "january", label: "Search all January terms" },
+      { season: "summer",  label: "Search all Summer terms" },
+    ];
+    const crossSection = document.createElement("div");
+    crossSection.className = "term-cross-section";
+    for (const { season, label } of CROSS_OPTIONS) {
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "term-option term-option-cross";
+      btn.dataset.crossSeason = season;
+      btn.textContent = label;
+      btn.hidden = season !== "all";
+      btn.addEventListener("click", () => {
+        closeTermPicker();
+        activateCrossTermSearch(season === "all" ? null : season);
+      });
+      crossSection.appendChild(btn);
+    }
+    els.termList.appendChild(crossSection);
+    const divider = document.createElement("hr");
+    divider.className = "term-divider";
+    els.termList.appendChild(divider);
+
     const frag = document.createDocumentFragment();
     for (const [ay, terms] of byAY) {
       const group = document.createElement("div");
@@ -686,7 +727,19 @@
     els.termList.appendChild(frag);
   }
 
+  const CROSS_LABELS = { fall: "All Fall terms", spring: "All Spring terms", january: "All January terms", summer: "All Summer terms" };
+
   function syncTermPicker(termCode) {
+    if (crossTermMode) {
+      els.termPickerLabel.textContent = crossTermSeason ? CROSS_LABELS[crossTermSeason] : "All terms";
+      els.termList.querySelectorAll(".term-option-cross").forEach((btn) => {
+        btn.classList.toggle("is-active", btn.dataset.crossSeason === (crossTermSeason || "all"));
+      });
+      els.termList.querySelectorAll(".term-option:not(.term-option-cross)").forEach((btn) => {
+        btn.classList.remove("is-active");
+      });
+      return;
+    }
     const t = index.find((t) => t.term_code === termCode);
     if (t) els.termPickerLabel.textContent = t.term_label;
     els.termList.querySelectorAll(".term-option").forEach((btn) => {
@@ -715,16 +768,20 @@
       tab.classList.toggle("is-active", tab.dataset.season === season);
     });
     const isAll = season === "all";
-    els.termList.querySelectorAll(".term-option").forEach((btn) => {
+    // Cross-term buttons: show only the one matching the active tab
+    els.termList.querySelectorAll(".term-option-cross").forEach((btn) => {
+      btn.hidden = btn.dataset.crossSeason !== season;
+    });
+    // Regular term buttons: show/hide and swap label style
+    els.termList.querySelectorAll(".term-option:not(.term-option-cross)").forEach((btn) => {
       const visible = isAll || btn.dataset.season === season;
       btn.hidden = !visible;
-      // Full label ("Fall 2026") when filtered by season; short label ("Fall") in grouped "All" view.
       btn.textContent = isAll ? btn.dataset.shortLabel : btn.dataset.fullLabel;
     });
+    // Year-group headings are redundant when each button already shows the full label with year
     els.termList.querySelectorAll(".term-year-group").forEach((group) => {
       const anyVisible = [...group.querySelectorAll(".term-option")].some((b) => !b.hidden);
       group.hidden = !anyVisible;
-      // Year-group heading is redundant when each button already shows the full label with year.
       const heading = group.querySelector(".term-year-label");
       if (heading) heading.hidden = !isAll;
     });
@@ -733,9 +790,10 @@
   async function selectTerm(termCode) {
     currentTermCode = termCode;
     els.termSelect.value = termCode;
-    syncTermPicker(termCode);
-    els.searchAllToggle.checked = false;
+    crossTermMode = false;
+    crossTermSeason = null;
     els.results.classList.remove("is-cross-term");
+    syncTermPicker(termCode);
     await ensureTermLoaded(termCode);
     selectedSubjects.clear();
     buildSubjectChips();
@@ -798,12 +856,17 @@
     }
   }
 
-  async function onToggleSearchAll(e) {
-    els.results.classList.toggle("is-cross-term", e.target.checked);
-    if (e.target.checked) await ensureSearchIndexLoaded();
-    syncTermSortOptions(e.target.checked);
+  async function activateCrossTermSearch(season) {
+    crossTermMode = true;
+    crossTermSeason = season; // null = all seasons
+    els.results.classList.add("is-cross-term");
+    await ensureSearchIndexLoaded();
+    syncTermSortOptions(true);
+    syncTermPicker(currentTermCode);
     selectedSubjects.clear();
     buildSubjectChips();
+    updateTermFreshness();
+    loadChangesPanel();
     render();
     updateUrl();
   }
@@ -868,7 +931,7 @@
 
   function buildSubjectChips() {
     els.deptSearchInput.value = "";
-    els.deptFilterScopeLabel.textContent = els.searchAllToggle.checked
+    els.deptFilterScopeLabel.textContent = crossTermMode
       ? "Filter by department (all terms)"
       : "Filter by department (this term)";
     renderSubjectRows(currentSubjectOptions());
@@ -1135,8 +1198,10 @@
   // ---------------------------------------------------------------------
 
   function currentCourses() {
-    if (els.searchAllToggle && els.searchAllToggle.checked) {
-      return searchIndexCache || [];
+    if (crossTermMode) {
+      const all = searchIndexCache || [];
+      if (!crossTermSeason) return all;
+      return all.filter((c) => (c.term_label || "").split(" ")[0].toLowerCase() === crossTermSeason);
     }
     const payload = termCache.get(currentTermCode);
     return payload ? payload.courses.map((c) => ({ ...c, _term_label: payload.term_label, _term_code: payload.term_code })) : [];
@@ -1181,10 +1246,11 @@
       });
     }
 
-    if (els.searchAllToggle.checked) {
+    if (crossTermMode) {
+      const label = crossTermSeason ? CROSS_LABELS[crossTermSeason] : "All terms";
       chips.push({
-        label: "Searching every term",
-        onRemove: () => { els.searchAllToggle.checked = false; onToggleSearchAll({ target: els.searchAllToggle }); },
+        label,
+        onRemove: () => { crossTermMode = false; crossTermSeason = null; els.results.classList.remove("is-cross-term"); syncTermSortOptions(false); syncTermPicker(currentTermCode); render(); updateUrl(); },
       });
     }
 
@@ -1229,7 +1295,8 @@
   function currentFilterSignature() {
     return JSON.stringify([
       currentTermCode,
-      els.searchAllToggle.checked,
+      crossTermMode,
+      crossTermSeason,
       els.searchBox.value.trim().toLowerCase(),
       els.seatsThresholdSelect.value,
       els.sortSelect.value,
@@ -1693,7 +1760,7 @@
 
   async function loadChangesPanel() {
     els.changesPanel.hidden = true;
-    if (els.searchAllToggle.checked) return;
+    if (crossTermMode) return;
     try {
       const res = await fetch(`${DATA_DIR}/changes/${currentTermCode}.jsonl`);
       if (!res.ok) return;
