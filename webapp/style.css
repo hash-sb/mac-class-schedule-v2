@@ -1222,8 +1222,8 @@ dialog.tray-dialog::backdrop { background: rgba(0,0,0,0.6); }
 /* ---------- print ---------- */
 
 @media print {
+  html, body { background: #fff !important; color: #000 !important; }
   body > *:not(#scheduleDialog) { display: none !important; }
-  .schedule-fab { display: none !important; }
 
   #scheduleDialog[open] {
     position: static !important;
