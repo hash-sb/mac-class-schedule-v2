@@ -88,25 +88,20 @@ a { color: var(--amber-bright); }
 
 .wordmark { max-width: 62rem; margin: 0 auto; }
 
-.wordmark-code {
-  display: inline-block;
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
-  letter-spacing: 0.18em;
-  color: var(--amber);
-  border: 1px solid var(--amber);
-  padding: 0.2rem 0.55rem;
-  border-radius: 2px;
-  margin-bottom: 1rem;
-}
-
 .wordmark h1 {
   font-family: var(--font-display);
   font-weight: 600;
   font-size: clamp(2.1rem, 5vw, 3.4rem);
-  margin: 0.2rem 0 0.6rem;
+  margin: 0 0 0.6rem;
   letter-spacing: -0.01em;
 }
+.disclaimer-ref {
+  font-size: 0.45em;
+  color: var(--paper-dim);
+  text-decoration: none;
+  vertical-align: super;
+}
+.disclaimer-ref:hover { color: var(--amber); }
 
 /* ---------- term picker ---------- */
 
