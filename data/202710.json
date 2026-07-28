@@ -1,7 +1,7 @@
 {
   "term_code": "202710",
   "term_label": "Fall 2026",
-  "scraped_at": "2026-07-27T02:36:26.421063+00:00",
+  "scraped_at": "2026-07-28T02:11:12.578555+00:00",
   "course_count": 782,
   "courses": [
     {
@@ -454,7 +454,7 @@
         }
       ],
       "instructor": "Jenna Rice Rahaim",
-      "open_seats": "10",
+      "open_seats": "11",
       "max_enrollment": "30",
       "crosslistings": [],
       "seat_reservations": "10 seats saved for incoming First-Years",
@@ -1602,7 +1602,7 @@
         }
       ],
       "instructor": "Arthur Mitchell",
-      "open_seats": "2",
+      "open_seats": "3",
       "max_enrollment": "20",
       "crosslistings": [
         "JAPA 254-01 (10437)"
@@ -2501,7 +2501,7 @@
         }
       ],
       "instructor": "Kathryn Splan",
-      "open_seats": "0",
+      "open_seats": "2",
       "max_enrollment": "48",
       "crosslistings": [
         "CHEM 351-01 (10135)"
@@ -2527,7 +2527,7 @@
         }
       ],
       "instructor": "Kathryn Splan",
-      "open_seats": "0",
+      "open_seats": "2",
       "max_enrollment": "16",
       "crosslistings": [],
       "seat_reservations": "",
@@ -2899,7 +2899,7 @@
       "seat_reservations": "15 seats saved for incoming First-Years",
       "description": "This course offers a rigorous, foundational treatment of atoms and molecules. We study the nature of chemical bonding and how bonding gives rise to the three-dimensional structure of matter. We explore how the macroscopic properties of substances can be interpreted in terms of atomic and molecular structure. We also learn mathematical and conceptual tools for quantifying chemical equilibrium, with an emphasis on the reactions of acids and bases. Laboratory work reinforces concepts in lecture, and also provides a review of fundamental topics, such as stoichiometry, gas laws, and solution-phase reactions, that are essential for future course work in chemistry. Three lectures and one three-hour laboratory per week. All sections of class will have regular graded homework assignments and tests. Lab fee of $12 required.",
       "distribution_requirements": "Natural science and mathematics",
-      "gen_ed_requirements": "Quantitative Thinking Q1, Writing WA, Writing WP",
+      "gen_ed_requirements": "Quantitative Thinking Q1, Writing WP",
       "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202710%27%20dept=%20%27CHEM%27%20num=%27111%27%20sect=%2701%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
     },
     {
@@ -3541,7 +3541,7 @@
         }
       ],
       "instructor": "Thomas Varberg",
-      "open_seats": "1",
+      "open_seats": "3",
       "max_enrollment": "24",
       "crosslistings": [],
       "seat_reservations": "",
@@ -3589,7 +3589,7 @@
         }
       ],
       "instructor": "Thomas Varberg",
-      "open_seats": "2",
+      "open_seats": "4",
       "max_enrollment": "8",
       "crosslistings": [],
       "seat_reservations": "",
@@ -3661,7 +3661,7 @@
         }
       ],
       "instructor": "Kathryn Splan",
-      "open_seats": "0",
+      "open_seats": "2",
       "max_enrollment": "48",
       "crosslistings": [
         "BIOL 351-01 (10136)"
@@ -3687,7 +3687,7 @@
         }
       ],
       "instructor": "Kathryn Splan",
-      "open_seats": "0",
+      "open_seats": "2",
       "max_enrollment": "16",
       "crosslistings": [],
       "seat_reservations": "",
@@ -4466,7 +4466,7 @@
       "seat_reservations": "",
       "description": "Varies by semester. Consult the department or class schedule for current listing.",
       "distribution_requirements": "Humanities",
-      "gen_ed_requirements": "Internationalism",
+      "gen_ed_requirements": "Internationalism, Writing WA",
       "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202710%27%20dept=%20%27CLAS%27%20num=%27194%27%20sect=%27F1%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
     },
     {
@@ -11402,7 +11402,7 @@
         }
       ],
       "instructor": "Arthur Mitchell",
-      "open_seats": "2",
+      "open_seats": "3",
       "max_enrollment": "20",
       "crosslistings": [
         "ASIA 254-01 (10438)"
@@ -12260,7 +12260,7 @@
         }
       ],
       "instructor": "William Grodzicki",
-      "open_seats": "0",
+      "open_seats": "1",
       "max_enrollment": "20",
       "crosslistings": [],
       "seat_reservations": "",
@@ -12692,7 +12692,7 @@
         }
       ],
       "instructor": "Brad Stiffler",
-      "open_seats": "2",
+      "open_seats": "3",
       "max_enrollment": "24",
       "crosslistings": [],
       "seat_reservations": "",
@@ -16404,7 +16404,7 @@
         {
           "days": "M W F",
           "time": "10:50 - 11:50 am",
-          "room": ""
+          "room": "MAIN 009"
         }
       ],
       "instructor": "Erik Davis",
