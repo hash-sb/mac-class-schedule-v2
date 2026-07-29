@@ -1,7 +1,7 @@
 {
   "term_code": "202710",
   "term_label": "Fall 2026",
-  "scraped_at": "2026-07-28T02:11:12.578555+00:00",
+  "scraped_at": "2026-07-29T02:14:24.764747+00:00",
   "course_count": 782,
   "courses": [
     {
@@ -1473,7 +1473,7 @@
         }
       ],
       "instructor": "Chun Chen",
-      "open_seats": "13",
+      "open_seats": "12",
       "max_enrollment": "20",
       "crosslistings": [
         "HIST 140-01 (10392)"
@@ -4758,7 +4758,7 @@
         }
       ],
       "instructor": "Amin Alhashim",
-      "open_seats": "5",
+      "open_seats": "4",
       "max_enrollment": "24",
       "crosslistings": [
         "STAT 112-02 (10186)"
@@ -10260,7 +10260,7 @@
         }
       ],
       "instructor": "Chun Chen",
-      "open_seats": "13",
+      "open_seats": "12",
       "max_enrollment": "20",
       "crosslistings": [
         "ASIA 140-01 (10393)"
@@ -12740,7 +12740,7 @@
         }
       ],
       "instructor": "Brad Stiffler",
-      "open_seats": "-1",
+      "open_seats": "0",
       "max_enrollment": "16",
       "crosslistings": [],
       "seat_reservations": "",
@@ -17852,7 +17852,7 @@
         }
       ],
       "instructor": "Amin Alhashim",
-      "open_seats": "5",
+      "open_seats": "4",
       "max_enrollment": "24",
       "crosslistings": [
         "COMP 112-02 (10185)"
