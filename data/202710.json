@@ -1,7 +1,7 @@
 {
   "term_code": "202710",
   "term_label": "Fall 2026",
-  "scraped_at": "2026-07-29T02:14:24.764747+00:00",
+  "scraped_at": "2026-07-30T02:03:35.422400+00:00",
   "course_count": 782,
   "courses": [
     {
@@ -5564,7 +5564,7 @@
         }
       ],
       "instructor": "Mario Solis-Garcia",
-      "open_seats": "0",
+      "open_seats": "1",
       "max_enrollment": "17",
       "crosslistings": [],
       "seat_reservations": "",
@@ -7619,7 +7619,7 @@
         }
       ],
       "instructor": "Xavier Haro-Carrión",
-      "open_seats": "0",
+      "open_seats": "-1",
       "max_enrollment": "16",
       "crosslistings": [],
       "seat_reservations": "",
@@ -9067,7 +9067,7 @@
         }
       ],
       "instructor": "Xavier Haro-Carrión",
-      "open_seats": "0",
+      "open_seats": "-1",
       "max_enrollment": "16",
       "crosslistings": [],
       "seat_reservations": "",
@@ -11605,7 +11605,7 @@
         }
       ],
       "instructor": "Xavier Haro-Carrión",
-      "open_seats": "0",
+      "open_seats": "-1",
       "max_enrollment": "16",
       "crosslistings": [],
       "seat_reservations": "",
@@ -17243,7 +17243,7 @@
         }
       ],
       "instructor": "Fernanda Bartolomei-Merlin",
-      "open_seats": "15",
+      "open_seats": "16",
       "max_enrollment": "20",
       "crosslistings": [],
       "seat_reservations": "",
