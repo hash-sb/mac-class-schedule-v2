@@ -1,7 +1,7 @@
 {
   "term_code": "202710",
   "term_label": "Fall 2026",
-  "scraped_at": "2026-08-09T01:22:04.324030+00:00",
+  "scraped_at": "2026-08-10T01:24:13.524885+00:00",
   "course_count": 781,
   "courses": [
     {
@@ -651,7 +651,7 @@
         }
       ],
       "instructor": "Ron Barrett",
-      "open_seats": "9",
+      "open_seats": "8",
       "max_enrollment": "20",
       "crosslistings": [],
       "seat_reservations": "",
@@ -1421,7 +1421,7 @@
         }
       ],
       "instructor": "Erik Davis",
-      "open_seats": "4",
+      "open_seats": "3",
       "max_enrollment": "16",
       "crosslistings": [
         "RELI 111-01 (10635)"
@@ -1550,7 +1550,7 @@
         }
       ],
       "instructor": "Bixin Guo",
-      "open_seats": "7",
+      "open_seats": "6",
       "max_enrollment": "20",
       "crosslistings": [
         "PHIL 211-01 (10535)"
@@ -3879,7 +3879,7 @@
         }
       ],
       "instructor": "Rivi Handler-Spitz",
-      "open_seats": "3",
+      "open_seats": "2",
       "max_enrollment": "15",
       "crosslistings": [],
       "seat_reservations": "",
@@ -3903,7 +3903,7 @@
         }
       ],
       "instructor": "Ruoxi Song",
-      "open_seats": "5",
+      "open_seats": "4",
       "max_enrollment": "12",
       "crosslistings": [],
       "seat_reservations": "",
@@ -9895,7 +9895,7 @@
         }
       ],
       "instructor": "Amanda Wolfson",
-      "open_seats": "7",
+      "open_seats": "6",
       "max_enrollment": "20",
       "crosslistings": [],
       "seat_reservations": "",
@@ -9919,7 +9919,7 @@
         }
       ],
       "instructor": "Francesca Caligiuri Shields",
-      "open_seats": "10",
+      "open_seats": "9",
       "max_enrollment": "12",
       "crosslistings": [],
       "seat_reservations": "",
@@ -12164,7 +12164,7 @@
         }
       ],
       "instructor": "Daniel O'Loughlin",
-      "open_seats": "7",
+      "open_seats": "6",
       "max_enrollment": "24",
       "crosslistings": [],
       "seat_reservations": "",
@@ -12644,7 +12644,7 @@
         }
       ],
       "instructor": "Howard Sinker",
-      "open_seats": "1",
+      "open_seats": "0",
       "max_enrollment": "20",
       "crosslistings": [],
       "seat_reservations": "6 seats saved for incoming First-Years",
@@ -12692,7 +12692,7 @@
         }
       ],
       "instructor": "Rory Solomon",
-      "open_seats": "13",
+      "open_seats": "12",
       "max_enrollment": "16",
       "crosslistings": [],
       "seat_reservations": "",
@@ -13590,7 +13590,7 @@
         }
       ],
       "instructor": "Bixin Guo",
-      "open_seats": "7",
+      "open_seats": "6",
       "max_enrollment": "20",
       "crosslistings": [
         "ASIA 211-01 (10536)"
@@ -13886,7 +13886,7 @@
         }
       ],
       "instructor": "Gina Wood",
-      "open_seats": "6",
+      "open_seats": "5",
       "max_enrollment": "10",
       "crosslistings": [],
       "seat_reservations": "",
@@ -13910,7 +13910,7 @@
         }
       ],
       "instructor": "Sara Augustin",
-      "open_seats": "14",
+      "open_seats": "13",
       "max_enrollment": "20",
       "crosslistings": [],
       "seat_reservations": "",
@@ -15800,7 +15800,7 @@
         }
       ],
       "instructor": "Erika DeAngelis",
-      "open_seats": "2",
+      "open_seats": "3",
       "max_enrollment": "32",
       "crosslistings": [],
       "seat_reservations": "",
@@ -16358,7 +16358,7 @@
         }
       ],
       "instructor": "Erik Davis",
-      "open_seats": "4",
+      "open_seats": "3",
       "max_enrollment": "16",
       "crosslistings": [
         "ASIA 113-01 (10636)"
@@ -16434,7 +16434,7 @@
         }
       ],
       "instructor": "James Laine",
-      "open_seats": "6",
+      "open_seats": "5",
       "max_enrollment": "12",
       "crosslistings": [],
       "seat_reservations": "4 seats saved for First-Years",
