@@ -1,7 +1,7 @@
 {
   "term_code": "202710",
   "term_label": "Fall 2026",
-  "scraped_at": "2026-08-10T01:24:13.524885+00:00",
+  "scraped_at": "2026-08-11T01:22:02.615541+00:00",
   "course_count": 781,
   "courses": [
     {
@@ -170,7 +170,7 @@
         }
       ],
       "instructor": "Kirisitina Sailiata",
-      "open_seats": "1",
+      "open_seats": "0",
       "max_enrollment": "16",
       "crosslistings": [
         "ENVI 237-01 (10021)"
@@ -550,7 +550,7 @@
         }
       ],
       "instructor": "Marianne Milligan",
-      "open_seats": "0",
+      "open_seats": "1",
       "max_enrollment": "20",
       "crosslistings": [
         "LING 206-01 (10456)"
@@ -1321,7 +1321,7 @@
         }
       ],
       "instructor": "Serdar Yalçin",
-      "open_seats": "-1",
+      "open_seats": "0",
       "max_enrollment": "16",
       "crosslistings": [],
       "seat_reservations": "",
@@ -1421,7 +1421,7 @@
         }
       ],
       "instructor": "Erik Davis",
-      "open_seats": "3",
+      "open_seats": "2",
       "max_enrollment": "16",
       "crosslistings": [
         "RELI 111-01 (10635)"
@@ -1473,7 +1473,7 @@
         }
       ],
       "instructor": "Chun Chen",
-      "open_seats": "3",
+      "open_seats": "4",
       "max_enrollment": "20",
       "crosslistings": [
         "HIST 140-01 (10392)"
@@ -2965,7 +2965,7 @@
         }
       ],
       "instructor": "Leah Witus",
-      "open_seats": "1",
+      "open_seats": "0",
       "max_enrollment": "36",
       "crosslistings": [],
       "seat_reservations": "15 seats saved for incoming First-Years",
@@ -3013,7 +3013,7 @@
         }
       ],
       "instructor": "Isabella Nimm",
-      "open_seats": "1",
+      "open_seats": "0",
       "max_enrollment": "18",
       "crosslistings": [],
       "seat_reservations": "9 seats saved for incoming First-Years",
@@ -3253,7 +3253,7 @@
         }
       ],
       "instructor": "Ronald Brisbois",
-      "open_seats": "4",
+      "open_seats": "3",
       "max_enrollment": "32",
       "crosslistings": [],
       "seat_reservations": "",
@@ -3445,7 +3445,7 @@
         }
       ],
       "instructor": "Sophia Lemonholm",
-      "open_seats": "12",
+      "open_seats": "11",
       "max_enrollment": "16",
       "crosslistings": [],
       "seat_reservations": "",
@@ -3879,7 +3879,7 @@
         }
       ],
       "instructor": "Rivi Handler-Spitz",
-      "open_seats": "2",
+      "open_seats": "1",
       "max_enrollment": "15",
       "crosslistings": [],
       "seat_reservations": "",
@@ -3927,7 +3927,7 @@
         }
       ],
       "instructor": "Ruoxi Song",
-      "open_seats": "2",
+      "open_seats": "1",
       "max_enrollment": "12",
       "crosslistings": [],
       "seat_reservations": "",
@@ -4242,7 +4242,7 @@
         }
       ],
       "instructor": "Brian Lush",
-      "open_seats": "14",
+      "open_seats": "13",
       "max_enrollment": "20",
       "crosslistings": [],
       "seat_reservations": "",
@@ -4266,7 +4266,7 @@
         }
       ],
       "instructor": "Brian Lush",
-      "open_seats": "14",
+      "open_seats": "13",
       "max_enrollment": "20",
       "crosslistings": [],
       "seat_reservations": "",
@@ -4660,7 +4660,7 @@
         }
       ],
       "instructor": "Serdar Yalçin",
-      "open_seats": "-1",
+      "open_seats": "0",
       "max_enrollment": "16",
       "crosslistings": [],
       "seat_reservations": "",
@@ -4810,7 +4810,7 @@
         }
       ],
       "instructor": "Getiria Onsongo",
-      "open_seats": "6",
+      "open_seats": "5",
       "max_enrollment": "24",
       "crosslistings": [
         "STAT 112-04 (10190)"
@@ -5032,7 +5032,7 @@
         }
       ],
       "instructor": "Rory Solomon",
-      "open_seats": "10",
+      "open_seats": "9",
       "max_enrollment": "16",
       "crosslistings": [
         "MCST 294-02 (10890)"
@@ -5540,7 +5540,7 @@
         }
       ],
       "instructor": "Mario Solis-Garcia",
-      "open_seats": "1",
+      "open_seats": "0",
       "max_enrollment": "17",
       "crosslistings": [],
       "seat_reservations": "",
@@ -7028,7 +7028,7 @@
         }
       ],
       "instructor": "Emily First",
-      "open_seats": "23",
+      "open_seats": "22",
       "max_enrollment": "48",
       "crosslistings": [
         "GEOL 160-01 (10355)"
@@ -7128,7 +7128,7 @@
         }
       ],
       "instructor": "Jeff Thole",
-      "open_seats": "4",
+      "open_seats": "3",
       "max_enrollment": "24",
       "crosslistings": [
         "GEOL 160-L3 (10361)"
@@ -7464,7 +7464,7 @@
         }
       ],
       "instructor": "Aila O'Loughlin",
-      "open_seats": "5",
+      "open_seats": "4",
       "max_enrollment": "20",
       "crosslistings": [
         "PHIL 221-01 (10879)"
@@ -7517,7 +7517,7 @@
         }
       ],
       "instructor": "William Moseley",
-      "open_seats": "13",
+      "open_seats": "12",
       "max_enrollment": "30",
       "crosslistings": [
         "GEOG 232-01 (10333)"
@@ -7569,7 +7569,7 @@
         }
       ],
       "instructor": "Kirisitina Sailiata",
-      "open_seats": "1",
+      "open_seats": "0",
       "max_enrollment": "16",
       "crosslistings": [
         "AMST 237-01 (10020)"
@@ -9017,7 +9017,7 @@
         }
       ],
       "instructor": "William Moseley",
-      "open_seats": "13",
+      "open_seats": "12",
       "max_enrollment": "30",
       "crosslistings": [
         "ENVI 232-01 (10334)"
@@ -9383,7 +9383,7 @@
         }
       ],
       "instructor": "Emily First",
-      "open_seats": "23",
+      "open_seats": "22",
       "max_enrollment": "48",
       "crosslistings": [
         "ENVI 160-01 (10356)"
@@ -9483,7 +9483,7 @@
         }
       ],
       "instructor": "Jeff Thole",
-      "open_seats": "4",
+      "open_seats": "3",
       "max_enrollment": "24",
       "crosslistings": [
         "ENVI 160-L3 (10362)"
@@ -9727,7 +9727,7 @@
         }
       ],
       "instructor": "Valentin Solachau-Chamutouski",
-      "open_seats": "7",
+      "open_seats": "6",
       "max_enrollment": "20",
       "crosslistings": [],
       "seat_reservations": "",
@@ -9775,7 +9775,7 @@
         }
       ],
       "instructor": "Francesca Caligiuri Shields",
-      "open_seats": "6",
+      "open_seats": "5",
       "max_enrollment": "12",
       "crosslistings": [],
       "seat_reservations": "",
@@ -10212,7 +10212,7 @@
         }
       ],
       "instructor": "Walter Greason",
-      "open_seats": "7",
+      "open_seats": "6",
       "max_enrollment": "20",
       "crosslistings": [],
       "seat_reservations": "",
@@ -10236,7 +10236,7 @@
         }
       ],
       "instructor": "Chun Chen",
-      "open_seats": "3",
+      "open_seats": "4",
       "max_enrollment": "20",
       "crosslistings": [
         "ASIA 140-01 (10393)"
@@ -10288,7 +10288,7 @@
         }
       ],
       "instructor": "Ethan Fredrick",
-      "open_seats": "3",
+      "open_seats": "2",
       "max_enrollment": "20",
       "crosslistings": [
         "LATI 181-01 (10397)"
@@ -10314,7 +10314,7 @@
         }
       ],
       "instructor": "Tara Hollies",
-      "open_seats": "4",
+      "open_seats": "3",
       "max_enrollment": "20",
       "crosslistings": [],
       "seat_reservations": "",
@@ -10837,7 +10837,7 @@
         }
       ],
       "instructor": "Alix Johnson",
-      "open_seats": "0",
+      "open_seats": "1",
       "max_enrollment": "22",
       "crosslistings": [],
       "seat_reservations": "",
@@ -11555,7 +11555,7 @@
         }
       ],
       "instructor": "Ethan Fredrick",
-      "open_seats": "3",
+      "open_seats": "2",
       "max_enrollment": "20",
       "crosslistings": [
         "HIST 181-01 (10396)"
@@ -11907,7 +11907,7 @@
         }
       ],
       "instructor": "Marianne Milligan",
-      "open_seats": "0",
+      "open_seats": "1",
       "max_enrollment": "20",
       "crosslistings": [
         "ANTH 206-01 (10457)"
@@ -12212,7 +12212,7 @@
         }
       ],
       "instructor": "Curtis Balz",
-      "open_seats": "8",
+      "open_seats": "7",
       "max_enrollment": "24",
       "crosslistings": [],
       "seat_reservations": "",
@@ -12841,7 +12841,7 @@
         }
       ],
       "instructor": "Rory Solomon",
-      "open_seats": "10",
+      "open_seats": "9",
       "max_enrollment": "16",
       "crosslistings": [
         "COMP 194-03 (10898)"
@@ -13666,7 +13666,7 @@
         }
       ],
       "instructor": "Aila O'Loughlin",
-      "open_seats": "5",
+      "open_seats": "4",
       "max_enrollment": "20",
       "crosslistings": [
         "ENVI 221-01 (10880)"
@@ -14510,7 +14510,7 @@
         }
       ],
       "instructor": "Michelle Milne",
-      "open_seats": "10",
+      "open_seats": "11",
       "max_enrollment": "24",
       "crosslistings": [],
       "seat_reservations": "",
@@ -14534,7 +14534,7 @@
         }
       ],
       "instructor": "Michelle Milne",
-      "open_seats": "10",
+      "open_seats": "11",
       "max_enrollment": "24",
       "crosslistings": [],
       "seat_reservations": "",
@@ -14678,7 +14678,7 @@
         }
       ],
       "instructor": "Sheharyar Imran",
-      "open_seats": "0",
+      "open_seats": "1",
       "max_enrollment": "20",
       "crosslistings": [],
       "seat_reservations": "",
@@ -15148,7 +15148,7 @@
         }
       ],
       "instructor": "Wendy Weber",
-      "open_seats": "2",
+      "open_seats": "1",
       "max_enrollment": "20",
       "crosslistings": [
         "WGSS 324-01 (10585)"
@@ -15848,7 +15848,7 @@
         }
       ],
       "instructor": "Grace Vieth",
-      "open_seats": "9",
+      "open_seats": "8",
       "max_enrollment": "32",
       "crosslistings": [],
       "seat_reservations": "",
@@ -15872,7 +15872,7 @@
         }
       ],
       "instructor": "Keith Halperin, Carolyn Dienhart",
-      "open_seats": "6",
+      "open_seats": "5",
       "max_enrollment": "24",
       "crosslistings": [],
       "seat_reservations": "",
@@ -16358,7 +16358,7 @@
         }
       ],
       "instructor": "Erik Davis",
-      "open_seats": "3",
+      "open_seats": "2",
       "max_enrollment": "16",
       "crosslistings": [
         "ASIA 113-01 (10636)"
@@ -17291,7 +17291,7 @@
         }
       ],
       "instructor": "Claire Lozano",
-      "open_seats": "3",
+      "open_seats": "2",
       "max_enrollment": "20",
       "crosslistings": [],
       "seat_reservations": "",
@@ -17880,7 +17880,7 @@
         }
       ],
       "instructor": "Getiria Onsongo",
-      "open_seats": "6",
+      "open_seats": "5",
       "max_enrollment": "24",
       "crosslistings": [
         "COMP 112-04 (10189)"
@@ -19089,7 +19089,7 @@
         }
       ],
       "instructor": "Wendy Weber",
-      "open_seats": "2",
+      "open_seats": "1",
       "max_enrollment": "20",
       "crosslistings": [
         "POLI 324-01 (10584)"
