@@ -1,8 +1,8 @@
 {
   "term_code": "202710",
   "term_label": "Fall 2026",
-  "scraped_at": "2026-08-11T01:22:02.615541+00:00",
-  "course_count": 781,
+  "scraped_at": "2026-08-12T01:38:36.853912+00:00",
+  "course_count": 782,
   "courses": [
     {
       "crn": "10721",
@@ -526,7 +526,7 @@
         }
       ],
       "instructor": "Samantha Blatt",
-      "open_seats": "1",
+      "open_seats": "0",
       "max_enrollment": "24",
       "crosslistings": [],
       "seat_reservations": "",
@@ -651,7 +651,7 @@
         }
       ],
       "instructor": "Ron Barrett",
-      "open_seats": "8",
+      "open_seats": "6",
       "max_enrollment": "20",
       "crosslistings": [],
       "seat_reservations": "",
@@ -897,7 +897,7 @@
         }
       ],
       "instructor": "Serdar Yalçin",
-      "open_seats": "1",
+      "open_seats": "0",
       "max_enrollment": "25",
       "crosslistings": [
         "CLAS 260-01 (10031)"
@@ -1153,7 +1153,7 @@
       "seat_reservations": "",
       "description": "This course examines the art and visual culture of China from the Neolithic era to the twenty-first century. Lectures and readings will teach methods of formal visual analysis as well as provide the opportunity for students to think critically about how scholars write the artistic history of the region. Through this class, students will engage with a broad array of media, from jade carvings, Buddhist cave painting, architecture, calligraphy and monumental landscape paintings to ceramics, imperial palaces, and contemporary installations. While examining the intended meanings and functions of these objects and spaces, we will discuss the varied contexts and value systems that have informed visual production in China.",
       "distribution_requirements": "Fine arts",
-      "gen_ed_requirements": "Internationalism, Writing WA",
+      "gen_ed_requirements": "Internationalism",
       "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202710%27%20dept=%20%27ART%27%20num=%27272%27%20sect=%2701%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
     },
     {
@@ -1371,7 +1371,7 @@
         }
       ],
       "instructor": "Kari Shepherdson-Scott",
-      "open_seats": "0",
+      "open_seats": "1",
       "max_enrollment": "16",
       "crosslistings": [
         "ASIA 327-01 (10053)"
@@ -1421,7 +1421,7 @@
         }
       ],
       "instructor": "Erik Davis",
-      "open_seats": "2",
+      "open_seats": "1",
       "max_enrollment": "16",
       "crosslistings": [
         "RELI 111-01 (10635)"
@@ -1431,6 +1431,32 @@
       "distribution_requirements": "Humanities",
       "gen_ed_requirements": "Internationalism, Writing WP",
       "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202710%27%20dept=%20%27ASIA%27%20num=%27113%27%20sect=%2701%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "10987",
+      "subject": "ASIA",
+      "subject_name": "Asian Studies",
+      "course_number": "113",
+      "section": "02",
+      "title": "Introduction to Buddhism",
+      "meetings": [
+        {
+          "days": "M W F",
+          "time": "10:50 - 11:50 am",
+          "room": "MAIN 009"
+        }
+      ],
+      "instructor": "Erik Davis",
+      "open_seats": "0",
+      "max_enrollment": "16",
+      "crosslistings": [
+        "RELI 111-02 (10983)"
+      ],
+      "seat_reservations": "",
+      "description": "Buddhism is increasingly well-known in the USA, but what is it, and how does Buddhism encourage people to organize and think about their lives? Organized on the basis of the Eightfold Noble Path, with a focus of ’morals, the Buddhist psychology of mind, and meditation,’ this course offers an introduction to the personalities, teachings, and institutions of Buddhism. Beginning in India at the time of the Buddha, this course focuses on Theravada Buddhism, asking students to think historically, philosophically, and anthropologically. Many Friday sessions will be dedicated to an exploration of the variety of Buddhist meditative techniques.",
+      "distribution_requirements": "Humanities",
+      "gen_ed_requirements": "Internationalism, Writing WP",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202710%27%20dept=%20%27ASIA%27%20num=%27113%27%20sect=%2702%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
     },
     {
       "crn": "10016",
@@ -1663,7 +1689,7 @@
       "seat_reservations": "",
       "description": "This course examines the art and visual culture of China from the Neolithic era to the twenty-first century. Lectures and readings will teach methods of formal visual analysis as well as provide the opportunity for students to think critically about how scholars write the artistic history of the region. Through this class, students will engage with a broad array of media, from jade carvings, Buddhist cave painting, architecture, calligraphy and monumental landscape paintings to ceramics, imperial palaces, and contemporary installations. While examining the intended meanings and functions of these objects and spaces, we will discuss the varied contexts and value systems that have informed visual production in China.",
       "distribution_requirements": "Fine arts",
-      "gen_ed_requirements": "Internationalism, Writing WA",
+      "gen_ed_requirements": "Internationalism",
       "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202710%27%20dept=%20%27ASIA%27%20num=%27272%27%20sect=%2701%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
     },
     {
@@ -1787,7 +1813,7 @@
         }
       ],
       "instructor": "Kari Shepherdson-Scott",
-      "open_seats": "0",
+      "open_seats": "1",
       "max_enrollment": "16",
       "crosslistings": [
         "ART 327-01 (10052)"
@@ -2497,7 +2523,7 @@
         {
           "days": "M W F",
           "time": "10:50 - 11:50 am",
-          "room": "OLRI 100"
+          "room": "OLRI 350"
         }
       ],
       "instructor": "Kathryn Splan",
@@ -2989,7 +3015,7 @@
         }
       ],
       "instructor": "Leah Witus",
-      "open_seats": "1",
+      "open_seats": "0",
       "max_enrollment": "36",
       "crosslistings": [],
       "seat_reservations": "15 seats saved for incoming First-Years",
@@ -3061,7 +3087,7 @@
         }
       ],
       "instructor": "Marc Rodwogin, Isabella Nimm",
-      "open_seats": "0",
+      "open_seats": "1",
       "max_enrollment": "36",
       "crosslistings": [],
       "seat_reservations": "18 seats saved for incoming First-Years",
@@ -3301,7 +3327,7 @@
         }
       ],
       "instructor": "Jeffrey Buenaflor",
-      "open_seats": "3",
+      "open_seats": "2",
       "max_enrollment": "32",
       "crosslistings": [],
       "seat_reservations": "",
@@ -3421,7 +3447,7 @@
         }
       ],
       "instructor": "Stephen Tereniak",
-      "open_seats": "1",
+      "open_seats": "0",
       "max_enrollment": "16",
       "crosslistings": [],
       "seat_reservations": "",
@@ -3855,7 +3881,7 @@
         }
       ],
       "instructor": "Rivi Handler-Spitz",
-      "open_seats": "2",
+      "open_seats": "1",
       "max_enrollment": "15",
       "crosslistings": [],
       "seat_reservations": "",
@@ -3951,7 +3977,7 @@
         }
       ],
       "instructor": "Ruoxi Song",
-      "open_seats": "4",
+      "open_seats": "3",
       "max_enrollment": "12",
       "crosslistings": [],
       "seat_reservations": "",
@@ -4556,7 +4582,7 @@
         }
       ],
       "instructor": "Serdar Yalçin",
-      "open_seats": "1",
+      "open_seats": "0",
       "max_enrollment": "25",
       "crosslistings": [
         "ART 160-01 (10030)"
@@ -5493,7 +5519,7 @@
       ],
       "instructor": "Sarah West",
       "open_seats": "0",
-      "max_enrollment": "25",
+      "max_enrollment": "26",
       "crosslistings": [],
       "seat_reservations": "",
       "description": "Economics is the study of how people make decisions and how these decisions apply to real-world problems. Economics can help us understand income inequality within and across countries, the quality of the environment, unemployment, poverty, crime, health care, financial crises, technological change, inflation and many more issues. This course introduces the basic tools that economists use to explore these topics and will cover fundamental economic concepts like scarcity, supply and demand, costs and benefits, trade-offs, and incentives. This course is a one semester overview of both microeconomics (the study of choices firms and individual consumers make) and macroeconomics (the study of the economy as a whole). This course counts as a Group E economics course and is the prerequisite for 200-level E courses in the Economics Department.",
@@ -5564,7 +5590,7 @@
         }
       ],
       "instructor": "Felix Friedt",
-      "open_seats": "2",
+      "open_seats": "3",
       "max_enrollment": "25",
       "crosslistings": [],
       "seat_reservations": "",
@@ -5660,7 +5686,7 @@
         }
       ],
       "instructor": "Joyce Minor",
-      "open_seats": "3",
+      "open_seats": "2",
       "max_enrollment": "25",
       "crosslistings": [],
       "seat_reservations": "",
@@ -6002,7 +6028,7 @@
         "ECON 494-02 (10239)"
       ],
       "seat_reservations": "",
-      "description": "This course is designed to illustrate how economists analyze topics related to demand for health care, health disparities, and US health policy. The goal of the course is for students to be more knowledgeable consumers and producers of empirical health economics research. Topics include: substance use, public policy, insurance, reproductive health, risky behaviors, and environmental economics. While the course will typically focus on a US context, it presents tools that are applicable in many contexts. We will read, discuss, and critically evaluate key research papers in health economics with particular focus on research design and data. This course counts as a Group E elective. It is a non-capstone course. It meets concurrently with ECON 494-02.",
+      "description": "This course is designed to illustrate how economists analyze topics related to demand for health care, health disparities, and US health policy. The goal of the course is for students to be more knowledgeable consumers and producers of empirical health economics research. Topics include: substance use, public policy, insurance, reproductive health, risky behaviors, and environmental economics. While the course will typically focus on a US context, it presents tools that are applicable in many contexts. We will read, discuss, and critically evaluate key research papers in health economics with particular focus on research design and data. This course counts as a Group E elective. It is a non-capstone course. It meets concurrently with ECON 494-02. Prerequisite(s): ECON 361, 371, and 381, completed with a grade of C- or higher.",
       "distribution_requirements": "Social science",
       "gen_ed_requirements": "",
       "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202710%27%20dept=%20%27ECON%27%20num=%27494%27%20sect=%2701%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
@@ -6028,7 +6054,7 @@
         "ECON 494-01 (10238)"
       ],
       "seat_reservations": "",
-      "description": "This course is designed to illustrate how economists analyze topics related to demand for health care, health disparities, and US health policy. The goal of the course is for students to be more knowledgeable consumers and producers of empirical health economics research. Topics include: substance use, public policy, insurance, reproductive health, risky behaviors, and environmental economics. While the course will typically focus on a US context, it presents tools that are applicable in many contexts. We will read, discuss, and critically evaluate key research papers in health economics with particular focus on research design and data. This course counts as a Group E elective. It is a capstone course. It meets concurrently with ECON 494-01.",
+      "description": "This course is designed to illustrate how economists analyze topics related to demand for health care, health disparities, and US health policy. The goal of the course is for students to be more knowledgeable consumers and producers of empirical health economics research. Topics include: substance use, public policy, insurance, reproductive health, risky behaviors, and environmental economics. While the course will typically focus on a US context, it presents tools that are applicable in many contexts. We will read, discuss, and critically evaluate key research papers in health economics with particular focus on research design and data. This course counts as a Group E elective. It is a capstone course. It meets concurrently with ECON 494-01. Prerequisite(s): ECON 361, 371, and 381, completed with a grade of C- or higher.",
       "distribution_requirements": "Social science",
       "gen_ed_requirements": "",
       "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202710%27%20dept=%20%27ECON%27%20num=%27494%27%20sect=%2702%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
@@ -6466,8 +6492,8 @@
         }
       ],
       "instructor": "Michael Prior",
-      "open_seats": "0",
-      "max_enrollment": "16",
+      "open_seats": "1",
+      "max_enrollment": "17",
       "crosslistings": [],
       "seat_reservations": "6 seats saved for incoming First-Years",
       "description": "In this course, we will explore and develop the foundational skills of creative writing. We will hone our craft and build a respectful, collaborative writing community through a series of creative exercises, close reading assignments, and workshops.. Over the semester, we will read and discuss poems and stories from a diverse group of published authors, focusing on what we might learn from their approaches to the page, while asking how, among so many unique voices, we might cultivate our own. This course requires students to devote a significant amount of time outside of class to reading the course texts and writing our own work: creative writing is a way to discover more about ourselves and the world, but such discovery requires attention, contemplation, and practice. Readings will include writing by Jhumpa Lahiri, Ocean Vuong, Jamaica Kincaid, Haruki Murakami, Elizabeth Bishop, Yanyi, and others. This course fulfills the WC general education requirement and serves as a foundation course for the English Major or Minor.",
@@ -6658,7 +6684,7 @@
         }
       ],
       "instructor": "Michael Householder",
-      "open_seats": "7",
+      "open_seats": "5",
       "max_enrollment": "20",
       "crosslistings": [],
       "seat_reservations": "",
@@ -6906,7 +6932,7 @@
         }
       ],
       "instructor": "Andrea Kaston Tange",
-      "open_seats": "3",
+      "open_seats": "2",
       "max_enrollment": "20",
       "crosslistings": [],
       "seat_reservations": "",
@@ -7517,7 +7543,7 @@
         }
       ],
       "instructor": "William Moseley",
-      "open_seats": "12",
+      "open_seats": "11",
       "max_enrollment": "30",
       "crosslistings": [
         "GEOG 232-01 (10333)"
@@ -7739,12 +7765,12 @@
         {
           "days": "T R",
           "time": "3:00 - 4:30 pm",
-          "room": "HUM 401"
+          "room": "HUM 212"
         }
       ],
       "instructor": "Kiarina Kordela",
       "open_seats": "0",
-      "max_enrollment": "20",
+      "max_enrollment": "21",
       "crosslistings": [
         "GERM 274-01 (10383)",
         "POLI 274-01 (10385)"
@@ -7868,7 +7894,7 @@
         }
       ],
       "instructor": "Tom Robertson",
-      "open_seats": "4",
+      "open_seats": "5",
       "max_enrollment": "15",
       "crosslistings": [
         "HIST 294-02 (10293)"
@@ -8197,7 +8223,7 @@
         }
       ],
       "instructor": "Joëlle Vitiello",
-      "open_seats": "1",
+      "open_seats": "2",
       "max_enrollment": "15",
       "crosslistings": [],
       "seat_reservations": "",
@@ -8293,7 +8319,7 @@
         }
       ],
       "instructor": "Claude Cassagne",
-      "open_seats": "5",
+      "open_seats": "4",
       "max_enrollment": "15",
       "crosslistings": [],
       "seat_reservations": "",
@@ -8317,7 +8343,7 @@
         }
       ],
       "instructor": "Erica Petersen",
-      "open_seats": "9",
+      "open_seats": "8",
       "max_enrollment": "10",
       "crosslistings": [],
       "seat_reservations": "",
@@ -9017,7 +9043,7 @@
         }
       ],
       "instructor": "William Moseley",
-      "open_seats": "12",
+      "open_seats": "11",
       "max_enrollment": "30",
       "crosslistings": [
         "ENVI 232-01 (10334)"
@@ -9067,7 +9093,7 @@
         }
       ],
       "instructor": "Daniel Trudeau",
-      "open_seats": "8",
+      "open_seats": "9",
       "max_enrollment": "25",
       "crosslistings": [],
       "seat_reservations": "",
@@ -9727,7 +9753,7 @@
         }
       ],
       "instructor": "Valentin Solachau-Chamutouski",
-      "open_seats": "6",
+      "open_seats": "5",
       "max_enrollment": "20",
       "crosslistings": [],
       "seat_reservations": "",
@@ -9775,7 +9801,7 @@
         }
       ],
       "instructor": "Francesca Caligiuri Shields",
-      "open_seats": "5",
+      "open_seats": "4",
       "max_enrollment": "12",
       "crosslistings": [],
       "seat_reservations": "",
@@ -10035,12 +10061,12 @@
         {
           "days": "T R",
           "time": "3:00 - 4:30 pm",
-          "room": "HUM 401"
+          "room": "HUM 212"
         }
       ],
       "instructor": "Kiarina Kordela",
       "open_seats": "0",
-      "max_enrollment": "20",
+      "max_enrollment": "21",
       "crosslistings": [
         "ENVI 274-01 (10384)",
         "POLI 274-01 (10385)"
@@ -10288,7 +10314,7 @@
         }
       ],
       "instructor": "Ethan Fredrick",
-      "open_seats": "2",
+      "open_seats": "0",
       "max_enrollment": "20",
       "crosslistings": [
         "LATI 181-01 (10397)"
@@ -10388,7 +10414,7 @@
         }
       ],
       "instructor": "Amy Sullivan",
-      "open_seats": "20",
+      "open_seats": "17",
       "max_enrollment": "20",
       "crosslistings": [],
       "seat_reservations": "",
@@ -10514,7 +10540,7 @@
         }
       ],
       "instructor": "Tom Robertson",
-      "open_seats": "4",
+      "open_seats": "5",
       "max_enrollment": "15",
       "crosslistings": [
         "ENVI 294-03 (10292)"
@@ -10837,7 +10863,7 @@
         }
       ],
       "instructor": "Alix Johnson",
-      "open_seats": "1",
+      "open_seats": "2",
       "max_enrollment": "22",
       "crosslistings": [],
       "seat_reservations": "",
@@ -11555,7 +11581,7 @@
         }
       ],
       "instructor": "Ethan Fredrick",
-      "open_seats": "2",
+      "open_seats": "0",
       "max_enrollment": "20",
       "crosslistings": [
         "HIST 181-01 (10396)"
@@ -11883,7 +11909,7 @@
         }
       ],
       "instructor": "Morgan Sleeper",
-      "open_seats": "7",
+      "open_seats": "6",
       "max_enrollment": "20",
       "crosslistings": [],
       "seat_reservations": "",
@@ -12212,7 +12238,7 @@
         }
       ],
       "instructor": "Curtis Balz",
-      "open_seats": "7",
+      "open_seats": "6",
       "max_enrollment": "24",
       "crosslistings": [],
       "seat_reservations": "",
@@ -12308,7 +12334,7 @@
         }
       ],
       "instructor": "Will Mitchell",
-      "open_seats": "7",
+      "open_seats": "6",
       "max_enrollment": "20",
       "crosslistings": [],
       "seat_reservations": "",
@@ -13790,7 +13816,7 @@
         }
       ],
       "instructor": "Julie Kendle",
-      "open_seats": "1",
+      "open_seats": "2",
       "max_enrollment": "20",
       "crosslistings": [],
       "seat_reservations": "",
@@ -14270,7 +14296,7 @@
         }
       ],
       "instructor": "Tonnis ter Veldhuis",
-      "open_seats": "6",
+      "open_seats": "5",
       "max_enrollment": "27",
       "crosslistings": [],
       "seat_reservations": "",
@@ -14342,7 +14368,7 @@
         }
       ],
       "instructor": "Brian Adams",
-      "open_seats": "9",
+      "open_seats": "8",
       "max_enrollment": "18",
       "crosslistings": [],
       "seat_reservations": "",
@@ -14678,7 +14704,7 @@
         }
       ],
       "instructor": "Sheharyar Imran",
-      "open_seats": "1",
+      "open_seats": "0",
       "max_enrollment": "20",
       "crosslistings": [],
       "seat_reservations": "",
@@ -14968,12 +14994,12 @@
         {
           "days": "T R",
           "time": "3:00 - 4:30 pm",
-          "room": "HUM 401"
+          "room": "HUM 212"
         }
       ],
       "instructor": "Kiarina Kordela",
       "open_seats": "0",
-      "max_enrollment": "20",
+      "max_enrollment": "21",
       "crosslistings": [
         "GERM 274-01 (10383)",
         "ENVI 274-01 (10384)"
@@ -15148,7 +15174,7 @@
         }
       ],
       "instructor": "Wendy Weber",
-      "open_seats": "1",
+      "open_seats": "2",
       "max_enrollment": "20",
       "crosslistings": [
         "WGSS 324-01 (10585)"
@@ -16358,7 +16384,7 @@
         }
       ],
       "instructor": "Erik Davis",
-      "open_seats": "2",
+      "open_seats": "1",
       "max_enrollment": "16",
       "crosslistings": [
         "ASIA 113-01 (10636)"
@@ -16386,7 +16412,9 @@
       "instructor": "Erik Davis",
       "open_seats": "0",
       "max_enrollment": "16",
-      "crosslistings": [],
+      "crosslistings": [
+        "ASIA 113-02 (10987)"
+      ],
       "seat_reservations": "",
       "description": "Buddhism is increasingly well-known in the USA, but what is it, and how does Buddhism encourage people to organize and think about their lives? Organized on the basis of the Eightfold Noble Path, with a focus of ’morals, the Buddhist psychology of mind, and meditation,’ this course offers an introduction to the personalities, teachings, and institutions of Buddhism. Beginning in India at the time of the Buddha, this course focuses on Theravada Buddhism, asking students to think historically, philosophically, and anthropologically. Many Friday sessions will be dedicated to an exploration of the variety of Buddhist meditative techniques.",
       "distribution_requirements": "Humanities",
@@ -16434,7 +16462,7 @@
         }
       ],
       "instructor": "James Laine",
-      "open_seats": "5",
+      "open_seats": "4",
       "max_enrollment": "12",
       "crosslistings": [],
       "seat_reservations": "4 seats saved for First-Years",
@@ -16508,7 +16536,7 @@
         }
       ],
       "instructor": "Susanna Drake",
-      "open_seats": "4",
+      "open_seats": "3",
       "max_enrollment": "20",
       "crosslistings": [],
       "seat_reservations": "",
@@ -16580,7 +16608,7 @@
         }
       ],
       "instructor": "Nicholas Schaser",
-      "open_seats": "13",
+      "open_seats": "14",
       "max_enrollment": "16",
       "crosslistings": [],
       "seat_reservations": "",
@@ -16748,7 +16776,7 @@
         {
           "days": "T R",
           "time": "3:00 - 3:40 pm",
-          "room": "HUM 212"
+          "room": "HUM 213"
         }
       ],
       "instructor": "Oksana Kashchenko",
@@ -16820,7 +16848,7 @@
         {
           "days": "T R",
           "time": "3:45 - 4:25 pm",
-          "room": "HUM 212"
+          "room": "HUM 213"
         }
       ],
       "instructor": "Oksana Kashchenko",
@@ -17291,7 +17319,7 @@
         }
       ],
       "instructor": "Claire Lozano",
-      "open_seats": "2",
+      "open_seats": "3",
       "max_enrollment": "20",
       "crosslistings": [],
       "seat_reservations": "",
@@ -17503,11 +17531,11 @@
         {
           "days": "M W F",
           "time": "9:40 - 10:40 am",
-          "room": ""
+          "room": "THEATR 213"
         }
       ],
       "instructor": "Fernando Contreras",
-      "open_seats": "0",
+      "open_seats": "1",
       "max_enrollment": "20",
       "crosslistings": [],
       "seat_reservations": "",
@@ -17953,7 +17981,7 @@
           "room": "OLRI 241"
         }
       ],
-      "instructor": "",
+      "instructor": "Abby Loe",
       "open_seats": "0",
       "max_enrollment": "24",
       "crosslistings": [],
@@ -17977,7 +18005,7 @@
           "room": "OLRI 241"
         }
       ],
-      "instructor": "",
+      "instructor": "Abby Loe",
       "open_seats": "0",
       "max_enrollment": "24",
       "crosslistings": [],
@@ -18465,7 +18493,7 @@
         }
       ],
       "instructor": "Marciano Silva Dos Santos",
-      "open_seats": "9",
+      "open_seats": "7",
       "max_enrollment": "18",
       "crosslistings": [],
       "seat_reservations": "",
@@ -19089,7 +19117,7 @@
         }
       ],
       "instructor": "Wendy Weber",
-      "open_seats": "1",
+      "open_seats": "2",
       "max_enrollment": "20",
       "crosslistings": [
         "POLI 324-01 (10584)"
