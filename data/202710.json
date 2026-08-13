@@ -1,7 +1,7 @@
 {
   "term_code": "202710",
   "term_label": "Fall 2026",
-  "scraped_at": "2026-08-12T01:38:36.853912+00:00",
+  "scraped_at": "2026-08-13T01:41:31.098305+00:00",
   "course_count": 782,
   "courses": [
     {
@@ -651,7 +651,7 @@
         }
       ],
       "instructor": "Ron Barrett",
-      "open_seats": "6",
+      "open_seats": "7",
       "max_enrollment": "20",
       "crosslistings": [],
       "seat_reservations": "",
@@ -975,7 +975,7 @@
         }
       ],
       "instructor": "Megan Vossler, Matt Burgess",
-      "open_seats": "0",
+      "open_seats": "1",
       "max_enrollment": "18",
       "crosslistings": [
         "ENGL 216-01 (10035)"
@@ -1171,7 +1171,7 @@
         }
       ],
       "instructor": "Serdar Yalçin",
-      "open_seats": "9",
+      "open_seats": "10",
       "max_enrollment": "20",
       "crosslistings": [
         "CLAS 282-01 (10045)"
@@ -1271,7 +1271,7 @@
         }
       ],
       "instructor": "Tony Siebenaler-Ransom",
-      "open_seats": "1",
+      "open_seats": "0",
       "max_enrollment": "12",
       "crosslistings": [
         "ENVI 294-05 (10884)"
@@ -1345,7 +1345,7 @@
         }
       ],
       "instructor": "Tony Siebenaler-Ransom",
-      "open_seats": "1",
+      "open_seats": "0",
       "max_enrollment": "12",
       "crosslistings": [
         "ENVI 294-L1 (10886)"
@@ -1835,7 +1835,7 @@
         {
           "days": "M W F",
           "time": "1:10 - 2:10 pm",
-          "room": "OLRI 250"
+          "room": "THEATR 001"
         }
       ],
       "instructor": "Sebastiano De Bona",
@@ -4632,7 +4632,7 @@
         }
       ],
       "instructor": "Serdar Yalçin",
-      "open_seats": "9",
+      "open_seats": "10",
       "max_enrollment": "20",
       "crosslistings": [
         "ART 282-01 (10044)"
@@ -4836,7 +4836,7 @@
         }
       ],
       "instructor": "Getiria Onsongo",
-      "open_seats": "5",
+      "open_seats": "4",
       "max_enrollment": "24",
       "crosslistings": [
         "STAT 112-04 (10190)"
@@ -6294,7 +6294,7 @@
         }
       ],
       "instructor": "Tamara von Schmidt-Pauli",
-      "open_seats": "11",
+      "open_seats": "9",
       "max_enrollment": "20",
       "crosslistings": [
         "RUSS 294-02 (10664)"
@@ -6588,7 +6588,7 @@
         }
       ],
       "instructor": "Emma Törzs",
-      "open_seats": "0",
+      "open_seats": "1",
       "max_enrollment": "16",
       "crosslistings": [],
       "seat_reservations": "",
@@ -6756,7 +6756,7 @@
         }
       ],
       "instructor": "Megan Vossler, Matt Burgess",
-      "open_seats": "0",
+      "open_seats": "1",
       "max_enrollment": "18",
       "crosslistings": [
         "ART 216-01 (10034)"
@@ -7176,7 +7176,7 @@
         {
           "days": "M W F",
           "time": "1:10 - 2:10 pm",
-          "room": "OLRI 250"
+          "room": "THEATR 001"
         }
       ],
       "instructor": "Sebastiano De Bona",
@@ -7947,7 +7947,7 @@
         }
       ],
       "instructor": "Tony Siebenaler-Ransom",
-      "open_seats": "1",
+      "open_seats": "0",
       "max_enrollment": "12",
       "crosslistings": [
         "ART 294-04 (10885)"
@@ -7997,7 +7997,7 @@
         }
       ],
       "instructor": "Tony Siebenaler-Ransom",
-      "open_seats": "1",
+      "open_seats": "0",
       "max_enrollment": "12",
       "crosslistings": [
         "ART 294-L1 (10887)"
@@ -8303,6 +8303,30 @@
       "distribution_requirements": "",
       "gen_ed_requirements": "",
       "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202710%27%20dept=%20%27FREN%27%20num=%27101%27%20sect=%27L3%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
+    },
+    {
+      "crn": "10992",
+      "subject": "FREN",
+      "subject_name": "French and Francophone Studies",
+      "course_number": "101",
+      "section": "L4",
+      "title": "French I Lab",
+      "meetings": [
+        {
+          "days": "R",
+          "time": "2:30 - 3:30 pm",
+          "room": ""
+        }
+      ],
+      "instructor": "Aida Lewis",
+      "open_seats": "9",
+      "max_enrollment": "10",
+      "crosslistings": [],
+      "seat_reservations": "",
+      "description": "Emphasizing the active use of the language, this course develops the fundamental skills of listening, speaking, reading, and writing. It includes an introduction to the cultural background of France and the Francophone world. Class sessions are supplemented by weekly small group meetings with a French graduate assistant. For students with no previous work in French. ALL COURSES ARE TAUGHT IN FRENCH UNLESS OTHERWISE INDICATED.",
+      "distribution_requirements": "",
+      "gen_ed_requirements": "",
+      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202710%27%20dept=%20%27FREN%27%20num=%27101%27%20sect=%27L4%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
     },
     {
       "crn": "10299",
@@ -8679,7 +8703,7 @@
         }
       ],
       "instructor": "Aida Lewis",
-      "open_seats": "8",
+      "open_seats": "6",
       "max_enrollment": "10",
       "crosslistings": [],
       "seat_reservations": "",
@@ -8711,30 +8735,6 @@
       "distribution_requirements": "",
       "gen_ed_requirements": "",
       "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202710%27%20dept=%20%27FREN%27%20num=%27204%27%20sect=%27L3%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
-    },
-    {
-      "crn": "10317",
-      "subject": "FREN",
-      "subject_name": "French and Francophone Studies",
-      "course_number": "204",
-      "section": "L4",
-      "title": "Text, Film and Media Lab",
-      "meetings": [
-        {
-          "days": "R",
-          "time": "2:30 - 3:30 pm",
-          "room": "HUM 409"
-        }
-      ],
-      "instructor": "Aida Lewis",
-      "open_seats": "8",
-      "max_enrollment": "10",
-      "crosslistings": [],
-      "seat_reservations": "",
-      "description": "This course is a content course that presents a study of the language, history, and culture of France and the francophone world through authentic materials including the press, the internet, television, literature and film. The themes of the course will depend on the instructor. At the end of the course students should have attained a sophisticated level of communication in French, the ability to use their skills in French for a variety of purposes including research in other disciplines, and a full appreciation of the intellectual challenge of learning a foreign language and its cultures. ALL COURSES ARE TAUGHT IN FRENCH UNLESS OTHERWISE INDICATED. Prerequisite(s): FREN 203 with a grade of C- or better, placement test or permission of instructor.",
-      "distribution_requirements": "",
-      "gen_ed_requirements": "",
-      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202710%27%20dept=%20%27FREN%27%20num=%27204%27%20sect=%27L4%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
     },
     {
       "crn": "10318",
@@ -10092,7 +10092,7 @@
         }
       ],
       "instructor": "Kiarina Kordela",
-      "open_seats": "8",
+      "open_seats": "7",
       "max_enrollment": "15",
       "crosslistings": [],
       "seat_reservations": "",
@@ -10116,7 +10116,7 @@
         }
       ],
       "instructor": "Francesca Caligiuri Shields",
-      "open_seats": "8",
+      "open_seats": "7",
       "max_enrollment": "10",
       "crosslistings": [],
       "seat_reservations": "",
@@ -10238,7 +10238,7 @@
         }
       ],
       "instructor": "Walter Greason",
-      "open_seats": "6",
+      "open_seats": "5",
       "max_enrollment": "20",
       "crosslistings": [],
       "seat_reservations": "",
@@ -10340,7 +10340,7 @@
         }
       ],
       "instructor": "Tara Hollies",
-      "open_seats": "3",
+      "open_seats": "2",
       "max_enrollment": "20",
       "crosslistings": [],
       "seat_reservations": "",
@@ -10414,7 +10414,7 @@
         }
       ],
       "instructor": "Amy Sullivan",
-      "open_seats": "17",
+      "open_seats": "16",
       "max_enrollment": "20",
       "crosslistings": [],
       "seat_reservations": "",
@@ -10863,7 +10863,7 @@
         }
       ],
       "instructor": "Alix Johnson",
-      "open_seats": "2",
+      "open_seats": "1",
       "max_enrollment": "22",
       "crosslistings": [],
       "seat_reservations": "",
@@ -14850,7 +14850,7 @@
         }
       ],
       "instructor": "Wendy Weber",
-      "open_seats": "0",
+      "open_seats": "1",
       "max_enrollment": "20",
       "crosslistings": [],
       "seat_reservations": "",
@@ -15025,7 +15025,7 @@
         }
       ],
       "instructor": "Patrick Schmidt",
-      "open_seats": "9",
+      "open_seats": "8",
       "max_enrollment": "30",
       "crosslistings": [],
       "seat_reservations": "",
@@ -16462,7 +16462,7 @@
         }
       ],
       "instructor": "James Laine",
-      "open_seats": "4",
+      "open_seats": "3",
       "max_enrollment": "12",
       "crosslistings": [],
       "seat_reservations": "4 seats saved for First-Years",
@@ -16955,7 +16955,7 @@
         }
       ],
       "instructor": "Tamara von Schmidt-Pauli",
-      "open_seats": "11",
+      "open_seats": "9",
       "max_enrollment": "20",
       "crosslistings": [
         "EDUC 294-03 (10665)"
@@ -17103,7 +17103,7 @@
         }
       ],
       "instructor": "Christina Hughes",
-      "open_seats": "0",
+      "open_seats": "1",
       "max_enrollment": "20",
       "crosslistings": [],
       "seat_reservations": "",
@@ -17247,7 +17247,7 @@
         }
       ],
       "instructor": "Fernanda Bartolomei-Merlin",
-      "open_seats": "0",
+      "open_seats": "1",
       "max_enrollment": "20",
       "crosslistings": [],
       "seat_reservations": "",
@@ -17908,7 +17908,7 @@
         }
       ],
       "instructor": "Getiria Onsongo",
-      "open_seats": "5",
+      "open_seats": "4",
       "max_enrollment": "24",
       "crosslistings": [
         "COMP 112-04 (10189)"
@@ -18347,7 +18347,7 @@
         }
       ],
       "instructor": "Marciano Silva Dos Santos",
-      "open_seats": "5",
+      "open_seats": "6",
       "max_enrollment": "18",
       "crosslistings": [],
       "seat_reservations": "",
