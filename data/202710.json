@@ -1,7 +1,7 @@
 {
   "term_code": "202710",
   "term_label": "Fall 2026",
-  "scraped_at": "2026-08-14T01:39:46.992058+00:00",
+  "scraped_at": "2026-08-15T01:01:05.599935+00:00",
   "course_count": 782,
   "courses": [
     {
@@ -975,7 +975,7 @@
         }
       ],
       "instructor": "Megan Vossler, Matt Burgess",
-      "open_seats": "1",
+      "open_seats": "0",
       "max_enrollment": "18",
       "crosslistings": [
         "ENGL 216-01 (10035)"
@@ -1145,7 +1145,7 @@
         }
       ],
       "instructor": "Kari Shepherdson-Scott",
-      "open_seats": "11",
+      "open_seats": "10",
       "max_enrollment": "20",
       "crosslistings": [
         "ASIA 272-01 (10043)"
@@ -1197,7 +1197,7 @@
         }
       ],
       "instructor": "Lela Pierce",
-      "open_seats": "4",
+      "open_seats": "3",
       "max_enrollment": "10",
       "crosslistings": [],
       "seat_reservations": "Seats saved for: 2 seniors, 2 juniors, 2 sophomores, 2 incoming First-Years",
@@ -1421,7 +1421,7 @@
         }
       ],
       "instructor": "Erik Davis",
-      "open_seats": "2",
+      "open_seats": "1",
       "max_enrollment": "16",
       "crosslistings": [
         "RELI 111-01 (10635)"
@@ -1499,7 +1499,7 @@
         }
       ],
       "instructor": "Chun Chen",
-      "open_seats": "4",
+      "open_seats": "3",
       "max_enrollment": "20",
       "crosslistings": [
         "HIST 140-01 (10392)"
@@ -1681,7 +1681,7 @@
         }
       ],
       "instructor": "Kari Shepherdson-Scott",
-      "open_seats": "11",
+      "open_seats": "10",
       "max_enrollment": "20",
       "crosslistings": [
         "ART 272-01 (10042)"
@@ -1839,7 +1839,7 @@
         }
       ],
       "instructor": "Sebastiano De Bona",
-      "open_seats": "1",
+      "open_seats": "0",
       "max_enrollment": "28",
       "crosslistings": [
         "ENVI 170-01 (10058)"
@@ -1969,7 +1969,7 @@
         }
       ],
       "instructor": "Jerald Dosch",
-      "open_seats": "3",
+      "open_seats": "2",
       "max_enrollment": "23",
       "crosslistings": [
         "ENVI 170-L3 (10068)"
@@ -3881,7 +3881,7 @@
         }
       ],
       "instructor": "Rivi Handler-Spitz",
-      "open_seats": "1",
+      "open_seats": "0",
       "max_enrollment": "15",
       "crosslistings": [],
       "seat_reservations": "",
@@ -3929,7 +3929,7 @@
         }
       ],
       "instructor": "Ruoxi Song",
-      "open_seats": "4",
+      "open_seats": "3",
       "max_enrollment": "12",
       "crosslistings": [],
       "seat_reservations": "",
@@ -4408,7 +4408,7 @@
         {
           "days": "T",
           "time": "10:10 - 11:10 am",
-          "room": ""
+          "room": "MAIN 410"
         }
       ],
       "instructor": "Nanette Goldman",
@@ -4554,7 +4554,7 @@
         {
           "days": "R",
           "time": "10:10 - 11:10 am",
-          "room": ""
+          "room": "MAIN 410"
         }
       ],
       "instructor": "Haci Gündüz",
@@ -6294,7 +6294,7 @@
         }
       ],
       "instructor": "Tamara von Schmidt-Pauli",
-      "open_seats": "10",
+      "open_seats": "9",
       "max_enrollment": "20",
       "crosslistings": [
         "RUSS 294-02 (10664)"
@@ -6684,7 +6684,7 @@
         }
       ],
       "instructor": "Michael Householder",
-      "open_seats": "5",
+      "open_seats": "4",
       "max_enrollment": "20",
       "crosslistings": [],
       "seat_reservations": "",
@@ -6756,7 +6756,7 @@
         }
       ],
       "instructor": "Megan Vossler, Matt Burgess",
-      "open_seats": "1",
+      "open_seats": "0",
       "max_enrollment": "18",
       "crosslistings": [
         "ART 216-01 (10034)"
@@ -6902,7 +6902,7 @@
         {
           "days": "W",
           "time": "7:00 - 10:00 pm",
-          "room": ""
+          "room": "THEATR 201"
         }
       ],
       "instructor": "Jarek Pastor",
@@ -7054,7 +7054,7 @@
         }
       ],
       "instructor": "Emily First",
-      "open_seats": "22",
+      "open_seats": "21",
       "max_enrollment": "48",
       "crosslistings": [
         "GEOL 160-01 (10355)"
@@ -7154,7 +7154,7 @@
         }
       ],
       "instructor": "Jeff Thole",
-      "open_seats": "3",
+      "open_seats": "2",
       "max_enrollment": "24",
       "crosslistings": [
         "GEOL 160-L3 (10361)"
@@ -7180,7 +7180,7 @@
         }
       ],
       "instructor": "Sebastiano De Bona",
-      "open_seats": "1",
+      "open_seats": "0",
       "max_enrollment": "28",
       "crosslistings": [
         "BIOL 170-01 (10057)"
@@ -7310,7 +7310,7 @@
         }
       ],
       "instructor": "Jerald Dosch",
-      "open_seats": "3",
+      "open_seats": "2",
       "max_enrollment": "23",
       "crosslistings": [
         "BIOL 170-L3 (10067)"
@@ -7894,7 +7894,7 @@
         }
       ],
       "instructor": "Tom Robertson",
-      "open_seats": "5",
+      "open_seats": "4",
       "max_enrollment": "15",
       "crosslistings": [
         "HIST 294-02 (10293)"
@@ -8895,7 +8895,7 @@
         }
       ],
       "instructor": "Daniel Trudeau",
-      "open_seats": "9",
+      "open_seats": "8",
       "max_enrollment": "25",
       "crosslistings": [],
       "seat_reservations": "",
@@ -9409,7 +9409,7 @@
         }
       ],
       "instructor": "Emily First",
-      "open_seats": "22",
+      "open_seats": "21",
       "max_enrollment": "48",
       "crosslistings": [
         "ENVI 160-01 (10356)"
@@ -9509,7 +9509,7 @@
         }
       ],
       "instructor": "Jeff Thole",
-      "open_seats": "3",
+      "open_seats": "2",
       "max_enrollment": "24",
       "crosslistings": [
         "ENVI 160-L3 (10362)"
@@ -10262,7 +10262,7 @@
         }
       ],
       "instructor": "Chun Chen",
-      "open_seats": "4",
+      "open_seats": "3",
       "max_enrollment": "20",
       "crosslistings": [
         "ASIA 140-01 (10393)"
@@ -10414,7 +10414,7 @@
         }
       ],
       "instructor": "Amy Sullivan",
-      "open_seats": "16",
+      "open_seats": "15",
       "max_enrollment": "20",
       "crosslistings": [],
       "seat_reservations": "",
@@ -10540,7 +10540,7 @@
         }
       ],
       "instructor": "Tom Robertson",
-      "open_seats": "5",
+      "open_seats": "4",
       "max_enrollment": "15",
       "crosslistings": [
         "ENVI 294-03 (10292)"
@@ -16384,7 +16384,7 @@
         }
       ],
       "instructor": "Erik Davis",
-      "open_seats": "2",
+      "open_seats": "1",
       "max_enrollment": "16",
       "crosslistings": [
         "ASIA 113-01 (10636)"
@@ -16955,7 +16955,7 @@
         }
       ],
       "instructor": "Tamara von Schmidt-Pauli",
-      "open_seats": "10",
+      "open_seats": "9",
       "max_enrollment": "20",
       "crosslistings": [
         "EDUC 294-03 (10665)"
@@ -17053,7 +17053,7 @@
         }
       ],
       "instructor": "Christina Hughes",
-      "open_seats": "-1",
+      "open_seats": "0",
       "max_enrollment": "16",
       "crosslistings": [],
       "seat_reservations": "",
@@ -17319,7 +17319,7 @@
         }
       ],
       "instructor": "Claire Lozano",
-      "open_seats": "3",
+      "open_seats": "2",
       "max_enrollment": "20",
       "crosslistings": [],
       "seat_reservations": "",
@@ -17487,7 +17487,7 @@
         }
       ],
       "instructor": "Cynthia Kauffeld",
-      "open_seats": "4",
+      "open_seats": "5",
       "max_enrollment": "20",
       "crosslistings": [],
       "seat_reservations": "",
@@ -18441,7 +18441,7 @@
         {
           "days": "T R",
           "time": "9:40 - 11:10 am",
-          "room": ""
+          "room": "THEATR 006"
         }
       ],
       "instructor": "Thomas Barrett",
@@ -18513,7 +18513,7 @@
         {
           "days": "W",
           "time": "7:00 - 10:00 pm",
-          "room": ""
+          "room": "THEATR 201"
         }
       ],
       "instructor": "Jarek Pastor",
@@ -18587,7 +18587,7 @@
         {
           "days": "M W F",
           "time": "12:00 - 1:00 pm",
-          "room": ""
+          "room": "THEATR 006"
         }
       ],
       "instructor": "Wu Chen Khoo",
