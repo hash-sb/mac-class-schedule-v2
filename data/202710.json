@@ -1,7 +1,7 @@
 {
   "term_code": "202710",
   "term_label": "Fall 2026",
-  "scraped_at": "2026-08-15T01:01:05.599935+00:00",
+  "scraped_at": "2026-08-16T01:04:57.736816+00:00",
   "course_count": 782,
   "courses": [
     {
@@ -8223,7 +8223,7 @@
         }
       ],
       "instructor": "Joëlle Vitiello",
-      "open_seats": "0",
+      "open_seats": "1",
       "max_enrollment": "15",
       "crosslistings": [],
       "seat_reservations": "",
@@ -8247,7 +8247,7 @@
         }
       ],
       "instructor": "Aida Lewis",
-      "open_seats": "0",
+      "open_seats": "1",
       "max_enrollment": "10",
       "crosslistings": [],
       "seat_reservations": "",
@@ -10190,7 +10190,7 @@
         }
       ],
       "instructor": "David Martyn",
-      "open_seats": "11",
+      "open_seats": "10",
       "max_enrollment": "15",
       "crosslistings": [],
       "seat_reservations": "",
@@ -10340,7 +10340,7 @@
         }
       ],
       "instructor": "Tara Hollies",
-      "open_seats": "3",
+      "open_seats": "2",
       "max_enrollment": "20",
       "crosslistings": [],
       "seat_reservations": "",
@@ -12382,7 +12382,7 @@
         }
       ],
       "instructor": "Andrew Beveridge",
-      "open_seats": "0",
+      "open_seats": "1",
       "max_enrollment": "20",
       "crosslistings": [],
       "seat_reservations": "",
@@ -15344,7 +15344,7 @@
         }
       ],
       "instructor": "J. Ernesto Ortiz Díaz",
-      "open_seats": "7",
+      "open_seats": "6",
       "max_enrollment": "15",
       "crosslistings": [],
       "seat_reservations": "",
