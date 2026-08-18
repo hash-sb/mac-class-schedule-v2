@@ -1,7 +1,7 @@
 {
   "term_code": "202710",
   "term_label": "Fall 2026",
-  "scraped_at": "2026-08-17T01:01:57.198271+00:00",
+  "scraped_at": "2026-08-18T01:00:03.563985+00:00",
   "course_count": 782,
   "courses": [
     {
@@ -1598,7 +1598,7 @@
         {
           "days": "T R",
           "time": "1:20 - 2:50 pm",
-          "room": "HUM 102"
+          "room": "CARN 109"
         }
       ],
       "instructor": "I-Chun Catherine Chang",
@@ -4886,7 +4886,7 @@
         }
       ],
       "instructor": "Elizabeth Ernst",
-      "open_seats": "0",
+      "open_seats": "1",
       "max_enrollment": "25",
       "crosslistings": [],
       "seat_reservations": "",
@@ -7026,7 +7026,7 @@
         {
           "days": "T R",
           "time": "1:20 - 2:50 pm",
-          "room": "MAIN 002"
+          "room": "MAIN 410"
         }
       ],
       "instructor": "Matt Burgess",
@@ -8223,7 +8223,7 @@
         }
       ],
       "instructor": "Joëlle Vitiello",
-      "open_seats": "1",
+      "open_seats": "0",
       "max_enrollment": "15",
       "crosslistings": [],
       "seat_reservations": "",
@@ -8247,7 +8247,7 @@
         }
       ],
       "instructor": "Aida Lewis",
-      "open_seats": "1",
+      "open_seats": "0",
       "max_enrollment": "10",
       "crosslistings": [],
       "seat_reservations": "",
@@ -9161,7 +9161,7 @@
         {
           "days": "T R",
           "time": "1:20 - 2:50 pm",
-          "room": "HUM 102"
+          "room": "CARN 109"
         }
       ],
       "instructor": "I-Chun Catherine Chang",
@@ -9357,7 +9357,7 @@
         {
           "days": "T R",
           "time": "3:00 - 4:30 pm",
-          "room": "HUM 102"
+          "room": "CARN 05"
         }
       ],
       "instructor": "I-Chun Catherine Chang",
@@ -10863,7 +10863,7 @@
         }
       ],
       "instructor": "Alix Johnson",
-      "open_seats": "0",
+      "open_seats": "-1",
       "max_enrollment": "22",
       "crosslistings": [],
       "seat_reservations": "",
@@ -12382,7 +12382,7 @@
         }
       ],
       "instructor": "Andrew Beveridge",
-      "open_seats": "1",
+      "open_seats": "0",
       "max_enrollment": "20",
       "crosslistings": [],
       "seat_reservations": "",
@@ -12574,7 +12574,7 @@
         }
       ],
       "instructor": "Taryn Flock",
-      "open_seats": "3",
+      "open_seats": "4",
       "max_enrollment": "16",
       "crosslistings": [],
       "seat_reservations": "",
@@ -13568,7 +13568,7 @@
         }
       ],
       "instructor": "Samuel Asarnow",
-      "open_seats": "0",
+      "open_seats": "1",
       "max_enrollment": "20",
       "crosslistings": [],
       "seat_reservations": "10 seats saved for First-Years",
@@ -13840,7 +13840,7 @@
         }
       ],
       "instructor": "Gina Wood",
-      "open_seats": "0",
+      "open_seats": "1",
       "max_enrollment": "15",
       "crosslistings": [],
       "seat_reservations": "",
@@ -13932,7 +13932,7 @@
         {
           "days": "T R",
           "time": "2:00 - 3:00 pm",
-          "room": "LEOCTR STUDIO 2"
+          "room": "LEOCTR STUDIO 1"
         }
       ],
       "instructor": "Sara Augustin",
@@ -14052,7 +14052,7 @@
         {
           "days": "T R",
           "time": "1:20 - 2:20 pm",
-          "room": ""
+          "room": "LEOCTR STUDIO 2"
         }
       ],
       "instructor": "Phyllis Calph",
@@ -14076,7 +14076,7 @@
         {
           "days": "W",
           "time": "7:00 - 8:30 pm",
-          "room": "LEOCTR FIELDHOUSE"
+          "room": "LEOCTR STUDIO 1"
         }
       ],
       "instructor": "Don DeBoer",
@@ -14100,7 +14100,7 @@
         {
           "days": "T R",
           "time": "1:20 - 2:20 pm",
-          "room": "LEOCTR STUDIO 1"
+          "room": "LEOCTR GYM"
         }
       ],
       "instructor": "AD Donovan, Richard Glesmann",
@@ -17391,7 +17391,7 @@
         }
       ],
       "instructor": "Toni Dorca",
-      "open_seats": "0",
+      "open_seats": "-1",
       "max_enrollment": "16",
       "crosslistings": [],
       "seat_reservations": "",
@@ -17531,7 +17531,7 @@
         {
           "days": "M W F",
           "time": "9:40 - 10:40 am",
-          "room": "THEATR 213"
+          "room": "HUM 314"
         }
       ],
       "instructor": "Fernando Contreras",
@@ -18054,7 +18054,7 @@
         }
       ],
       "instructor": "Lori Ziegelmeier",
-      "open_seats": "0",
+      "open_seats": "1",
       "max_enrollment": "24",
       "crosslistings": [],
       "seat_reservations": "Seats saved for: 4 seniors, 6 juniors, 8 sophomores, 6 First-Years",
