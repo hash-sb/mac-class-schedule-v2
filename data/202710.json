@@ -1,7 +1,7 @@
 {
   "term_code": "202710",
   "term_label": "Fall 2026",
-  "scraped_at": "2026-08-18T01:00:03.563985+00:00",
+  "scraped_at": "2026-08-19T01:01:25.499672+00:00",
   "course_count": 782,
   "courses": [
     {
@@ -949,7 +949,7 @@
         }
       ],
       "instructor": "Joanna Inglot",
-      "open_seats": "0",
+      "open_seats": "1",
       "max_enrollment": "16",
       "crosslistings": [
         "INTL 210-01 (10033)"
@@ -10911,7 +10911,7 @@
         }
       ],
       "instructor": "Joanna Inglot",
-      "open_seats": "0",
+      "open_seats": "1",
       "max_enrollment": "16",
       "crosslistings": [
         "ART 210-01 (10032)"
@@ -11631,7 +11631,7 @@
         }
       ],
       "instructor": "Paul Dosh",
-      "open_seats": "0",
+      "open_seats": "1",
       "max_enrollment": "20",
       "crosslistings": [
         "POLI 245-01 (10572)"
@@ -13980,7 +13980,7 @@
         {
           "days": "M W",
           "time": "2:20 - 3:20 pm",
-          "room": "LEOCTR STUDIO 2"
+          "room": "LEOCTR FITNESS RM"
         }
       ],
       "instructor": "Nicholas Brundy",
@@ -14004,7 +14004,7 @@
         {
           "days": "T R",
           "time": "2:20 - 3:20 pm",
-          "room": "LEOCTR FITNESS RM"
+          "room": "LEOCTR FIELDHOUSE"
         }
       ],
       "instructor": "Russell Adams, Dina Kountoupes, Jenelle Zumbusch",
@@ -14124,7 +14124,7 @@
         {
           "days": "R",
           "time": "1:20 - 2:50 pm",
-          "room": "LEOCTR GYM"
+          "room": ""
         }
       ],
       "instructor": "Donnie Brooks",
@@ -14898,7 +14898,7 @@
         }
       ],
       "instructor": "Paul Dosh",
-      "open_seats": "0",
+      "open_seats": "1",
       "max_enrollment": "20",
       "crosslistings": [
         "LATI 245-01 (10573)"
@@ -15200,7 +15200,7 @@
         }
       ],
       "instructor": "Rothin Datta",
-      "open_seats": "0",
+      "open_seats": "1",
       "max_enrollment": "20",
       "crosslistings": [],
       "seat_reservations": "",
@@ -17487,7 +17487,7 @@
         }
       ],
       "instructor": "Cynthia Kauffeld",
-      "open_seats": "5",
+      "open_seats": "6",
       "max_enrollment": "20",
       "crosslistings": [],
       "seat_reservations": "",
