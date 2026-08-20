@@ -1,7 +1,7 @@
 {
   "term_code": "202710",
   "term_label": "Fall 2026",
-  "scraped_at": "2026-08-19T01:01:25.499672+00:00",
+  "scraped_at": "2026-08-20T01:00:52.694090+00:00",
   "course_count": 782,
   "courses": [
     {
@@ -6022,7 +6022,7 @@
         }
       ],
       "instructor": "Jessica Kiser",
-      "open_seats": "8",
+      "open_seats": "9",
       "max_enrollment": "20",
       "crosslistings": [
         "ECON 494-02 (10239)"
@@ -6048,7 +6048,7 @@
         }
       ],
       "instructor": "Jessica Kiser",
-      "open_seats": "8",
+      "open_seats": "9",
       "max_enrollment": "20",
       "crosslistings": [
         "ECON 494-01 (10238)"
@@ -11787,7 +11787,7 @@
         }
       ],
       "instructor": "Daniel Coral Reyes",
-      "open_seats": "5",
+      "open_seats": "6",
       "max_enrollment": "15",
       "crosslistings": [
         "SPAN 394-02 (10704)"
@@ -11813,7 +11813,7 @@
         }
       ],
       "instructor": "Olga González",
-      "open_seats": "5",
+      "open_seats": "6",
       "max_enrollment": "10",
       "crosslistings": [],
       "seat_reservations": "",
@@ -13936,7 +13936,7 @@
         }
       ],
       "instructor": "Sara Augustin",
-      "open_seats": "13",
+      "open_seats": "14",
       "max_enrollment": "20",
       "crosslistings": [],
       "seat_reservations": "",
@@ -13956,7 +13956,7 @@
         {
           "days": "M W",
           "time": "4:45 - 5:45 pm",
-          "room": "LEOCTR STUDIO 1"
+          "room": "LEOCTR STUDIO 2"
         }
       ],
       "instructor": "Emma Fitzsimmons",
@@ -15174,7 +15174,7 @@
         }
       ],
       "instructor": "Wendy Weber",
-      "open_seats": "3",
+      "open_seats": "4",
       "max_enrollment": "20",
       "crosslistings": [
         "WGSS 324-01 (10585)"
@@ -17804,7 +17804,7 @@
         }
       ],
       "instructor": "Daniel Coral Reyes",
-      "open_seats": "5",
+      "open_seats": "6",
       "max_enrollment": "15",
       "crosslistings": [
         "LATI 394-01 (10705)"
@@ -19117,7 +19117,7 @@
         }
       ],
       "instructor": "Wendy Weber",
-      "open_seats": "3",
+      "open_seats": "4",
       "max_enrollment": "20",
       "crosslistings": [
         "POLI 324-01 (10584)"
