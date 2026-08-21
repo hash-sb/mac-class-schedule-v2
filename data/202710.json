@@ -1,8 +1,8 @@
 {
   "term_code": "202710",
   "term_label": "Fall 2026",
-  "scraped_at": "2026-08-20T01:00:52.694090+00:00",
-  "course_count": 782,
+  "scraped_at": "2026-08-21T01:04:38.388801+00:00",
+  "course_count": 781,
   "courses": [
     {
       "crn": "10721",
@@ -351,7 +351,7 @@
         }
       ],
       "instructor": "Alicia Muñoz",
-      "open_seats": "1",
+      "open_seats": "2",
       "max_enrollment": "15",
       "crosslistings": [
         "SPAN 308-01 (10695)",
@@ -1145,7 +1145,7 @@
         }
       ],
       "instructor": "Kari Shepherdson-Scott",
-      "open_seats": "10",
+      "open_seats": "11",
       "max_enrollment": "20",
       "crosslistings": [
         "ASIA 272-01 (10043)"
@@ -1681,7 +1681,7 @@
         }
       ],
       "instructor": "Kari Shepherdson-Scott",
-      "open_seats": "10",
+      "open_seats": "11",
       "max_enrollment": "20",
       "crosslistings": [
         "ART 272-01 (10042)"
@@ -4836,7 +4836,7 @@
         }
       ],
       "instructor": "Getiria Onsongo",
-      "open_seats": "3",
+      "open_seats": "4",
       "max_enrollment": "24",
       "crosslistings": [
         "STAT 112-04 (10190)"
@@ -4862,7 +4862,7 @@
         }
       ],
       "instructor": "Elizabeth Ernst",
-      "open_seats": "0",
+      "open_seats": "1",
       "max_enrollment": "25",
       "crosslistings": [],
       "seat_reservations": "",
@@ -11734,7 +11734,7 @@
         }
       ],
       "instructor": "Alicia Muñoz",
-      "open_seats": "1",
+      "open_seats": "2",
       "max_enrollment": "15",
       "crosslistings": [
         "SPAN 308-01 (10695)",
@@ -12550,7 +12550,7 @@
         }
       ],
       "instructor": "Taryn Flock",
-      "open_seats": "0",
+      "open_seats": "1",
       "max_enrollment": "16",
       "crosslistings": [],
       "seat_reservations": "",
@@ -14924,7 +14924,7 @@
         }
       ],
       "instructor": "Erik Larson",
-      "open_seats": "2",
+      "open_seats": "3",
       "max_enrollment": "29",
       "crosslistings": [
         "SOCI 275-01 (10669)"
@@ -14950,7 +14950,7 @@
         }
       ],
       "instructor": "Rothin Datta",
-      "open_seats": "0",
+      "open_seats": "1",
       "max_enrollment": "20",
       "crosslistings": [],
       "seat_reservations": "",
@@ -17077,7 +17077,7 @@
         }
       ],
       "instructor": "Erik Larson",
-      "open_seats": "2",
+      "open_seats": "3",
       "max_enrollment": "29",
       "crosslistings": [
         "POLI 250-01 (10670)"
@@ -17705,7 +17705,7 @@
         }
       ],
       "instructor": "Alicia Muñoz",
-      "open_seats": "1",
+      "open_seats": "2",
       "max_enrollment": "15",
       "crosslistings": [
         "AMST 308-01 (10696)",
@@ -17908,7 +17908,7 @@
         }
       ],
       "instructor": "Getiria Onsongo",
-      "open_seats": "3",
+      "open_seats": "4",
       "max_enrollment": "24",
       "crosslistings": [
         "COMP 112-04 (10189)"
@@ -18006,7 +18006,7 @@
         }
       ],
       "instructor": "Abby Loe",
-      "open_seats": "0",
+      "open_seats": "1",
       "max_enrollment": "24",
       "crosslistings": [],
       "seat_reservations": "Seats saved for: 4 seniors, 6 juniors, 8 sophomores, 6 First-Years",
@@ -18527,30 +18527,6 @@
       "distribution_requirements": "Fine arts",
       "gen_ed_requirements": "Writing WC",
       "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202710%27%20dept=%20%27THDA%27%20num=%27242%27%20sect=%2701%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
-    },
-    {
-      "crn": "10742",
-      "subject": "THDA",
-      "subject_name": "Theater and Dance",
-      "course_number": "25",
-      "section": "01",
-      "title": "Beginning Breaking",
-      "meetings": [
-        {
-          "days": "M W F",
-          "time": "1:10 - 2:10 pm",
-          "room": "THEATR 003"
-        }
-      ],
-      "instructor": "Cheng Xiong",
-      "open_seats": "11",
-      "max_enrollment": "14",
-      "crosslistings": [],
-      "seat_reservations": "",
-      "description": "This course introduces students to fundamental characteristics, techniques, and principles of Breaking/Breakdance. The class will dive into the typical movements, histories and origins of this urban dance style. We are going into deep detail using theories and concepts that can help our minds, bodies and spirit connect further and deeper to the styles themselves. This class will allow your own identity and way of motion to be in the forefront. The course is physically rigorous, and emphasizes community building. We will utilize class time to learn and discuss the history of Breaking and its evolution by reading the book The Birth of Breaking by Serouj \"Midus\" Aprahamian. No experience required. All are welcome. May be repeated for credit.",
-      "distribution_requirements": "",
-      "gen_ed_requirements": "",
-      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202710%27%20dept=%20%27THDA%27%20num=%2725%27%20sect=%2701%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
     },
     {
       "crn": "10732",
