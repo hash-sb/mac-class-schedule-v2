@@ -1,7 +1,7 @@
 {
   "term_code": "202710",
   "term_label": "Fall 2026",
-  "scraped_at": "2026-08-21T01:04:38.388801+00:00",
+  "scraped_at": "2026-08-22T01:01:06.571916+00:00",
   "course_count": 781,
   "courses": [
     {
@@ -675,7 +675,7 @@
         }
       ],
       "instructor": "Jenna Rice Rahaim",
-      "open_seats": "0",
+      "open_seats": "1",
       "max_enrollment": "20",
       "crosslistings": [
         "INTL 258-01 (10881)",
@@ -2693,7 +2693,7 @@
         {
           "days": "T",
           "time": "1:20 - 4:30 pm",
-          "room": ""
+          "room": "THEATR 204"
         }
       ],
       "instructor": "Stotra Chakrabarti",
@@ -4384,7 +4384,7 @@
         {
           "days": "M W F",
           "time": "12:00 - 1:00 pm",
-          "room": "MAIN 009"
+          "room": "MAIN 003"
         }
       ],
       "instructor": "Nanette Goldman",
@@ -4486,7 +4486,7 @@
         }
       ],
       "instructor": "Andrew Overman",
-      "open_seats": "-1",
+      "open_seats": "0",
       "max_enrollment": "16",
       "crosslistings": [],
       "seat_reservations": "",
@@ -5006,7 +5006,7 @@
         }
       ],
       "instructor": "David Moore",
-      "open_seats": "0",
+      "open_seats": "1",
       "max_enrollment": "20",
       "crosslistings": [
         "INTL 294-01 (10420)"
@@ -11011,7 +11011,7 @@
         }
       ],
       "instructor": "Jenna Rice Rahaim",
-      "open_seats": "0",
+      "open_seats": "1",
       "max_enrollment": "20",
       "crosslistings": [
         "ANTH 249-01 (10798)",
@@ -11062,7 +11062,7 @@
         }
       ],
       "instructor": "David Moore",
-      "open_seats": "0",
+      "open_seats": "1",
       "max_enrollment": "20",
       "crosslistings": [
         "COMP 194-01 (10421)"
@@ -12310,7 +12310,7 @@
         }
       ],
       "instructor": "Curtis Balz",
-      "open_seats": "0",
+      "open_seats": "1",
       "max_enrollment": "20",
       "crosslistings": [],
       "seat_reservations": "",
@@ -12790,7 +12790,7 @@
         }
       ],
       "instructor": "Jenna Rice Rahaim",
-      "open_seats": "0",
+      "open_seats": "1",
       "max_enrollment": "20",
       "crosslistings": [
         "ANTH 249-01 (10798)",
@@ -14392,7 +14392,7 @@
         }
       ],
       "instructor": "James Heyman",
-      "open_seats": "8",
+      "open_seats": "9",
       "max_enrollment": "24",
       "crosslistings": [],
       "seat_reservations": "",
@@ -14440,7 +14440,7 @@
         }
       ],
       "instructor": "James Heyman",
-      "open_seats": "3",
+      "open_seats": "4",
       "max_enrollment": "12",
       "crosslistings": [],
       "seat_reservations": "",
@@ -15994,7 +15994,7 @@
         {
           "days": "T R",
           "time": "1:20 - 2:50 pm",
-          "room": "THEATR 204"
+          "room": "OLRI 371G"
         }
       ],
       "instructor": "Violet Brown",
@@ -16018,7 +16018,7 @@
         {
           "days": "T",
           "time": "3:00 - 4:30 pm",
-          "room": "THEATR 204"
+          "room": "OLRI 371G"
         }
       ],
       "instructor": "Violet Brown",
