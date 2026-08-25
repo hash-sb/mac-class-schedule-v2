@@ -1,7 +1,7 @@
 {
   "term_code": "202710",
   "term_label": "Fall 2026",
-  "scraped_at": "2026-08-24T01:03:18.062380+00:00",
+  "scraped_at": "2026-08-25T01:02:40.278567+00:00",
   "course_count": 781,
   "courses": [
     {
@@ -1025,7 +1025,7 @@
         }
       ],
       "instructor": "Chris Willcox",
-      "open_seats": "0",
+      "open_seats": "1",
       "max_enrollment": "15",
       "crosslistings": [],
       "seat_reservations": "Seats saved for: 4 seniors, 4 juniors, 4 sophomores, 3 incoming First-Years",
@@ -3973,7 +3973,7 @@
         {
           "days": "T",
           "time": "1:20 - 2:20 pm",
-          "room": "HUM 113"
+          "room": "HUM 102"
         }
       ],
       "instructor": "Ruoxi Song",
@@ -4117,7 +4117,7 @@
         {
           "days": "R",
           "time": "1:20 - 2:20 pm",
-          "room": "HUM 113"
+          "room": "HUM 102"
         }
       ],
       "instructor": "Ruoxi Song",
@@ -5206,7 +5206,7 @@
         }
       ],
       "instructor": "Bret Jackson",
-      "open_seats": "4",
+      "open_seats": "5",
       "max_enrollment": "16",
       "crosslistings": [],
       "seat_reservations": "",
@@ -5398,7 +5398,7 @@
         }
       ],
       "instructor": "Bridgit Jordan",
-      "open_seats": "0",
+      "open_seats": "1",
       "max_enrollment": "25",
       "crosslistings": [],
       "seat_reservations": "",
@@ -6366,7 +6366,7 @@
         {
           "days": "T R",
           "time": "3:00 - 4:30 pm",
-          "room": "THEATR 101"
+          "room": "HUM 113"
         }
       ],
       "instructor": "Brian Lozenski",
@@ -6390,7 +6390,7 @@
         {
           "days": "T R",
           "time": "1:20 - 2:50 pm",
-          "room": "THEATR 101"
+          "room": "HUM 113"
         }
       ],
       "instructor": "Brian Lozenski",
@@ -9093,7 +9093,7 @@
         }
       ],
       "instructor": "Daniel Trudeau",
-      "open_seats": "9",
+      "open_seats": "10",
       "max_enrollment": "25",
       "crosslistings": [],
       "seat_reservations": "",
@@ -10985,7 +10985,7 @@
         }
       ],
       "instructor": "Julia Chadaga",
-      "open_seats": "0",
+      "open_seats": "1",
       "max_enrollment": "20",
       "crosslistings": [
         "RUSS 250-01 (10654)"
@@ -15424,7 +15424,7 @@
       "seat_reservations": "",
       "description": "An introduction to psychological science -- the study of behavior and mental processes. This course surveys the major subdisciplines of the field, including such topics as the brain and neuroscience, behavioral genetics, cognitive and social development, perception, learning, memory, decision-making, language, consciousness, emotions, motivation, psychological disorders, social identity, interpersonal interactions and group and cultural processes. Lecture and laboratory components.",
       "distribution_requirements": "Social science",
-      "gen_ed_requirements": "Quantitative Thinking Q1, Writing WA, Writing WP",
+      "gen_ed_requirements": "Quantitative Thinking Q1, Writing WP",
       "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202710%27%20dept=%20%27PSYC%27%20num=%27100%27%20sect=%2701%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
     },
     {
@@ -15448,7 +15448,7 @@
       "seat_reservations": "",
       "description": "An introduction to psychological science -- the study of behavior and mental processes. This course surveys the major subdisciplines of the field, including such topics as the brain and neuroscience, behavioral genetics, cognitive and social development, perception, learning, memory, decision-making, language, consciousness, emotions, motivation, psychological disorders, social identity, interpersonal interactions and group and cultural processes. Lecture and laboratory components.",
       "distribution_requirements": "Social science",
-      "gen_ed_requirements": "Quantitative Thinking Q1, Writing WA, Writing WP",
+      "gen_ed_requirements": "Quantitative Thinking Q1, Writing WP",
       "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202710%27%20dept=%20%27PSYC%27%20num=%27100%27%20sect=%2702%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
     },
     {
@@ -16876,7 +16876,7 @@
         }
       ],
       "instructor": "Julia Chadaga",
-      "open_seats": "0",
+      "open_seats": "1",
       "max_enrollment": "20",
       "crosslistings": [
         "INTL 250-01 (10655)"
@@ -18776,7 +18776,7 @@
       "subject_name": "Theater and Dance",
       "course_number": "80",
       "section": "01",
-      "title": "Performance Practice",
+      "title": "Performance Practice: Theater",
       "meetings": [
         {
           "days": "MTWR",
@@ -19065,7 +19065,7 @@
         {
           "days": "T R",
           "time": "3:00 - 4:30 pm",
-          "room": "HUM 113"
+          "room": "MAIN 410"
         }
       ],
       "instructor": "Melanie Yazzie",
