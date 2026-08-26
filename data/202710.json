@@ -1,7 +1,7 @@
 {
   "term_code": "202710",
   "term_label": "Fall 2026",
-  "scraped_at": "2026-08-25T01:02:40.278567+00:00",
+  "scraped_at": "2026-08-26T01:04:25.850366+00:00",
   "course_count": 781,
   "courses": [
     {
@@ -378,7 +378,7 @@
         }
       ],
       "instructor": "Melanie Yazzie",
-      "open_seats": "9",
+      "open_seats": "10",
       "max_enrollment": "20",
       "crosslistings": [
         "WGSS 394-01 (10752)"
@@ -6146,7 +6146,7 @@
         }
       ],
       "instructor": "Kehaulani Fagatele-Folau",
-      "open_seats": "9",
+      "open_seats": "8",
       "max_enrollment": "24",
       "crosslistings": [
         "ENVI 194-02 (10759)"
@@ -7386,7 +7386,7 @@
         }
       ],
       "instructor": "Kehaulani Fagatele-Folau",
-      "open_seats": "9",
+      "open_seats": "8",
       "max_enrollment": "24",
       "crosslistings": [
         "EDUC 194-01 (10758)"
@@ -7645,7 +7645,7 @@
         }
       ],
       "instructor": "Louisa Bradtmiller",
-      "open_seats": "0",
+      "open_seats": "1",
       "max_enrollment": "24",
       "crosslistings": [],
       "seat_reservations": "",
@@ -7669,7 +7669,7 @@
         }
       ],
       "instructor": "Louisa Bradtmiller",
-      "open_seats": "0",
+      "open_seats": "1",
       "max_enrollment": "24",
       "crosslistings": [],
       "seat_reservations": "",
@@ -19143,7 +19143,7 @@
         }
       ],
       "instructor": "Melanie Yazzie",
-      "open_seats": "9",
+      "open_seats": "10",
       "max_enrollment": "20",
       "crosslistings": [
         "AMST 394-01 (10753)"
