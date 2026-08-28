@@ -1,8 +1,8 @@
 {
   "term_code": "202710",
   "term_label": "Fall 2026",
-  "scraped_at": "2026-08-26T01:04:25.850366+00:00",
-  "course_count": 781,
+  "scraped_at": "2026-08-28T02:05:07.855956+00:00",
+  "course_count": 780,
   "courses": [
     {
       "crn": "10721",
@@ -1548,7 +1548,7 @@
         {
           "days": "T R",
           "time": "3:00 - 4:30 pm",
-          "room": "HUM 217"
+          "room": "HUM 111"
         }
       ],
       "instructor": "Rivi Handler-Spitz",
@@ -3997,7 +3997,7 @@
         {
           "days": "T R",
           "time": "3:00 - 4:30 pm",
-          "room": "HUM 217"
+          "room": "HUM 111"
         }
       ],
       "instructor": "Rivi Handler-Spitz",
@@ -4049,7 +4049,7 @@
         }
       ],
       "instructor": "Xin Yang",
-      "open_seats": "6",
+      "open_seats": "5",
       "max_enrollment": "15",
       "crosslistings": [],
       "seat_reservations": "",
@@ -4097,7 +4097,7 @@
         }
       ],
       "instructor": "Ruoxi Song",
-      "open_seats": "9",
+      "open_seats": "8",
       "max_enrollment": "12",
       "crosslistings": [],
       "seat_reservations": "",
@@ -5422,7 +5422,7 @@
         }
       ],
       "instructor": "Bridgit Jordan",
-      "open_seats": "2",
+      "open_seats": "3",
       "max_enrollment": "25",
       "crosslistings": [],
       "seat_reservations": "",
@@ -6728,7 +6728,7 @@
         {
           "days": "M",
           "time": "7:00 - 10:00 pm",
-          "room": "MAIN 010"
+          "room": "OLRI 301"
         }
       ],
       "instructor": "Coral Lumbley",
@@ -13520,7 +13520,7 @@
         }
       ],
       "instructor": "Geoffrey Gorham",
-      "open_seats": "0",
+      "open_seats": "1",
       "max_enrollment": "20",
       "crosslistings": [],
       "seat_reservations": "5 seats saved for First-Years",
@@ -16594,30 +16594,6 @@
       "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202710%27%20dept=%20%27RELI%27%20num=%27294%27%20sect=%2701%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
     },
     {
-      "crn": "10645",
-      "subject": "RELI",
-      "subject_name": "Religious Studies",
-      "course_number": "294",
-      "section": "02",
-      "title": "Kindred Visions: Jewish and Christian Biblical Interpretation",
-      "meetings": [
-        {
-          "days": "T R",
-          "time": "1:20 - 2:50 pm",
-          "room": "MAIN 003"
-        }
-      ],
-      "instructor": "Nicholas Schaser",
-      "open_seats": "14",
-      "max_enrollment": "16",
-      "crosslistings": [],
-      "seat_reservations": "",
-      "description": "For over two thousand years, Jews and Christians have read and interpreted the Hebrew Bible (Tanakh/Old Testament) in a variety of ways. This course explores the historical and religious contexts in which ancient readers understood Scripture. Students will survey specific biblical passages that have yielded various meanings in Judaism and Christianity throughout the centuries. We will analyze ancient texts in both the Hebrew Bible and the New Testament in order to see how different religious groups utilized the Bible for their respective communities. The course will put early interpretations into conversation with modern scholarly approaches that speak to contemporary Jewish-Christian relations and the ongoing role of Scripture in theological, social, and intellectual discourse today.",
-      "distribution_requirements": "Humanities",
-      "gen_ed_requirements": "",
-      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202710%27%20dept=%20%27RELI%27%20num=%27294%27%20sect=%2702%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
-    },
-    {
       "crn": "10760",
       "subject": "RELI",
       "subject_name": "Religious Studies",
@@ -17535,7 +17511,7 @@
         }
       ],
       "instructor": "Fernando Contreras",
-      "open_seats": "1",
+      "open_seats": "2",
       "max_enrollment": "20",
       "crosslistings": [],
       "seat_reservations": "",
@@ -17651,7 +17627,7 @@
         {
           "days": "M W F",
           "time": "1:10 - 2:10 pm",
-          "room": "HUM 217"
+          "room": "THEATR 213"
         }
       ],
       "instructor": "Claire Lozano",
@@ -18006,7 +17982,7 @@
         }
       ],
       "instructor": "Abby Loe",
-      "open_seats": "1",
+      "open_seats": "2",
       "max_enrollment": "24",
       "crosslistings": [],
       "seat_reservations": "Seats saved for: 4 seniors, 6 juniors, 8 sophomores, 6 First-Years",
