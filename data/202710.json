@@ -1,7 +1,7 @@
 {
   "term_code": "202710",
   "term_label": "Fall 2026",
-  "scraped_at": "2026-08-28T02:05:07.855956+00:00",
+  "scraped_at": "2026-08-30T04:16:31.976699+00:00",
   "course_count": 780,
   "courses": [
     {
@@ -3905,7 +3905,7 @@
         }
       ],
       "instructor": "Rivi Handler-Spitz",
-      "open_seats": "1",
+      "open_seats": "0",
       "max_enrollment": "15",
       "crosslistings": [],
       "seat_reservations": "",
@@ -3953,7 +3953,7 @@
         }
       ],
       "instructor": "Ruoxi Song",
-      "open_seats": "1",
+      "open_seats": "0",
       "max_enrollment": "12",
       "crosslistings": [],
       "seat_reservations": "",
