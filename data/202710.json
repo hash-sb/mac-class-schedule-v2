@@ -1,7 +1,7 @@
 {
   "term_code": "202710",
   "term_label": "Fall 2026",
-  "scraped_at": "2026-08-31T04:21:50.665206+00:00",
+  "scraped_at": "2026-09-01T04:06:22.477956+00:00",
   "course_count": 780,
   "courses": [
     {
@@ -1991,7 +1991,7 @@
         {
           "days": "T",
           "time": "1:20 - 4:30 pm",
-          "room": "OLRI 284"
+          "room": "THEATR 204"
         }
       ],
       "instructor": "Jerald Dosch",
@@ -2693,7 +2693,7 @@
         {
           "days": "T",
           "time": "1:20 - 4:30 pm",
-          "room": "THEATR 204"
+          "room": "OLRI 284"
         }
       ],
       "instructor": "Stotra Chakrabarti",
@@ -3881,8 +3881,8 @@
         }
       ],
       "instructor": "Rivi Handler-Spitz",
-      "open_seats": "0",
-      "max_enrollment": "15",
+      "open_seats": "3",
+      "max_enrollment": "18",
       "crosslistings": [],
       "seat_reservations": "",
       "description": "This class is designed for beginners. Students will study Mandarin pronunciation, master pinyin, learn how to hand-write roughly 200 Chinese characters, and conduct simple conversations about dates and times, birthdays, family, hobbies, etc.",
@@ -3905,8 +3905,8 @@
         }
       ],
       "instructor": "Rivi Handler-Spitz",
-      "open_seats": "0",
-      "max_enrollment": "15",
+      "open_seats": "3",
+      "max_enrollment": "18",
       "crosslistings": [],
       "seat_reservations": "",
       "description": "This class is designed for beginners. Students will study Mandarin pronunciation, master pinyin, learn how to hand-write roughly 200 Chinese characters, and conduct simple conversations about dates and times, birthdays, family, hobbies, etc.",
@@ -15994,7 +15994,7 @@
         {
           "days": "T R",
           "time": "1:20 - 2:50 pm",
-          "room": "OLRI 371G"
+          "room": "THEATR 101"
         }
       ],
       "instructor": "Violet Brown",
@@ -17483,7 +17483,7 @@
         {
           "days": "M W F",
           "time": "8:30 - 9:30 am",
-          "room": "HUM 215"
+          "room": "HUM 314"
         }
       ],
       "instructor": "Fernando Contreras",
