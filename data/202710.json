@@ -1,7 +1,7 @@
 {
   "term_code": "202710",
   "term_label": "Fall 2026",
-  "scraped_at": "2026-09-02T03:28:17.331752+00:00",
+  "scraped_at": "2026-09-03T03:30:16.687189+00:00",
   "course_count": 780,
   "courses": [
     {
@@ -948,7 +948,7 @@
           "room": "ARTCOM 102"
         }
       ],
-      "instructor": "Joanna Inglot",
+      "instructor": "Lauren Deland",
       "open_seats": "1",
       "max_enrollment": "16",
       "crosslistings": [
@@ -6113,7 +6113,7 @@
       "subject_name": "Educational Studies",
       "course_number": "180",
       "section": "01",
-      "title": "Education and Society",
+      "title": "Education & Society: The Philosophies, Politics, and Cultures of Learning",
       "meetings": [
         {
           "days": "T R",
@@ -9137,7 +9137,7 @@
         {
           "days": "T R",
           "time": "3:00 - 4:30 pm",
-          "room": "CARN 105"
+          "room": "CARN 05"
         }
       ],
       "instructor": "William Moseley",
@@ -9357,7 +9357,7 @@
         {
           "days": "T R",
           "time": "3:00 - 4:30 pm",
-          "room": "CARN 05"
+          "room": "CARN 105"
         }
       ],
       "instructor": "I-Chun Catherine Chang",
@@ -10839,7 +10839,7 @@
         }
       ],
       "instructor": "David Moore",
-      "open_seats": "1",
+      "open_seats": "0",
       "max_enrollment": "24",
       "crosslistings": [],
       "seat_reservations": "",
@@ -10910,7 +10910,7 @@
           "room": "ARTCOM 102"
         }
       ],
-      "instructor": "Joanna Inglot",
+      "instructor": "Lauren Deland",
       "open_seats": "1",
       "max_enrollment": "16",
       "crosslistings": [
@@ -11164,7 +11164,7 @@
         }
       ],
       "instructor": "Sachiko Dorsey",
-      "open_seats": "0",
+      "open_seats": "1",
       "max_enrollment": "20",
       "crosslistings": [],
       "seat_reservations": "",
@@ -11236,7 +11236,7 @@
         }
       ],
       "instructor": "Kyoshin Sasahara",
-      "open_seats": "8",
+      "open_seats": "9",
       "max_enrollment": "15",
       "crosslistings": [],
       "seat_reservations": "",
@@ -13567,7 +13567,7 @@
           "room": "MAIN 009"
         }
       ],
-      "instructor": "Samuel Asarnow",
+      "instructor": "GILLIAN GRAY",
       "open_seats": "1",
       "max_enrollment": "20",
       "crosslistings": [],
@@ -13592,7 +13592,7 @@
         }
       ],
       "instructor": "Samuel Asarnow",
-      "open_seats": "-1",
+      "open_seats": "0",
       "max_enrollment": "16",
       "crosslistings": [],
       "seat_reservations": "",
@@ -14295,7 +14295,7 @@
           "room": "OLRI 150"
         }
       ],
-      "instructor": "James Heyman",
+      "instructor": "James Heyman, Tonnis ter Veldhuis",
       "open_seats": "3",
       "max_enrollment": "27",
       "crosslistings": [],
@@ -17151,7 +17151,7 @@
         }
       ],
       "instructor": "Khaldoun Samman",
-      "open_seats": "26",
+      "open_seats": "27",
       "max_enrollment": "40",
       "crosslistings": [],
       "seat_reservations": "",
@@ -18006,7 +18006,7 @@
         }
       ],
       "instructor": "Lori Ziegelmeier",
-      "open_seats": "1",
+      "open_seats": "2",
       "max_enrollment": "24",
       "crosslistings": [],
       "seat_reservations": "Seats saved for: 4 seniors, 6 juniors, 8 sophomores, 6 First-Years",
@@ -18518,7 +18518,7 @@
           "room": "THEATR 006"
         }
       ],
-      "instructor": "Mina Kinukawa",
+      "instructor": "Trevor Bowen",
       "open_seats": "1",
       "max_enrollment": "13",
       "crosslistings": [],
