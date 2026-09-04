@@ -1,8 +1,8 @@
 {
   "term_code": "202710",
   "term_label": "Fall 2026",
-  "scraped_at": "2026-09-03T03:30:16.687189+00:00",
-  "course_count": 780,
+  "scraped_at": "2026-09-04T03:27:57.252384+00:00",
+  "course_count": 777,
   "courses": [
     {
       "crn": "10721",
@@ -478,7 +478,7 @@
         }
       ],
       "instructor": "Jenna Rice Rahaim",
-      "open_seats": "0",
+      "open_seats": "1",
       "max_enrollment": "30",
       "crosslistings": [],
       "seat_reservations": "",
@@ -753,7 +753,7 @@
         }
       ],
       "instructor": "Aisling Quigley",
-      "open_seats": "6",
+      "open_seats": "7",
       "max_enrollment": "16",
       "crosslistings": [],
       "seat_reservations": "",
@@ -919,7 +919,7 @@
         {
           "days": "M W",
           "time": "1:10 - 4:20 pm",
-          "room": "ART 302"
+          "room": "ART 206"
         }
       ],
       "instructor": "Megan Vossler, Mary Heskel",
@@ -1049,7 +1049,7 @@
         }
       ],
       "instructor": "Lela Pierce",
-      "open_seats": "5",
+      "open_seats": "6",
       "max_enrollment": "15",
       "crosslistings": [],
       "seat_reservations": "Seats saved for: 4 seniors, 4 juniors, 4 sophomores, 3 incoming First-Years",
@@ -1835,7 +1835,7 @@
         {
           "days": "M W F",
           "time": "1:10 - 2:10 pm",
-          "room": "THEATR 001"
+          "room": "OLRI 301"
         }
       ],
       "instructor": "Sebastiano De Bona",
@@ -2209,7 +2209,7 @@
         {
           "days": "M W",
           "time": "1:10 - 4:20 pm",
-          "room": "ART 302"
+          "room": "ART 206"
         }
       ],
       "instructor": "Megan Vossler, Mary Heskel",
@@ -7176,7 +7176,7 @@
         {
           "days": "M W F",
           "time": "1:10 - 2:10 pm",
-          "room": "THEATR 001"
+          "room": "OLRI 301"
         }
       ],
       "instructor": "Sebastiano De Bona",
@@ -7332,7 +7332,7 @@
         {
           "days": "T",
           "time": "1:20 - 4:30 pm",
-          "room": "OLRI 284"
+          "room": "THEATR 204"
         }
       ],
       "instructor": "Jerald Dosch",
@@ -8219,7 +8219,7 @@
         {
           "days": "M W F",
           "time": "10:50 - 11:50 am",
-          "room": "HUM 401"
+          "room": "HUM 404"
         }
       ],
       "instructor": "Joëlle Vitiello",
@@ -8895,7 +8895,7 @@
         }
       ],
       "instructor": "Daniel Trudeau",
-      "open_seats": "8",
+      "open_seats": "9",
       "max_enrollment": "25",
       "crosslistings": [],
       "seat_reservations": "",
@@ -9215,7 +9215,7 @@
         }
       ],
       "instructor": "Laura Smith",
-      "open_seats": "10",
+      "open_seats": "11",
       "max_enrollment": "25",
       "crosslistings": [],
       "seat_reservations": "",
@@ -12334,7 +12334,7 @@
         }
       ],
       "instructor": "Will Mitchell",
-      "open_seats": "5",
+      "open_seats": "4",
       "max_enrollment": "20",
       "crosslistings": [],
       "seat_reservations": "",
@@ -12843,7 +12843,7 @@
         }
       ],
       "instructor": "Aisling Quigley",
-      "open_seats": "6",
+      "open_seats": "7",
       "max_enrollment": "16",
       "crosslistings": [],
       "seat_reservations": "",
@@ -12919,7 +12919,7 @@
         }
       ],
       "instructor": "Morgan Adamson",
-      "open_seats": "5",
+      "open_seats": "6",
       "max_enrollment": "16",
       "crosslistings": [
         "WGSS 394-02 (10492)"
@@ -13984,7 +13984,7 @@
         }
       ],
       "instructor": "Nicholas Brundy",
-      "open_seats": "8",
+      "open_seats": "7",
       "max_enrollment": "25",
       "crosslistings": [],
       "seat_reservations": "",
@@ -14392,7 +14392,7 @@
         }
       ],
       "instructor": "James Heyman",
-      "open_seats": "9",
+      "open_seats": "8",
       "max_enrollment": "24",
       "crosslistings": [],
       "seat_reservations": "",
@@ -14440,7 +14440,7 @@
         }
       ],
       "instructor": "James Heyman",
-      "open_seats": "4",
+      "open_seats": "3",
       "max_enrollment": "12",
       "crosslistings": [],
       "seat_reservations": "",
@@ -14448,78 +14448,6 @@
       "distribution_requirements": "",
       "gen_ed_requirements": "",
       "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202710%27%20dept=%20%27PHYS%27%20num=%27331%27%20sect=%27L2%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
-    },
-    {
-      "crn": "10556",
-      "subject": "PHYS",
-      "subject_name": "Physics and Astronomy",
-      "course_number": "370",
-      "section": "01",
-      "title": "Computational Physics",
-      "meetings": [
-        {
-          "days": "M W F",
-          "time": "1:10 - 2:10 pm",
-          "room": "OLRI 101"
-        }
-      ],
-      "instructor": "Tonnis ter Veldhuis",
-      "open_seats": "15",
-      "max_enrollment": "24",
-      "crosslistings": [],
-      "seat_reservations": "",
-      "description": "This course introduces students to coding and computational methods, focusing on developing computation-based skills that are critical for practicing physicists. Students process experimental data using statistical tools, study the implications of realistic physical models using a toolbox of numerical methods, and visualize information in meaningful formats. The course starts with an introduction to coding (in Python) and a survey of data manipulation tools (e.g., reading, writing, analyzing statistically, etc.). The focus is on skills that help students in labs, research, and anywhere else they need to extract physical insight from data. After the introduction to data analysis, the course transitions into a survey of numerical techniques which facilitate quantitative analysis of theoretical models describing complex physical phenomena, thereby creating a bridge between experimental/observational and theoretical physics. The lab provides hands-on experience in the application of computational skills discussed in lecture to realistic physical models drawn from a wide range of physics subdisciplines. Projects in the lab are implemented using Jupyter notebooks, via the Google Colaboratory environment. Students write documentation in Latex and Markdown. No previous experience with any of these is assumed. Prerequisite(s): PHYS 227",
-      "distribution_requirements": "Natural science and mathematics",
-      "gen_ed_requirements": "",
-      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202710%27%20dept=%20%27PHYS%27%20num=%27370%27%20sect=%2701%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
-    },
-    {
-      "crn": "10557",
-      "subject": "PHYS",
-      "subject_name": "Physics and Astronomy",
-      "course_number": "370",
-      "section": "L1",
-      "title": "Computational Physics Lab",
-      "meetings": [
-        {
-          "days": "R",
-          "time": "8:00 - 11:10 am",
-          "room": "OLRI 101"
-        }
-      ],
-      "instructor": "Tonnis ter Veldhuis",
-      "open_seats": "7",
-      "max_enrollment": "12",
-      "crosslistings": [],
-      "seat_reservations": "",
-      "description": "This course introduces students to coding and computational methods, focusing on developing computation-based skills that are critical for practicing physicists. Students process experimental data using statistical tools, study the implications of realistic physical models using a toolbox of numerical methods, and visualize information in meaningful formats. The course starts with an introduction to coding (in Python) and a survey of data manipulation tools (e.g., reading, writing, analyzing statistically, etc.). The focus is on skills that help students in labs, research, and anywhere else they need to extract physical insight from data. After the introduction to data analysis, the course transitions into a survey of numerical techniques which facilitate quantitative analysis of theoretical models describing complex physical phenomena, thereby creating a bridge between experimental/observational and theoretical physics. The lab provides hands-on experience in the application of computational skills discussed in lecture to realistic physical models drawn from a wide range of physics subdisciplines. Projects in the lab are implemented using Jupyter notebooks, via the Google Colaboratory environment. Students write documentation in Latex and Markdown. No previous experience with any of these is assumed. Prerequisite(s): PHYS 227",
-      "distribution_requirements": "",
-      "gen_ed_requirements": "",
-      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202710%27%20dept=%20%27PHYS%27%20num=%27370%27%20sect=%27L1%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
-    },
-    {
-      "crn": "10558",
-      "subject": "PHYS",
-      "subject_name": "Physics and Astronomy",
-      "course_number": "370",
-      "section": "L2",
-      "title": "Computational Physics Lab",
-      "meetings": [
-        {
-          "days": "R",
-          "time": "1:20 - 4:30 pm",
-          "room": "OLRI 101"
-        }
-      ],
-      "instructor": "Tonnis ter Veldhuis",
-      "open_seats": "8",
-      "max_enrollment": "12",
-      "crosslistings": [],
-      "seat_reservations": "",
-      "description": "This course introduces students to coding and computational methods, focusing on developing computation-based skills that are critical for practicing physicists. Students process experimental data using statistical tools, study the implications of realistic physical models using a toolbox of numerical methods, and visualize information in meaningful formats. The course starts with an introduction to coding (in Python) and a survey of data manipulation tools (e.g., reading, writing, analyzing statistically, etc.). The focus is on skills that help students in labs, research, and anywhere else they need to extract physical insight from data. After the introduction to data analysis, the course transitions into a survey of numerical techniques which facilitate quantitative analysis of theoretical models describing complex physical phenomena, thereby creating a bridge between experimental/observational and theoretical physics. The lab provides hands-on experience in the application of computational skills discussed in lecture to realistic physical models drawn from a wide range of physics subdisciplines. Projects in the lab are implemented using Jupyter notebooks, via the Google Colaboratory environment. Students write documentation in Latex and Markdown. No previous experience with any of these is assumed. Prerequisite(s): PHYS 227",
-      "distribution_requirements": "",
-      "gen_ed_requirements": "",
-      "bookstore_url": "https://macalester.bncollege.com/webapp/wcs/stores/servlet/TBListView?cm_mmc=RI-_-8345-_-1-_-A&catalogId=10001&storeId=89536&termMapping=Y&courseXml=%3C?xml%20version=%271.0%27%20encoding=%27UTF-8%27?%3E%3Ctextbookorder%3E%3Ccourses%3E%3Ccourse%20term=%27202710%27%20dept=%20%27PHYS%27%20num=%27370%27%20sect=%27L2%27%20/%3E%3C/courses%3E%3C/textbookorder%3E"
     },
     {
       "crn": "10559",
@@ -19145,7 +19073,7 @@
         }
       ],
       "instructor": "Morgan Adamson",
-      "open_seats": "5",
+      "open_seats": "6",
       "max_enrollment": "16",
       "crosslistings": [
         "MCST 388-01 (10491)"
