@@ -1,7 +1,7 @@
 {
   "term_code": "202710",
   "term_label": "Fall 2026",
-  "scraped_at": "2026-09-04T03:27:57.252384+00:00",
+  "scraped_at": "2026-09-05T03:29:29.232687+00:00",
   "course_count": 777,
   "courses": [
     {
@@ -651,7 +651,7 @@
         }
       ],
       "instructor": "Ron Barrett",
-      "open_seats": "7",
+      "open_seats": "6",
       "max_enrollment": "20",
       "crosslistings": [],
       "seat_reservations": "",
@@ -3015,7 +3015,7 @@
         }
       ],
       "instructor": "Leah Witus",
-      "open_seats": "0",
+      "open_seats": "1",
       "max_enrollment": "36",
       "crosslistings": [],
       "seat_reservations": "15 seats saved for incoming First-Years",
@@ -3039,7 +3039,7 @@
         }
       ],
       "instructor": "Isabella Nimm",
-      "open_seats": "1",
+      "open_seats": "2",
       "max_enrollment": "18",
       "crosslistings": [],
       "seat_reservations": "9 seats saved for incoming First-Years",
@@ -3207,7 +3207,7 @@
         }
       ],
       "instructor": "Keith Kuwata",
-      "open_seats": "-1",
+      "open_seats": "-2",
       "max_enrollment": "16",
       "crosslistings": [],
       "seat_reservations": "",
@@ -3231,7 +3231,7 @@
         }
       ],
       "instructor": "Keith Kuwata",
-      "open_seats": "-1",
+      "open_seats": "-2",
       "max_enrollment": "16",
       "crosslistings": [],
       "seat_reservations": "",
@@ -8487,7 +8487,7 @@
         }
       ],
       "instructor": "El Hadji Diop",
-      "open_seats": "9",
+      "open_seats": "8",
       "max_enrollment": "15",
       "crosslistings": [],
       "seat_reservations": "",
@@ -8511,7 +8511,7 @@
         }
       ],
       "instructor": "Erica Petersen",
-      "open_seats": "8",
+      "open_seats": "7",
       "max_enrollment": "10",
       "crosslistings": [],
       "seat_reservations": "",
@@ -11188,7 +11188,7 @@
         }
       ],
       "instructor": "Sachiko Dorsey",
-      "open_seats": "12",
+      "open_seats": "13",
       "max_enrollment": "20",
       "crosslistings": [],
       "seat_reservations": "",
@@ -11212,7 +11212,7 @@
         }
       ],
       "instructor": "Kyoshin Sasahara",
-      "open_seats": "0",
+      "open_seats": "1",
       "max_enrollment": "15",
       "crosslistings": [],
       "seat_reservations": "",
@@ -11284,7 +11284,7 @@
         }
       ],
       "instructor": "Ritsuko Larson",
-      "open_seats": "4",
+      "open_seats": "3",
       "max_enrollment": "18",
       "crosslistings": [],
       "seat_reservations": "",
@@ -11380,7 +11380,7 @@
         }
       ],
       "instructor": "Kyoshin Sasahara",
-      "open_seats": "8",
+      "open_seats": "7",
       "max_enrollment": "12",
       "crosslistings": [],
       "seat_reservations": "",
@@ -12166,7 +12166,7 @@
         }
       ],
       "instructor": "Yariana Diaz",
-      "open_seats": "0",
+      "open_seats": "1",
       "max_enrollment": "24",
       "crosslistings": [],
       "seat_reservations": "",
@@ -12993,7 +12993,7 @@
         }
       ],
       "instructor": "Inga Chinilina",
-      "open_seats": "13",
+      "open_seats": "12",
       "max_enrollment": "25",
       "crosslistings": [],
       "seat_reservations": "",
